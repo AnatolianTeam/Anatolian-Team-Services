@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Anatolian Team",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Anatolian Team",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Tutorial": {
+    "message": "Dokümanlar",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.Website": {
+    "message": "Website",
+    "description": "Navbar item with label Website"
+  },
+  "item.label.Service": {
+    "message": "Servis",
+    "description": "Navbar item with label Service"
+  },
+  "item.label.Links": {
+    "message": "Bağlantılar",
+    "description": "Navbar item with label Links"
+  }
+}

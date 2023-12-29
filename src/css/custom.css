@@ -1,0 +1,43 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #414042;
+  --ifm-color-primary-dark: #3a3a3b;
+  --ifm-color-primary-darker: #373638;
+  --ifm-color-primary-darkest: #2d2d2e;
+  --ifm-color-primary-light: #474649;
+  --ifm-color-primary-lighter: #4b4a4c;
+  --ifm-color-primary-lightest: #545356;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #dca958;
+  --ifm-color-primary-dark: #d79c3f;
+  --ifm-color-primary-darker: #d49532;
+  --ifm-color-primary-darkest: #b27c25;
+  --ifm-color-primary-light: #e1b671;
+  --ifm-color-primary-lighter: #e4bd7e;
+  --ifm-color-primary-lightest: #ecd0a4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+.footer--dark {
+  --ifm-footer-background-color: #2E3032FF;
+}
+#navbarDropdownImage {
+  height: 16px;
+  padding-right: 5px;
+}
+/* Ekran genişliği 768 pikselden küçükse (mobil) */
+@media (max-width: 768px) {
+  .heroBanner .featureImage {
+    width: 50%; /* Örnek bir değer, isteğinize göre ayarlayabilirsiniz */
+  }
+}
