@@ -29,7 +29,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            <Translate>Service Intro</Translate>
+            <Translate>Services Intro</Translate>
           </Link>
         </div>
       </div>
@@ -44,8 +44,8 @@ export default function Home() {
 
   return (
     <Layout
-      title={`Service`}
-      description="Anatolian Team Service Website <head />">
+      title={`Services`}
+      description="Anatolian Team Services Website <head />">
       <HomepageHeader />
       <div className={styles.topShape}>
         <svg

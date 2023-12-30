@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Service Intro
+# Services Intro
 
 In this section you will find **brief information** for beginners and those who will benefit from the documents here.
 
