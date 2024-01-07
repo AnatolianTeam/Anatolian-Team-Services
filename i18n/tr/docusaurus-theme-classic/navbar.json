@@ -4,23 +4,19 @@
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Anatolian Team",
+    "message": "Anatolian Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Tutorial": {
-    "message": "Dokümanlar",
-    "description": "Navbar item with label Tutorial"
-  },
-  "item.label.Website": {
-    "message": "Website",
-    "description": "Navbar item with label Website"
-  },
-  "item.label.Service": {
-    "message": "Servisler",
-    "description": "Navbar item with label Service"
+  "item.label.Services": {
+    "message": "Hizmetler",
+    "description": "Navbar item with label Services"
   },
   "item.label.Links": {
     "message": "Bağlantılar",
     "description": "Navbar item with label Links"
+  },
+  "item.label.Website": {
+    "message": "Website",
+    "description": "Navbar item with label Website"
   }
 }

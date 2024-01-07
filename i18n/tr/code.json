@@ -3,10 +3,6 @@
     "message": "Bu sayfa çöktü.",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Sayfa başına dön",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "Arşiv",
     "description": "The page & hero title of the blog archive page"
@@ -14,6 +10,10 @@
   "theme.blog.archive.description": {
     "message": "Arşiv",
     "description": "The page & hero description of the blog archive page"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Sayfa başına dön",
+    "description": "The ARIA label for the back to top button"
   },
   "theme.blog.paginator.navAriaLabel": {
     "message": "Blog gönderi sayfası navigasyonu",
@@ -27,18 +27,6 @@
     "message": "Eski Girdiler",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog gönderi sayfası navigasyonu",
-    "description": "The ARIA label for the blog posts pagination"
-  },
-  "theme.blog.post.paginator.newerPost": {
-    "message": "Daha Yeni Gönderi",
-    "description": "The blog post button label to navigate to the newer/previous post"
-  },
-  "theme.blog.post.paginator.olderPost": {
-    "message": "Daha Eski Gönderi",
-    "description": "The blog post button label to navigate to the older/next post"
-  },
   "theme.blog.post.plurals": {
     "message": "Bir gönderi|{count} gönderi",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -51,13 +39,21 @@
     "message": "Tüm Etiketleri Görüntüle",
     "description": "The label of the link targeting the tag list page"
   },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Blog gönderi sayfası navigasyonu",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Daha Yeni Gönderi",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Daha Eski Gönderi",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
   "theme.docs.DocCard.categoryDescription": {
     "message": "{count} öğe",
     "description": "The default description for a category card in the generated index about how many items this category includes"
-  },
-  "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Breadcrumbs",
-    "description": "The ARIA label for the breadcrumbs"
   },
   "theme.colorToggle.ariaLabel": {
     "message": "Karanlık ve aydınlık mod arasında geçiş yapın (şu anda {mode})",
@@ -70,6 +66,10 @@
   "theme.colorToggle.ariaLabel.mode.light": {
     "message": "Aydınlık mod",
     "description": "The name for the light color mode"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Breadcrumbs",
+    "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Dokümanlar sayfası",
@@ -94,6 +94,14 @@
   "theme.docs.versionBadge.label": {
     "message": "Version: {versionLabel}"
   },
+  "theme.common.editThisPage": {
+    "message": "Bu sayfayı düzenle",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "{heading} doğrudan bağlantı",
+    "description": "Title for link to heading"
+  },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Bu, {siteTitle} {versionLabel} sürümü için yayınlanmamış dokümantasyondur.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
@@ -110,14 +118,6 @@
     "message": "en son sürüm",
     "description": "The label used for the latest version suggestion link label"
   },
-  "theme.common.editThisPage": {
-    "message": "Bu sayfayı düzenle",
-    "description": "The link label to edit the current page"
-  },
-  "theme.common.headingLinkTitle": {
-    "message": "{heading} doğrudan bağlantı",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": " {date} tarihinde",
     "description": "The words used to describe on which date a page has been last updated"
@@ -130,13 +130,13 @@
     "message": "En son {atDate} {byUser} güncellendi",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.NotFound.title": {
-    "message": "Sayfa Bulunamadı",
-    "description": "The title of the 404 page"
-  },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "Versiyonlar",
     "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "Sayfa Bulunamadı",
+    "description": "The title of the 404 page"
   },
   "theme.tags.tagsListLabel": {
     "message": "Etiketler:",
@@ -186,6 +186,10 @@
     "message": "Kopyala",
     "description": "The copy button label on code blocks"
   },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Kelime kaydırmayı aç/kapat",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Expand sidebar category '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -194,9 +198,13 @@
     "message": "Collapse sidebar category '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Kelime kaydırmayı aç/kapat",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Languages",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Aradığınız şeyi bulamadık.",
@@ -206,17 +214,17 @@
     "message": "Lütfen sizi orijinal URL'ye yönlendiren sitenin sahibiyle iletişime geçin ve bağlantısının bozuk olduğunu bildirin.",
     "description": "The 2nd paragraph of the 404 page"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Languages",
-    "description": "The label for the mobile language switcher dropdown"
-  },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Main",
-    "description": "The ARIA label for the main navigation"
-  },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Bu sayfada",
     "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Daha Fazla",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "{title} hakkında daha fazla bilgi edinin",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
     "message": "{readingTime} dakikalık okuma|{readingTime} dakikalık okuma",
@@ -233,14 +241,6 @@
   "theme.docs.sidebar.collapseButtonAriaLabel": {
     "message": "Kenar çubuğunu daralt",
     "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.blog.post.readMore": {
-    "message": "Daha Fazla",
-    "description": "The label used in blog post item excerpts to link to full blog posts"
-  },
-  "theme.blog.post.readMoreLabel": {
-    "message": "{title} hakkında daha fazla bilgi edinin",
-    "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.docs.sidebar.navAriaLabel": {
     "message": "Docs sidebar",
@@ -286,60 +286,28 @@
     "message": "Bu sayfa listelenmemiş. Arama motorları dizine eklemez ve yalnızca doğrudan bağlantısı olan kullanıcılar buna erişebilir.",
     "description": "The unlisted content banner message"
   },
+  "Services Intro": {
+    "message": "Hizmetler"
+  },
   "Installation": {
-    "message": "Yükelemeler",
+    "message": "Kurulumlar",
     "description": "Installation"
   },
-  "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.": {
-    "message": "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
+  "Installation guides for network testnets.": {
+    "message": "Ağ testnetleri için kurulum rehberleri."
   },
-  "SnapShot": {
-    "message": "SnapShot"
-  },
-  "directory.": {
-    "message": "directory."
-  },
-  "StateSyncs": {
-    "message": "StateSyncs"
-  },
-  "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.": {
-    "message": "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer."
-  },
-  "Test 1": {
-    "message": "Test 1",
-    "description": "Test 1"
-  },
-  "Long text for the first feature.": {
-    "message": "Long text for the first feature."
-  },
-  "Test 2": {
-    "message": "Test 2",
-    "description": "Test 2"
-  },
-  "Long text for the second feature.": {
-    "message": "Long text for the second feature."
-  },
-  "Long text for the third feature.": {
-    "message": "Long text for the third feature."
-  },
-  "Node installation guides for network testnets.": {
-    "message": "Ağ testnetleri için node kurulum rehberleri."
-  },
-  "Snapshot": {
+  "Snapshots": {
     "message": "Snapshot",
     "description": "Snapshot"
   },
   "Node installation with snapshots.": {
-    "message": "Anlık görüntüler ile node kurulumu."
+    "message": "Anlık görüntüler ile node senkronizasyonu."
   },
   "StateSync": {
     "message": "StateSync",
     "description": "StateSync"
   },
   "Node synchronization with Statesync.": {
-    "message": "StateSync ile node senkronizasyonu."
-  },
-  "Service Intro": {
-    "message": "Hizmetlere Giriş"
+    "message": "Statesync ile anlık node senkronizasyonu."
   }
 }

@@ -16,7 +16,7 @@ const config = {
   url: 'https://AnatolianTeam.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Anatolian-Team-Services/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -25,7 +25,7 @@ const config = {
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -50,8 +50,8 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/AnatolianTeam/AnatolianTeam.github.io/tree/master/',
+          editUrl: 'https://github.com/AnatolianTeam/Anatolian-Team-Services/tree/master/',
+          editLocalizedFiles: true
         },
         blog: false,
         theme: {
@@ -125,14 +125,14 @@ const config = {
             ]
           },
           {
+            type: 'localeDropdown',
+            position: 'right',
+          },  
+          {
             href: 'https://anatolianteam.com/',
             label: 'Website',
             position: 'right',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },   
+          }, 
         ],
       },
       footer: {

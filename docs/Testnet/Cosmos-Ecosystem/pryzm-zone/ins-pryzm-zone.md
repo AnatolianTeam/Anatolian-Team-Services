@@ -39,29 +39,30 @@ The areas you need to change are written below.
 echo "export PRYZM_NODENAME=$PRYZM_NODENAME"  >> $HOME/.bash_profile
 echo "export PRYZM_WALLET=$PRYZM_WALLET" >> $HOME/.bash_profile
 echo "export PRYZM_PORT=11" >> $HOME/.bash_profile
-echo "export PRYZM_CHAIN_ID=fPRYZM_9052-1" >> $HOME/.bash_profile
+echo "export PRYZM_CHAIN_ID=indigo-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Sample
-Let's assume that your Node (`PRYZM_NODENAME`) and Wallet (`PRYZM_WALLET`) name is `Mehmet` and the port you will use (`PRYZM_PORT`) will be `16656`. The code will be arranged as shown below.
+Let's assume that your Node (`PRYZM_NODENAME`) and Wallet (`PRYZM_WALLET`) name is `Anatolian-Guide` and the port you will use (`PRYZM_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
-echo "export PRYZM_NODENAME=Mehmet"  >> $HOME/.bash_profile
-echo "export PRYZM_WALLET=Mehmet" >> $HOME/.bash_profile
+echo "export PRYZM_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export PRYZM_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export PRYZM_PORT=16" >> $HOME/.bash_profile
-echo "export PRYZM_CHAIN_ID=fPRYZM_9052-1" >> $HOME/.bash_profile
+echo "export PRYZM_CHAIN_ID=indigo-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ## Installing Pryzm
 ```
 cd $HOME
-wget https://storage.googleapis.com/pryzm-resources/pryzmd-0.9.0-linux-amd64.tar.gz
-tar -xzvf pryzmd-0.9.0-linux-amd64.tar.gz
-mv pryzmd /root/go/bin
+wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64.tar.gz
+tar -xzvf pryzmd-0.10.0-linux-amd64.tar.gz && chmod +x pryzmd
+rm -rf pryzmd-0.10.0-linux-amd64.tar.gz
+mv pryzmd /root/go/bin/
 pryzmd version
 ```
-The version output will be `0.9.0`.
+The version output will be `0.10.0`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
@@ -75,7 +76,7 @@ pryzmd init --chain-id $PRYZM_CHAIN_ID $PRYZM_NODENAME
 wget  -O $HOME/.pryzm/config/genesis.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.25aacre"|g' $HOME/.pryzm/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.25upryzm"|g' $HOME/.pryzm/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
@@ -83,7 +84,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.pryzm/config/config.t
 
 # Set up SEED and PEERS
 SEEDS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.babylond/config/config.toml
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.pryzm/config/config.toml
 
 # Enabling Prometheus
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.pryzm/config/config.toml
@@ -99,9 +100,21 @@ sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.pryzm/config/app.toml
 
 # Set up Ports
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${PRYZM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${PRYZM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${PRYZM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${PRYZM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${PRYZM_PORT}660\"%" $HOME/.pryzm/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${PRYZM_PORT}317\"%; s%^address = \":8080\"%address = \":${PRYZM_PORT}080\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:${PRYZM_PORT}545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:${PRYZM_PORT}546\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${PRYZM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${PRYZM_PORT}091\"%" $HOME/.pryzm/config/app.toml
-sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:${PRYZM_PORT}657\"%" $HOME/.pryzm/config/client.toml
+# Set up Ports
+sed -i.bak -e "
+s%:26658%:${BBN_PORT}658%g;
+s%:26657%:${BBN_PORT}657%g;
+s%:6060%:${BBN_PORT}060%g;
+s%:26656%:${BBN_PORT}656%g;
+s%:26660%:${BBN_PORT}660%g
+" $HOME/.pryzm/config/config.toml
+sed -i.bak -e "
+s%:1317%:${BBN_PORT}317%g; 
+s%:8080%:${BBN_PORT}080%g; 
+s%:9090%:${BBN_PORT}090%g; 
+s%:9091%:${BBN_PORT}091%g
+" $HOME/.pryzm/config/app.toml
+sed -i.bak -e "s%:26657%:${BBN_PORT}657%g" $HOME/.pryzm/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
@@ -109,16 +122,18 @@ sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${PRYZM_PORT}65
 mv ~/.pryzm/config/config.toml.tmp  ~/.pryzm/config/config.toml
 
 # Creating the Service File
-tee /etc/systemd/system.pryzm.service > /dev/null << EOF
+tee /etc/systemd/system/pryzmd.service > /dev/null << EOF
 [Unit]
-Description.pryzm Node
+Description=pryzmd
 After=network-online.target
+
 [Service]
 User=$USER
-ExecStart=$(which.pryzm) start
+ExecStart=$(which pryzmd) start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
+
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -127,18 +142,18 @@ EOF
 ## Enabling the Service
 ```shell
 systemctl daemon-reload
-systemctl enable.pryzm
+systemctl enable pryzmd
 ```
 
 ## Checking the Logs
 ```shell
-journalctl -u.pryzm -f -o cat
+journalctl -u pryzmd -f -o cat
 ```  
 
 🔴 **AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.**
 
-## Senkronizasyonu Kontrol Etme
-`false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
+## Checking Synchronization
+Unless we get a `false` output, we do not move on to the next step, namely creating a validator.
 ```shell
 pryzmd status 2>&1 | jq .SyncInfo
 ```
@@ -160,8 +175,8 @@ pryzmd keys add $PRYZM_WALLET --recover
 Here we add our wallet and valve information to the variable.
 
 ```shell
-PRYZM_WALLET_ADDRESS=$.pryzm keys show $PRYZM_WALLET -a)
-PRYZM_VALOPER_ADDRESS=$.pryzm keys show $PRYZM_WALLET --bech val -a)
+PRYZM_WALLET_ADDRESS=$(pryzmd keys show $PRYZM_WALLET -a)
+PRYZM_VALOPER_ADDRESS=$(pryzmd keys show $PRYZM_WALLET --bech val -a)
 ```
 
 ```shell
@@ -175,7 +190,7 @@ source $HOME/.bash_profile
 pryzmd query bank balances $PRYZM_WALLET_ADDRESS
 ```
 
-🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
+🔴 **If the synchronization is completed, we proceed to the following step.**
 
 
 ## Creating Validator
@@ -186,15 +201,15 @@ You do not need to make any changes to the following command other than the plac
     - `security-contact` Your email address.
  ```shell 
 pryzmd tx staking create-validator \
---amount=490000000000000000000aacre \
---pubkey=$.pryzm tendermint show-validator) \
+--amount=490000000000000000000upryzm \
+--pubkey=$(pryzmd tendermint show-validator) \
 --moniker=$PRYZM_NODENAME \
 --chain-id=$PRYZM_CHAIN_ID \
 --commission-rate=0.10 \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.25aacre \
+--gas-prices=0.25upryzm \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$PRYZM_WALLET \
@@ -204,162 +219,3 @@ pryzmd tx staking create-validator \
 --identity="XXXX1111XXXX1111" \
 --yes
 ```
-
-## USEFUL COMMANDS
-
-## Checking Logs
-```
-journalctl -fu.pryzm -o cat
-```
-
-### Starting Node
-```
-systemctl start.pryzm
-```
-
-### Stopping the Node
-```
-systemctl stop acquired
-```
-
-### Restarting the Node
-```
-systemctl restart.pryzm
-```
-
-### Node Sync Status
-```
-acquired status 2>&1 | jq .SyncInfo
-```
-```
-curl -s localhost:26657/status | jq .result.sync_info
-```
-
-### Validator Information
-```
-acquired status 2>&1 | jq .ValidatorInfo
-```
-
-### Node Information
-```
-acquired status 2>&1 | jq .NodeInfo
-```
-
-### Learning Node ID
-```
-pryzmd tendermint show-node-id
-```
-
-### Learning Node IP Address
-```
-curl icanhazip.com
-```
-
-### Viewing the List of Wallets
-```
-acquired keys list
-```
-
-### Seeing Wallet Address
-```
-pryzmd keys show $PRYZM_WALLET --bech val -a
-```
-
-### Importing Wallet
-```
-acquired keys add $PRYZM_WALLET --recover
-```
-
-### Deleting Your Wallet
-```
-acquired keys delete $PRYZM_WALLET
-```
-
-### Checking Wallet Balance
-```
-pryzmd query bank balances $PRYZM_WALLET_ADDRESS
-```
-
-### Transferring from One Wallet to Another
-```
-pryzmd tx bank send $PRYZM_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aacre
-```
-
-### Participating in Proposal Voting
-```
-pryzmd tx gov vote 1 yes --from $PRYZM_WALLET --chain-id=$PRYZM_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Validatore Staking / Delegation
-```
-pryzmd tx staking delegate $PRYZM_VALOPER_ADDRESS 100000000aacre --from=$PRYZM_WALLET --chain-id=$PRYZM_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Staking / Redelegate from Current Validator to Other Validator
-`srcValidatorAddress`: Address of the current staked validator
-`destValidatorAddress`: Address of the new validator to be staked
-```
-pryzmd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aacre --from=$PRYZM_WALLET --chain-id=$PRYZM_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Withdraw Rewards
-```
-pryzmd tx distribution withdraw-all-rewards --from=$PRYZM_WALLET --chain-id=$PRYZM_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Withdrawing Commission Rewards
-
-```
-pryzmd tx distribution withdraw-rewards $PRYZM_VALOPER_ADDRESS --from=$PRYZM_WALLET --commission --chain-id=$PRYZM_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Changing Validator Name
-Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
-```
-pryzmd tx staking edit-validator \
---moniker=NEW-NODE-NAME\
---chain-id=$PRYZM_CHAIN_ID\
---from=$PRYZM_WALLET\
---gas-prices 0.00001aacre\
---gas-adjustment 1.5\
---gas auto -y
-```
-
-### Changing Validator Commission Rate
-We change the value in the section that says 'commission-rate'.
-```
-pryzmd tx staking edit-validator --commission-rate "0.02" --moniker=$PRYZM_NODENAME --from $PRYZM_WALLET --chain-id $PRYZM_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto - y
-```
-
-### Editing Your Validator Information
-Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
-`$PRYZM_NODENAME` and `$PRYZM_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
-```
-pryzmd tx staking edit-validator \
---moniker=$PRYZM_NODENAME\
---identity=XXXX0000XXXX0000\
---website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
---details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$PRYZM_CHAIN_ID\
---from=$PRYZM_WALLET
-```
-
-### Recovering Validator from Jail
-```
-pryzmd tx slashing unjail --from $PRYZM_WALLET --chain-id $PRYZM_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-
-```
-
-### Completely Deleting the Node
-
-```
-systemctl stop acquired && \
-systemctl disable acquired && \
-rm /etc/systemd/system.pryzm.service && \
-systemctl daemon-reload && \
-cd $HOME && \
-rm -rf .pryzm.pryzm && \
-rm -rf $(which acres)
-sed -i '/PRYZM_/d' ~/.bash_profile
-```
-​

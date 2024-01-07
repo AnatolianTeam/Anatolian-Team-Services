@@ -1,8 +1,8 @@
 ---
-title: 🔄 StateSync
+title: 🆙 Update
 sidebar_position: 2
 ---
 
-# StateSync
+# Update
 
-Yakında eklenecek...
+Coming soon...

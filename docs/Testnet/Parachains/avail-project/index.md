@@ -1,33 +1,35 @@
 ---
-id: Avail Project
+id: introduction
 hide_table_of_contents: true
 ---
 
 # Avail Project
 
+![Avail Project](./img/Avail-Service.jpg)
+
 ## Links
 
- ✔️ [Website](https://pryzm.zone/) | ✔️ [Explorer](https://cosmos-testnet.anatolianteam.com/Pryzm) | ✔️ [Doc](https://docs.pryzm.zone/) | ✔️ [GitHub](https://github.com/pryzm-finance) | ✔️ [Discord](https://discord.gg/eZGaXFEeEZ) | ✔️ [Zealy](https://zealy.io/c/pryzm/invite/cfNmFH3eoXrvl2Rr9qk7o)
+ ✔️ [Website](https://availproject.org/) | ✔️ [Explorer](https://goldberg.avail.tools/) | ✔️ [Doc](https://docs.availproject.org) | ✔️ [GitHub](https://github.com/availproject) | ✔️ [Blog](https://blog.availproject.org/) | ✔️ [Discord](https://discord.gg/BDARnX7dMJ)
 
 ## Requirements
 
 | Components | Minimum | **Recommended** |
 | ------------ | ------------ | ------------ |
-| CPU |	4 | 4 |
-| RAM	| 16 GB | 16 GB |
-| Storage	| 120 GB SSD | 250 GB SSD |
+| CPU |	2 | 4 |
+| RAM	| 4 GB | 8 GB |
+| Storage	| 20-40 GB SSD | 200-300 GB SSD |
 
 ## Network Info 
 
-* Network Chain ID: 
-* Binary: 
-* Denom: 
-* Working directory: 
+* Network Chain ID: goldberg
+* Binary: avail
+* Denom: AVL
+* Working directory: avail / avail-light / avail-light-relay / avail-light-bootstrap
 
 ## Public Services
 * **RPC:** 
 * **API:** 
-* **Explorer:** 
+* **Explorer:** https://goldberg.avail.tools
 
 
 ```mdx-code-block

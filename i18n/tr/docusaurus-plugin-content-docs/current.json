@@ -3,25 +3,13 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
-    "message": "Tutorial - Basics",
-    "description": "The label for category Tutorial - Basics in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Testnet": {
+    "message": "Testnet",
+    "description": "The label for category Testnet in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
-    "message": "5 minutes to learn the most important Docusaurus concepts.",
-    "description": "The generated-index page description for category Tutorial - Basics in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Tutorial - Extras": {
-    "message": "Tutorial - Extras",
-    "description": "The label for category Tutorial - Extras in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Testnets": {
-    "message": "Testnetler",
-    "description": "The label for category Testnets in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Testnets.link.generated-index.description": {
+  "sidebar.tutorialSidebar.category.Testnet.link.generated-index.description": {
     "message": "Here you will find guides for testnets belonging to the Cosmos ecosystem.",
-    "description": "The generated-index page description for category Testnets in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category Testnet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Cosmos Ecosystem": {
     "message": "Cosmos Ekosistemi",
@@ -30,6 +18,14 @@
   "sidebar.tutorialSidebar.category.Cosmos Ecosystem.link.generated-index.description": {
     "message": "Here you will find guides for testnets belonging to the Cosmos ecosystem.",
     "description": "The generated-index page description for category Cosmos Ecosystem in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Babylon Chain": {
+    "message": "Babylon Chain",
+    "description": "The label for category Babylon Chain in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Crowd Control": {
+    "message": "Crowd Control",
+    "description": "The label for category Crowd Control in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Pryzm Zone": {
     "message": "Pryzm Zone",
@@ -40,28 +36,8 @@
     "description": "The label for category Paracahins in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Paracahins.link.generated-index.description": {
-    "message": "Burada Parachains ekosistemine ait test ağları için rehberleri bulacaksınız.",
+    "message": "Here you will find guides for testnets belonging to the Parachains.",
     "description": "The generated-index page description for category Paracahins in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Avail Project": {
-    "message": "Avail Project",
-    "description": "The label for category Avail Project in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Mainnets": {
-    "message": "Mainnetler",
-    "description": "The label for category Mainnets in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Mainnets.link.generated-index.description": {
-    "message": "Burada Cosmos ekosistemine ait test ağları için rehberleri bulacaksınız.",
-    "description": "The generated-index page description for category Mainnets in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Testnet": {
-    "message": "Testnet",
-    "description": "The label for category Testnet in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Testnet.link.generated-index.description": {
-    "message": "Here you will find guides for testnets belonging to the Cosmos ecosystem.",
-    "description": "The generated-index page description for category Testnet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Mainnet": {
     "message": "Mainnet",

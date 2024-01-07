@@ -5,13 +5,13 @@ hide_table_of_contents: true
 
 # Arable Protocol
 
-## Bağlantılar
+## Links
 
-## Gereksinimler
+## Requirements
 
-## Ağ Bilgisi
+## Network Info 
 
-## Servisler
+## Public Services
 
 ## Peering
 

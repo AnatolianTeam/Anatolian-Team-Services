@@ -5,41 +5,40 @@ hide_table_of_contents: true
 
 # Pryzm Zone
 
-## Bağlantılar
+## Links
 
  ✔️ [Website](https://pryzm.zone/) | ✔️ [Explorer](https://cosmos-testnet.anatolianteam.com/Pryzm) | ✔️ [Doc](https://docs.pryzm.zone/) | ✔️ [GitHub](https://github.com/pryzm-finance) | ✔️ [Discord](https://discord.gg/eZGaXFEeEZ) | ✔️ [Zealy](https://zealy.io/c/pryzm/invite/cfNmFH3eoXrvl2Rr9qk7o)
 
-## Gereksinimler
+## Requirements
 
-| Bileşenler | Minimum | **Önerilen** |
+| Components | Minimum | **Recommended** |
 | ------------ | ------------ | ------------ |
 | CPU |	4 | 4 |
 | RAM	| 16 GB | 16 GB |
 | Storage	| 120 GB SSD | 250 GB SSD |
 
-## Ağ Bilgisi 
+## Network Info 
 
 * Network Chain ID: indigo-1
 * Binary: pryzmd
 * Denom: upryzm
 * Working directory: .pryzm
 
-## Servisler
+## Public Services
 * **RPC:** 
 * **API:** 
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/Pryzm
+* **Explorer:** 
 
 ## Peering
-Hızlı bağlantı ya da StateSync için kullanabilirsiniz
+You can use peer for fast connection or state sync
 ```shell
 peers=""
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.pryzm/config/config.toml
 ```
-Adres defteri saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
+The address book is updated once an hour. You can use it for quick launch.
 ```shell
 wget -O $HOME/.pryzm/config/addrbook.json ""
 ```
-
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

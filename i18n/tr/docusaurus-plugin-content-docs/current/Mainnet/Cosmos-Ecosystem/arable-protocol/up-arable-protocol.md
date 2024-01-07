@@ -1,8 +1,8 @@
 ---
-title: 🆙 Güncelleme
+title: 🆙 Update
 sidebar_position: 2
 ---
 
-# Güncelleme
+# Update
 
-Yakında eklenecek...
+Coming soon...

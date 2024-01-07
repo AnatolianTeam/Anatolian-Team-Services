@@ -84,12 +84,10 @@ export default function Home() {
                   style={{ width: '60%', height: 'auto' }}
                 />
                 <h3>
-                  <Translate description="Installation">Installation</Translate>
+                <Translate description="Installation">Installation</Translate>
                 </h3>
                 <p>
-                  <Translate>
-                  Installation guides for network testnets.
-                  </Translate>
+                <Translate>Installation guides for network testnets.</Translate>
                 </p>
               </div>
             </div>
@@ -104,12 +102,10 @@ export default function Home() {
                   style={{ width: '60%', height: 'auto' }}
                 />
                 <h3>
-                  <Translate description="Snapshot">Snapshot</Translate>
+                <Translate description="Snapshot">Snapshots</Translate>
                 </h3>
                 <p>
-                  <Translate>
-                  Node installation with snapshots.
-                  </Translate>
+                <Translate>Node installation with snapshots.</Translate>
                 </p>
               </div>
             </div>
@@ -123,12 +119,10 @@ export default function Home() {
                   style={{ width: '60%', height: 'auto' }}
                 />
                 <h3>
-                  <Translate description="StateSync">StateSync</Translate>
+                <Translate description="StateSync">StateSync</Translate>
                 </h3>
                 <p>
-                  <Translate>
-                    Node synchronization with Statesync.
-                  </Translate>
+                <Translate>Node synchronization with Statesync.</Translate>
                 </p>
               </div>
             </div>

@@ -2,21 +2,21 @@
 sidebar_position: 1
 ---
 
-# Giriş
+# Services Intro
 
-Bu bölümde yeni başlayanlar ve buradaki dokümanlardan faydalanacaklar için **kısa bilgilendirmeleri** bulacaksınız.
+In this section you will find **brief information** for beginners and those who will benefit from the documents here.
 
-## Başlarken
+## Getting Started
 
-İlk olarak sunucunuza bağlandığınızda **yönetici izinlerine** sahip olduğunuzdan emin olun. Aşağıdaki kodu kullanın.
+First, make sure you have **administrator permissions** when you connect to your server. Use the code below.
 
 ```bash
 sudo su
 ```
 
-### Gğncellemeler ve Yükseltmeler
+### Updates and Upgrades
 
-Yönetici izinlerinizi aldıktan sonra sunucunuzu güncelleyin ve yükseltmeleri yapın.
+Once you have administrative permissions, update your server and perform upgrades.
 
 ```bash
 apt update && apt upgrade -y
@@ -24,14 +24,14 @@ apt update && apt upgrade -y
 
 ## Installations
 
-Yüklemeler sırasında ilgili kodlarda **değiştirilmesi gereken yerler belirtilecektir.** Bunun dışında kodlarda **herhangi bir değişiklik yapmanıza gerek yoktur.**
+During installation, **the areas that need to be changed** in the relevant codes will be indicated. Other than that, **you don't need to make any changes** to the codes.
 
-Rehberleri herkesin anlayabileceği bir dille yazmaya özen gösteriyoruz. Yine de takıldığınız yerler olursa bizr [telegram](https://t.me/AnatolianTeam) sayfamızdan ulaşabilirsiniz. Orada bulunanlar sizlere yardımcı olacaktır. 
+We take care to write the guides in a language that everyone can understand. If you still get stuck, you can reach us on our [telegram](https://t.me/AnatolianTeam) page. Those who are there will help you.
 
 ## Contribution
 
-Sitede karşılaştığınız hataları bize bildirmekten çekinmeyin. Sonuçta biz de insanız ve hata yapabiliriz.
+Do not hesitate to let us know any errors you encounter on the site. After all, we are human too and can make mistakes.
 
 ## Updates
 
-Bu sayfa zamanla güncellenecektir. Siz de katkıda bulunabilirsiniz. Bize [telegram](https://t.me/AnatolianTeam) sayfamızdan ulaşabilirsiniz.
+This home page will be updated over time. You too can contribute. You can reach us on our [telegram](https://t.me/AnatolianTeam) page.
