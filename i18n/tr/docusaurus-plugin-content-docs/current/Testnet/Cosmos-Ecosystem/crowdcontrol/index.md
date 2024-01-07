@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 ![Crowd Control](./img/CC-Service.jpg)
 
-## Links
+## Bağlantılar
  ✔️ [Website](https://crowdcontrol.network/) |
  ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Crowd%20Control) |
  ✔️ [Doküman](https://github.com/DecentralCardGame/whitepaper/blob/master/whitepaper.pdf) |
