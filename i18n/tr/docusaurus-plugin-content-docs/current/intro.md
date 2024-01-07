@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Services Intro
+# Hizmetlere Giriş
 
 In this section you will find **brief information** for beginners and those who will benefit from the documents here.
 
