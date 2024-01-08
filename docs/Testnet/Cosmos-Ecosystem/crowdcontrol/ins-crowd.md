@@ -99,19 +99,19 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 # Set up Ports
 sed -i.bak -e "
-s%:26658%:${BBN_PORT}658%g;
-s%:26657%:${BBN_PORT}657%g;
-s%:6060%:${BBN_PORT}060%g;
-s%:26656%:${BBN_PORT}656%g;
-s%:26660%:${BBN_PORT}660%g
+s%:26658%:${CROWD_PORT}658%g;
+s%:26657%:${CROWD_PORT}657%g;
+s%:6060%:${CROWD_PORT}060%g;
+s%:26656%:${CROWD_PORT}656%g;
+s%:26660%:${CROWD_PORT}660%g
 " $HOME/.Cardchain/config/config.toml
 sed -i.bak -e "
-s%:1317%:${BBN_PORT}317%g; 
-s%:8080%:${BBN_PORT}080%g; 
-s%:9090%:${BBN_PORT}090%g; 
-s%:9091%:${BBN_PORT}091%g
+s%:1317%:${CROWD_PORT}317%g; 
+s%:8080%:${CROWD_PORT}080%g; 
+s%:9090%:${CROWD_PORT}090%g; 
+s%:9091%:${CROWD_PORT}091%g
 " $HOME/.Cardchain/config/app.toml
-sed -i.bak -e "s%:26657%:${BBN_PORT}657%g" $HOME/.Cardchain/config/client.toml
+sed -i.bak -e "s%:26657%:${CROWD_PORT}657%g" $HOME/.Cardchain/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
