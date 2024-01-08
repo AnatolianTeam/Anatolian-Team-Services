@@ -231,7 +231,7 @@ babylond tx checkpointing create-validator \
 --yes
 ```
 
-### Node'u Tamamen Silme 
+## Node'u Tamamen Silme 
 ```
 systemctl stop babylond && \
 systemctl disable babylond && \
