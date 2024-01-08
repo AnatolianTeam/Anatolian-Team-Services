@@ -56,7 +56,7 @@ source $HOME/.bash_profile
 ```
 cd $HOME
 git clone https://github.com/DecentralCardGame/Cardchain
-wget https://github.com/DecentralCardGame/Cardchain/releases/download/v0.11.0/Cardchaind
+wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.13.0/Cardchaind
 chmod +x Cardchaind
 mv $HOME/Cardchaind /usr/local/bin
 Cardchaind version
