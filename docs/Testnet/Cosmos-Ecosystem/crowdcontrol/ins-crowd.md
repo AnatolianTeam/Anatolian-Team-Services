@@ -61,7 +61,7 @@ chmod +x Cardchaind
 mv $HOME/Cardchaind /usr/local/bin
 Cardchaind version
 ```
-The version output will be `0.11.0`.
+The version output will be `0.13.0`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
