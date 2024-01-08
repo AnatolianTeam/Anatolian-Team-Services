@@ -74,7 +74,7 @@ Cardchaind init --chain-id $CROWD_CHAIN_ID $CROWD_NODENAME
 wget  -O $HOME/.Cardchain/config/genesis.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.25ubpf"|g' $HOME/.Cardchain/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0ubpf"|g' $HOME/.Cardchain/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
