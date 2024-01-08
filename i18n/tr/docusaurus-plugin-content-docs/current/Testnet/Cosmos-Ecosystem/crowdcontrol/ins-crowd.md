@@ -217,3 +217,15 @@ Cardchaind tx staking create-validator \
 --identity="XXXX1111XXXX1111" \
 --yes
 ```
+
+## Node'u Tamamen Silme
+ ```shell 
+systemctl stop Cardchaind && \
+systemctl disable Cardchaind && \
+rm /etc/systemd/system/Cardchaind.service && \
+systemctl daemon-reload && \
+cd $HOME && \
+rm -rf .Cardchain Cardchain && \
+rm -rf $(which Cardchaind)
+sed -i '/CROWD_/d' ~/.bash_profile
+ ```
