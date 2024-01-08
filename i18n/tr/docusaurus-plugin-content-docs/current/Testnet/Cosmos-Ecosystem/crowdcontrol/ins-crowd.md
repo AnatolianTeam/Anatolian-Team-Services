@@ -71,7 +71,7 @@ Cardchaind config chain-id $CROWD_CHAIN_ID
 Cardchaind init --chain-id $CROWD_CHAIN_ID $CROWD_NODENAME
 
 # Copying the Genesis File
-wget  -O $HOME/.Cardchain/config/genesis.json
+wget http://45.136.28.158:3000/genesis.json -O $HOME/.Cardchain/config/genesis.json
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0ubpf"|g' $HOME/.Cardchain/config/app.toml
