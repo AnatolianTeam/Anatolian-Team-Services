@@ -136,10 +136,11 @@ WantedBy=multi-user.target
 EOF
 ```
 
-## Enabling the Service
+## Enabling and Starting the Service
 ```shell
 systemctl daemon-reload
 systemctl enable Cardchaind
+systemctl start Cardchaind
 ```
 
 ## Checking the Logs
