@@ -208,6 +208,13 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      announcementBar: {
+        id: 'support_us',
+        content: '⛑️ Our Services Website is Under Construction. 🚧 Hizmetler Web Sitemiz Yapım Aşamasındadır. ⛑️',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
     }),
     stylesheets: ["https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500&display=swap"],
 };
