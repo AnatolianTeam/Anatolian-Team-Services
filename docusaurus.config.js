@@ -11,6 +11,9 @@ const config = {
   title: 'Anatolian Team',
   tagline: 'Always forward with the Anatolian Team 🚀',
   favicon: 'img/favicon.ico',
+  customFields: {
+    description: 'Anatolian Team Services Website. Installation Guides, Snaphots, StateSync for the testnet networks and more...',
+  },
 
   // Set the production url of your site here
   url: 'https://AnatolianTeam.github.io',
@@ -65,17 +68,16 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'description', content: 'Welcome to the Anatolian Team Service.',},
+        {name: 'description', content: 'Welcome to the Anatolian Team Services.',},
         {name: 'robots', content: 'index, follow'},
         {name: 'og:image', content: 'img/anatolian-doc-social-card.jpg'},        
         {name: 'twitter:card', content: 'summary_large_image'},
         {name: 'og:title', content: 'Anatolian Team | Service'},
-        {name: 'og:description', content: 'Anatolian Team Service Website'},
-        {name: 'og:image:type', content: 'image/jpg'},
+        {name: 'og:description', content: 'Anatolian Team Services Website. Installation Guides, Snaphots, StateSync for the testnet networks... '},
         {name: 'og:image:type', content: 'image/jpg'},
       ],
       // Replace with your project's social card
-      image: 'img/anatolian-doc-social-card.jpg',
+      // image: 'img/anatolian-doc-social-card.jpg',
       navbar: {
         title: 'Anatolian Team',
         logo: {
@@ -208,7 +210,27 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      colorMode: {
+        defaultMode: 'dark'
+      },
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '⛑️ Our Services Website is Under Construction. 🚧 Hizmetler Web Sitemiz Yapım Aşamasındadır. ⛑️',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
     }),
+    plugins: [
+      [
+        '@easyops-cn/docusaurus-search-local',
+        {
+          hashed: true,
+          docsRouteBasePath: '/'
+        }
+      ]
+    ],
     stylesheets: ["https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500&display=swap"],
 };
 

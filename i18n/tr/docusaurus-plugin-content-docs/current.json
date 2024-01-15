@@ -8,7 +8,7 @@
     "description": "The label for category Testnet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Testnet.link.generated-index.description": {
-    "message": "Here you will find guides for testnets belonging to the Cosmos ecosystem.",
+    "message": "Burada Cosmos ekosistemine ait test ağlarına yönelik rehberleri bulacaksınız.",
     "description": "The generated-index page description for category Testnet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Cosmos Ecosystem": {
@@ -16,7 +16,7 @@
     "description": "The label for category Cosmos Ecosystem in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Cosmos Ecosystem.link.generated-index.description": {
-    "message": "Here you will find guides for testnets belonging to the Cosmos ecosystem.",
+    "message": "Burada Cosmos ekosistemine ait test ağlarına yönelik rehberleri bulacaksınız.",
     "description": "The generated-index page description for category Cosmos Ecosystem in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Babylon Chain": {
@@ -44,7 +44,7 @@
     "description": "The label for category Mainnet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Mainnet.link.generated-index.description": {
-    "message": "Here you will find guides for testnets belonging to the Cosmos ecosystem.",
+    "message": "Burada Cosmos ekosistemine ait test ağlarına yönelik rehberleri bulacaksınız.",
     "description": "The generated-index page description for category Mainnet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Arable Protocol": {
@@ -54,5 +54,21 @@
   "sidebar.tutorialSidebar.category.Q Blockchain": {
     "message": "Q Blockchain",
     "description": "The label for category Q Blockchain in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Chain4Energy": {
+    "message": "Chain4Energy",
+    "description": "The label for category Chain4Energy in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.OKP4": {
+    "message": "OKP4",
+    "description": "The label for category OKP4 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Substrate Ecosystem": {
+    "message": "Substrate Ekosistemi",
+    "description": "The label for category Substrate Ecosystem in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Substrate Ecosystem.link.generated-index.description": {
+    "message": "Burada Substrate tabanlı projelere ait test ağları için rehberleri bulacaksınız.",
+    "description": "The generated-index page description for category Substrate Ecosystem in sidebar tutorialSidebar"
   }
 }

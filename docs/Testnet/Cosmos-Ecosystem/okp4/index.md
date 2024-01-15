@@ -2,16 +2,16 @@
 id: introduction
 hide_table_of_contents: true
 ---
-# Crowd Control
+# OKP4 
 
-![Crowd Control](./img/CC-Service.jpg)
+![Chain4Energy](./img/OKP4-Service.jpg)
 
 ## Links
- ✔️ [Website](https://crowdcontrol.network/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Crowd%20Control) |
- ✔️ [Docs](https://github.com/DecentralCardGame/whitepaper/blob/master/whitepaper.pdf) |
- ✔️ [GitHub](https://github.com/DecentralCardGame) |
- ✔️ [Discord](https://discord.gg/5DYef3CpME)
+ ✔️ [Website](https://c4e.io/) |
+ ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Chain4Energy) |
+ ✔️ [Docs](https://docs.c4e.io/) |
+ ✔️ [GitHub](https://github.com/chain4energy) |
+ ✔️ [Discord](https://discord.gg/chain4energy)
 
 ## Requirements
 
@@ -23,10 +23,10 @@ hide_table_of_contents: true
 
 ## Network Info 
 
-* Network Chain ID: cardtestnet-8
-* Binary: Cardchaind
-* Denom: ubpf
-* Working directory: .Cardchaind
+* Network Chain ID: babajaga-1
+* Binary: c4ed
+* Denom: uc4e
+* Working directory: .c4e-chain
 
 ## Public Services
 * **RPC:** https://rpc-t-cardchain.anatolianteam.com/ (Coming soon)
@@ -37,7 +37,7 @@ hide_table_of_contents: true
 You can use peer for fast connection or state sync (Coming soon)
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.Cardchaind/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.c4e-chain/config/config.toml
 ```
 The address book is updated once an hour. You can use it for quick launch.
 ```shell

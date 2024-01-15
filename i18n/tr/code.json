@@ -309,5 +309,40 @@
   },
   "Node synchronization with Statesync.": {
     "message": "Statesync ile anlık node senkronizasyonu."
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Sonuç yok"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "\"{context}\" dışındaki sonuçları görün"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "{context} içindeki tüm sonuçları görün"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Tüm sonuçları görüntüle"
+  },
+  "theme.SearchBar.label": {
+    "message": "Ara",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "\"{query}\" için arama sonuçları",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Dokümanlarda arama yapın",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "her yerde"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "1 doküman bulundu|{count} doküman bulundu",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Hiçbir doküman bulunamadı",
+    "description": "The paragraph for empty search result"
   }
 }
