@@ -6,10 +6,10 @@ description: Node synchronization with StateSync.
 # StateSync
 
 ```shell
-systemctl stop pryzm
+systemctl stop pryzmd
 
 cp $HOME/.pryzm/data/priv_validator_state.json $HOME/.pryzm/priv_validator_state.json.backup
-pryzm tendermint unsafe-reset-all --home $HOME/.pryzm --keep-addr-book
+pryzmd tendermint unsafe-reset-all --home $HOME/.pryzm --keep-addr-book
 
 SNAP_RPC="https://rpc-t-pryzm.anatolianteam.com:443"
 
