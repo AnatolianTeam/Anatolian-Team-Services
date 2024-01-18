@@ -5,13 +5,12 @@ image: ./img/CC-Service-Cover.jpg
 keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (COMING SOON)
+# Snapshot
 
 ```shell
 # install lz4
 apt update
-apt install snapd -y
-snap install lz4
+apt install lz4 -y
 ```
 
 ```shell
@@ -26,4 +25,4 @@ curl https://testnet.anatolianteam.com/babylon/${SNAP_NAME} | lz4 -dc - | tar -x
 mv $HOME/.Cardchaind/priv_validator_state.json.backup $HOME/.Cardchaind/data/priv_validator_state.json 
 
 systemctl restart Cardchaind && journalctl -u Cardchaind -f -o cat
-```shell
+```

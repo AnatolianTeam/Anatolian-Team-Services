@@ -5,7 +5,7 @@ image: ./img/OKP4-Service-Cover.jpg
 keywords: [okp4, open, knowledge, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# StateSync (COMING SOON) 
+# StateSync
 
 ```shell
 sudo systemctl stop okp4d
@@ -13,7 +13,7 @@ sudo systemctl stop okp4d
 cp $HOME/.okp4d/data/priv_validator_state.json $HOME/.okp4d/priv_validator_state.json.backup
 okp4d tendermint unsafe-reset-all --home $HOME/.okp4d --keep-addr-book
 
-SNAP_RPC="COMING_SOON"
+SNAP_RPC="https://rpc-t-okp4.anatolianteam.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))

@@ -5,13 +5,12 @@ image: ./img/C4E-Service-Cover.jpg
 keywords: [chain4energy, c4e, installation, snapshot, statesync, update]
 ---
 
-# Snapshot (COMING SOON)
+# Snapshot
 
 ```shell
 # install lz4
 apt update
-apt install snapd -y
-snap install lz4
+apt install lz4 -y
 ```
 
 ```shell
@@ -20,10 +19,10 @@ systemctl stop c4ed
 cp $HOME/.c4e-chain/data/priv_validator_state.json $HOME/.c4e-chain/priv_validator_state.json.backup 
 
 c4ed tendermint unsafe-reset-all --home $HOME/.c4e-chain --keep-addr-book
-SNAP_NAME=$(curl -s COMING_SOON | egrep -o ">bbn-test-2_.*\.tar.lz4" | tr -d ">")
-curl https://testnet.anatolianteam.com/babylon/${SNAP_NAME} | lz4 -dc - | tar -xf - -C $HOME/.c4e-chain
+SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/c4e/ | egrep -o ">babajaga-1_.*\.tar.lz4" | tr -d ">")
+curl -L https://testnet.anatolianteam.com/c4e/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.c4e-chain
 
 mv $HOME/.c4e-chain/priv_validator_state.json.backup $HOME/.c4e-chain/data/priv_validator_state.json 
 
 systemctl restart c4ed && journalctl -u c4ed -f -o cat
-```shell
+```

@@ -41,7 +41,7 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 echo "export OKP4_NODENAME=$OKP4_NODENAME"  >> $HOME/.bash_profile
 echo "export OKP4_WALLET=$OKP4_WALLET" >> $HOME/.bash_profile
 echo "export OKP4_PORT=11" >> $HOME/.bash_profile
-echo "export OKP4_CHAIN_ID=babajaga-1" >> $HOME/.bash_profile
+echo "export OKP4_CHAIN_ID=okp4-nemeton-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Node (`OKP4_NODENAME`) ve Cüzdan (`OKP4_WALLET`) adımızın `Anatolian-Guide` 
 echo "export OKP4_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export OKP4_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export OKP4_PORT=16" >> $HOME/.bash_profile
-echo "export OKP4_CHAIN_ID=babajaga-1" >> $HOME/.bash_profile
+echo "export OKP4_CHAIN_ID=okp4-nemeton-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 

@@ -40,7 +40,7 @@ The areas you need to change are written below.
 echo "export OKP4_NODENAME=$OKP4_NODENAME"  >> $HOME/.bash_profile
 echo "export OKP4_WALLET=$OKP4_WALLET" >> $HOME/.bash_profile
 echo "export OKP4_PORT=11" >> $HOME/.bash_profile
-echo "export OKP4_CHAIN_ID=babajaga-1" >> $HOME/.bash_profile
+echo "export OKP4_CHAIN_ID=okp4-nemeton-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -50,7 +50,7 @@ Let's assume that your Node (`OKP4_NODENAME`) and Wallet (`OKP4_WALLET`) name is
 echo "export OKP4_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export OKP4_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export OKP4_PORT=16" >> $HOME/.bash_profile
-echo "export OKP4_CHAIN_ID=babajaga-1" >> $HOME/.bash_profile
+echo "export OKP4_CHAIN_ID=okp4-nemeton-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -73,8 +73,8 @@ okp4d config chain-id $OKP4_CHAIN_ID
 okp4d init --chain-id $OKP4_CHAIN_ID $OKP4_NODENAME
 
 # Copying the Genesis and addrbook Files
-wget https://raw.githubusercontent.com/chain4energy/c4e-chains/main/babajaga-1/genesis.json -O $HOME/.okp4d/config/genesis.json
-wget https://raw.githubusercontent.com/koltigin/C4E-Kurulum-Rehberi/main/addrbook.json -O $HOME/.okp4d/config/addrbook.json
+curl -L https://testnet.anatolianteam.com/okp4/genesis.json > $HOME/.babylond/config/genesis.json
+curl -L https://testnet.anatolianteam.com/okp4/addrbook.json > $HOME/.babylond/config/addrbook.json
 
 # Set up the minimum gas price
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0uknow "|g' $HOME/.okp4d/config/app.toml

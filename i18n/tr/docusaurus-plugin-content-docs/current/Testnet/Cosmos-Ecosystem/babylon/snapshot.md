@@ -5,13 +5,12 @@ image: ./img/Babylon-Service-Cover.jpg
 keywords: [babylon, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (YAKINDA)
+# Snapshot
 
 ```shell
 # install lz4
 apt update
-apt install snapd -y
-snap install lz4
+apt install lz4 -y
 ```
 
 ```shell
@@ -26,4 +25,4 @@ curl https://testnet.anatolianteam.com/babylon/${SNAP_NAME} | lz4 -dc - | tar -x
 mv $HOME/.babylond/priv_validator_state.json.backup $HOME/.babylond/data/priv_validator_state.json 
 
 systemctl restart babylond && journalctl -u babylond -f -o cat
-```shell
+```

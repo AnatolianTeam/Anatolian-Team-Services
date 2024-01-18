@@ -5,7 +5,7 @@ image: ./img/CC-Service-Cover.jpg
 keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# StateSync (COMING SOON)
+# StateSync
 
 ```shell
 sudo systemctl stop Cardchaind
@@ -13,7 +13,7 @@ sudo systemctl stop Cardchaind
 cp $HOME/.Cardchaind/data/priv_validator_state.json $HOME/.Cardchaind/priv_validator_state.json.backup
 Cardchaind tendermint unsafe-reset-all --home $HOME/.Cardchaind --keep-addr-book
 
-SNAP_RPC="COMING_SOON"
+SNAP_RPC="https://rpc-t-crowdcontrol.anatolianteam.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
