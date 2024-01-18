@@ -1,6 +1,8 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
+image: ./img/OKP4-Service-Cover.jpg
+keywords: [okp4, open knowledge protocol, installation, snapshot, statesync, update]
 ---
 
 # Snapshot (COMING SOON) 

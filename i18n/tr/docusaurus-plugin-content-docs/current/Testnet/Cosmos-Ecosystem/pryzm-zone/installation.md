@@ -1,6 +1,8 @@
 ---
 title: 💾 Kurulum
 description: Node installation guide.
+image: ./img/Pryzm-Service-Cover.jpg
+keywords: [Pryzm, node, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Kurulum

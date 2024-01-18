@@ -1,6 +1,8 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
+image: ./img/Babylon-Service-Cover.jpg
+keywords: [babylon, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Snapshot (YAKINDA)

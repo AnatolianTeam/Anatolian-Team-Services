@@ -1,6 +1,8 @@
 ---
 title: 🆙 Güncelleme
 description: Update node with manual or scheduled.
+image: ./img/C4E-Service-Cover.jpg
+keywords: [chain4energy, c4e, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Güncelleme

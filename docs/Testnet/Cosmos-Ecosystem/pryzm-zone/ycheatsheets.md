@@ -1,6 +1,8 @@
 ---
 title: ⤴️ Cheatsheets
 description: Node installation guide.
+image: ./img/Pryzm-Service-Cover.jpg
+keywords: [pryzm, zone, installation, snapshot, statesync, update]
 ---
 
 # Cheatsheets

@@ -1,6 +1,8 @@
 ---
 title: 💾 Installation
 description: Node installation guide.
+image: ./img/Babylon-Service-Cover.jpg
+keywords: [babylon, installation, snapshot, statesync, update]
 ---
 
 # Installation

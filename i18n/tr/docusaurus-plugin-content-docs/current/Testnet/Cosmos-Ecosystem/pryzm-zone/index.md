@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/Pryzm-Service-Cover.jpg
+keywords: [Pryzm, node, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Pryzm Zone

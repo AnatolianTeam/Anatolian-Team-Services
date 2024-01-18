@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/C4E-Service-Cover.jpg
+keywords: [chain4energy, c4e, installation, snapshot, statesync, update]
 ---
 # Chain4Energy
 

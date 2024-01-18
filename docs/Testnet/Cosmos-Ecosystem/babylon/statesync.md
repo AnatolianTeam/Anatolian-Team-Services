@@ -1,6 +1,8 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
+image: ./img/Babylon-Service-Cover.jpg
+keywords: [babylon, installation, snapshot, statesync, update]
 ---
 
 # StateSync

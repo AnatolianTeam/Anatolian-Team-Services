@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/Avail-Service-Cover.jpg
+keywords: [avail, project, essential, blockchains, base, layer, installation, snapshot, statesync, update]
 ---
 
 # Avail Project

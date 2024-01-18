@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/Pryzm-Service-Cover.jpg
+keywords: [pryzm, zone, installation, snapshot, statesync, update]
 ---
 
 # Pryzm Zone

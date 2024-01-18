@@ -1,6 +1,7 @@
 ---
 title: 💾 Installation
-sidebar_position: 2
+image: ./img/Pryzm-Service-Cover.jpg
+keywords: [pryzm, zone, installation, snapshot, statesync, update]
 ---
 
 # Installation

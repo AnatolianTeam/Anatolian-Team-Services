@@ -1,6 +1,8 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
+image: ./img/C4E-Service-Cover.jpg
+keywords: [chain4energy, c4e, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # StateSync (COMING SOON)

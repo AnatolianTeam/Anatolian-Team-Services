@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/OKP4-Service-Cover.jpg
+keywords: [okp4, open, knowledge, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 # OKP4
 

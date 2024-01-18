@@ -1,6 +1,8 @@
 ---
 title: 💾 Kurulum
 description: Node installation guide.
+image: ./img/CC-Service-Cover.jpg
+keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Kurulum

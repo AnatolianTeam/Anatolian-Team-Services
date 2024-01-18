@@ -1,6 +1,8 @@
 ---
 title: 🆙 Update
 description: Update node with manual or scheduled.
+image: ./img/Babylon-Service-Cover.jpg
+keywords: [babylon, installation, snapshot, statesync, update]
 ---
 
 # Update

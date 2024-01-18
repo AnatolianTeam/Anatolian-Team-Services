@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/CC-Service-Cover.jpg
+keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 ---
 # Crowd Control
 

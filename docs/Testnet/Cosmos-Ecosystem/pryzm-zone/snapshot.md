@@ -1,6 +1,8 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
+image: ./img/Pryzm-Service-Cover.jpg
+keywords: [pryzm, zone, installation, snapshot, statesync, update]
 ---
 
 # Snapshot

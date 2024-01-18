@@ -1,6 +1,8 @@
 ---
 title: ⤴️ Komutlar
 description: Node installation guide.
+image: ./img/C4E-Service-Cover.jpg
+keywords: [chain4energy, c4e, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Komutlar

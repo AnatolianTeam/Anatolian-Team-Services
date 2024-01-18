@@ -1,6 +1,8 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
+image: ./img/CC-Service-Cover.jpg
+keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, statesync, update]
 ---
 
 # Snapshot (COMING SOON)

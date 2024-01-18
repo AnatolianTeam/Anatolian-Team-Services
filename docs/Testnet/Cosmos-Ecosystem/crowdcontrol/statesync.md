@@ -1,6 +1,8 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
+image: ./img/CC-Service-Cover.jpg
+keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, statesync, update]
 ---
 
 # StateSync (COMING SOON)

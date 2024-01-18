@@ -1,6 +1,8 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
+image: ./img/C4E-Service-Cover.jpg
+keywords: [chain4energy, c4e, installation, snapshot, statesync, update]
 ---
 
 # Snapshot (COMING SOON)

@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/Avail-Service-Cover.jpg
+keywords: [Avail, proje, önemli, temel, katman, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Avail Project

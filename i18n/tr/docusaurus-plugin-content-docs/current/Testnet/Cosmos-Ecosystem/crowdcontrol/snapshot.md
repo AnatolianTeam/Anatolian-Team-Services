@@ -1,6 +1,8 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
+image: ./img/CC-Service-Cover.jpg
+keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Snapshot (COMING SOON)

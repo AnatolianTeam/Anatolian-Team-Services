@@ -1,5 +1,7 @@
 ---
 title: 💾 Installation
+image: ./img/C4E-Service-Cover.jpg
+keywords: [chain4energy, c4e, installation, snapshot, statesync, update]
 ---
 
 # Installation

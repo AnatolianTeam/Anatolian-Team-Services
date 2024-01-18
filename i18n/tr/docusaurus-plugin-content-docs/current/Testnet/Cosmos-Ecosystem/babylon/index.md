@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/Babylon-Service-Cover.jpg
+keywords: [babylon, kurulum, snapshot, statesync, güncelleme]
 ---
 # Babylon Chain
 

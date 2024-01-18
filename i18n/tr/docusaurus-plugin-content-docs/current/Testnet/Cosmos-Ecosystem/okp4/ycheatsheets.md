@@ -1,6 +1,8 @@
 ---
 title: ⤴️ Komutlar
 description: Node installation guide.
+image: ./img/OKP4-Service-Cover.jpg
+keywords: [okp4, open, knowledge, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Komutlar
