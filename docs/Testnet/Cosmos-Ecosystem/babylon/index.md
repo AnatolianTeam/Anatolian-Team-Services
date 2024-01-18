@@ -43,9 +43,9 @@ You can use peer for fast connection or state sync.
 peers="fc0a973bd9c9da2b3a9f2aebb2efa9f14c25e8a5@86.48.0.190:12656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.babylond/config/config.toml
 ```
-The address book is updated once an hour. You can use it for quick launch.
+The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json "https://testnet.anatolianteam.com/babylon/addrbook.json"
+wget -O $HOME/.babylond/config/addrbook.json "https://testnet.anatolianteam.com/babylon/addrbook.json"
 ```
 
 ```mdx-code-block

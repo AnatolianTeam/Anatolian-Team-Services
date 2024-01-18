@@ -186,6 +186,21 @@ echo 'export ART_VALOPER_ADDRESS='${ART_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
+### EIP-55 Adresini Öğrenme
+```shell
+artelad debug addr $ART_WALLET_ADDRESS
+```
+
+#### Faucet
+Discord sunucusunda `#🚰┃testnet-faucet` kanalından aşağıdaki şekilde token istiyoruz..
+
+`$request EIP-55_Address`
+
+### Checking Wallet Balance
+```
+artelad query bank balances $ART_WALLET_ADDRESS
+```
+
 ### Cüzdan Bakiyesini Kontrol Etme 
 ```
 artelad query bank balances $ART_WALLET_ADDRESS

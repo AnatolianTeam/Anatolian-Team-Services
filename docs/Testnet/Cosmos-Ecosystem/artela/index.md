@@ -43,7 +43,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.a
 ```
 The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
+wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
 ```
 
 ```mdx-code-block

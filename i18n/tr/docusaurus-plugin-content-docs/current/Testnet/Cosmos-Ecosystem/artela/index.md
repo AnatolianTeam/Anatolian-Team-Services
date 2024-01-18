@@ -39,11 +39,11 @@ keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.c4e-chain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.artelad/config/config.toml
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
+wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
 ```
 
 ```mdx-code-block

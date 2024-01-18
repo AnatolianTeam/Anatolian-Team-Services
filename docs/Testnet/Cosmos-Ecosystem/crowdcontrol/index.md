@@ -28,22 +28,22 @@ keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, st
 * Network Chain ID: cardtestnet-8
 * Binary: Cardchaind
 * Denom: ubpf
-* Working directory: .Cardchaind
+* Working directory: .Cardchain
 
 ## Public Services
-* **RPC:** https://rpc-t-cardchain.anatolianteam.com/ (Coming soon)
-* **API:** https://api-t-cardchain.anatolianteam.com/ (Coming soon)
+* **RPC:** https://rpc-t-carcrowdcontrol.anatolianteam.com/ 
+* **API:** https://api-t-crowdcontrol.anatolianteam.com/
 * **Explorer:** https://cosmos-testnet.anatolianteam.com/Crowd%20Control
 
 ## Peering
-You can use peer for fast connection or state sync (Coming soon)
+You can use peer for fast connection or state sync.
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.Cardchaind/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.Cardchain/config/config.toml
 ```
-The address book is updated once an hour. You can use it for quick launch.
+The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json "COMING SOON"
+wget -O $HOME/.Cardchain/config/addrbook.json "https://testnet.anatolianteam.com/crowdcontrol/addrbook.json"
 ```
 
 ```mdx-code-block

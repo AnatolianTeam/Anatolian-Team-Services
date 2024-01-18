@@ -192,7 +192,8 @@ artelad debug addr $ART_WALLET_ADDRESS
 ```
 
 #### Faucet
-Request tokens by sending a message to the #🚰┃testnet-faucet channel on the Discord server as follows.
+Request tokens by sending a message to the `#🚰┃testnet-faucet` channel on the Discord server as follows.
+
 `$request EIP-55_Address`
 
 ### Checking Wallet Balance

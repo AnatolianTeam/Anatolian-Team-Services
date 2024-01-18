@@ -25,25 +25,25 @@ keywords: [okp4, open knowledge protocol, installation, snapshot, statesync, upd
 
 ## Network Info 
 
-* Network Chain ID: babajaga-1
-* Binary: c4ed
-* Denom: uc4e
-* Working directory: .c4e-chain
+* Network Chain ID: okp4-nemeton-1
+* Binary: okp4d
+* Denom: uknow
+* Working directory: .okp4d
 
 ## Public Services
-* **RPC:** https://rpc-t-cardchain.anatolianteam.com/ (Coming soon)
-* **API:** https://api-t-cardchain.anatolianteam.com/ (Coming soon)
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/Crowd%20Control
+* **RPC:** https://rpc-t-okp4.anatolianteam.com/ 
+* **API:** https://api-t-okp4.anatolianteam.com/ 
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/OKP4
 
 ## Peering
-You can use peer for fast connection or state sync (Coming soon)
+You can use peer for fast connection or state sync.
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.c4e-chain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.okp4d/config/config.toml
 ```
-The address book is updated once an hour. You can use it for quick launch.
+The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json "COMING SOON"
+wget -O $HOME/.okp4d/config/addrbook.json "https://testnet.anatolianteam.com/okp4/addrbook.json"
 ```
 
 ```mdx-code-block

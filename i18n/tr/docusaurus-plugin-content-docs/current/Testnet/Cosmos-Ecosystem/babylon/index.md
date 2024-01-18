@@ -42,9 +42,9 @@ Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kull
 peers="fc0a973bd9c9da2b3a9f2aebb2efa9f14c25e8a5@86.48.0.190:12656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.babylond/config/config.toml
 ```
-Adres defteri saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
+Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json "https://testnet.anatolianteam.com/babylon/addrbook.json"
+wget -O $HOME/.babylond/config/addrbook.json "https://testnet.anatolianteam.com/babylon/addrbook.json"
 ```
 
 ```mdx-code-block

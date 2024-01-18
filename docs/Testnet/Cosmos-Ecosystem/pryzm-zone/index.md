@@ -29,19 +29,19 @@ keywords: [pryzm, zone, installation, snapshot, statesync, update]
 * Working directory: .pryzm
 
 ## Public Services
-* **RPC:** 
-* **API:** 
-* **Explorer:** 
+* **RPC:** https://rpc-t-pryzm.anatolianteam.com/ 
+* **API:** https://api-t-pryzm.anatolianteam.com/ 
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/Pryzm
 
 ## Peering
-You can use peer for fast connection or state sync
+You can use peer for fast connection or state sync.
 ```shell
 peers=""
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.pryzm/config/config.toml
 ```
-The address book is updated once an hour. You can use it for quick launch.
+The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json ""
+wget -O $HOME/.okppryzm4d/config/addrbook.json "https://testnet.anatolianteam.com/pryzm/addrbook.json"
 ```
 
 ```mdx-code-block

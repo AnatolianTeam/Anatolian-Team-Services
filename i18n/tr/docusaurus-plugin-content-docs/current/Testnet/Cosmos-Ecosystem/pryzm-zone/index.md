@@ -29,9 +29,9 @@ keywords: [Pryzm, node, protocol, kurulum, snapshot, statesync, güncelleme]
 * Working directory: .pryzm
 
 ## Hizmetler
-* **RPC:** 
-* **API:** 
-* **Explorer:** 
+* **RPC:** https://rpc-t-pryzm.anatolianteam.com/
+* **API:** https://api-t-pryzm.anatolianteam.com/
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/Pryzm
 
 ## Peering
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
@@ -39,9 +39,9 @@ Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kull
 peers=""
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.pryzm/config/config.toml
 ```
-Adres defteri saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
+Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json ""
+wget -O $HOME/.pryzm/config/addrbook.json "https://testnet.anatolianteam.com/pryzm/addrbook.json"
 ```
 
 ```mdx-code-block

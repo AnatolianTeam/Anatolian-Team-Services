@@ -31,9 +31,9 @@ keywords: [chain4energy, c4e, kurulum, snapshot, statesync, güncelleme]
 * Working directory: .c4e-chain
 
 ## Hizmetler
-* **RPC:** https://rpc-t-cardchain.anatolianteam.com/ (Coming soon)
-* **API:** https://api-t-cardchain.anatolianteam.com/ (Coming soon)
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/Crowd%20Control
+* **RPC:** https://rpc-t-c4e.anatolianteam.com/
+* **API:** https://api-t-c4e.anatolianteam.com/
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/Chain4Energy
 
 ## Peering
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
@@ -41,9 +41,9 @@ Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kull
 peers="COMING SOON"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.c4e-chain/config/config.toml
 ```
-Adres defteri saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
+Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.pryzm/config/addrbook.json "COMING SOON"
+wget -O $HOME/.c4e-chain/config/addrbook.json "https://testnet.anatolianteam.com/c4e/addrbook.json"
 ```
 
 ```mdx-code-block
