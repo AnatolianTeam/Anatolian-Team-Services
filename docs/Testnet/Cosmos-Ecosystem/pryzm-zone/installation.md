@@ -56,13 +56,12 @@ source $HOME/.bash_profile
 ## Installing Pryzm
 ```
 cd $HOME
-wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64.tar.gz
-tar -xzvf pryzmd-0.10.0-linux-amd64.tar.gz && chmod +x pryzmd
-rm -rf pryzmd-0.10.0-linux-amd64.tar.gz
+wget -O pryzmd https://storage.googleapis.com/pryzm-zone/core/0.11.1/pryzmd-0.11.1-linux-amd64
+chmod +x $HOME/pryzmd
 mv pryzmd /root/go/bin/
 pryzmd version
 ```
-The version output will be `0.10.0`.
+The version output will be `0.11.1`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
@@ -73,17 +72,19 @@ pryzmd config chain-id $PRYZM_CHAIN_ID
 pryzmd init --chain-id $PRYZM_CHAIN_ID $PRYZM_NODENAME
 
 # Copying the Genesis File
-wget  -O $HOME/.pryzm/config/genesis.json
+wget -O $HOME/.pryzm/config/genesis.json "https://testnet.anatolianteam.com/pryzm/genesis.json"
+wget -O $HOME/.pryzm/config/addrbook.json "https://testnet.anatolianteam.com/pryzm/addrbook.json"
 
-# Minimum GAS Ücretinin Ayarlanması
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.25upryzm"|g' $HOME/.pryzm/config/app.toml
+# Set up the minimum gas price
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.015upryzm"|g' $HOME/.pryzm/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.pryzm/config/config.toml
 
 # Set up SEED and PEERS
-SEEDS=""
+PEERS="a08dfd98fb5dd3fb0c843088c70610570965907e@86.48.0.190:16656,e48dc3817b1646dec199e66700945234a61f1cd6@135.181.15.158:26656,53c21574397826e080d9d88f756872c5b764d1a2@[2a01:4f9:3051:19c2::2]:12456,a45072cbd173d6dc62ba6b2e5b76f4f69c9c7eb5@207.244.253.244:38656,d9a846e2632764c44577ce71c859c4167b8c5c18@178.128.197.47:26656,c176528e93142915af27e73511e21afc2dce22f4@65.109.28.177:26706,0e236d748212fcf9de89c8882f44e682f93475dc@159.69.193.68:36656,19102f727574337f014772f56920c1e5a4efe52d@135.181.254.74:26656,db0e0cff276b3292804474eb8beb83538acf77f5@195.14.6.192:26656,fd04c898639bf85eab223e686f4506b90213e432@193.164.4.109:31656,6d84adfe688d43fee69b35a7c3f26980c3d37463@89.38.98.200:20256"
+SEEDS="ff17ca4f46230306412ff5c0f5e85439ee5136f0@testnet-seed.pryzm.zone:26656"
 sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.pryzm/config/config.toml
 
 # Enabling Prometheus
@@ -100,21 +101,20 @@ sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.pryzm/config/app.toml
 
 # Set up Ports
-# Set up Ports
 sed -i.bak -e "
-s%:26658%:${BBN_PORT}658%g;
-s%:26657%:${BBN_PORT}657%g;
-s%:6060%:${BBN_PORT}060%g;
-s%:26656%:${BBN_PORT}656%g;
-s%:26660%:${BBN_PORT}660%g
+s%:26658%:${PRYZM_PORT}658%g;
+s%:26657%:${PRYZM_PORT}657%g;
+s%:6060%:${PRYZM_PORT}060%g;
+s%:26656%:${PRYZM_PORT}656%g;
+s%:26660%:${PRYZM_PORT}660%g
 " $HOME/.pryzm/config/config.toml
 sed -i.bak -e "
-s%:1317%:${BBN_PORT}317%g; 
-s%:8080%:${BBN_PORT}080%g; 
-s%:9090%:${BBN_PORT}090%g; 
-s%:9091%:${BBN_PORT}091%g
+s%:1317%:${PRYZM_PORT}317%g; 
+s%:8080%:${PRYZM_PORT}080%g; 
+s%:9090%:${PRYZM_PORT}090%g; 
+s%:9091%:${PRYZM_PORT}091%g
 " $HOME/.pryzm/config/app.toml
-sed -i.bak -e "s%:26657%:${BBN_PORT}657%g" $HOME/.pryzm/config/client.toml
+sed -i.bak -e "s%:26657%:${PRYZM_PORT}657%g" $HOME/.pryzm/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
@@ -219,3 +219,15 @@ pryzmd tx staking create-validator \
 --identity="XXXX1111XXXX1111" \
 --yes
 ```
+
+## Completely Deleting the Node
+ ```shell
+systemctl stop pryzmd && \
+systemctl disable pryzmd && \
+rm /etc/systemd/system/pryzmd.service && \
+systemctl daemon-reload && \
+cd $HOME && \
+rm .pryzm -rf && \
+rm $(which pryzmd) -rf
+sed -i '/PRYZM_/d' ~/.bash_profile 
+ ```
