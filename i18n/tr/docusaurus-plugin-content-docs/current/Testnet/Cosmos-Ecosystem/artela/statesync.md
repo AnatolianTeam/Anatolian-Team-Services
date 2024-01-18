@@ -1,8 +1,8 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
-image: ./img/OKP4-Service-Cover.jpg
-keywords: [okp4, open, knowledge, protocol, kurulum, snapshot, statesync, güncelleme]
+image: ./img/Artela-Service-Cover.jpg
+keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # StateSync (COMING SOON) 
