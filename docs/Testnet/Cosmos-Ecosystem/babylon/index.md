@@ -4,12 +4,6 @@ hide_table_of_contents: true
 image: ./img/Babylon-Service-Cover.jpg
 keywords: [babylon, installation, snapshot, statesync, update]
 ---
-<head>
-  <title>Babylon</title>
-  <meta charSet="utf-8" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="https://docusaurus.io/docs/markdown-features/head-metadata" />
-</head>
    
 # Babylon Chain
 
