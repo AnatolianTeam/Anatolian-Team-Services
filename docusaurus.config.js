@@ -74,7 +74,6 @@ const config = {
         {name: 'twitter:card', content: 'summary_large_image'},
         {name: 'og:title', content: 'Anatolian Team | Service'},
         {name: 'og:description', content: 'Anatolian Team Services Website. Installation Guides, Snaphots, StateSync for the testnet networks... '},
-        {name: 'og:image:type', content: 'image/jpg'},
       ],
       // Replace with your project's social card
       // image: 'img/anatolian-doc-social-card.jpg',
