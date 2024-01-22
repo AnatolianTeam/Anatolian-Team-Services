@@ -59,11 +59,11 @@ source $HOME/.bash_profile
 cd $HOME
 git clone https://github.com/artela-network/artela
 cd artela
-git checkout v0.4.7-rc4
+git checkout v0.4.7-rc6
 make install
 artelad version
 ```
-The version output will be `v0.4.7-rc4`.
+The version output will be `v0.4.7-rc6`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
