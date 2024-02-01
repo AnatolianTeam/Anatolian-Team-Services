@@ -63,7 +63,7 @@ cd entangle-blockchain
 make install
 entangled version
 ```
-The version output will be `v0.4.7-rc6`.
+The version output will be `1.0.1`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
@@ -77,7 +77,7 @@ wget https://testnet.anatolianteam.com/entangle/genesis.json -O $HOME/.entangled
 wget https://testnet.anatolianteam.com/entangle/addrbook.json -O $HOME/.entangled/config/addrbook.json
 
 # Set up the minimum gas price
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001uNGL "|g' $HOME/.entangled/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001aNGL "|g' $HOME/.entangled/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
@@ -223,7 +223,7 @@ You do not need to make any changes to the following command other than the plac
     - `security-contact` Your email address.
  ```shell 
 entangled tx staking create-validator \
---amount=940000uNGL  \
+--amount=940000aNGL  \
 --pubkey=$(entangled tendermint show-validator) \
 --moniker=$ENT_NODENAME \
 --chain-id=$ENT_CHAIN_ID \
@@ -231,7 +231,7 @@ entangled tx staking create-validator \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.25uNGL  \
+--gas-prices=0.25aNGL  \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$ENT_WALLET \

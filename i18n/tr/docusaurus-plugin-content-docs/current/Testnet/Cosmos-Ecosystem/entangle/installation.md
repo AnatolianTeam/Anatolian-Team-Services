@@ -77,7 +77,7 @@ wget https://testnet.anatolianteam.com/entangle/genesis.json -O $HOME/.entangled
 wget https://testnet.anatolianteam.com/entangle/addrbook.json -O $HOME/.entangled/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.02uart"|g' $HOME/.entangled/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.02aNGL"|g' $HOME/.entangled/config/app.toml
 
 # Indexer Kapatma -Opsiyonel
 indexer="null"
@@ -211,7 +211,7 @@ Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik y
  ```shell 
  ```shell 
 entangled tx staking create-validator \
---amount=490000000000000000000uart \
+--amount=490000000000000000000aNGL \
 --pubkey=$(entangled tendermint show-validator) \
 --moniker=$ENT_NODENAME \
 --chain-id=$ENT_CHAIN_ID \
@@ -219,7 +219,7 @@ entangled tx staking create-validator \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.25uart \
+--gas-prices=0.25aNGL \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$ENT_WALLET \
