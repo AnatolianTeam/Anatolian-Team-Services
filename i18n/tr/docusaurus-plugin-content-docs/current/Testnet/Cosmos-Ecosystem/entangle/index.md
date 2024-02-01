@@ -26,7 +26,7 @@ keywords: [entangle, network, kurulum, snapshot, statesync, güncelleme]
 
 * Network Chain ID: entangle_33133-1
 * Binary: entangled
-* Denom: uNGL
+* Denom: aNGL
 * Çalışma dizini: .entangled
 
 ## Hizmetler

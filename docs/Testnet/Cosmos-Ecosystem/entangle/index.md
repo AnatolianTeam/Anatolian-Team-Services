@@ -26,7 +26,7 @@ keywords: [entangle, network, installation, snapshot, statesync, update]
 
 * Network Chain ID: entangle_33133-1
 * Binary: entangled
-* Denom: uNGL
+* Denom: aNGL
 * Working directory: .entangled
 
 ## Public Services
