@@ -66,61 +66,61 @@ artelad keys list
 
 ### Cüzdan Adresini Görme
 ```
-artelad keys show $C4E_WALLET --bech val -a
+artelad keys show $ART_WALLET --bech val -a
 ```
 
 ### Cüzdanı İçeri Aktarma
 ```
-artelad keys add $C4E_WALLET --recover
+artelad keys add $ART_WALLET --recover
 ```
 
 ### Cüzdanı Silme
 ```
-artelad keys delete $C4E_WALLET
+artelad keys delete $ART_WALLET
 ```
 
 ### Cüzdan Bakiyesini Kontrol Etme
 ```
-artelad query bank balances $C4E_WALLET_ADDRESS
+artelad query bank balances $ART_WALLET_ADDRESS
 ```
 
 ## Token İşlemleri
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-artelad tx bank send $C4E_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
+artelad tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 ```
 
 ### Proposal Oylamasına Katılma
 ```
-artelad tx gov vote 1 yes --from $C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-artelad tx staking delegate $C4E_VALOPER_ADDRESS 100000000uc4e --from=$C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx staking delegate $ART_VALOPER_ADDRESS 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $C4E_CHAIN_ID --fees 3000uc4e -y
+artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uc4e -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-artelad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-artelad tx distribution withdraw-all-rewards --from=$C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-artelad tx distribution withdraw-rewards $C4E_VALOPER_ADDRESS --from=$C4E_WALLET --commission --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -135,8 +135,8 @@ artelad status 2>&1 | jq .ValidatorInfo
 ```
 artelad tx staking edit-validator \
 --moniker=YENI-NODE-ADI\
---chain-id=$C4E_CHAIN_ID\
---from=$C4E_WALLET\
+--chain-id=$ART_CHAIN_ID\
+--from=$ART_WALLET\
 --gas-prices 0.00001uc4e\
 --gas-adjustment 1.5\
 --gas auto -y
@@ -145,20 +145,20 @@ artelad tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-artelad tx staking edit-validator --commission-rate "0.02" --moniker=$C4E_NODENAME --from $C4E_WALLET --chain-id $C4E_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
+artelad tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
 Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak aşağıdaki kodda görüldüğü gibi 16 haneli (XXXX0000XXXX0000) kodunuzu almalısınız. Ayrıca profil resmi vs. ayarları da yapabilirsiniz. 
-`$C4E_NODENAME` ve `$C4E_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
+`$ART_NODENAME` ve `$ART_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 artelad tx staking edit-validator \
---moniker=$C4E_NODENAME\
+--moniker=$ART_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$C4E_CHAIN_ID\
---from=$C4E_WALLET
+--chain-id=$ART_CHAIN_ID\
+--from=$ART_WALLET
 ```
 
 ### Validator Detayları
@@ -178,7 +178,7 @@ artelad q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-artelad tx slashing unjail --from $C4E_WALLET --chain-id $C4E_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

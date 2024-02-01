@@ -66,39 +66,39 @@ artelad keys list
 
 ### Seeing Wallet Address
 ```
-artelad keys show $CROWD_WALLET --bech val -a
+artelad keys show $ART_WALLET --bech val -a
 ```
 
 ### Importing Wallet
 ```
-artelad keys add $CROWD_WALLET --recover
+artelad keys add $ART_WALLET --recover
 ```
 
 ### Deleting Your Wallet
 ```
-artelad keys delete $CROWD_WALLET
+artelad keys delete $ART_WALLET
 ```
 
 ### Checking Wallet Balance
 ```
-artelad query bank balances $CROWD_WALLET_ADDRESS
+artelad query bank balances $ART_WALLET_ADDRESS
 ```
 
 ## Tokens
 
 ### Transferring from One Wallet to Another
 ```
-artelad tx bank send $CROWD_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000ubbn
+artelad tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000ubbn
 ```
 
 ### Participating in Proposal Voting
 ```
-artelad tx gov vote 1 yes --from $CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+artelad tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-artelad tx staking delegate $CROWD_VALOPER_ADDRESS 100000000ubbn --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+artelad tx staking delegate $ART_VALOPER_ADDRESS 100000000ubbn --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
@@ -109,18 +109,18 @@ artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000ubbn
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-artelad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000ubbn --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+artelad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000ubbn --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-artelad tx distribution withdraw-all-rewards --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+artelad tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-artelad tx distribution withdraw-rewards $CROWD_VALOPER_ADDRESS --from=$CROWD_WALLET --commission --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+artelad tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -135,8 +135,8 @@ Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should n
 ```
 artelad tx staking edit-validator \
 --moniker=NEW-NODE-NAME\
---chain-id=$CROWD_CHAIN_ID\
---from=$CROWD_WALLET\
+--chain-id=$ART_CHAIN_ID\
+--from=$ART_WALLET\
 --gas-prices 0.00001ubbn\
 --gas-adjustment 1.5\
 --gas auto -y
@@ -145,20 +145,20 @@ artelad tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-artelad tx staking edit-validator --commission-rate "0.02" --moniker=$CROWD_NODENAME --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto - y
+artelad tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
 Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
-`$CROWD_NODENAME` and `$CROWD_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
+`$ART_NODENAME` and `$ART_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 artelad tx staking edit-validator \
---moniker=$CROWD_NODENAME\
+--moniker=$ART_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$CROWD_CHAIN_ID\
---from=$CROWD_WALLET
+--chain-id=$ART_CHAIN_ID\
+--from=$ART_WALLET
 ```
 
 ### Validator Details
@@ -178,7 +178,7 @@ artelad q slashing params
 
 ### Recovering Validator from Jail
 ```
-artelad tx slashing unjail --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+artelad tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List
