@@ -4,7 +4,7 @@ hide_table_of_contents: true
 image: ./img/Entangle-Service-Cover.jpg
 keywords: [entangle, network, kurulum, snapshot, statesync, güncelleme]
 ---
-# entangle Network
+# Entangle
 
 ![Chain4Energy](./img/Entangle-Service.jpg)
 

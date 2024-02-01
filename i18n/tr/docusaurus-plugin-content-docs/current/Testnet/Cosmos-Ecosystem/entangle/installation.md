@@ -55,7 +55,7 @@ echo "export ENT_CHAIN_ID=entangle_11822-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## entangle'nın Kurulması
+## Entangle'nin Kurulması
 ```
 cd $HOME
 git clone https://github.com/Entangle-Protocol/entangle-blockchain
