@@ -1,29 +1,29 @@
 ---
-title: 🆙 Update Q
+title: 🆙 Q Güncelleme
 description: Update node.
 ---
 
-# Q Update
+# Q Güncelleme
 
-## Editing .env File
+## .env Dosyasını Düzenleme
 ...
 cd $HOME/mainnet-public-tools/validator/
 nano .env
 ...
 
-Update the following section in the file to the current version.
+Dosyada aşağıdaki bölümü güncel versiyona güncelleyin.
 ...
 QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
 ...
 
-## Restart Node
+## Yeniden Başlatma
 
-### Pulling and overwriting the latest docker image
+### En son docker image'ı çekme ve üzerine yazma
 ```
 docker-compose pull
 ```
 
-### Restarting with new configurations and images
+### Yeni yapılandırmalar ve image ile yeniden başlatma
 ```
 docker-compose down -t 60 && docker-compose up -d
 ```
