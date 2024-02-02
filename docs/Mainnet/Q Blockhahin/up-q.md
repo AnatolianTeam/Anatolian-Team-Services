@@ -6,15 +6,15 @@ description: Update node.
 # Q Update
 
 ## Editing .env File
-...
+```
 cd $HOME/mainnet-public-tools/validator/
 nano .env
-...
+```
 
 Update the following section in the file to the current version.
-...
+```
 QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
-...
+```
 
 ## Restart Node
 
