@@ -1,6 +1,8 @@
 ---
 title: 🆙 Update Q
 description: Update node.
+image: ./img/Q-Service-Cover.jpg
+keywords: [Q, blockchain, installation, snapshot, statesync, update]
 ---
 
 # Q Update

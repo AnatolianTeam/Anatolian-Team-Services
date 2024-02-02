@@ -1,6 +1,8 @@
 ---
 title: 🆙 Q Güncelleme
 description: Update node.
+image: ./img/Q-Service-Cover.jpg
+keywords: [Q, blockchain, installation, snapshot, statesync, update]
 ---
 
 # Q Güncelleme
@@ -9,12 +11,12 @@ description: Update node.
 ...
 cd $HOME/mainnet-public-tools/validator/
 nano .env
-...
+```
 
 Dosyada aşağıdaki bölümü güncel versiyona güncelleyin.
 ...
 QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
-...
+```
 
 ## Yeniden Başlatma
 

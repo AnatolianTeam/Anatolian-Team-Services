@@ -1,6 +1,8 @@
 ---
 id: introduction
 hide_table_of_contents: true
+image: ./img/Q-Service-Cover.jpg
+keywords: [Q, blockchain, installation, snapshot, statesync, update]
 ---
 
 # Q Blockchain
