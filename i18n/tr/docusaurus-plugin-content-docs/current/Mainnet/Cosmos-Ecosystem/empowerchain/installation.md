@@ -101,9 +101,20 @@ sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.empowerchain/config/app.toml
 
 # Set up Ports
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${EMPOW_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${EMPOW_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${EMPOW_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${EMPOW_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${EMPOW_PORT}660\"%" $HOME/.empowerchain/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${EMPOW_PORT}317\"%; s%^address = \":8080\"%address = \":${EMPOW_PORT}080\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:${EMPOW_PORT}545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:${EMPOW_PORT}546\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${EMPOW_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${EMPOW_PORT}091\"%" $HOME/.empowerchain/config/app.toml
-sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:${EMPOW_PORT}657\"%" $HOME/.empowerchain/config/client.toml
+sed -i.bak -e "
+s%:26658%:${EMPOW_PORT}658%g;
+s%:26657%:${EMPOW_PORT}657%g;
+s%:6060%:${EMPOW_PORT}060%g;
+s%:26656%:${EMPOW_PORT}656%g;
+s%:26660%:${EMPOW_PORT}660%g
+" $HOME/.empowerchain/config/config.toml
+sed -i.bak -e "
+s%:1317%:${EMPOW_PORT}317%g; 
+s%:8080%:${EMPOW_PORT}080%g; 
+s%:9090%:${EMPOW_PORT}090%g; 
+s%:9091%:${EMPOW_PORT}091%g
+" $HOME/.empowerchain/config/app.toml
+sed -i.bak -e "s%:26657%:${EMPOW_PORT}657%g" $HOME/.empowerchain/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`

@@ -66,39 +66,39 @@ empowerd keys list
 
 ### Seeing Wallet Address
 ```
-empowerd keys show $ACRE_WALLET --bech val -a
+empowerd keys show $EMPOW_WALLET --bech val -a
 ```
 
 ### Importing Wallet
 ```
-empowerd keys add $ACRE_WALLET --recover
+empowerd keys add $EMPOW_WALLET --recover
 ```
 
 ### Deleting Your Wallet
 ```
-empowerd keys delete $ACRE_WALLET
+empowerd keys delete $EMPOW_WALLET
 ```
 
 ### Checking Wallet Balance
 ```
-empowerd query bank balances $ACRE_WALLET_ADDRESS
+empowerd query bank balances $EMPOW_WALLET_ADDRESS
 ```
 
 ## Tokens
 
 ### Transferring from One Wallet to Another
 ```
-empowerd tx bank send $ACRE_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000umpwr
+empowerd tx bank send $EMPOW_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000umpwr
 ```
 
 ### Participating in Proposal Voting
 ```
-empowerd tx gov vote 1 yes --from $ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx gov vote 1 yes --from $EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-empowerd tx staking delegate $ACRE_VALOPER_ADDRESS 100000000umpwr --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx staking delegate $EMPOW_VALOPER_ADDRESS 100000000umpwr --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
@@ -109,18 +109,18 @@ empowerd tx staking unbond $(empowerd keys show $WALLET --bech val -a) 1000000um
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-empowerd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000umpwr --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000umpwr --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-empowerd tx distribution withdraw-all-rewards --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx distribution withdraw-all-rewards --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-empowerd tx distribution withdraw-rewards $ACRE_VALOPER_ADDRESS --from=$ACRE_WALLET --commission --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx distribution withdraw-rewards $EMPOW_VALOPER_ADDRESS --from=$EMPOW_WALLET --commission --chain-id=$EMPOW_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -135,8 +135,8 @@ Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should n
 ```
 empowerd tx staking edit-validator \
 --moniker=NEW-NODE-NAME\
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET\
+--chain-id=$EMPOW_CHAIN_ID\
+--from=$EMPOW_WALLET\
 --gas-prices 0.00001umpwr\
 --gas-adjustment 1.5\
 --gas auto -y
@@ -145,20 +145,20 @@ empowerd tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-empowerd tx staking edit-validator --commission-rate "0.02" --moniker=$ACRE_NODENAME --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto - y
+empowerd tx staking edit-validator --commission-rate "0.02" --moniker=$EMPOW_NODENAME --from $EMPOW_WALLET --chain-id $EMPOW_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
 Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
-`$ACRE_NODENAME` and `$ACRE_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
+`$EMPOW_NODENAME` and `$EMPOW_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 empowerd tx staking edit-validator \
---moniker=$ACRE_NODENAME\
+--moniker=$EMPOW_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET
+--chain-id=$EMPOW_CHAIN_ID\
+--from=$EMPOW_WALLET
 ```
 
 ### Validator Details
@@ -178,7 +178,7 @@ empowerd q slashing params
 
 ### Recovering Validator from Jail
 ```
-empowerd tx slashing unjail --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx slashing unjail --from $EMPOW_WALLET --chain-id $EMPOW_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List

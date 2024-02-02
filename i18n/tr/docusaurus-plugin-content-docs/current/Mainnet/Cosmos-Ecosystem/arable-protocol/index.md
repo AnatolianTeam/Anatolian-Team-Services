@@ -52,12 +52,12 @@ Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.artelad/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.acred/config/config.toml
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/artela/genesis.json"
-wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
+wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/arable/genesis.json"
+wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/arable/addrbook.json"
 ```
 
 ```mdx-code-block
