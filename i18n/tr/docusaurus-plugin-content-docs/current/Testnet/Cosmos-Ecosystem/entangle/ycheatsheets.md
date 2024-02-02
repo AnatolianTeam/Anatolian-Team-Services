@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Node Peer Adresini Öğrenme
 ```
-echo $(entangled tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(entangled tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.entangled/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Cüzdan Yönetimi
@@ -93,34 +93,34 @@ entangled tx bank send $ENT_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 
 ### Proposal Oylamasına Katılma
 ```
-entangled tx gov vote 1 yes --from $ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+entangled tx gov vote 1 yes --from $ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-entangled tx staking delegate $ENT_VALOPER_ADDRESS 100000000uc4e --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+entangled tx staking delegate $ENT_VALOPER_ADDRESS 100000000aNGL--from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-entangled tx staking unbond $(entangled keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $ENT_CHAIN_ID --fees 3000uc4e -y
+entangled tx staking unbond $(entangled keys show $WALLET --bech val -a) 1000000aNGL--from $WALLET --chain-id $ENT_CHAIN_ID --fees 3000aNGL-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-entangled tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+entangled tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aNGL--from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-entangled tx distribution withdraw-all-rewards --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+entangled tx distribution withdraw-all-rewards --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-entangled tx distribution withdraw-rewards $ENT_VALOPER_ADDRESS --from=$ENT_WALLET --commission --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+entangled tx distribution withdraw-rewards $ENT_VALOPER_ADDRESS --from=$ENT_WALLET --commission --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -131,7 +131,7 @@ entangled status 2>&1 | jq .ValidatorInfo
 ```
 
 ### Validator İsmini Değiştirme
-`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
+`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 entangled tx staking edit-validator \
 --moniker=YENI-NODE-ADI\
@@ -145,7 +145,7 @@ entangled tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-entangled tx staking edit-validator --commission-rate "0.02" --moniker=$ENT_NODENAME --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
+entangled tx staking edit-validator --commission-rate "0.02" --moniker=$ENT_NODENAME --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001aNGL--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
@@ -178,7 +178,7 @@ entangled q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-entangled tx slashing unjail --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+entangled tx slashing unjail --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001aNGL--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

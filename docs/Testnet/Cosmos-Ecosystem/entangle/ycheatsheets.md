@@ -1,6 +1,6 @@
 ---
 title: ⤴️ Cheatsheets
-description: Node installation guide.
+description: Useful commands.
 image: ./img/Entangle-Service-Cover.jpg
 keywords: [entangle, installation, snapshot, statesync, update]
 ---
@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Your node peer
 ```
-echo $(entangled tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(entangled tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.entangled/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Wallet Management
@@ -88,39 +88,39 @@ entangled query bank balances $ENT_WALLET_ADDRESS
 
 ### Transferring from One Wallet to Another
 ```
-entangled tx bank send $ENT_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000ubbn
+entangled tx bank send $ENT_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aNGL
 ```
 
 ### Participating in Proposal Voting
 ```
-entangled tx gov vote 1 yes --from $ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+entangled tx gov vote 1 yes --from $ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-entangled tx staking delegate $ENT_VALOPER_ADDRESS 100000000ubbn --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+entangled tx staking delegate $ENT_VALOPER_ADDRESS 100000000aNGL --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-entangled tx staking unbond $(entangled keys show $WALLET --bech val -a) 1000000ubbn --from $WALLET --chain-id indigo-1 --fees 3000ubbn -y
+entangled tx staking unbond $(entangled keys show $WALLET --bech val -a) 1000000aNGL --from $WALLET --chain-id indigo-1 --fees 3000aNGL -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-entangled tx staking redelegate srcValidatorAddress destValidatorAddress 100000000ubbn --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+entangled tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aNGL --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-entangled tx distribution withdraw-all-rewards --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+entangled tx distribution withdraw-all-rewards --from=$ENT_WALLET --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-entangled tx distribution withdraw-rewards $ENT_VALOPER_ADDRESS --from=$ENT_WALLET --commission --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+entangled tx distribution withdraw-rewards $ENT_VALOPER_ADDRESS --from=$ENT_WALLET --commission --chain-id=$ENT_CHAIN_ID --gas-prices 0.00001aNGL --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -137,7 +137,7 @@ entangled tx staking edit-validator \
 --moniker=NEW-NODE-NAME\
 --chain-id=$ENT_CHAIN_ID\
 --from=$ENT_WALLET\
---gas-prices 0.00001ubbn\
+--gas-prices 0.00001aNGL\
 --gas-adjustment 1.5\
 --gas auto -y
 ```
@@ -145,7 +145,7 @@ entangled tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-entangled tx staking edit-validator --commission-rate "0.02" --moniker=$ENT_NODENAME --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto - y
+entangled tx staking edit-validator --commission-rate "0.02" --moniker=$ENT_NODENAME --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001aNGL --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
@@ -178,7 +178,7 @@ entangled q slashing params
 
 ### Recovering Validator from Jail
 ```
-entangled tx slashing unjail --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+entangled tx slashing unjail --from $ENT_WALLET --chain-id $ENT_CHAIN_ID --gas-prices 0.00001aNGL --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List

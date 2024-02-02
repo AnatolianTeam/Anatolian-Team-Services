@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Node Peer Adresini Öğrenme
 ```
-echo $(artelad tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(artelad tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.artelad/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Cüzdan Yönetimi
@@ -93,34 +93,34 @@ artelad tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 
 ### Proposal Oylamasına Katılma
 ```
-artelad tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-artelad tx staking delegate $ART_VALOPER_ADDRESS 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx staking delegate $ART_VALOPER_ADDRESS 100000000uart--from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uc4e -y
+artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000uart--from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uart-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-artelad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uart--from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-artelad tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-artelad tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -131,7 +131,7 @@ artelad status 2>&1 | jq .ValidatorInfo
 ```
 
 ### Validator İsmini Değiştirme
-`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
+`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 artelad tx staking edit-validator \
 --moniker=YENI-NODE-ADI\
@@ -145,7 +145,7 @@ artelad tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-artelad tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
+artelad tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
@@ -178,7 +178,7 @@ artelad q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-artelad tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+artelad tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Node Peer Adresini Öğrenme
 ```
-echo $(pryzmd tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(pryzmd tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.pryzm/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Cüzdan Yönetimi
@@ -131,7 +131,7 @@ pryzmd status 2>&1 | jq .ValidatorInfo
 ```
 
 ### Validator İsmini Değiştirme
-`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
+`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 pryzmd tx staking edit-validator \
 --moniker=YENI-NODE-ADI\

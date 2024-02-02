@@ -1,6 +1,6 @@
 ---
 title: ⤴️ Cheatsheets
-description: Node installation guide.
+description: Useful commands.
 image: ./img/OKP4-Service-Cover.jpg
 keywords: [okp4, open knowledge protocol, installation, snapshot, statesync, update]
 ---
@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Your node peer
 ```
-echo $(okp4d tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(okp4d tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.okp4d/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Wallet Management
@@ -88,39 +88,39 @@ okp4d query bank balances $CROWD_WALLET_ADDRESS
 
 ### Transferring from One Wallet to Another
 ```
-okp4d tx bank send $CROWD_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000ubbn
+okp4d tx bank send $CROWD_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uknow
 ```
 
 ### Participating in Proposal Voting
 ```
-okp4d tx gov vote 1 yes --from $CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+okp4d tx gov vote 1 yes --from $CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-okp4d tx staking delegate $CROWD_VALOPER_ADDRESS 100000000ubbn --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+okp4d tx staking delegate $CROWD_VALOPER_ADDRESS 100000000uknow --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-okp4d tx staking unbond $(okp4d keys show $WALLET --bech val -a) 1000000ubbn --from $WALLET --chain-id indigo-1 --fees 3000ubbn -y
+okp4d tx staking unbond $(okp4d keys show $WALLET --bech val -a) 1000000uknow --from $WALLET --chain-id indigo-1 --fees 3000uknow -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-okp4d tx staking redelegate srcValidatorAddress destValidatorAddress 100000000ubbn --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+okp4d tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uknow --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-okp4d tx distribution withdraw-all-rewards --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+okp4d tx distribution withdraw-all-rewards --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-okp4d tx distribution withdraw-rewards $CROWD_VALOPER_ADDRESS --from=$CROWD_WALLET --commission --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+okp4d tx distribution withdraw-rewards $CROWD_VALOPER_ADDRESS --from=$CROWD_WALLET --commission --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -137,7 +137,7 @@ okp4d tx staking edit-validator \
 --moniker=NEW-NODE-NAME\
 --chain-id=$CROWD_CHAIN_ID\
 --from=$CROWD_WALLET\
---gas-prices 0.00001ubbn\
+--gas-prices 0.00001uknow\
 --gas-adjustment 1.5\
 --gas auto -y
 ```
@@ -145,7 +145,7 @@ okp4d tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-okp4d tx staking edit-validator --commission-rate "0.02" --moniker=$CROWD_NODENAME --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto - y
+okp4d tx staking edit-validator --commission-rate "0.02" --moniker=$CROWD_NODENAME --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
@@ -178,7 +178,7 @@ okp4d q slashing params
 
 ### Recovering Validator from Jail
 ```
-okp4d tx slashing unjail --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+okp4d tx slashing unjail --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List

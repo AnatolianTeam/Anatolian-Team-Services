@@ -1,5 +1,6 @@
 ---
 title: 💾 Installation
+description: Node installation guide.
 image: ./img/OKP4-Service-Cover.jpg
 keywords: [okp4, open knowledge protocol, installation, snapshot, statesync, update]
 ---
@@ -73,8 +74,8 @@ okp4d config chain-id $OKP4_CHAIN_ID
 okp4d init --chain-id $OKP4_CHAIN_ID $OKP4_NODENAME
 
 # Copying the Genesis and addrbook Files
-curl -L https://testnet.anatolianteam.com/okp4/genesis.json > $HOME/.babylond/config/genesis.json
-curl -L https://testnet.anatolianteam.com/okp4/addrbook.json > $HOME/.babylond/config/addrbook.json
+curl -L https://testnet.anatolianteam.com/okp4/genesis.json > $HOME/.okp4d/config/genesis.json
+curl -L https://testnet.anatolianteam.com/okp4/addrbook.json > $HOME/.okp4d/config/addrbook.json
 
 # Set up the minimum gas price
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0uknow "|g' $HOME/.okp4d/config/app.toml

@@ -1,6 +1,6 @@
 ---
 title: ⤴️ Cheatsheets
-description: Node installation guide.
+description: Useful commands.
 image: ./img/Pryzm-Service-Cover.jpg
 keywords: [pryzm, zone, installation, snapshot, statesync, update]
 ---
@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Your node peer
 ```
-echo $(pryzmd tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(pryzmd tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.pryzm/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Wallet Management

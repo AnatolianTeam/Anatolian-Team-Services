@@ -41,17 +41,17 @@ The areas you need to change are written below.
 echo "export ACRE_NODENAME=$ACRE_NODENAME"  >> $HOME/.bash_profile
 echo "export ACRE_WALLET=$ACRE_WALLET" >> $HOME/.bash_profile
 echo "export ACRE_PORT=11" >> $HOME/.bash_profile
-echo "export ACRE_CHAIN_ID=facre_9052-1" >> $HOME/.bash_profile
+echo "export ACRE_CHAIN_ID=acre_9052-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Sample
-Let's assume that your Node (`ACRE_NODENAME`) and Wallet (`ACRE_WALLET`) name is `Mehmet` and the port you will use (`ACRE_PORT`) will be `16656`. The code will be arranged as shown below.
+Let's assume that your Node (`ACRE_NODENAME`) and Wallet (`ACRE_WALLET`) name is `Anatolian-Guide` and the port you will use (`ACRE_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
 echo "export ACRE_NODENAME=Mehmet"  >> $HOME/.bash_profile
 echo "export ACRE_WALLET=Mehmet" >> $HOME/.bash_profile
 echo "export ACRE_PORT=16" >> $HOME/.bash_profile
-echo "export ACRE_CHAIN_ID=facre_9052-1" >> $HOME/.bash_profile
+echo "export ACRE_CHAIN_ID=acre_9052-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 

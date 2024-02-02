@@ -1,197 +1,197 @@
 ---
-title: ⤴️ Komutlar
-description: Node installation guide.
+title: ⤴️ Cheatsheets
+description: Useful commands.
 image: ./img/Arable-Service-Cover.jpg
 keywords: [arable, protocol, acre, network, installation, snapshot, statesync, update]
 ---
 
-# Komutlar
+# Cheatsheets 
 :::note
-Rehberimizden kurulum yaptıysanız aksi belirtilmediği sürece aşağıdaki kodlarda herhangi bir değişiklik yapmanıza gerek yoktur.
+If you have installed from our guide, you do not need to make any changes in the codes below unless stated otherwise.
 :::
 
-## Servis İşlemleri 
+## Service Operations
 
-## Logları Kontrol Etme 
+### Checking Logs
 ```
 journalctl -fu acred -o cat
 ```
 
-### Node'u Başlatma
+### Starting Node
 ```
 systemctl start acred
 ```
 
-### Node'u Durdurma
+### Stopping the Node
 ```
 systemctl stop acred
 ```
 
-### Node'u Yeniden Başlatma
+### Restarting the Node
 ```
 systemctl restart acred
 ```
 
-### Node Senkronizasyon Durumu
+### Node Sync Status
 ```
 acred status 2>&1 | jq .SyncInfo
 ```
 
-### Node Bilgileri
+### Node Information
 ```
 acred status 2>&1 | jq .NodeInfo
 ```
 
-### Node ID Öğrenme
+### Learning Node ID
 ```
 acred tendermint show-node-id
 ```
 
-### Node IP Adresini Öğrenme
+### Learning Node IP Address
 ```
 curl icanhazip.com
 ```
 
-### Node Peer Adresini Öğrenme
+### Your node peer
 ```
-echo $(acred tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(acred tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.acred/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
-## Cüzdan Yönetimi
+## Wallet Management
 
-### Cüzdanların Listesine Bakma
+### Viewing the List of Wallets
 ```
 acred keys list
 ```
 
-### Cüzdan Adresini Görme
+### Seeing Wallet Address
 ```
-acred keys show $ART_WALLET --bech val -a
-```
-
-### Cüzdanı İçeri Aktarma
-```
-acred keys add $ART_WALLET --recover
+acred keys show $ACRE_WALLET --bech val -a
 ```
 
-### Cüzdanı Silme
+### Importing Wallet
 ```
-acred keys delete $ART_WALLET
-```
-
-### Cüzdan Bakiyesini Kontrol Etme
-```
-acred query bank balances $ART_WALLET_ADDRESS
+acred keys add $ACRE_WALLET --recover
 ```
 
-## Token İşlemleri
-
-### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
+### Deleting Your Wallet
 ```
-acred tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
+acred keys delete $ACRE_WALLET
 ```
 
-### Proposal Oylamasına Katılma
+### Checking Wallet Balance
 ```
-acred tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
-```
-
-### Validatore Stake Etme / Delegate Etme
-```
-acred tx staking delegate $ART_VALOPER_ADDRESS 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred query bank balances $ACRE_WALLET_ADDRESS
 ```
 
-### Stake'ten Çıkma
+## Tokens
+
+### Transferring from One Wallet to Another
 ```
-acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uc4e -y
+acred tx bank send $ACRE_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aacre
 ```
 
-### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
-`srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
-`destValidatorAddress`: Yeni stake edilecek validatorün adresi
+### Participating in Proposal Voting
 ```
-acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx gov vote 1 yes --from $ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
 ```
 
-### Ödülleri Çekme
+### Validatore Staking / Delegation
 ```
-acred tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx staking delegate $ACRE_VALOPER_ADDRESS 100000000aacre --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
+```
+### Unbonding
+```
+acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000aacre --from $WALLET --chain-id indigo-1 --fees 3000aacre -y
 ```
 
-### Komisyon Ödüllerini Çekme
+### Staking / Redelegate from Current Validator to Other Validator
+`srcValidatorAddress`: Address of the current staked validator
+`destValidatorAddress`: Address of the new validator to be staked
 ```
-acred tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aacre --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
 ```
 
-## Validator İşlemleri
+### Withdraw Rewards
+```
+acred tx distribution withdraw-all-rewards --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
+```
 
-### Validator Bilgileri
+### Withdrawing Commission Rewards
+
+```
+acred tx distribution withdraw-rewards $ACRE_VALOPER_ADDRESS --from=$ACRE_WALLET --commission --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
+```
+
+## Validator operations
+
+### Validator Information
 ```
 acred status 2>&1 | jq .ValidatorInfo
 ```
 
-### Validator İsmini Değiştirme
-`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
+### Changing Validator Name
+Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 acred tx staking edit-validator \
---moniker=YENI-NODE-ADI\
---chain-id=$ART_CHAIN_ID\
---from=$ART_WALLET\
---gas-prices 0.00001uc4e\
+--moniker=NEW-NODE-NAME\
+--chain-id=$ACRE_CHAIN_ID\
+--from=$ACRE_WALLET\
+--gas-prices 0.00001aacre\
 --gas-adjustment 1.5\
 --gas auto -y
 ```
 
-### Validator Komisyon Oranını Değiştirme
-`commission-rate` yazan bölümdeki değeri değiştiriyoruz.
+### Changing Validator Commission Rate
+We change the value in the section that says 'commission-rate'.
 ```
-acred tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
+acred tx staking edit-validator --commission-rate "0.02" --moniker=$ACRE_NODENAME --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto - y
 ```
 
-### Validator Bilgilerinizi Düzenleme
-Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak aşağıdaki kodda görüldüğü gibi 16 haneli (XXXX0000XXXX0000) kodunuzu almalısınız. Ayrıca profil resmi vs. ayarları da yapabilirsiniz. 
-`$ART_NODENAME` ve `$ART_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
+### Editing Your Validator Information
+Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
+`$ACRE_NODENAME` and `$ACRE_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 acred tx staking edit-validator \
---moniker=$ART_NODENAME\
+--moniker=$ACRE_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$ART_CHAIN_ID\
---from=$ART_WALLET
+--chain-id=$ACRE_CHAIN_ID\
+--from=$ACRE_WALLET
 ```
 
-### Validator Detayları
+### Validator Details
 ```
 acred q staking validator $(acred keys show $WALLET --bech val -a)
 ```
 
-### Jailing Bilgisi
+### Jailing info
 ```
 acred q slashing signing-info $(acred tendermint show-validator)
 ```
 
-### Slashing Parametreleri
+### Slashing parameters
 ```
 acred q slashing params
 ```
 
-### Validatoru Jail Durumundan Kurtarma 
+### Recovering Validator from Jail
 ```
-acred tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx slashing unjail --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
 ```
 
-### Actif Validator Listesi
+### Active Validators List
 ```
 acred q staking validators -oj --limit=2000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl
 ```
 
-### Validator Anahtarını Kontrol Etme
+### Checking Validator key
 ```
 [[ $(acred q staking validator $VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(acred status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "Your key status is ok" || echo -e "Your key status is error"
 ```
 
-### İmzalama Bilgisi
+### Signing info
 ```
 acred q slashing signing-info $(acred tendermint show-validator)
 ```

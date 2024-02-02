@@ -131,7 +131,7 @@ babylond status 2>&1 | jq .ValidatorInfo
 ```
 
 ### Validator İsmini Değiştirme
-`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
+`YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 babylond tx staking edit-validator \
 --moniker=YENI-NODE-ADI\

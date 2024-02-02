@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Node Peer Adresini Öğrenme
 ```
-echo $(acred tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(acred tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.acred/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Cüzdan Yönetimi
@@ -93,34 +93,34 @@ acred tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 
 ### Proposal Oylamasına Katılma
 ```
-acred tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-acred tx staking delegate $ART_VALOPER_ADDRESS 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx staking delegate $ART_VALOPER_ADDRESS 100000000aacre--from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uc4e -y
+acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000aacre--from $WALLET --chain-id $ART_CHAIN_ID --fees 3000aacre-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aacre--from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-acred tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-acred tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -145,7 +145,7 @@ acred tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-acred tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
+acred tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
@@ -178,7 +178,7 @@ acred q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-acred tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

@@ -1,5 +1,6 @@
 ---
 title: 💾 Installation
+description: Node installation guide.
 image: ./img/Entangle-Service-Cover.jpg
 keywords: [entangle, installation, snapshot, statesync, update]
 ---

@@ -1,5 +1,6 @@
 ---
 title: 💾 Installation
+description: Node installation guide.
 image: ./img/CC-Service-Cover.jpg
 keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, statesync, update]
 ---

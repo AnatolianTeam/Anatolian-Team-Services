@@ -12,7 +12,7 @@ keywords: [arable, protocol, acre, network, installation, snapshot, statesync, u
 ## Links
  ✔️ [Website](https://www.arable.finance/) |
  ✔️ [Blockchain Explorer](https://cosmos.anatolianteam.com/arable) |
- ✔️ [Doküman](https://about.arable.finance/) |
+ ✔️ [Docs](https://about.arable.finance/) |
  ✔️ [GitHub](https://github.com/ArableProtocol) |
  ✔️ [Discord](http://discord.gg/arable)
 
@@ -32,7 +32,7 @@ You can stake using auto-compound [here](https://restake.app/acrechain/acrevalop
 * Network Chain ID: acre_9052-1
 * Binary: acred
 * Denom: aacre
-* Çalışma dizini: .acred
+* Working directory: .acred
 
 ## Public Services
 * **RPC:**
@@ -56,8 +56,8 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.a
 ```
 The address book is updated once three hour. You can use it for quick launch.
 ```shell
+wget -O $HOME/.acred/config/addrbook.json "https://testnet.anatolianteam.com/artela/genesis.json"
 wget -O $HOME/.acred/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
-```-O $HOME/.acred/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
 ```
 
 ```mdx-code-block

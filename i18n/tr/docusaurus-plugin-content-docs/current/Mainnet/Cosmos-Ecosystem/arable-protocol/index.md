@@ -56,6 +56,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.a
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
+wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/artela/genesis.json"
 wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
 ```
 
