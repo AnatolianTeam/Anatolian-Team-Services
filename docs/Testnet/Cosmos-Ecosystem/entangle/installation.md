@@ -125,9 +125,6 @@ s%:8546%:${ENT_PORT}546%g
 " $HOME/.entangled/config/app.toml
 sed -i.bak -e "s%:26657%:${ENT_PORT}657%g" $HOME/.entangled/config/client.toml
 
-
-
-
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
 sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${ENT_PORT}656\"|g" ~/.entangled/config/config.toml > ~/.entangled/config/config.toml.tmp
@@ -198,15 +195,10 @@ echo 'export ENT_VALOPER_ADDRESS='${ENT_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-### Learn EIP-55 Address
-```shell
-entangled debug addr $ENT_WALLET_ADDRESS
-```
-
 #### Faucet
 Request tokens by sending a message to the `#🚰┃testnet-faucet` channel on the Discord server as follows.
 
-`$request EIP-55_Address`
+`$request Entangled_Address`
 
 ### Checking Wallet Balance
 ```
