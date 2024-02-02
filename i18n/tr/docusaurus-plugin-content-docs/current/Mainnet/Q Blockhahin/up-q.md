@@ -8,13 +8,13 @@ keywords: [Q, blockchain, installation, snapshot, statesync, update]
 # Q Güncelleme
 
 ## .env Dosyasını Düzenleme
-...
+```
 cd $HOME/mainnet-public-tools/validator/
 nano .env
 ```
 
 Dosyada aşağıdaki bölümü güncel versiyona güncelleyin.
-...
+```
 QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
 ```
 
