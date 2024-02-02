@@ -12,7 +12,7 @@ keywords: [arable, protocol, acre, network, installation, snapshot, statesync, u
 ## Links
  ✔️ [Website](https://www.arable.finance/) |
  ✔️ [Blockchain Explorer](https://cosmos.anatolianteam.com/arable) |
- ✔️ [Doküman](https://about.arable.finance/ |
+ ✔️ [Doküman](https://about.arable.finance/) |
  ✔️ [GitHub](https://github.com/ArableProtocol) |
  ✔️ [Discord](http://discord.gg/arable)
 
