@@ -36,16 +36,16 @@ You can stake using auto-compound [here](https://restake.app/acrechain/acrevalop
 
 ## Public Services
 * **RPC:**
-https://rpc.acre.nodestake.top/
-https://rpc.acrescan.com/
-https://rpc-acre.synergynodes.com/
-https://rpc-acrechain.nodeist.net/
-https://jsonrpc.point.nodestake.top/
-https://api.acre.nodestake.top/
+    * https://rpc.acre.nodestake.top/
+    * https://rpc.acrescan.com/
+    * https://rpc-acre.synergynodes.com/
+    * https://rpc-acrechain.nodeist.net/
+    * https://jsonrpc.point.nodestake.top/
+    * https://api.acre.nodestake.top/
 * **API:**
-https://rest.acrescan.com/
-https://lcd-acre.synergynodes.com/
-https://api-acrechain.nodeist.net/
+    * https://rest.acrescan.com/
+    * https://lcd-acre.synergynodes.com/
+    * https://api-acrechain.nodeist.net/
 * **Explorer:** https://cosmos.anatolianteam.com/arable
 
 ## Peering (Coming Soon)

@@ -36,16 +36,16 @@ Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https
 
 ## Hizmetler
 * **RPC:**
-https://rpc.acre.nodestake.top/
-https://rpc.acrescan.com/
-https://rpc-acre.synergynodes.com/
-https://rpc-acrechain.nodeist.net/
-https://jsonrpc.point.nodestake.top/
-https://api.acre.nodestake.top/
+    * https://rpc.acre.nodestake.top/
+    * https://rpc.acrescan.com/
+    * https://rpc-acre.synergynodes.com/
+    * https://rpc-acrechain.nodeist.net/
+    * https://jsonrpc.point.nodestake.top/
+    * https://api.acre.nodestake.top/
 * **API:**
-https://rest.acrescan.com/
-https://lcd-acre.synergynodes.com/
-https://api-acrechain.nodeist.net/
+    * https://rest.acrescan.com/
+    * https://lcd-acre.synergynodes.com/
+    * https://api-acrechain.nodeist.net/
 * **Explorer:** https://cosmos.anatolianteam.com/arable
 
 ## Peering (Yakında)
