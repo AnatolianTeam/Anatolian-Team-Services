@@ -1,5 +1,5 @@
 ---
-title: ⚙️ OmniBridge Setup
+title: ⚙️ OmniBridge Kurulumu
 description: OmniBridge Oracle guide.
 image: ./img/Q-Service-Cover.jpg
 keywords: [Q, blockchain, OmniBridge, Oracle, installation, snapshot, statesync, update]

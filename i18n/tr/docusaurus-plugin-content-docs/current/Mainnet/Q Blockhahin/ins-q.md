@@ -1,5 +1,5 @@
 ---
-title: 💾 Installation
+title: 💾 Kurulum
 description: Node installation guide.
 image: ./img/Q-Service-Cover.jpg
 keywords: [Q, blockchain, installation, snapshot, statesync, update]
