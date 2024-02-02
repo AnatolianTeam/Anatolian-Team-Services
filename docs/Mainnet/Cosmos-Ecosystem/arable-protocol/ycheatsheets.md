@@ -14,37 +14,37 @@ Rehberimizden kurulum yaptıysanız aksi belirtilmediği sürece aşağıdaki ko
 
 ## Logları Kontrol Etme 
 ```
-journalctl -fu artelad -o cat
+journalctl -fu acred -o cat
 ```
 
 ### Node'u Başlatma
 ```
-systemctl start artelad
+systemctl start acred
 ```
 
 ### Node'u Durdurma
 ```
-systemctl stop artelad
+systemctl stop acred
 ```
 
 ### Node'u Yeniden Başlatma
 ```
-systemctl restart artelad
+systemctl restart acred
 ```
 
 ### Node Senkronizasyon Durumu
 ```
-artelad status 2>&1 | jq .SyncInfo
+acred status 2>&1 | jq .SyncInfo
 ```
 
 ### Node Bilgileri
 ```
-artelad status 2>&1 | jq .NodeInfo
+acred status 2>&1 | jq .NodeInfo
 ```
 
 ### Node ID Öğrenme
 ```
-artelad tendermint show-node-id
+acred tendermint show-node-id
 ```
 
 ### Node IP Adresini Öğrenme
@@ -54,86 +54,86 @@ curl icanhazip.com
 
 ### Node Peer Adresini Öğrenme
 ```
-echo $(artelad tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(acred tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.bablond/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Cüzdan Yönetimi
 
 ### Cüzdanların Listesine Bakma
 ```
-artelad keys list
+acred keys list
 ```
 
 ### Cüzdan Adresini Görme
 ```
-artelad keys show $ART_WALLET --bech val -a
+acred keys show $ART_WALLET --bech val -a
 ```
 
 ### Cüzdanı İçeri Aktarma
 ```
-artelad keys add $ART_WALLET --recover
+acred keys add $ART_WALLET --recover
 ```
 
 ### Cüzdanı Silme
 ```
-artelad keys delete $ART_WALLET
+acred keys delete $ART_WALLET
 ```
 
 ### Cüzdan Bakiyesini Kontrol Etme
 ```
-artelad query bank balances $ART_WALLET_ADDRESS
+acred query bank balances $ART_WALLET_ADDRESS
 ```
 
 ## Token İşlemleri
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-artelad tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
+acred tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 ```
 
 ### Proposal Oylamasına Katılma
 ```
-artelad tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-artelad tx staking delegate $ART_VALOPER_ADDRESS 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx staking delegate $ART_VALOPER_ADDRESS 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uc4e -y
+acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uc4e -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-artelad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uc4e --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-artelad tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-artelad tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
 
 ### Validator Bilgileri
 ```
-artelad status 2>&1 | jq .ValidatorInfo
+acred status 2>&1 | jq .ValidatorInfo
 ```
 
 ### Validator İsmini Değiştirme
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
 ```
-artelad tx staking edit-validator \
+acred tx staking edit-validator \
 --moniker=YENI-NODE-ADI\
 --chain-id=$ART_CHAIN_ID\
 --from=$ART_WALLET\
@@ -145,14 +145,14 @@ artelad tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-artelad tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
+acred tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
 Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak aşağıdaki kodda görüldüğü gibi 16 haneli (XXXX0000XXXX0000) kodunuzu almalısınız. Ayrıca profil resmi vs. ayarları da yapabilirsiniz. 
 `$ART_NODENAME` ve `$ART_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
-artelad tx staking edit-validator \
+acred tx staking edit-validator \
 --moniker=$ART_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
@@ -163,35 +163,35 @@ artelad tx staking edit-validator \
 
 ### Validator Detayları
 ```
-artelad q staking validator $(artelad keys show $WALLET --bech val -a)
+acred q staking validator $(acred keys show $WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi
 ```
-artelad q slashing signing-info $(artelad tendermint show-validator)
+acred q slashing signing-info $(acred tendermint show-validator)
 ```
 
 ### Slashing Parametreleri
 ```
-artelad q slashing params
+acred q slashing params
 ```
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-artelad tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
+acred tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001uc4e --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi
 ```
-artelad q staking validators -oj --limit=2000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl
+acred q staking validators -oj --limit=2000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl
 ```
 
 ### Validator Anahtarını Kontrol Etme
 ```
-[[ $(artelad q staking validator $VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(artelad status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "Your key status is ok" || echo -e "Your key status is error"
+[[ $(acred q staking validator $VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(acred status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "Your key status is ok" || echo -e "Your key status is error"
 ```
 
 ### İmzalama Bilgisi
 ```
-artelad q slashing signing-info $(artelad tendermint show-validator)
+acred q slashing signing-info $(acred tendermint show-validator)
 ```
