@@ -64,7 +64,7 @@ Path of the secret key file: /data/keystore/UTC--2021-01-18T11-36-28.705754426Z-
 🔴 Then back up the files in your folder written (`/data/keystore`) in the output to keep them in a safe place.
 
 ### Importing an Existing Wallet
-If you already have a wallet, copy the json file (starting like UTC) to the keystore folder as shown below. (`/root/mainnet-public-tools/validator/keystore/).
+If you already have a wallet, copy the json file (starting like UTC) to the keystore folder as shown below. (`/root/mainnet-public-tools/validator/keystore/`).
 ```
 validator
 |   ...
@@ -80,7 +80,7 @@ validator
 cp .env.example .env
 nano .env
 ```
-When you open the file, write your wallet without `0x` in the place where it says `ADDRESS` as in the code above, 
+When you open the file, write your wallet without `0x` in the place where it says `ADDRESS` as in the code below, 
 then make sure your own IP address is written in the `IP` section, then save and exit. (CTRL+X Y)
 ```
 # docker image for q client

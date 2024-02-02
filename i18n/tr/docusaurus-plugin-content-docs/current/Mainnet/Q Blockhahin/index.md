@@ -9,11 +9,11 @@ keywords: [Q, blockchain, installation, snapshot, statesync, update]
 
 ![Q Blockchain](./img/Q-Service.jpg)
 
-## Links
+## Bağlantılar
 
  ✔️ [Website](https://q.org) | ✔️ [Explorer](https://explorer.q.org) | ✔️ [Doc](https://docs.q.org) | ✔️ [Blog](https://medium.com/q-blockchain) | ✔️ [Discord](https://discord.gg/q-blockchain-902893347239247952)
 
-## Requirements
+## Gereksinimler
 
 | Components | **Recommended** |
 | ------------ | ------------ |
@@ -21,14 +21,14 @@ keywords: [Q, blockchain, installation, snapshot, statesync, update]
 | RAM	| 16 GB |
 | Storage	| 1 TB SSD |
 
-## Network Info 
+## Ağ Bilgisi 
 
 * Network Chain ID: 35441 (Q Mainnet / EVM)
 * Docker: QCLIENT_IMAGE
 * Denom: Q
 * Working directory: mainnet-public-tools
 
-## Public Services
+## Hizmetler
 * **RPC:** 
 * **API:** 
 * **Explorer:** https://explorer.q.org/

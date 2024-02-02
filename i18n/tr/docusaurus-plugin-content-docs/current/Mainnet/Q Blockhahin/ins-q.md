@@ -5,19 +5,19 @@ image: ./img/Q-Service-Cover.jpg
 keywords: [Q, blockchain, installation, snapshot, statesync, update]
 ---
 
-# Installation
+# Kurulum
 
-## Updating the System
+## Sistemi Güncelleme
 ```shell
 apt update && apt upgrade -y
 ```
 
-## Installing the Necessary Libraries
+## Gerekli Kütüphanelerin Kurulması
 ```shell
 apt install ca-certificates curl gnupg lsb-release git htop tmux
 ```
 
-## Installing Docker
+## Docker Kurulumu
 ```shell
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
@@ -26,30 +26,30 @@ apt-get install docker-ce docker-ce-cli containerd.io
 docker version
 ```
 
-## Installing Q
+## Q Kurulumu
 ```
 cd $HOME
 git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
-## Creating Keystore Folder and pwd.txt File
+## keystore Klasörü ve pwd.txt Dosyasının Oluşturulması
 ```
 cd $HOME/mainnet-public-tools/validator/
 mkdir keystore
 ```
 
-Type the password you will use in your wallet where `YOUR_PASS` is written in the code below.
+Cüzdanınızda kullanacağınız şifreyi aşağıdaki kodda `YOUR_PASS` yazan yere yazın.
 ```
 echo YOUR_PASS > keystore/pwd.txt
 ```
 
-## Wallet
+## Cüzdan
 
-### Creating a New Wallet
+### Yeni Cüzdan Oluşturma
 ```shell 
 docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:1.3.6 geth account new --datadir=/data --password=/data/keystore/pwd.txt
 ```
-If the output is as follows, everything is OK.
+Çıktı aşağıdaki gibi ise her şey yolunda demektir.
 ```
 Your new key was generated
 
@@ -61,10 +61,10 @@ Path of the secret key file: /data/keystore/UTC--2021-01-18T11-36-28.705754426Z-
 - You must BACKUP your key file! Without the key, it's impossible to access account funds!
 - You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
 ```
-🔴 Then back up the files in your folder written (`/data/keystore`) in the output to keep them in a safe place.
+🔴 Daha sonra çıktıda yazılı olan (`/data/keystore`) klasörünüzdeki dosyaları güvenli bir yerde saklamak için yedekleyin.
 
-### Importing an Existing Wallet
-If you already have a wallet, copy the json file (starting like UTC) to the keystore folder as shown below. (`/root/mainnet-public-tools/validator/keystore/).
+### Var Olan Cüzdanı İçeri Aktarma
+Zaten bir cüzdanınız varsa, json dosyasını (UTC ile başlayan) aşağıda gösterildiği gibi keystore klasörüne kopyalayın. (`/root/mainnet-public-tools/validator/keystore/`).
 ```
 validator
 |   ...
@@ -74,14 +74,14 @@ validator
   |   pwd.txt
 ```
 
-## Editing .env File
+## .env Dosyasını Düzenleme
 
 ```shell
 cp .env.example .env
 nano .env
 ```
-When you open the file, write your wallet without `0x` in the place where it says `ADDRESS` as in the code above, 
-then make sure your own IP address is written in the `IP` section, then save and exit. (CTRL+X Y)
+Dosyayı açtığınızda aşağıdaki koddaki gibi `ADDRESS` yazan yere `0x` olmadan cüzdanınızı yazın,
+daha sonra `IP` kısmına kendi IP adresinizin yazdığınızdan emin olun ve kaydedip çıkın. (CTRL+XY)
 ```
 # docker image for q client
 QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
@@ -101,12 +101,11 @@ BOOTNODE2_ADDR=enode://3021f73a6f14f8594384923f7f0228f81a806d1708e5c046db12661bd
 BOOTNODE3_ADDR=enode://34b9e4e18bc37e4437bc0a9b10ac8ae5d0aab2b2e827310e90ec1012e818d07962b162d98e083ec5487e0cf87d1ffefb46332ec05209ec82fb675ae7afe3e241@extrabootnode.q.org:30315
 ```
 
-## Editing docker-compose.yaml File
+## docker-compose.yaml Dosyasını Düzenleme
 ```
 nano docker-compose.yaml
 ```
-
-In the file, write your own moniker name (`YOUR_MONIKER`) and mainnet access key (`MAINNET_ACCESS_KEY`) in the `--ethstats` section similar to the one below and save it.
+Dosyanın `--ethstats` bölümüne kendi moniker adınızı (`YOUR_MONIKER`) ve ana ağ erişim anahtarınızı (`MAINNET_ACCESS_KEY`) aşağıdakine benzer şekilde yazın ve kaydedin.
 ```
 .
 .
@@ -117,12 +116,12 @@ In the file, write your own moniker name (`YOUR_MONIKER`) and mainnet access key
 .
 ```
 
-## Editing config.json File
+## config.json Dosyasını Düzenleme
 ```
 nano config.json
 ```
-In the address section of the file, write your wallet address without a leading `0x`. 
-Then write your wallet `password` in the password section (instead of `supersecurepassword`) and save the file.
+Dosyada adres kısmına cüzdan adresinizi başında 0x olmadan yazın.
+Daha sonra şifre kısmına cüzdanınızın “şifresini” yazıp (“supersecurepassword” yerine) dosyayı kaydedin.
 ```
     {
       "address": "b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc",
@@ -132,17 +131,17 @@ Then write your wallet `password` in the password section (instead of `supersecu
     }
 ```
 
-## Starting Node
+## Node'u Başlatma
 ```shell
 docker-compose up -d
 ```
 
-## Checking Logs
+## Logları Kontrol Etme
 ```
 docker-compose logs -f --tail "100"
 ```
 
-## Synchronizing Node Quickly
+## Node'u Hızla Senkronize Etme
  ```shell 
 docker-compose down && cd
 rm -rf /var/lib/docker/volumes/validator_validator-node-data/_data/geth/chaindata
@@ -150,13 +149,12 @@ mkdir /var/lib/docker/volumes/validator_validator-node-data/_data/geth/chaindata
 cd /var/lib/docker/volumes/validator_validator-node-data/_data/geth/chaindata
 ```
 
-Go to [Stake Craft](https://snapshots.stakecraft.com/) snapshots service and copy the URL of the Q Blockchain and write it where `SNAPHOT_URL` is written below.
-
+[Stake Craft](https://snapshots.stakecraft.com/) anlık görüntü servisine gidin ve Q Blockchain'in URL'sini kopyalayın ve aşağıda `SNAPHOT_URL` yazan yere yazın.
 ```
 wget -O - SNAPHOT_URL | tar xf -
 ```
 
-Then restart the node.
+Ardından node'u yeniden başlatın.
 ```
 cd $HOME/mainnet-public-tools/validator/
 docker-compose up -d
