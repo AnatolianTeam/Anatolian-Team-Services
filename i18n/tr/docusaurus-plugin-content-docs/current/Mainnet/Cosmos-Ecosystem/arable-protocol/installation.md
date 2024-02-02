@@ -1,21 +1,23 @@
 ---
-title: 💾 Installation
-sidebar_position: 2
+title: 💾 Kurulum
+description: Node kurulum rehberi.
+image: ./img/Arable-Service-Cover.jpg
+keywords: [arable, protocol, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Installation
+# Kurulum
 
 ## Updating the System
 ```shell
 apt update && apt upgrade -y
 ```
 
-## Installing the Necessary Libraries
+## Gerekli Kütüphanelerin Kurulması
 ```shell
 apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp jq llvm tmux htop screen gcc lz4 -y < "/dev/null"
 ```
 
-## Installing Go
+## Go Kurulumu
 ```shell
 ver="1.21.5"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
@@ -30,30 +32,30 @@ source $HOME/.bash_profile
 go version
 ```
 
-## Setting Variables
-The areas you need to change are written below.
-* `$ACRE_NODENAME` your validator name
-* `$ACRE_WALLET` your wallet name
-*  If another node is using the port, you can change it below. You must enter a different value where it says `11`, again as two digits.
+## Değişkenleri Yükleme
+Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
+* `$ACRE_NODENAME` validator adınız
+* `$ACRE_WALLET` cüzdan adınız
+*  Eğer portu başka bir node kullanıyorsa aşağıdan değiştirebilirsiniz. `11` yazan yere farklı bir değer girmelisiniz yine iki haneli olacak şekilde.
 ```shell
 echo "export ACRE_NODENAME=$ACRE_NODENAME"  >> $HOME/.bash_profile
 echo "export ACRE_WALLET=$ACRE_WALLET" >> $HOME/.bash_profile
 echo "export ACRE_PORT=11" >> $HOME/.bash_profile
-echo "export ACRE_CHAIN_ID=facre_9052-1" >> $HOME/.bash_profile
+echo "export ACRE_CHAIN_ID=acre_9052-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-### Sample
-Let's assume that your Node (`ACRE_NODENAME`) and Wallet (`ACRE_WALLET`) name is `Mehmet` and the port you will use (`ACRE_PORT`) will be `16656`. The code will be arranged as shown below.
+### Örnek
+Node (`ACRE_NODENAME`) ve Cüzdan (`ACRE_WALLET`) adımızın `Anatolian-Guide` olduğunu ve kullanacağınız portun (`ACRE_PORT`) da `16656` olacağını varsayalım. Kod aşağıdaki şekilde düzenlenecektir. 
 ```shell
-echo "export ACRE_NODENAME=Mehmet"  >> $HOME/.bash_profile
-echo "export ACRE_WALLET=Mehmet" >> $HOME/.bash_profile
+echo "export ACRE_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export ACRE_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export ACRE_PORT=16" >> $HOME/.bash_profile
-echo "export ACRE_CHAIN_ID=facre_9052-1" >> $HOME/.bash_profile
+echo "export ACRE_CHAIN_ID=acre_9052-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Installing Arable
+## Arable'ın Kurulması
 ```shell
 git clone https://github.com/ArableProtocol/acrechain.git
 cd acrechain
@@ -64,9 +66,8 @@ acred version
 ```
 The version output will be `v1.2.0`.
 
-## Configuring and Launching the Node
-We copy and paste the codes below without making any changes.
-
+## Uygulamayı Yapılandırma ve Başlatma
+Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
 ```
 acred config keyring-backend test
 acred config chain-id $ACRE_CHAIN_ID
@@ -125,13 +126,13 @@ WantedBy=multi-user.target
 EOF
 ```
 
-## Enabling the Service
+## Hizmeti Etkinleştirme ve Başlatma
 ```shell
 systemctl daemon-reload
 systemctl enable acred
 ```
 
-## Checking the Logs
+## Logları Kontrol Etme
 ```shell
 journalctl -u acred -f -o cat
 ```  
@@ -144,10 +145,10 @@ journalctl -u acred -f -o cat
 acred status 2>&1 | jq .SyncInfo
 ```
 
-## Wallet
+## Cüzdan
 
-### Creating a New Wallet
-We do not change the `$ACRE_WALLET` section, we named our wallet with variables at the beginning of the installation.
+### Yeni Cüzdan Oluşturma
+`$ACRE_WALLET` bölümünü değiştirmiyoruz kurulumun başında cüzdanımıza değişkenler ile isim belirledik.
 ```shell 
 acred keys add $ACRE_WALLET
 ```  
@@ -157,7 +158,7 @@ acred keys add $ACRE_WALLET
 acred keys add $ACRE_WALLET --recover
 ```
 
-## Wallet and Valoper Info
+### Var Olan Cüzdanı İçeri Aktarma
 Here we add our wallet and valve information to the variable.
 
 ```shell
@@ -171,20 +172,19 @@ echo 'export ACRE_VALOPER_ADDRESS='${ACRE_VALOPER_ADDRESS} >> $HOME/.bash_profil
 source $HOME/.bash_profile
 ```
 
-### Checking Wallet Balance
+### Cüzdan Bakiyesini Kontrol Etme 
 ```
 acred query bank balances $ACRE_WALLET_ADDRESS
 ```
 
 🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
 
-
-## Creating Validator
-You do not need to make any changes to the following command other than the places specified below;
-    - `identity` where it says `XXXX1111XXXX1111` you write your identification number given to you as a member of the [keybase](https://keybase.io/) site.
-    - `details` You can write information about yourself where it says `Always forward with the Anatolian Team 🚀`.
-    - `website` where it says `https://anatolianteam.com`, if you have a website or twitter etc. You can write your address.
-    - `security-contact` Your email address.
+## Validator Oluşturma
+Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik yapmanız gerekmez;
+   - `identity`  burada `XXXX1111XXXX1111` yazan yere [keybase](https://keybase.io/) sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
+   - `details` `Always forward with the Anatolian Team 🚀` yazan yere kendiniz hakkında bilgiler yazabilirsiniz.
+   - `website`  `https://anatolianteam.com` yazan yere varsa bir siteniz ya da twitter vb. adresinizi yazabilirsiniz.
+   - `security-contact`  E-posta adresiniz.
  ```shell 
 acred tx staking create-validator \
 --amount=490000000000000000000aacre \
@@ -206,161 +206,16 @@ acred tx staking create-validator \
 --yes
 ```
 
-## USEFUL COMMANDS
 
-## Checking Logs
+## Node'u Tamamen Silme
 ```
-journalctl -fu acred -o cat
-```
-
-### Starting Node
-```
-systemctl start acred
-```
-
-### Stopping the Node
-```
-systemctl stop acquired
-```
-
-### Restarting the Node
-```
-systemctl restart acred
-```
-
-### Node Sync Status
-```
-acquired status 2>&1 | jq .SyncInfo
-```
-```
-curl -s localhost:26657/status | jq .result.sync_info
-```
-
-### Validator Information
-```
-acquired status 2>&1 | jq .ValidatorInfo
-```
-
-### Node Information
-```
-acquired status 2>&1 | jq .NodeInfo
-```
-
-### Learning Node ID
-```
-acred tendermint show-node-id
-```
-
-### Learning Node IP Address
-```
-curl icanhazip.com
-```
-
-### Viewing the List of Wallets
-```
-acquired keys list
-```
-
-### Seeing Wallet Address
-```
-acred keys show $ACRE_WALLET --bech val -a
-```
-
-### Importing Wallet
-```
-acquired keys add $ACRE_WALLET --recover
-```
-
-### Deleting Your Wallet
-```
-acquired keys delete $ACRE_WALLET
-```
-
-### Checking Wallet Balance
-```
-acred query bank balances $ACRE_WALLET_ADDRESS
-```
-
-### Transferring from One Wallet to Another
-```
-acred tx bank send $ACRE_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aacre
-```
-
-### Participating in Proposal Voting
-```
-acred tx gov vote 1 yes --from $ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Validatore Staking / Delegation
-```
-acred tx staking delegate $ACRE_VALOPER_ADDRESS 100000000aacre --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Staking / Redelegate from Current Validator to Other Validator
-`srcValidatorAddress`: Address of the current staked validator
-`destValidatorAddress`: Address of the new validator to be staked
-```
-acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aacre --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Withdraw Rewards
-```
-acred tx distribution withdraw-all-rewards --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Withdrawing Commission Rewards
-
-```
-acred tx distribution withdraw-rewards $ACRE_VALOPER_ADDRESS --from=$ACRE_WALLET --commission --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Changing Validator Name
-Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
-```
-acred tx staking edit-validator \
---moniker=NEW-NODE-NAME\
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET\
---gas-prices 0.00001aacre\
---gas-adjustment 1.5\
---gas auto -y
-```
-
-### Changing Validator Commission Rate
-We change the value in the section that says 'commission-rate'.
-```
-acred tx staking edit-validator --commission-rate "0.02" --moniker=$ACRE_NODENAME --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto - y
-```
-
-### Editing Your Validator Information
-Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
-`$ACRE_NODENAME` and `$ACRE_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
-```
-acred tx staking edit-validator \
---moniker=$ACRE_NODENAME\
---identity=XXXX0000XXXX0000\
---website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
---details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET
-```
-
-### Recovering Validator from Jail
-```
-acred tx slashing unjail --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-
-```
-
-### Completely Deleting the Node
-
-```
-systemctl stop acquired && \
-systemctl disable acquired && \
+systemctl stop acred && \
+systemctl disable acred && \
 rm /etc/systemd/system/acred.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .acred.acred && \
-rm -rf $(which acres)
+rm -rf .acred acrechain && \
+rm -rf $(which acred)
 sed -i '/ACRE_/d' ~/.bash_profile
 ```
 ​

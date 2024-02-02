@@ -196,11 +196,6 @@ Discord sunucusunda `#🚰┃testnet-faucet` kanalından aşağıdaki şekilde t
 
 `$request EIP-55_Address`
 
-### Checking Wallet Balance
-```
-artelad query bank balances $ART_WALLET_ADDRESS
-```
-
 ### Cüzdan Bakiyesini Kontrol Etme 
 ```
 artelad query bank balances $ART_WALLET_ADDRESS

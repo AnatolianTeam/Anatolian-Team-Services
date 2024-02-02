@@ -6,7 +6,7 @@ keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 ---
 # Artela Network
 
-![Chain4Energy](./img/Artela-Service.jpg)
+![Artela](./img/Artela-Service.jpg)
 
 ## Bağlantılar
  ✔️ [Website](https://artela.network/) |

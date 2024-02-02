@@ -1,6 +1,8 @@
 ---
 title: 💾 Installation
-sidebar_position: 2
+description: Node installation guide.
+image: ./img/Arable-Service-Cover.jpg
+keywords: [arable, protocol, acre, network, installation, snapshot, statesync, update]
 ---
 
 # Installation
@@ -206,161 +208,15 @@ acred tx staking create-validator \
 --yes
 ```
 
-## USEFUL COMMANDS
-
-## Checking Logs
-```
-journalctl -fu acred -o cat
-```
-
-### Starting Node
-```
-systemctl start acred
-```
-
-### Stopping the Node
-```
-systemctl stop acquired
-```
-
-### Restarting the Node
-```
-systemctl restart acred
-```
-
-### Node Sync Status
-```
-acquired status 2>&1 | jq .SyncInfo
-```
-```
-curl -s localhost:26657/status | jq .result.sync_info
-```
-
-### Validator Information
-```
-acquired status 2>&1 | jq .ValidatorInfo
-```
-
-### Node Information
-```
-acquired status 2>&1 | jq .NodeInfo
-```
-
-### Learning Node ID
-```
-acred tendermint show-node-id
-```
-
-### Learning Node IP Address
-```
-curl icanhazip.com
-```
-
-### Viewing the List of Wallets
-```
-acquired keys list
-```
-
-### Seeing Wallet Address
-```
-acred keys show $ACRE_WALLET --bech val -a
-```
-
-### Importing Wallet
-```
-acquired keys add $ACRE_WALLET --recover
-```
-
-### Deleting Your Wallet
-```
-acquired keys delete $ACRE_WALLET
-```
-
-### Checking Wallet Balance
-```
-acred query bank balances $ACRE_WALLET_ADDRESS
-```
-
-### Transferring from One Wallet to Another
-```
-acred tx bank send $ACRE_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aacre
-```
-
-### Participating in Proposal Voting
-```
-acred tx gov vote 1 yes --from $ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Validatore Staking / Delegation
-```
-acred tx staking delegate $ACRE_VALOPER_ADDRESS 100000000aacre --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Staking / Redelegate from Current Validator to Other Validator
-`srcValidatorAddress`: Address of the current staked validator
-`destValidatorAddress`: Address of the new validator to be staked
-```
-acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aacre --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Withdraw Rewards
-```
-acred tx distribution withdraw-all-rewards --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Withdrawing Commission Rewards
-
-```
-acred tx distribution withdraw-rewards $ACRE_VALOPER_ADDRESS --from=$ACRE_WALLET --commission --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-```
-
-### Changing Validator Name
-Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
-```
-acred tx staking edit-validator \
---moniker=NEW-NODE-NAME\
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET\
---gas-prices 0.00001aacre\
---gas-adjustment 1.5\
---gas auto -y
-```
-
-### Changing Validator Commission Rate
-We change the value in the section that says 'commission-rate'.
-```
-acred tx staking edit-validator --commission-rate "0.02" --moniker=$ACRE_NODENAME --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto - y
-```
-
-### Editing Your Validator Information
-Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
-`$ACRE_NODENAME` and `$ACRE_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
-```
-acred tx staking edit-validator \
---moniker=$ACRE_NODENAME\
---identity=XXXX0000XXXX0000\
---website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
---details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET
-```
-
-### Recovering Validator from Jail
-```
-acred tx slashing unjail --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre --gas-adjustment 1.5 --gas auto -y
-
-```
-
 ### Completely Deleting the Node
-
 ```
-systemctl stop acquired && \
-systemctl disable acquired && \
+systemctl stop acred && \
+systemctl disable acred && \
 rm /etc/systemd/system/acred.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .acred.acred && \
-rm -rf $(which acres)
+rm -rf .acred acrechain && \
+rm -rf $(which acred)
 sed -i '/ACRE_/d' ~/.bash_profile
 ```
 ​

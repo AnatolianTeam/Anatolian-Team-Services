@@ -1,5 +1,6 @@
 ---
 title: 💾 Installation
+description: Node installation guide.
 image: ./img/Artela-Service-Cover.jpg
 keywords: [artela, installation, snapshot, statesync, update]
 ---

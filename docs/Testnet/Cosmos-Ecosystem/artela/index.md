@@ -24,7 +24,6 @@ keywords: [artela, network, installation, snapshot, statesync, update]
 | Storage	| 250 GB SSD | 500 GB SSD |
 
 ## Network Info 
-
 * Network Chain ID: artela_11822-1
 * Binary: artelad
 * Denom: uart
