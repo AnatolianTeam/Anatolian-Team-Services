@@ -3,7 +3,7 @@ id: introduction
 hide_table_of_contents: true
 description: Node installation guide.
 image: ./img/Rebus-Service-Cover.jpg
-keywords: [arable, protocol, acre, network, installation, snapshot, statesync, update]
+keywords: [rebus, chain, network, installation, snapshot, statesync, update]
 ---
 # Rebus Chain
 

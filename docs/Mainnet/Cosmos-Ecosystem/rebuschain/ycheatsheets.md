@@ -1,8 +1,8 @@
 ---
 title: ⤴️ Cheatsheets
 description: Useful commands.
-image: ./img/Arable-Service-Cover.jpg
-keywords: [arable, protocol, acre, network, installation, snapshot, statesync, update]
+image: ./img/Rebus-Service-Cover.jpg
+keywords: [rebus, chain, network, installation, snapshot, statesync, update]
 ---
 
 # Cheatsheets 
