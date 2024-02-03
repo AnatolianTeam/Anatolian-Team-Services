@@ -86,7 +86,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.acred/config/config.t
 
 # Set up SEED and PEERS
 SEEDS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.babylond/config/config.toml
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.acred/config/config.toml
 
 # Enabling Prometheus
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.acred/config/config.toml

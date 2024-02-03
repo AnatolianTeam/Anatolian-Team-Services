@@ -56,8 +56,8 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.a
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.artelad/config/addrbook.json "https://mainnet.anatolianteam.com/arable/genesis.json"
-wget -O $HOME/.artelad/config/addrbook.json "https://mainnet.anatolianteam.com/arable/addrbook.json"
+wget -O $HOME/.acred/config/addrbook.json "https://mainnet.anatolianteam.com/arable/genesis.json"
+wget -O $HOME/.acred/config/addrbook.json "https://mainnet.anatolianteam.com/arable/addrbook.json"
 ```
 
 ```mdx-code-block
