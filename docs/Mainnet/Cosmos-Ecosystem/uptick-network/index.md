@@ -5,7 +5,7 @@ description: Node installation guide.
 image: ./img/Uptick-Service-Cover.jpg
 keywords: [uptick, network, NFT, web3, installation, snapshot, statesync, update]
 ---
-# Uptick Protocol
+# Uptick Network
 
 ![Uptick](./img/Uptick-Service.jpg)
 

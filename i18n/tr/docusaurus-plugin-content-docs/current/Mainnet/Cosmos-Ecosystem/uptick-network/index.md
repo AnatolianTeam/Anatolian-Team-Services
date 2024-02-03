@@ -5,7 +5,7 @@ description: Node kurulum rehberi.
 image: ./img/Uptick-Service-Cover.jpg
 keywords: [uptick, network, NFT, web3, kurulum, snapshot, statesync, güncelleme]
 ---
-# Uptick Protocol
+# Uptick Network
 
 ![Uptick](./img/Uptick-Service.jpg)
 
