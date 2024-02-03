@@ -1,8 +1,8 @@
 ---
 title: ⤴️ Komutlar
 description: Node kurulum rehberi.
-image: ./img/Arable-Service-Cover.jpg
-keywords: [arable, protocol, network, kurulum, snapshot, statesync, güncelleme]
+image: ./img/Rebus-Service-Cover.jpg
+keywords: [rebus, chain, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Komutlar
@@ -66,61 +66,61 @@ acred keys list
 
 ### Cüzdan Adresini Görme
 ```
-acred keys show $ACRE_WALLET --bech val -a
+acred keys show $REBUS_WALLET --bech val -a
 ```
 
 ### Cüzdanı İçeri Aktarma
 ```
-acred keys add $ACRE_WALLET --recover
+acred keys add $REBUS_WALLET --recover
 ```
 
 ### Cüzdanı Silme
 ```
-acred keys delete $ACRE_WALLET
+acred keys delete $REBUS_WALLET
 ```
 
 ### Cüzdan Bakiyesini Kontrol Etme
 ```
-acred query bank balances $ACRE_WALLET_ADDRESS
+acred query bank balances $REBUS_WALLET_ADDRESS
 ```
 
 ## Token İşlemleri
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-acred tx bank send $ACRE_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
+acred tx bank send $REBUS_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 ```
 
 ### Proposal Oylamasına Katılma
 ```
-acred tx gov vote 1 yes --from $ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
+acred tx gov vote 1 yes --from $REBUS_WALLET --chain-id=$REBUS_CHAIN_ID --gas-prices 0.00001arebus--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-acred tx staking delegate $ACRE_VALOPER_ADDRESS 100000000aacre--from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
+acred tx staking delegate $REBUS_VALOPER_ADDRESS 100000000arebus--from=$REBUS_WALLET --chain-id=$REBUS_CHAIN_ID --gas-prices 0.00001arebus--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000aacre--from $WALLET --chain-id $ACRE_CHAIN_ID --fees 3000aacre-y
+acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000arebus--from $WALLET --chain-id $REBUS_CHAIN_ID --fees 3000arebus-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aacre--from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
+acred tx staking redelegate srcValidatorAddress destValidatorAddress 100000000arebus--from=$REBUS_WALLET --chain-id=$REBUS_CHAIN_ID --gas-prices 0.00001arebus--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-acred tx distribution withdraw-all-rewards --from=$ACRE_WALLET --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
+acred tx distribution withdraw-all-rewards --from=$REBUS_WALLET --chain-id=$REBUS_CHAIN_ID --gas-prices 0.00001arebus--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-acred tx distribution withdraw-rewards $ACRE_VALOPER_ADDRESS --from=$ACRE_WALLET --commission --chain-id=$ACRE_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
+acred tx distribution withdraw-rewards $REBUS_VALOPER_ADDRESS --from=$REBUS_WALLET --commission --chain-id=$REBUS_CHAIN_ID --gas-prices 0.00001arebus--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -135,8 +135,8 @@ acred status 2>&1 | jq .ValidatorInfo
 ```
 acred tx staking edit-validator \
 --moniker=YENI-NODE-ADI\
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET\
+--chain-id=$REBUS_CHAIN_ID\
+--from=$REBUS_WALLET\
 --gas-prices 0.00001uc4e\
 --gas-adjustment 1.5\
 --gas auto -y
@@ -145,20 +145,20 @@ acred tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-acred tx staking edit-validator --commission-rate "0.02" --moniker=$ACRE_NODENAME --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto - y
+acred tx staking edit-validator --commission-rate "0.02" --moniker=$REBUS_NODENAME --from $REBUS_WALLET --chain-id $REBUS_CHAIN_ID --gas-prices 0.00001arebus--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
 Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak aşağıdaki kodda görüldüğü gibi 16 haneli (XXXX0000XXXX0000) kodunuzu almalısınız. Ayrıca profil resmi vs. ayarları da yapabilirsiniz. 
-`$ACRE_NODENAME` ve `$ACRE_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
+`$REBUS_NODENAME` ve `$REBUS_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 acred tx staking edit-validator \
---moniker=$ACRE_NODENAME\
+--moniker=$REBUS_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$ACRE_CHAIN_ID\
---from=$ACRE_WALLET
+--chain-id=$REBUS_CHAIN_ID\
+--from=$REBUS_WALLET
 ```
 
 ### Validator Detayları
@@ -178,7 +178,7 @@ acred q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-acred tx slashing unjail --from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --gas-prices 0.00001aacre--gas-adjustment 1.5 --gas auto -y
+acred tx slashing unjail --from $REBUS_WALLET --chain-id $REBUS_CHAIN_ID --gas-prices 0.00001arebus--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

@@ -24,7 +24,7 @@ Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https
 | Bşleşenler | Minimum | **Önerilen** |
 | ------------ | ------------ | ------------ |
 | CPU |	4 | 8 |
-| RAM	| 16 GB | 31 GB |
+| RAM	| 16 GB | 32 GB |
 | Storage	| 500 GB SSD | 1 TB SSD | 
 
 ## Ağ Bilgisi 
@@ -56,8 +56,8 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.a
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/arable/genesis.json"
-wget -O $HOME/.artelad/config/addrbook.json "https://testnet.anatolianteam.com/arable/addrbook.json"
+wget -O $HOME/.artelad/config/addrbook.json "https://mainnet.anatolianteam.com/arable/genesis.json"
+wget -O $HOME/.artelad/config/addrbook.json "https://mainnet.anatolianteam.com/arable/addrbook.json"
 ```
 
 ```mdx-code-block

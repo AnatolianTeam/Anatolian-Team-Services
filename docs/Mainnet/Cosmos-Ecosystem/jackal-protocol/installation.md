@@ -48,8 +48,8 @@ source $HOME/.bash_profile
 ### Sample
 Let's assume that your Node (`JACKAL_NODENAME`) and Wallet (`JACKAL_WALLET`) name is `Anatolian-Guide` and the port you will use (`JACKAL_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
-echo "export JACKAL_NODENAME=Mehmet"  >> $HOME/.bash_profile
-echo "export JACKAL_WALLET=Mehmet" >> $HOME/.bash_profile
+echo "export JACKAL_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export JACKAL_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export JACKAL_PORT=16" >> $HOME/.bash_profile
 echo "export JACKAL_CHAIN_ID=jackal-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile

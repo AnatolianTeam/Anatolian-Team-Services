@@ -24,7 +24,7 @@ You can stake using auto-compound [here](https://restake.app/acrechain/acrevalop
 | Components | Minimum | **Recommended** |
 | ------------ | ------------ | ------------ |
 | CPU |	4 | 8 |
-| RAM	| 16 GB | 31 GB |
+| RAM	| 16 GB | 32 GB |
 | Storage	| 500 GB SSD | 1 TB SSD | 
 
 ## Network Info 
@@ -56,8 +56,8 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.a
 ```
 The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.acred/config/addrbook.json "https://testnet.anatolianteam.com/artela/genesis.json"
-wget -O $HOME/.acred/config/addrbook.json "https://testnet.anatolianteam.com/artela/addrbook.json"
+wget -O $HOME/.acred/config/addrbook.json "https://mainnet.anatolianteam.com/arable/genesis.json"
+wget -O $HOME/.acred/config/addrbook.json "https://mainnet.anatolianteam.com/arable/addrbook.json"
 ```
 
 ```mdx-code-block
