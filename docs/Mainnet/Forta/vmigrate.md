@@ -9,7 +9,7 @@ keywords: [forta, network, security, intel]
 
 ## Copying the .forta Folder
 First of all, we need to install winscp, termius etc. on our server. We connect with a program and copy the .forta folder in the root directory to our computer.
-![Forta-1](./img/migrate-1.jpeg)
+![Forta-1](./img/migrate-1.jpg)
 
 Bu adımı gerçekleştirdikten sonra yeni sunucumuza kurulum yapıyoruz.
 
@@ -69,7 +69,7 @@ apt-get install forta
 
 ## Moving .forta Folder to New Server
 This time we copy the .forta folder we copied here to our new server.
-![Forta-2](./img/migrate-2.jpeg)
+![Forta-2](./img/migrate-2.jpg)
 
 ## Checking the Configuration File
 We open the `config.yml` file with the code below.
