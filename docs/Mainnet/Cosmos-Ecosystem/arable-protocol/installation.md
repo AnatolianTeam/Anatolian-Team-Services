@@ -75,7 +75,7 @@ acred config chain-id $ACRE_CHAIN_ID
 acred init --chain-id $ACRE_CHAIN_ID $ACRE_NODENAME
 
 # Copying the Genesis File
-wget  -O $HOME/.acred/config/genesis.json
+wget https://raw.githubusercontent.com/ArableProtocol/acrechain/main/networks/mainnet/acre_9052-1/genesis.json -O $HOME/.acred/config/genesis.json
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.25aacre"|g' $HOME/.acred/config/app.toml

@@ -74,7 +74,7 @@ canined config chain-id $JACKAL_CHAIN_ID
 canined init --chain-id $JACKAL_CHAIN_ID $JACKAL_NODENAME
 
 # Copying the Genesis File
-wget  -O $HOME/.canine/config/genesis.json
+wget -O $HOME/.canine/config/genesis.json "https://cdn.discordapp.com/attachments/1002389406650466405/1034968352591986859/updated_genesis2.json"
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.25ujkl"|g' $HOME/.canine/config/app.toml

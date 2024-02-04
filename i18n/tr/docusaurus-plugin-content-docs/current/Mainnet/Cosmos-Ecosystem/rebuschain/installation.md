@@ -74,7 +74,9 @@ rebusd config chain-id $REBUS_CHAIN_ID
 rebusd init --chain-id $REBUS_CHAIN_ID $REBUS_NODENAME
 
 # Copying the Genesis File
-wget  -O $HOME/.rebusd/config/genesis.json
+curl https://raw.githubusercontent.com/rebuschain/rebus.mainnet/master/reb_1111-1/genesis.zip > ~/.rebusd/config/genesis.zip
+cd $HOME/.rebusd/config/ 
+unzip genesis.zip && rm -rf genesis.zip
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.25arebus"|g' $HOME/.rebusd/config/app.toml

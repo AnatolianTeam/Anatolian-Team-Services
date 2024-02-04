@@ -74,7 +74,7 @@ acred config chain-id $EMPOW_CHAIN_ID
 acred init --chain-id $EMPOW_CHAIN_ID $EMPOW_NODENAME
 
 # Copying the Genesis File
-wget  -O $HOME/.empowerchain/config/genesis.json
+curl -L https://github.com/EmpowerPlastic/empowerchain/raw/main/mainnet/empowerchain-1/genesis.tar.gz | tar -xz -C $HOME/.empowerchain/config/
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.025umpwr"|g' $HOME/.empowerchain/config/app.toml
