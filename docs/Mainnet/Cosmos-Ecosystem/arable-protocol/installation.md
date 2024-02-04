@@ -151,8 +151,8 @@ journalctl -u acred -f -o cat
 
 🔴 **AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.**
 
-## Senkronizasyonu Kontrol Etme
-`false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
+## Checking Synchronization
+Unless we get a `false` output, we do not move on to the next step, namely creating a validator.
 ```shell
 acred status 2>&1 | jq .SyncInfo
 ```
