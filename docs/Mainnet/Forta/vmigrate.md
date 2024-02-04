@@ -77,7 +77,9 @@ We open the `config.yml` file with the code below.
 nano /root/.forta/config.yml
 ```
 We check whether the file content is as follows. In the 'ALCHEMY_LINK' section, we also check whether your alchemy address starting with 'https' is correct. If the file content is not as follows, we delete the codes in the file, edit the code below and paste it into the file.
-
+````jsx
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 <Tabs className="forta-confs">
   <TabItem value="Polygon">
 
@@ -192,6 +194,7 @@ EOF
   ``` 
   </TabItem>
 </Tabs>
+````
 
 ## Registering Wallet
 We enter your EVM wallet address where it says `EVM_ADDRESS` and the password you set in the Forta installation above where it says `PASSWORD`.
