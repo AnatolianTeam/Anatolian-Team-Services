@@ -2,7 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 description: Node installation guide.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/a8dce3356e553aad55bb6531935b292faca6c2e2/docs/Mainnet/Forta/img/Forta-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Mainnet/Forta/img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 ---
 # Forta
