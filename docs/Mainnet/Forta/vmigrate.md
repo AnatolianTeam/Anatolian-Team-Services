@@ -80,8 +80,7 @@ nano /root/.forta/config.yml
 We check whether the file content is as follows. In the 'ALCHEMY_LINK' section, we also check whether your alchemy address starting with 'https' is correct. If the file content is not as follows, we delete the codes in the file, edit the code below and paste it into the file.
 
 <Tabs>
-  <TabItem value="Polygon">
-
+<TabItem value="Polygon">
 ```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -95,9 +94,8 @@ trace:
   enabled: false
 EOF
 ```
-  </TabItem>
-  <TabItem value="BSC">
-
+</TabItem>
+<TabItem value="BSC">
 ```  
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -111,10 +109,9 @@ trace:
   enabled: false
 EOF
 ```
-  </TabItem>
-  <TabItem value="Ethereum">
-  
-  ``` 
+</TabItem>
+<TabItem value="Ethereum">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 1
@@ -126,11 +123,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Arbitrum">
-  
-  ```
+```
+</TabItem>
+<TabItem value="Arbitrum">
+```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 42161
@@ -142,10 +138,9 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Optimism">
-  
+```
+</TabItem>
+<TabItem value="Optimism">
 ``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -158,10 +153,9 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Avalanche">
-  
+```
+</TabItem>
+<TabItem value="Avalanche">
 ``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -174,11 +168,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Fantom">
-  
-  ``` 
+```
+</TabItem>
+<TabItem value="Fantom">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 250
@@ -189,9 +182,9 @@ scan:
 
 trace:
   enabled: false
-EOF  
-  ``` 
-  </TabItem>
+EOF
+```
+</TabItem>
 </Tabs>
 
 ## Registering Wallet

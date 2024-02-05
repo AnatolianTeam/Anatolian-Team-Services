@@ -81,10 +81,8 @@ nano /root/.forta/config.yml
 ```
 Dosya içeriğinin aşağıdaki gibi olup omadığını kontrol ediyoruz. `ALCHEMY_LINKINIZ` kısmında `https` ile başlayan alchemy adresinizin de doğru olup olmadığını kontrol ediyoruz. Eğer dosya içeriği aşağıdaki gibi değilse dosya içerisindeki kodları silip aşağıdaki kodu düzenleyip dosya içerisine yapıştırıyoruz.
 
-
 <Tabs>
-  <TabItem value="Polygon">
-
+<TabItem value="Polygon">
 ```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -98,9 +96,8 @@ trace:
   enabled: false
 EOF
 ```
-  </TabItem>
-  <TabItem value="BSC">
-
+</TabItem>
+<TabItem value="BSC">
 ```  
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -114,10 +111,9 @@ trace:
   enabled: false
 EOF
 ```
-  </TabItem>
-  <TabItem value="Ethereum">
-  
-  ``` 
+</TabItem>
+<TabItem value="Ethereum">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 1
@@ -129,11 +125,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Arbitrum">
-  
-  ```
+```
+</TabItem>
+<TabItem value="Arbitrum">
+```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 42161
@@ -145,11 +140,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Optimism">
-  
-  ``` 
+```
+</TabItem>
+<TabItem value="Optimism">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 10
@@ -161,11 +155,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Avalanche">
-  
-  ``` 
+```
+</TabItem>
+<TabItem value="Avalanche">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 43114
@@ -177,11 +170,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Fantom">
-  
-  ``` 
+```
+</TabItem>
+<TabItem value="Fantom">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 250
@@ -192,9 +184,9 @@ scan:
 
 trace:
   enabled: false
-EOF  
-  ``` 
-  </TabItem>
+EOF
+```
+</TabItem>
 </Tabs>
 
 ## Cüzdanı Kaydetme

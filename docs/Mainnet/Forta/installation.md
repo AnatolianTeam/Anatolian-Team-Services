@@ -79,8 +79,7 @@ We create an account by going to [Alchemy](https://alchemy.com/?r=zc3NjI5NzM1NzM
 Whichever network you want to run it on, you need to make the following configurations for that network.
 
 <Tabs>
-  <TabItem value="Polygon">
-
+<TabItem value="Polygon">
 ```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -94,9 +93,8 @@ trace:
   enabled: false
 EOF
 ```
-  </TabItem>
-  <TabItem value="BSC">
-
+</TabItem>
+<TabItem value="BSC">
 ```  
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -110,10 +108,9 @@ trace:
   enabled: false
 EOF
 ```
-  </TabItem>
-  <TabItem value="Ethereum">
-  
-  ``` 
+</TabItem>
+<TabItem value="Ethereum">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 1
@@ -125,11 +122,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Arbitrum">
-  
-  ```
+```
+</TabItem>
+<TabItem value="Arbitrum">
+```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 42161
@@ -141,11 +137,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Optimism">
-  
-  ``` 
+```
+</TabItem>
+<TabItem value="Optimism">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 10
@@ -157,11 +152,10 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Avalanche">
-  
-  ``` 
+```
+</TabItem>
+<TabItem value="Avalanche">
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 43114
@@ -173,9 +167,9 @@ scan:
 trace:
   enabled: false
 EOF
-  ``` 
-  </TabItem>
-  <TabItem value="Fantom">
+```
+</TabItem>
+<TabItem value="Fantom">
 ``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -187,9 +181,9 @@ scan:
 
 trace:
   enabled: false
-EOF  
-``` 
-  </TabItem>
+EOF
+```
+</TabItem>
 </Tabs>
 
 ## Registering Wallet
