@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Substrate%20Ecosystem/Avail%20Project/img/Avail-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Substrate-Ecosystem/avail-project/img/Avail-Service-Cover.jpg
 keywords: [Avail, proje, önemli, temel, katman, kurulum, snapshot, statesync, güncelleme]
 ---
 
