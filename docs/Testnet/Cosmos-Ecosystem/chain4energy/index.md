@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./img/C4E-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/chain4energy/img/C4E-Service-Cover.jpg
 keywords: [chain4energy, c4e, installation, snapshot, statesync, update]
 ---
 # Chain4Energy

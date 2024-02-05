@@ -1,7 +1,7 @@
 ---
 title: 💾 Installation
 description: Node installation guide.
-image: ./img/Artela-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
 keywords: [artela, installation, snapshot, statesync, update]
 ---
 

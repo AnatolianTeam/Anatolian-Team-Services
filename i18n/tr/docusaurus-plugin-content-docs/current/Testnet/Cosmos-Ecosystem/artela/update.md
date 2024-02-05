@@ -1,7 +1,7 @@
 ---
 title: 🆙 Güncelleme
 description: Update node with manual or scheduled.
-image: ./img/Artela-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
 keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 ---
 

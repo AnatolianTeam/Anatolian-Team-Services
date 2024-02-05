@@ -1,7 +1,7 @@
 ---
 title: ⤴️ Cheatsheets
 description: Useful commands.
-image: ./img/Jackal-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Mainnet/Cosmos-Ecosystem/jackal-protocol/img/Jackal-Service-Cover.jpg
 keywords: [jackal, protocol, canine, network, installation, snapshot, statesync, update]
 ---
 

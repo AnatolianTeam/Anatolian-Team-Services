@@ -1,7 +1,7 @@
 ---
 title: 💾 Kurulum
 description: Node installation guide.
-image: ./img/OKP4-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/okp4/img/OKP4-Service-Cover.jpg
 keywords: [okp4, open, knowledge, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 

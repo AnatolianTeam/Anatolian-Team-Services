@@ -1,7 +1,7 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
-image: ./img/Artela-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
 keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 ---
 

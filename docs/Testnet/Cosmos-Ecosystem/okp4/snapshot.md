@@ -1,7 +1,7 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
-image: ./img/OKP4-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/okp4/img/OKP4-Service-Cover.jpg
 keywords: [okp4, open knowledge protocol, installation, snapshot, statesync, update]
 ---
 

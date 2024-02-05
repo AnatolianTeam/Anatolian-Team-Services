@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./img/Pryzm-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/pryzm-zone/img/Pryzm-Service-Cover.jpg
 keywords: [Pryzm, node, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 

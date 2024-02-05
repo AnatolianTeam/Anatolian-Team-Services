@@ -1,7 +1,7 @@
 ---
 title: 🆙 Update
 description: Update node with manual or scheduled.
-image: ./img/CC-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crowdcontrol/img/CC-Service-Cover.jpg
 keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, statesync, update]
 ---
 

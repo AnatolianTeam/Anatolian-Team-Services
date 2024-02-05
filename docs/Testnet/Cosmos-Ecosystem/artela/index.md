@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./img/Artela-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
 keywords: [artela, network, installation, snapshot, statesync, update]
 ---
 # Artela Network 

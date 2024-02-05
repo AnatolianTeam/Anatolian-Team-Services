@@ -1,7 +1,7 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
-image: ./img/Pryzm-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/pryzm-zone/img/Pryzm-Service-Cover.jpg
 keywords: [Pryzm, node, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 

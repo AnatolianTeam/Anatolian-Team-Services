@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./img/Entangle-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/entangle/img/Entangle-Service-Cover.jpg
 keywords: [entangle, network, installation, snapshot, statesync, update]
 ---
 # Entangle 

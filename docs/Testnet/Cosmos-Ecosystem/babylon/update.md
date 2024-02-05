@@ -1,7 +1,7 @@
 ---
 title: 🆙 Update
 description: Update node with manual or scheduled.
-image: ./img/Babylon-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/babylon/img/Babylon-Service-Cover.jpg
 keywords: [babylon, installation, snapshot, statesync, update]
 ---
 

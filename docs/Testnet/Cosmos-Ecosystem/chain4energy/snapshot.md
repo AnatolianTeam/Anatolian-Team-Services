@@ -1,7 +1,7 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
-image: ./img/C4E-Service-Cover.jpg
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/chain4energy/img/C4E-Service-Cover.jpg
 keywords: [chain4energy, c4e, installation, snapshot, statesync, update]
 ---
 
