@@ -177,8 +177,7 @@ EOF
   ``` 
   </TabItem>
   <TabItem value="Fantom">
-  
-  ``` 
+``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 250
@@ -190,7 +189,7 @@ scan:
 trace:
   enabled: false
 EOF  
-  ``` 
+``` 
   </TabItem>
 </Tabs>
 
