@@ -17,7 +17,8 @@ keywords: [forta, network, security, intel]
  ✔️ [Discord](https://discord.gg/nbPQXRepWV)
 
 ## Stake with Us ♻️
-You can stake using [restake](https://restake.app/stride/stridevaloper1ehmnl9jdf2hnj78va888gtpz9e3d4g4ll3wthh), [Keplr](https://wallet.keplr.app/?tab=staking&modal=validator&chain=stride-1&validator_address=stridevaloper1ehmnl9jdf2hnj78va888gtpz9e3d4g4ll3wthh) or [Explorer](https://cosmos.anatolianteam.com/stride/staking/stridevaloper1ehmnl9jdf2hnj78va888gtpz9e3d4g4ll3wthh).
+* Arbitrum: https://app.forta.network/nodePool/832
+* Optimism: 
 
 ## Requirements
 

@@ -18,7 +18,7 @@ keywords: [forta, network, security, intel]
 
 
 ## Bizimle Stake Edin ♻️
-* Arbitrum: 
+* Arbitrum: https://app.forta.network/nodePool/832
 * Optimism: 
 
 ## Gereksinimler
