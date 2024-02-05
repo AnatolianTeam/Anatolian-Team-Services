@@ -84,7 +84,7 @@ Dosya içeriğinin aşağıdaki gibi olup omadığını kontrol ediyoruz. `ALCHE
 <Tabs>
 <TabItem value="Polygon">
 
-```
+```shell
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 137
@@ -101,7 +101,7 @@ EOF
 </TabItem>
 <TabItem value="BSC">
 
-```  
+```shell
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 56
@@ -118,7 +118,7 @@ EOF
 </TabItem>
 <TabItem value="Ethereum">
 
-``` 
+```shell
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 1
@@ -135,7 +135,7 @@ EOF
 </TabItem>
 <TabItem value="Arbitrum">
 
-```
+```shell
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 42161
@@ -152,7 +152,7 @@ EOF
 </TabItem>
 <TabItem value="Optimism">
 
-``` 
+```shell
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 10
@@ -168,7 +168,7 @@ EOF
 </TabItem>
 <TabItem value="Avalanche">
 
-``` 
+```shell
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 43114
@@ -186,7 +186,7 @@ EOF
 
 <TabItem value="Fantom">
 
-``` 
+```shell
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
 chainId: 250
