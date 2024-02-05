@@ -4,8 +4,7 @@ description: Update node with manual or scheduled.
 image: ./img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 ---
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 # Forta Node Migration
 
 ## Copying the .forta Folder

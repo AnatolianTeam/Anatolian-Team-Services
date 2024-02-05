@@ -6,6 +6,7 @@ keywords: [forta, network, security, intel]
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
 
 # Forta Node Taşıma
 
