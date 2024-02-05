@@ -77,7 +77,7 @@ We create an account by going to [Alchemy](https://alchemy.com/?r=zc3NjI5NzM1NzM
 
 ## Creating a Configuration File
 Whichever network you want to run it on, you need to make the following configurations for that network.
-
+```
 <Tabs>
 <TabItem value="Polygon">
 ```
@@ -185,6 +185,7 @@ EOF
 ```
 </TabItem>
 </Tabs>
+```
 
 ## Registering Wallet
 We enter your EVM wallet address where it says `EVM_ADDRESS` and the password you set in the Forta installation above where it says `PASSWORD`.

@@ -78,7 +78,7 @@ Successfully initialized at /root/.forta
 
 ## Yapılandırma Dosyası Oluşturma
 Hangi ağda çalıştırmak istiyorsanız o ağın aşağıdaki yapılandırmalarını yapmanız gerekmektedir.
-
+```
 <Tabs>
 <TabItem value="Polygon">
 ```
@@ -186,6 +186,7 @@ EOF
 ```
 </TabItem>
 </Tabs>
+```
 
 ## Cüzdanı Kaydetme
 `EVM_ADRESINIZ` bölümüne EVM cüzdan adresinizi ve `SIFRENIZ` yerine de yukarıda Forta kurulumunda belirlediğiniz şifreyi giriyoruz.

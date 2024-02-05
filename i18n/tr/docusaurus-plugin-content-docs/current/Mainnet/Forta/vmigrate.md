@@ -81,6 +81,7 @@ nano /root/.forta/config.yml
 ```
 Dosya içeriğinin aşağıdaki gibi olup omadığını kontrol ediyoruz. `ALCHEMY_LINKINIZ` kısmında `https` ile başlayan alchemy adresinizin de doğru olup olmadığını kontrol ediyoruz. Eğer dosya içeriği aşağıdaki gibi değilse dosya içerisindeki kodları silip aşağıdaki kodu düzenleyip dosya içerisine yapıştırıyoruz.
 
+```
 <Tabs>
 <TabItem value="Polygon">
 ```
@@ -188,6 +189,7 @@ EOF
 ```
 </TabItem>
 </Tabs>
+```
 
 ## Cüzdanı Kaydetme
 `EVM_ADRESINIZ` bölümünde EVM cüzdan adresinizi ve `SIFRENIZ` yerine de yukarıda Forta kurulumunda belirlediğiniz şifreyi giriyoruz.
