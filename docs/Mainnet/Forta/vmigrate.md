@@ -1,7 +1,7 @@
 ---
 title: 🆙 Migration
 description: Update node with manual or scheduled.
-image: ./img/Forta-Service-Cover.jpg
+image: https://github.com/AnatolianTeam/Anatolian-Team-Services/blob/a8dce3356e553aad55bb6531935b292faca6c2e2/docs/Mainnet/Forta/img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 ---
 
