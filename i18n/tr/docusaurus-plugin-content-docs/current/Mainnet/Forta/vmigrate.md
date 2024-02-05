@@ -4,6 +4,8 @@ description: Node kurulum rehberi.
 image: ./img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Forta Node Taşıma
 
@@ -79,8 +81,7 @@ nano /root/.forta/config.yml
 ```
 Dosya içeriğinin aşağıdaki gibi olup omadığını kontrol ediyoruz. `ALCHEMY_LINKINIZ` kısmında `https` ile başlayan alchemy adresinizin de doğru olup olmadığını kontrol ediyoruz. Eğer dosya içeriği aşağıdaki gibi değilse dosya içerisindeki kodları silip aşağıdaki kodu düzenleyip dosya içerisine yapıştırıyoruz.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 <Tabs>
   <TabItem value="Polygon">
 

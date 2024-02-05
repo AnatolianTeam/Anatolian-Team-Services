@@ -4,6 +4,8 @@ description: Node kurulum rehberi.
 image: ./img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Kurulum
 
@@ -77,8 +79,6 @@ Successfully initialized at /root/.forta
 ## Yapılandırma Dosyası Oluşturma
 Hangi ağda çalıştırmak istiyorsanız o ağın aşağıdaki yapılandırmalarını yapmanız gerekmektedir.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="Polygon">
 

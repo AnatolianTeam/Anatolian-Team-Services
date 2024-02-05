@@ -4,7 +4,8 @@ description: Update node with manual or scheduled.
 image: ./img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 ---
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 # Forta Node Migration
 
 ## Copying the .forta Folder
@@ -78,8 +79,6 @@ nano /root/.forta/config.yml
 ```
 We check whether the file content is as follows. In the 'ALCHEMY_LINK' section, we also check whether your alchemy address starting with 'https' is correct. If the file content is not as follows, we delete the codes in the file, edit the code below and paste it into the file.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="Polygon">
 

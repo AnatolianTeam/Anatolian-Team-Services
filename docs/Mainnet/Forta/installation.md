@@ -4,7 +4,8 @@ description: Node installation guide.
 image: ./img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 ---
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 # Installation
 
 ## Updating the System
@@ -77,8 +78,6 @@ We create an account by going to [Alchemy](https://alchemy.com/?r=zc3NjI5NzM1NzM
 ## Creating a Configuration File
 Whichever network you want to run it on, you need to make the following configurations for that network.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="Polygon">
 
