@@ -78,9 +78,10 @@ We open the `config.yml` file with the code below.
 nano /root/.forta/config.yml
 ```
 We check whether the file content is as follows. In the 'ALCHEMY_LINK' section, we also check whether your alchemy address starting with 'https' is correct. If the file content is not as follows, we delete the codes in the file, edit the code below and paste it into the file.
-```
+
 <Tabs>
 <TabItem value="Polygon">
+
 ```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -94,8 +95,10 @@ trace:
   enabled: false
 EOF
 ```
+
 </TabItem>
 <TabItem value="BSC">
+
 ```  
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -109,8 +112,10 @@ trace:
   enabled: false
 EOF
 ```
+
 </TabItem>
 <TabItem value="Ethereum">
+
 ``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -124,8 +129,10 @@ trace:
   enabled: false
 EOF
 ```
+
 </TabItem>
 <TabItem value="Arbitrum">
+
 ```
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -139,8 +146,10 @@ trace:
   enabled: false
 EOF
 ```
+
 </TabItem>
 <TabItem value="Optimism">
+
 ``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -156,6 +165,7 @@ EOF
 ```
 </TabItem>
 <TabItem value="Avalanche">
+
 ``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -169,8 +179,11 @@ trace:
   enabled: false
 EOF
 ```
+
 </TabItem>
+
 <TabItem value="Fantom">
+
 ``` 
 rm /root/.forta/config.yml
 sudo tee /root/.forta/config.yml > /dev/null <<EOF
@@ -184,9 +197,10 @@ trace:
   enabled: false
 EOF
 ```
+
 </TabItem>
 </Tabs>
-```
+
 ## Registering Wallet
 We enter your EVM wallet address where it says `EVM_ADDRESS` and the password you set in the Forta installation above where it says `PASSWORD`.
 ```shell
