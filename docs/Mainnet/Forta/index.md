@@ -18,7 +18,7 @@ keywords: [forta, network, security, intel]
 
 ## Stake with Us ♻️
 * Arbitrum: https://app.forta.network/nodePool/832
-* Optimism: 
+* Optimism: https://app.forta.network/nodePool/226
 
 ## Requirements
 
