@@ -17,8 +17,9 @@ keywords: [forta, network, security, intel]
  ✔️ [Discord](https://discord.gg/nbPQXRepWV)
 
 ## Stake with Us ♻️
-* Arbitrum: https://app.forta.network/nodePool/832
-* Optimism: https://app.forta.network/nodePool/226
+* Arbitrum: https://app.forta.network/nodePool/832 & https://app.forta.network/nodePool/830
+* Optimism: https://app.forta.network/nodePool/226 & https://app.forta.network/nodePool/222
+* Polygon: https://app.forta.network/nodePool/586
 
 ## Requirements
 
