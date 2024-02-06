@@ -17,7 +17,7 @@ keywords: [jackal, protocol, canine, network, kurulum, snapshot, statesync, gün
  ✔️ [Discord](https://discord.com/invite/5GKym3p6rj)
 
 ## Bizimle Stake Edin ♻️
-Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https://restake.app/jackal/jklvaloper1qhm6hucmshaz6s3mdyl8jje9ryk7t5uxgxy6w8) stake edebilirsiniz.
+Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](hhttps://restake.anatolianteam.com/jackal/jklvaloper1qhm6hucmshaz6s3mdyl8jje9ryk7t5uxgxy6w8) stake edebilirsiniz.
 
 ## Gereksinimler
 

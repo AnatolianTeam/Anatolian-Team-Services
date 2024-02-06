@@ -17,7 +17,7 @@ keywords: [rebus, chain, network, installation, snapshot, statesync, update]
  ✔️ [Discord](https://discord.com/invite/tqfSntHxvv)
 
 ## Stake with Us ♻️
-You can stake using auto-compound [here](https://restake.app/rebus/rebusvaloper183hv37en2dayslgf03zfr57crtjrchuazwm9h9) without paying any fees.
+You can stake using auto-compound [here](https://restake.anatolianteam.com/rebus/rebusvaloper183hv37en2dayslgf03zfr57crtjrchuazwm9h9) without paying any fees.
 
 ## Requirements
 

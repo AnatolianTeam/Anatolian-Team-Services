@@ -17,7 +17,7 @@ keywords: [empower, chain, empowerchain, network, kurulum, snapshot, statesync, 
  ✔️ [Discord](https://discord.gg/UTxEzFzHVX)
 
 ## Bizimle Stake Edin ♻️
-Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https://restake.app/acrechain/empowervaloper1786wmwws6avkrkx9nwv3az6g2j9ha953ydusdv) stake edebilirsiniz.
+Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan]((https://restake.anatolianteam.com/empowerchain/empowervaloper1786wmwws6avkrkx9nwv3az6g2j9ha953ydusdv) stake edebilirsiniz.
 
 ## Gereksinimler
 

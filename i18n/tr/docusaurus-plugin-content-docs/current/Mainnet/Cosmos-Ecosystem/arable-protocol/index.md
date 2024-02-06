@@ -17,7 +17,7 @@ keywords: [arable, protocol, acre, network, kurulum, snapshot, statesync, günce
  ✔️ [Discord](http://discord.gg/arable)
 
 ## Bizimle Stake Edin ♻️
-Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https://restake.app/acrechain/acrevaloper10uc3h2348v9dxa7evkjhep8xxtsd8f7de3xg5t) stake edebilirsiniz.
+Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https://restake.anatolianteam.com/acrechain/acrevaloper10uc3h2348v9dxa7evkjhep8xxtsd8f7de3xg5t) stake edebilirsiniz.
 
 ## Gereksinimler
 

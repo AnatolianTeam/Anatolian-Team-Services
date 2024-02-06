@@ -17,7 +17,7 @@ keywords: [jackal, protocol, canine, network, installation, snapshot, statesync,
  ✔️ [Discord](https://discord.com/invite/5GKym3p6rj)
 
 ## Stake with Us ♻️
-You can stake using auto-compound [here](https://restake.app/acrechain/jklvaloper1qhm6hucmshaz6s3mdyl8jje9ryk7t5uxgxy6w8) without paying any fees.
+You can stake using auto-compound [here](https://restake.anatolianteam.com/jackal/jklvaloper1qhm6hucmshaz6s3mdyl8jje9ryk7t5uxgxy6w8) without paying any fees.
 
 ## Requirements
 

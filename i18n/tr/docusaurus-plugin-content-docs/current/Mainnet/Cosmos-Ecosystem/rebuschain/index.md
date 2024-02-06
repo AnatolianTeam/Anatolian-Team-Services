@@ -17,7 +17,7 @@ keywords: [rebus, chain, network, kurulum, snapshot, statesync, güncelleme]
  ✔️ [Discord](https://discord.com/invite/tqfSntHxvv)
 
 ## Bizimle Stake Edin ♻️
-Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https://restake.app/rebus/rebusvaloper183hv37en2dayslgf03zfr57crtjrchuazwm9h9) stake edebilirsiniz.
+Restake kullanarak fee ücreti ödemeden auto-restake kullanarak [buradan](https://restake.anatolianteam.com/rebus/rebusvaloper183hv37en2dayslgf03zfr57crtjrchuazwm9h9) stake edebilirsiniz.
 
 ## Gereksinimler
 

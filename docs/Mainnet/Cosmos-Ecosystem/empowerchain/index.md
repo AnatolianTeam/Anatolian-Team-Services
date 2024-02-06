@@ -17,7 +17,7 @@ keywords: [empower, chain, empowerchain, network, installation, snapshot, states
  ✔️ [Discord](https://discord.gg/UTxEzFzHVX)
 
 ## Stake with Us ♻️
-You can stake using auto-compound [here](https://restake.app/empowerchain/empowervaloper1786wmwws6avkrkx9nwv3az6g2j9ha953ydusdv) without paying any fees.
+You can stake using auto-compound [here](https://restake.anatolianteam.com/empowerchain/empowervaloper1786wmwws6avkrkx9nwv3az6g2j9ha953ydusdv) without paying any fees.
 
 ## Requirements
 

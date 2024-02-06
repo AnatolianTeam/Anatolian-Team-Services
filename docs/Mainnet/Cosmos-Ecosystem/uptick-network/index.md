@@ -17,7 +17,7 @@ keywords: [uptick, network, NFT, web3, installation, snapshot, statesync, update
  ✔️ [Discord](https://discord.com/invite/teqX78VZUV)
 
 ## Stake with Us ♻️
-You can stake using auto-compound [here](https://restake.app/uptick/uptickvaloper12tmn00ne92n5nljf3t5apyy2jtkfjfetdhvgca) without paying any fees.
+You can stake using auto-compound [here](https://restake.anatolianteam.com/uptick/uptickvaloper12tmn00ne92n5nljf3t5apyy2jtkfjfetdhvgca) without paying any fees.
 
 ## Requirements
 

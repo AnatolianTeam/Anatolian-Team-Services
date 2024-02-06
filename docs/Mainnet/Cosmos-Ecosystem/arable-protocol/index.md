@@ -17,7 +17,7 @@ keywords: [arable, protocol, acre, network, installation, snapshot, statesync, u
  ✔️ [Discord](http://discord.gg/arable)
 
 ## Stake with Us ♻️
-You can stake using auto-compound [here](https://restake.app/acrechain/acrevaloper10uc3h2348v9dxa7evkjhep8xxtsd8f7de3xg5t) without paying any fees.
+You can stake using auto-compound [here](https://restake.anatolianteam.com/acrechain/acrevaloper10uc3h2348v9dxa7evkjhep8xxtsd8f7de3xg5t) without paying any fees.
 
 ## Requirements
 
