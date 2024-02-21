@@ -103,7 +103,7 @@ pryzmd tx staking delegate $PRYZM_VALOPER_ADDRESS 100000000upryzm --from=$PRYZM_
 
 ### Stake'ten Çıkma
 ```
-pryzmd tx staking unbond $(pryzmd keys show $WALLET --bech val -a) 1000000upryzm --from $WALLET --chain-id $PRYZM_CHAIN_ID --fees 3000upryzm -y
+pryzmd tx staking unbond $(pryzmd keys show $PRYZM_WALLET --bech val -a) 1000000upryzm --from $PRYZM_WALLET --chain-id $PRYZM_CHAIN_ID --fees 3000upryzm -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
@@ -163,7 +163,7 @@ pryzmd tx staking edit-validator \
 
 ### Validator Detayları
 ```
-pryzmd q staking validator $(pryzmd keys show $WALLET --bech val -a)
+pryzmd q staking validator $(pryzmd keys show $PRYZM_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi
