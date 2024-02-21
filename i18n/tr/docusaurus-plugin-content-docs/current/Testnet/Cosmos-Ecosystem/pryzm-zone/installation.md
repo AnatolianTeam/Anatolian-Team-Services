@@ -58,9 +58,8 @@ source $HOME/.bash_profile
 ## Pryzm'in Kurulması
 ```
 cd $HOME
-wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64.tar.gz
-tar -xzvf pryzmd-0.10.0-linux-amd64.tar.gz && chmod +x pryzmd
-rm -rf pryzmd-0.10.0-linux-amd64.tar.gz
+wget -O pryzmd https://storage.googleapis.com/pryzm-zone/core/0.11.1/pryzmd-0.11.1-linux-amd64
+chmod +x $HOME/pryzmd
 mv pryzmd /root/go/bin/
 pryzmd version
 ```
