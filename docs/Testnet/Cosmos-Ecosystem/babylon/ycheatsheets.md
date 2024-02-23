@@ -102,7 +102,7 @@ babylond tx staking delegate $BBN_VALOPER_ADDRESS 100000000ubbn --from=$BBN_WALL
 ```
 ### Unbonding
 ```
-babylond tx staking unbond $(babylond keys show $WALLET --bech val -a) 1000000ubbn --from $WALLET --chain-id indigo-1 --fees 3000ubbn -y
+babylond tx staking unbond $(babylond keys show $WALLET --bech val -a) 1000000ubbn --from $BBN_WALLET --chain-id indigo-1 --fees 3000ubbn -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

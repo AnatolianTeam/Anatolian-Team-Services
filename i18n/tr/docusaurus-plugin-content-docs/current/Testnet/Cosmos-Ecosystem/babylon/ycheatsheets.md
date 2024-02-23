@@ -103,7 +103,7 @@ babylond tx staking delegate $BBN_VALOPER_ADDRESS 100000000ubbn --from=$BBN_WALL
 
 ### Stake'ten Çıkma
 ```
-babylond tx staking unbond $(babylond keys show $WALLET --bech val -a) 1000000ubbn --from $WALLET --chain-id $BBN_CHAIN_ID --fees 3000ubbn -y
+babylond tx staking unbond $(babylond keys show $WALLET --bech val -a) 1000000ubbn --from $BBN_WALLET --chain-id $BBN_CHAIN_ID --fees 3000ubbn -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

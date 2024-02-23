@@ -41,7 +41,7 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 echo "export BBN_NODENAME=$BBN_NODENAME"  >> $HOME/.bash_profile
 echo "export BBN_WALLET=$BBN_WALLET" >> $HOME/.bash_profile
 echo "export BBN_PORT=11" >> $HOME/.bash_profile
-echo "export BBN_CHAIN_ID=bbn-test-2" >> $HOME/.bash_profile
+echo "export BBN_CHAIN_ID=bbn-test-3" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -58,13 +58,13 @@ source $HOME/.bash_profile
 ## Babylon'un Kurulması
 ```
 cd $HOME
-git clone https://github.com/babylonchain/babylon
-cd babylon || return
-git checkout v0.7.2
+git clone https://github.com/babylonchain/babylon.git babylon
+cd babylon
+git checkout v0.8.3
 make install
 babylond version
 ```
-Versiyon çıktısı `0.7.2` olacak.
+Versiyon çıktısı `0.8.3` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.

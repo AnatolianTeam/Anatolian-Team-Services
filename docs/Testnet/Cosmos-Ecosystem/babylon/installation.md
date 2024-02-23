@@ -41,7 +41,7 @@ The areas you need to change are written below.
 echo "export BBN_NODENAME=$BBN_NODENAME"  >> $HOME/.bash_profile
 echo "export BBN_WALLET=$BBN_WALLET" >> $HOME/.bash_profile
 echo "export BBN_PORT=11" >> $HOME/.bash_profile
-echo "export BBN_CHAIN_ID=bbn-test-2" >> $HOME/.bash_profile
+echo "export BBN_CHAIN_ID=bbn-test-3" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -58,13 +58,13 @@ source $HOME/.bash_profile
 ## Installing Babylon
 ```
 cd $HOME
-git clone https://github.com/babylonchain/babylon
-cd babylon || return
-git checkout v0.7.2
+git clone https://github.com/babylonchain/babylon.git babylon
+cd babylon
+git checkout v0.8.3
 make install
 babylond version
 ```
-The version output will be `0.7.2`.
+The version output will be `0.8.3`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
