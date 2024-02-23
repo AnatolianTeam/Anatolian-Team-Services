@@ -5,7 +5,7 @@ image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/m
 keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# StateSync (COMING SOON) 
+# StateSync
 
 ```shell
 sudo systemctl stop artelad
