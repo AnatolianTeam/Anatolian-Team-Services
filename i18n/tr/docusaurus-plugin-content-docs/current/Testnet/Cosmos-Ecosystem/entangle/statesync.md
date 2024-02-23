@@ -5,7 +5,7 @@ image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/m
 keywords: [entangle, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# StateSync (COMING SOON) 
+# StateSync
 
 ```shell
 sudo systemctl stop entangled
