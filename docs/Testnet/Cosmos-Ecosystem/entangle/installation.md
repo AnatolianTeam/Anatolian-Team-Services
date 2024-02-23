@@ -85,14 +85,9 @@ indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.entangled/config/config.toml
 
 # Set up SEED and PEERS
-SEEDS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.entangled/config/config.toml
-*
 SEEDS="b65b6270a053b8a5b5bc037aa90d5790fcc555fa@entangle-testnet-seed.itrocket.net:29656"
 PEERS="fe8c954ed37bfc3e5fc5eaf19b861d8a5947b2f5@entangle-testnet-peer.itrocket.net:29656,1786a89fc8ae055b775276c8f64197653aa9efa0@159.203.128.93:26656,7bff324a17426a00731f425ae29fe6ef05eebbac@213.239.217.52:33656,0188b9ed89f9aa60cf3691fbe336e0a36fc6bb9c@[2a02:4780:d:bec4::1]:26656,b02c2619b81356ce5ee0c0c832ab9f96cec46e87@8.217.49.46:26656,f7faae4bb64024ca0d7eb81f525cf33ea7d7e94f@89.58.18.47:27464,4895c46a55c7991f998277bd2f8ab45bcaba77cd@167.86.84.79:26656,68b0732e1a6ea2c37dbe4085b43b1a7c8d9bf8c6@185.209.223.103:14656,2cd6d17b7fcf2930684ba9332f3cae8219d1f1ea@46.250.236.48:26656,3d15d612fad5ffa14dce2dc99d29d651df399db2@144.217.68.182:17956,a24ccb1bcfdb940b640a9288021841a3386b6c0f@65.109.68.87:23656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.entangled/config/config.toml
-*
-
 
 # Enabling Prometheus
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.entangled/config/config.toml
