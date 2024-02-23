@@ -13,7 +13,7 @@ sudo systemctl stop entangled
 cp $HOME/.entangled/data/priv_validator_state.json $HOME/.entangled/priv_validator_state.json.backup
 entangled tendermint unsafe-reset-all --home $HOME/.entangled --keep-addr-book
 
-SNAP_RPC="https://rpc-t.entangle.anatolianteam.com:443"
+SNAP_RPC="https://rpc-t-entangle.anatolianteam.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
