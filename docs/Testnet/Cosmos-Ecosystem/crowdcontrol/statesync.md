@@ -8,7 +8,7 @@ keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, st
 # StateSync
 
 ```shell
-sudo systemctl stop Cardchaind
+systemctl stop Cardchaind
 
 cp $HOME/.Cardchain/data/priv_validator_state.json $HOME/.Cardchain/priv_validator_state.json.backup
 Cardchaind tendermint unsafe-reset-all --home $HOME/.Cardchain --keep-addr-book
@@ -28,6 +28,5 @@ sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.Cardchain/confi
 
 mv $HOME/.Cardchain/priv_validator_state.json.backup $HOME/.Cardchain/data/priv_validator_state.json
 
-sudo systemctl restart Cardchaind
-sudo journalctl -u Cardchaind -f --no-hostname -o cat
+systemctl restart Cardchaind && journalctl -u Cardchaind -f -o cat
 ```

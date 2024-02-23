@@ -8,7 +8,7 @@ keywords: [babylon, installation, snapshot, statesync, update]
 # StateSync
 
 ```shell
-sudo systemctl stop babylond
+systemctl stop babylond
 
 cp $HOME/.babylond/data/priv_validator_state.json $HOME/.babylond/priv_validator_state.json.backup
 babylond tendermint unsafe-reset-all --home $HOME/.babylond --keep-addr-book
@@ -28,6 +28,5 @@ sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.babylond/config
 
 mv $HOME/.babylond/priv_validator_state.json.backup $HOME/.babylond/data/priv_validator_state.json
 
-sudo systemctl restart babylond
-sudo journalctl -u babylond -f --no-hostname -o cat
+systemctl restart babylond && journalctl -u babylond -f -o cat
 ```

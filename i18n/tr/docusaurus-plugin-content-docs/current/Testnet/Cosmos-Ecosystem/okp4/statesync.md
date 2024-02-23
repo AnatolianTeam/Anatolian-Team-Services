@@ -8,7 +8,7 @@ keywords: [okp4, open, knowledge, protocol, kurulum, snapshot, statesync, günce
 # StateSync
 
 ```shell
-sudo systemctl stop okp4d
+systemctl stop okp4d
 
 cp $HOME/.okp4d/data/priv_validator_state.json $HOME/.okp4d/priv_validator_state.json.backup
 okp4d tendermint unsafe-reset-all --home $HOME/.okp4d --keep-addr-book
@@ -28,6 +28,5 @@ sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.okp4d/config/co
 
 mv $HOME/.okp4d/priv_validator_state.json.backup $HOME/.okp4d/data/priv_validator_state.json
 
-sudo systemctl restart okp4d
-sudo journalctl -u okp4d -f --no-hostname -o cat
+systemctl restart okp4d && journalctl -u okp4d -f -o cat
 ```

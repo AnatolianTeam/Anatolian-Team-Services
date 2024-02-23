@@ -8,7 +8,7 @@ keywords: [chain4energy, c4e, kurulum, snapshot, statesync, güncelleme]
 # StateSync
 
 ```shell
-sudo systemctl stop c4ed
+systemctl stop c4ed
 
 cp $HOME/.c4e-chain/data/priv_validator_state.json $HOME/.c4e-chain/priv_validator_state.json.backup
 c4ed tendermint unsafe-reset-all --home $HOME/.c4e-chain --keep-addr-book
@@ -28,6 +28,5 @@ sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.c4e-chain/confi
 
 mv $HOME/.c4e-chain/priv_validator_state.json.backup $HOME/.c4e-chain/data/priv_validator_state.json
 
-sudo systemctl restart c4ed
-sudo journalctl -u c4ed -f --no-hostname -o cat
+systemctl restart c4ed && journalctl -u c4ed -f -o cat
 ```

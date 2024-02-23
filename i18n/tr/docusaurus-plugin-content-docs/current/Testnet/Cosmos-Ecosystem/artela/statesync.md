@@ -8,7 +8,7 @@ keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 # StateSync
 
 ```shell
-sudo systemctl stop artelad
+systemctl stop artelad
 
 cp $HOME/.artelad/data/priv_validator_state.json $HOME/.artelad/priv_validator_state.json.backup
 artelad tendermint unsafe-reset-all --home $HOME/.artelad --keep-addr-book
@@ -28,6 +28,5 @@ sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.artelad/config/
 
 mv $HOME/.artelad/priv_validator_state.json.backup $HOME/.artelad/data/priv_validator_state.json
 
-sudo systemctl restart artelad
-sudo journalctl -u artelad -f --no-hostname -o cat
+systemctl restart artelad && journalctl -u artelad -f -o cat
 ```

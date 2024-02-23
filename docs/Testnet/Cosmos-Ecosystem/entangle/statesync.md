@@ -8,7 +8,7 @@ keywords: [entangle, installation, snapshot, statesync, update]
 # StateSync
 
 ```shell
-sudo systemctl stop entangled
+systemctl stop entangled
 
 cp $HOME/.entangled/data/priv_validator_state.json $HOME/.entangled/priv_validator_state.json.backup
 entangled tendermint unsafe-reset-all --home $HOME/.entangled --keep-addr-book
@@ -28,6 +28,5 @@ sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.entangled/confi
 
 mv $HOME/.entangled/priv_validator_state.json.backup $HOME/.entangled/data/priv_validator_state.json
 
-sudo systemctl restart entangled
-sudo journalctl -u entangled -f --no-hostname -o cat
+systemctl restart entangled && journalctl -u entangled -f -o cat
 ```
