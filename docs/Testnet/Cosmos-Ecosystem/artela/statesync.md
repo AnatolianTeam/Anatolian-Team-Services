@@ -13,7 +13,7 @@ sudo systemctl stop artelad
 cp $HOME/.artelad/data/priv_validator_state.json $HOME/.artelad/priv_validator_state.json.backup
 artelad tendermint unsafe-reset-all --home $HOME/.artelad --keep-addr-book
 
-SNAP_RPC="https://rpc-t.artela.anatolianteam.com:443"
+SNAP_RPC="https://rpc-t-artela.anatolianteam.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
