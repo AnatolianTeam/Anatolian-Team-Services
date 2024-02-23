@@ -103,7 +103,7 @@ empowerd tx staking delegate $ART_VALOPER_ADDRESS 100000000umpwr --from=$ART_WAL
 
 ### Stake'ten Çıkma
 ```
-empowerd tx staking unbond $(empowerd keys show $WALLET --bech val -a) 1000000umpwr --from $WALLET --chain-id $ART_CHAIN_ID --fees 3000umpwr -y
+empowerd tx staking unbond $(empowerd keys show $ART_WALLET --bech val -a) 1000000umpwr --from $ART_WALLET --chain-id $ART_CHAIN_ID --fees 3000umpwr -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

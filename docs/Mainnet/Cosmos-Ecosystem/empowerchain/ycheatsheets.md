@@ -102,7 +102,7 @@ empowerd tx staking delegate $EMPOW_VALOPER_ADDRESS 100000000umpwr --from=$EMPOW
 ```
 ### Unbonding
 ```
-empowerd tx staking unbond $(empowerd keys show $WALLET --bech val -a) 1000000umpwr --from $WALLET --chain-id indigo-1 --fees 3000umpwr -y
+empowerd tx staking unbond $(empowerd keys show $EMPOW_WALLET --bech val -a) 1000000umpwr --from $EMPOW_WALLET --chain-id indigo-1 --fees 3000umpwr -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

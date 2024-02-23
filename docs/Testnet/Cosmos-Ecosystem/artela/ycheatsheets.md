@@ -102,7 +102,7 @@ artelad tx staking delegate $ART_VALOPER_ADDRESS 100000000uart --from=$ART_WALLE
 ```
 ### Unbonding
 ```
-artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000uart --from $WALLET --chain-id indigo-1 --fees 3000uart -y
+artelad tx staking unbond $(artelad keys show $ART_WALLET --bech val -a) 1000000uart --from $ART_WALLET --chain-id indigo-1 --fees 3000uart -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

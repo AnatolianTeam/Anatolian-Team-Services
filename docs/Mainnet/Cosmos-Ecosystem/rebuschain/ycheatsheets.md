@@ -102,7 +102,7 @@ acred tx staking delegate $REBUS_VALOPER_ADDRESS 100000000arebus --from=$REBUS_W
 ```
 ### Unbonding
 ```
-acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000arebus --from $WALLET --chain-id indigo-1 --fees 3000arebus -y
+acred tx staking unbond $(acred keys show $REBUS_WALLET --bech val -a) 1000000arebus --from $REBUS_WALLET --chain-id indigo-1 --fees 3000arebus -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

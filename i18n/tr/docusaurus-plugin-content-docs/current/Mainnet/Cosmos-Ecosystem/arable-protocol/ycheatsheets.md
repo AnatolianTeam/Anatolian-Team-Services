@@ -103,7 +103,7 @@ acred tx staking delegate $ACRE_VALOPER_ADDRESS 100000000aacre--from=$ACRE_WALLE
 
 ### Stake'ten Çıkma
 ```
-acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000aacre--from $WALLET --chain-id $ACRE_CHAIN_ID --fees 3000aacre-y
+acred tx staking unbond $(acred keys show $ACRE_WALLET --bech val -a) 1000000aacre--from $ACRE_WALLET --chain-id $ACRE_CHAIN_ID --fees 3000aacre-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

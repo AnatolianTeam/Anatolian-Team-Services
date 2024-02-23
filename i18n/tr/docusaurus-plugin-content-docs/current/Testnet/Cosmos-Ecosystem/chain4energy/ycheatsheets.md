@@ -103,7 +103,7 @@ c4ed tx staking delegate $C4E_VALOPER_ADDRESS 100000000uc4e --from=$C4E_WALLET -
 
 ### Stake'ten Çıkma
 ```
-c4ed tx staking unbond $(c4ed keys show $WALLET --bech val -a) 1000000uc4e --from $WALLET --chain-id $C4E_CHAIN_ID --fees 3000uc4e -y
+c4ed tx staking unbond $(c4ed keys show $C4E_WALLET --bech val -a) 1000000uc4e --from $C4E_WALLET --chain-id $C4E_CHAIN_ID --fees 3000uc4e -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

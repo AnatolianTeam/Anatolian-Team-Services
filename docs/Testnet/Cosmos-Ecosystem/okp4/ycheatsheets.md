@@ -66,61 +66,61 @@ okp4d keys list
 
 ### Seeing Wallet Address
 ```
-okp4d keys show $CROWD_WALLET --bech val -a
+okp4d keys show $OKP4_WALLET --bech val -a
 ```
 
 ### Importing Wallet
 ```
-okp4d keys add $CROWD_WALLET --recover
+okp4d keys add $OKP4_WALLET --recover
 ```
 
 ### Deleting Your Wallet
 ```
-okp4d keys delete $CROWD_WALLET
+okp4d keys delete $OKP4_WALLET
 ```
 
 ### Checking Wallet Balance
 ```
-okp4d query bank balances $CROWD_WALLET_ADDRESS
+okp4d query bank balances $OKP4_WALLET_ADDRESS
 ```
 
 ## Tokens
 
 ### Transferring from One Wallet to Another
 ```
-okp4d tx bank send $CROWD_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uknow
+okp4d tx bank send $OKP4_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uknow
 ```
 
 ### Participating in Proposal Voting
 ```
-okp4d tx gov vote 1 yes --from $CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
+okp4d tx gov vote 1 yes --from $OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-okp4d tx staking delegate $CROWD_VALOPER_ADDRESS 100000000uknow --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
+okp4d tx staking delegate $OKP4_VALOPER_ADDRESS 100000000uknow --from=$OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-okp4d tx staking unbond $(okp4d keys show $WALLET --bech val -a) 1000000uknow --from $WALLET --chain-id indigo-1 --fees 3000uknow -y
+okp4d tx staking unbond $(okp4d keys show $OKP4_WALLET --bech val -a) 1000000uknow --from $OKP4_WALLET --chain-id indigo-1 --fees 3000uknow -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-okp4d tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uknow --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
+okp4d tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uknow --from=$OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-okp4d tx distribution withdraw-all-rewards --from=$CROWD_WALLET --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
+okp4d tx distribution withdraw-all-rewards --from=$OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-okp4d tx distribution withdraw-rewards $CROWD_VALOPER_ADDRESS --from=$CROWD_WALLET --commission --chain-id=$CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
+okp4d tx distribution withdraw-rewards $OKP4_VALOPER_ADDRESS --from=$OKP4_WALLET --commission --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -135,8 +135,8 @@ Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should n
 ```
 okp4d tx staking edit-validator \
 --moniker=NEW-NODE-NAME\
---chain-id=$CROWD_CHAIN_ID\
---from=$CROWD_WALLET\
+--chain-id=$OKP4_CHAIN_ID\
+--from=$OKP4_WALLET\
 --gas-prices 0.00001uknow\
 --gas-adjustment 1.5\
 --gas auto -y
@@ -145,20 +145,20 @@ okp4d tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-okp4d tx staking edit-validator --commission-rate "0.02" --moniker=$CROWD_NODENAME --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto - y
+okp4d tx staking edit-validator --commission-rate "0.02" --moniker=$OKP4_NODENAME --from $OKP4_WALLET --chain-id $OKP4_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
 Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
-`$CROWD_NODENAME` and `$CROWD_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
+`$OKP4_NODENAME` and `$OKP4_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 okp4d tx staking edit-validator \
---moniker=$CROWD_NODENAME\
+--moniker=$OKP4_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$CROWD_CHAIN_ID\
---from=$CROWD_WALLET
+--chain-id=$OKP4_CHAIN_ID\
+--from=$OKP4_WALLET
 ```
 
 ### Validator Details
@@ -178,7 +178,7 @@ okp4d q slashing params
 
 ### Recovering Validator from Jail
 ```
-okp4d tx slashing unjail --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
+okp4d tx slashing unjail --from $OKP4_WALLET --chain-id $OKP4_CHAIN_ID --gas-prices 0.00001uknow --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List

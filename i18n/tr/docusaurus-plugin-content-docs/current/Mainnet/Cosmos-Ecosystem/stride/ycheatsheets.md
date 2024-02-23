@@ -103,7 +103,7 @@ strided tx staking delegate $STRD_VALOPER_ADDRESS 100000000ustrd--from=$STRD_WAL
 
 ### Stake'ten Çıkma
 ```
-strided tx staking unbond $(strided keys show $WALLET --bech val -a) 1000000ustrd--from $WALLET --chain-id $STRD_CHAIN_ID --fees 3000ustrd-y
+strided tx staking unbond $(strided keys show $STRD_WALLET --bech val -a) 1000000ustrd--from $STRD_WALLET --chain-id $STRD_CHAIN_ID --fees 3000ustrd-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

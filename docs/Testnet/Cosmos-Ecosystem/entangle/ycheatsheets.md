@@ -102,7 +102,7 @@ entangled tx staking delegate $ENT_VALOPER_ADDRESS 100000000aNGL --from=$ENT_WAL
 ```
 ### Unbonding
 ```
-entangled tx staking unbond $(entangled keys show $WALLET --bech val -a) 1000000aNGL --from $WALLET --chain-id indigo-1 --fees 3000aNGL -y
+entangled tx staking unbond $(entangled keys show $ENT_WALLET --bech val -a) 1000000aNGL --from $ENT_WALLET --chain-id indigo-1 --fees 3000aNGL -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

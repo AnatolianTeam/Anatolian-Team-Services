@@ -103,7 +103,7 @@ artelad tx staking delegate $ART_VALOPER_ADDRESS 100000000uart--from=$ART_WALLET
 
 ### Stake'ten Çıkma
 ```
-artelad tx staking unbond $(artelad keys show $WALLET --bech val -a) 1000000uart--from $WALLET --chain-id $ART_CHAIN_ID --fees 3000uart-y
+artelad tx staking unbond $(artelad keys show $ART_WALLET --bech val -a) 1000000uart--from $ART_WALLET --chain-id $ART_CHAIN_ID --fees 3000uart-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

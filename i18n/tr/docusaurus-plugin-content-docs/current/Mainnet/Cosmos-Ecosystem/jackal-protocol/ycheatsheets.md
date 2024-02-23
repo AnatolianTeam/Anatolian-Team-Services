@@ -103,7 +103,7 @@ canined tx staking delegate $JACKAL_VALOPER_ADDRESS 100000000ujkl--from=$JACKAL_
 
 ### Stake'ten Çıkma
 ```
-canined tx staking unbond $(canined keys show $WALLET --bech val -a) 1000000ujkl--from $WALLET --chain-id $JACKAL_CHAIN_ID --fees 3000ujkl-y
+canined tx staking unbond $(canined keys show $JACKAL_WALLET --bech val -a) 1000000ujkl--from $JACKAL_WALLET --chain-id $JACKAL_CHAIN_ID --fees 3000ujkl-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

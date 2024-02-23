@@ -66,61 +66,61 @@ okp4d keys list
 
 ### Cüzdan Adresini Görme
 ```
-okp4d keys show $C4E_WALLET --bech val -a
+okp4d keys show $OKP4_WALLET --bech val -a
 ```
 
 ### Cüzdanı İçeri Aktarma
 ```
-okp4d keys add $C4E_WALLET --recover
+okp4d keys add $OKP4_WALLET --recover
 ```
 
 ### Cüzdanı Silme
 ```
-okp4d keys delete $C4E_WALLET
+okp4d keys delete $OKP4_WALLET
 ```
 
 ### Cüzdan Bakiyesini Kontrol Etme
 ```
-okp4d query bank balances $C4E_WALLET_ADDRESS
+okp4d query bank balances $OKP4_WALLET_ADDRESS
 ```
 
 ## Token İşlemleri
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-okp4d tx bank send $C4E_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
+okp4d tx bank send $OKP4_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 ```
 
 ### Proposal Oylamasına Katılma
 ```
-okp4d tx gov vote 1 yes --from $C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
+okp4d tx gov vote 1 yes --from $OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-okp4d tx staking delegate $C4E_VALOPER_ADDRESS 100000000uknow--from=$C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
+okp4d tx staking delegate $OKP4_VALOPER_ADDRESS 100000000uknow--from=$OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-okp4d tx staking unbond $(okp4d keys show $WALLET --bech val -a) 1000000uknow--from $WALLET --chain-id $C4E_CHAIN_ID --fees 3000uknow-y
+okp4d tx staking unbond $(okp4d keys show $OKP4_WALLET --bech val -a) 1000000uknow--from $OKP4_WALLET --chain-id $OKP4_CHAIN_ID --fees 3000uknow-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-okp4d tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uknow--from=$C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
+okp4d tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uknow--from=$OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-okp4d tx distribution withdraw-all-rewards --from=$C4E_WALLET --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
+okp4d tx distribution withdraw-all-rewards --from=$OKP4_WALLET --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-okp4d tx distribution withdraw-rewards $C4E_VALOPER_ADDRESS --from=$C4E_WALLET --commission --chain-id=$C4E_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
+okp4d tx distribution withdraw-rewards $OKP4_VALOPER_ADDRESS --from=$OKP4_WALLET --commission --chain-id=$OKP4_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -135,8 +135,8 @@ okp4d status 2>&1 | jq .ValidatorInfo
 ```
 okp4d tx staking edit-validator \
 --moniker=YENI-NODE-ADI\
---chain-id=$C4E_CHAIN_ID\
---from=$C4E_WALLET\
+--chain-id=$OKP4_CHAIN_ID\
+--from=$OKP4_WALLET\
 --gas-prices 0.00001uc4e\
 --gas-adjustment 1.5\
 --gas auto -y
@@ -145,20 +145,20 @@ okp4d tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-okp4d tx staking edit-validator --commission-rate "0.02" --moniker=$C4E_NODENAME --from $C4E_WALLET --chain-id $C4E_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto - y
+okp4d tx staking edit-validator --commission-rate "0.02" --moniker=$OKP4_NODENAME --from $OKP4_WALLET --chain-id $OKP4_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
 Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak aşağıdaki kodda görüldüğü gibi 16 haneli (XXXX0000XXXX0000) kodunuzu almalısınız. Ayrıca profil resmi vs. ayarları da yapabilirsiniz. 
-`$C4E_NODENAME` ve `$C4E_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
+`$OKP4_NODENAME` ve `$OKP4_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 okp4d tx staking edit-validator \
---moniker=$C4E_NODENAME\
+--moniker=$OKP4_NODENAME\
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$C4E_CHAIN_ID\
---from=$C4E_WALLET
+--chain-id=$OKP4_CHAIN_ID\
+--from=$OKP4_WALLET
 ```
 
 ### Validator Detayları
@@ -178,7 +178,7 @@ okp4d q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-okp4d tx slashing unjail --from $C4E_WALLET --chain-id $C4E_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
+okp4d tx slashing unjail --from $OKP4_WALLET --chain-id $OKP4_CHAIN_ID --gas-prices 0.00001uknow--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

@@ -102,7 +102,7 @@ Cardchaind tx staking delegate $CROWD_VALOPER_ADDRESS 100000000ubpf --from=$CROW
 ```
 ### Unbonding
 ```
-Cardchaind tx staking unbond $(Cardchaind keys show $WALLET --bech val -a) 1000000ubpf --from $WALLET --chain-id indigo-1 --fees 3000ubpf -y
+Cardchaind tx staking unbond $(Cardchaind keys show $CROWD_WALLET --bech val -a) 1000000ubpf --from $CROWD_WALLET --chain-id indigo-1 --fees 3000ubpf -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

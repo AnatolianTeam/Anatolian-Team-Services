@@ -102,7 +102,7 @@ acred tx staking delegate $ACRE_VALOPER_ADDRESS 100000000aacre --from=$ACRE_WALL
 ```
 ### Unbonding
 ```
-acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000aacre --from $WALLET --chain-id indigo-1 --fees 3000aacre -y
+acred tx staking unbond $(acred keys show $ACRE_WALLET --bech val -a) 1000000aacre --from $ACRE_WALLET --chain-id indigo-1 --fees 3000aacre -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

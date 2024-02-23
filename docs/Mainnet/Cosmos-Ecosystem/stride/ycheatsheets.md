@@ -102,7 +102,7 @@ strided tx staking delegate $STRD_VALOPER_ADDRESS 100000000ustrd --from=$STRD_WA
 ```
 ### Unbonding
 ```
-strided tx staking unbond $(strided keys show $WALLET --bech val -a) 1000000ustrd --from $WALLET --chain-id indigo-1 --fees 3000ustrd -y
+strided tx staking unbond $(strided keys show $STRD_WALLET --bech val -a) 1000000ustrd --from $STRD_WALLET --chain-id indigo-1 --fees 3000ustrd -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator

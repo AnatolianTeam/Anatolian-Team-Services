@@ -103,7 +103,7 @@ acred tx staking delegate $REBUS_VALOPER_ADDRESS 100000000arebus--from=$REBUS_WA
 
 ### Stake'ten Çıkma
 ```
-acred tx staking unbond $(acred keys show $WALLET --bech val -a) 1000000arebus--from $WALLET --chain-id $REBUS_CHAIN_ID --fees 3000arebus-y
+acred tx staking unbond $(acred keys show $REBUS_WALLET --bech val -a) 1000000arebus--from $REBUS_WALLET --chain-id $REBUS_CHAIN_ID --fees 3000arebus-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

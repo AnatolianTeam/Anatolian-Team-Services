@@ -234,8 +234,7 @@ babylond tx checkpointing create-validator \
 --yes
 ```
 
-# Completely Deleting the Node
-
+## Completely Deleting the Node
 ```
 systemctl stop babylond && \
 systemctl disable babylond && \

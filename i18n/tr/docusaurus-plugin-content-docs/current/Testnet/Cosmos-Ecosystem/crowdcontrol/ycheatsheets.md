@@ -103,7 +103,7 @@ Cardchaind tx staking delegate $CROWD_VALOPER_ADDRESS 100000000ubpf --from=$CROW
 
 ### Stake'ten Çıkma
 ```
-Cardchaind tx staking unbond $(Cardchaind keys show $WALLET --bech val -a) 1000000ubpf --from $WALLET --chain-id $CROWD_CHAIN_ID --fees 3000ubpf -y
+Cardchaind tx staking unbond $(Cardchaind keys show $CROWD_WALLET --bech val -a) 1000000ubpf --from $CROWD_WALLET --chain-id $CROWD_CHAIN_ID --fees 3000ubpf -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme

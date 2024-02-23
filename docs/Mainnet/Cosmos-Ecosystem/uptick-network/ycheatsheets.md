@@ -102,7 +102,7 @@ uptickd tx staking delegate $UPTICK_VALOPER_ADDRESS 100000000auptick --from=$UPT
 ```
 ### Unbonding
 ```
-uptickd tx staking unbond $(uptickd keys show $WALLET --bech val -a) 1000000auptick --from $WALLET --chain-id indigo-1 --fees 3000auptick -y
+uptickd tx staking unbond $(uptickd keys show $UPTICK_WALLET --bech val -a) 1000000auptick --from $UPTICK_WALLET --chain-id indigo-1 --fees 3000auptick -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
