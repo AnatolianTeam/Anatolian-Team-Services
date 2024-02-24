@@ -1,0 +1,247 @@
+---
+title: 💾 Installation
+description: Node installation guide.
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
+keywords: [artela, installation, snapshot, statesync, update]
+---
+
+# Installation
+
+## Updating the System
+```shell
+apt update && apt upgrade -y
+```
+
+## Installing the Necessary Libraries
+```shell
+apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp jq llvm tmux htop screen gcc lz4 -y < "/dev/null"
+```
+
+## Installing Go
+```shell
+ver="1.21.5"
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
+rm -rf /usr/local/go
+tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+rm -rf "go$ver.linux-amd64.tar.gz"
+echo 'export GOROOT=/usr/local/go' >> $HOME/.bash_profile
+echo 'export GOPATH=$HOME/go' >> $HOME/.bash_profile
+echo 'export GO111MODULE=on' >> $HOME/.bash_profile
+echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
+source $HOME/.bash_profile
+go version
+```
+
+## Setting Variables
+The areas you need to change are written below.
+* `$CFI_NODENAME` your validator name
+* `$CFI_WALLET` your wallet name
+*  If another node is using the port, you can change it below. You must enter a different value where it says `11`, again as two digits.
+```shell
+echo "export CFI_NODENAME=$CFI_NODENAME"  >> $HOME/.bash_profile
+echo "export CFI_WALLET=$CFI_WALLET" >> $HOME/.bash_profile
+echo "export CFI_PORT=11" >> $HOME/.bash_profile
+echo "export CFI_CHAIN_ID=crossfi-evm-testnet-1" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+
+### Sample
+Let's assume that your Node (`CFI_NODENAME`) and Wallet (`CFI_WALLET`) name is `Anatolian-Guide` and the port you will use (`CFI_PORT`) will be `16656`. The code will be arranged as shown below.
+```shell
+echo "export CFI_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export CFI_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
+echo "export CFI_PORT=16" >> $HOME/.bash_profile
+echo "export CFI_CHAIN_ID=crossfi-evm-testnet-1" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+
+## Installing CrossFi
+```
+cd $HOME
+wget https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz && tar -xf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
+tar -xvf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
+chmod +x $HOME/bin/crossfid
+mv $HOME/bin/crossfid $HOME/go/bin
+rm -rf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz $HOME/bin
+crossfid version
+```
+The version output will be `v0.3.0-prebuild3`.
+
+## Configuring and Launching the Node
+We copy and paste the codes below without making any changes.
+```
+crossfid config keyring-backend test
+crossfid config chain-id $CFI_CHAIN_ID
+crossfid init --chain-id $CFI_CHAIN_ID $CFI_NODENAME
+git clone https://github.com/crossfichain/testnet.git
+mv $HOME/testnet/ $HOME/.crossfid/
+
+# Copying the Genesis and addrbook Files
+wget https://raw.githubusercontent.com/crossfichain/testnet/master/config/genesis.json -O $HOME/.crossfid/config/genesis.json
+
+# Set up the minimum gas price
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0uart "|g' $HOME/.crossfid/config/app.toml
+
+# Closing Indexer-Optional
+indexer="null"
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.crossfid/config/config.toml
+
+# Set up SEED and PEERS
+SEEDS=""
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.crossfid/config/config.toml
+
+# Enabling Prometheus
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.crossfid/config/config.toml
+
+# Set up Pruning 
+pruning="custom"
+pruning_keep_recent="100"
+pruning_keep_every="0"
+pruning_interval="50"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.crossfid/config/app.toml
+
+# Set up Ports
+sed -i.bak -e "
+s%:26658%:${CFI_PORT}658%g;
+s%:26657%:${CFI_PORT}657%g;
+s%:6060%:${CFI_PORT}060%g;
+s%:26656%:${CFI_PORT}656%g;
+s%:26660%:${CFI_PORT}660%g
+" $HOME/.crossfid/config/config.toml
+sed -i.bak -e "
+s%:1317%:${CFI_PORT}317%g; 
+s%:8080%:${CFI_PORT}080%g; 
+s%:9090%:${CFI_PORT}090%g; 
+s%:9091%:${CFI_PORT}091%g
+" $HOME/.crossfid/config/app.toml
+sed -i.bak -e "s%:26657%:${CFI_PORT}657%g" $HOME/.crossfid/config/client.toml
+
+# Adding External Address
+PUB_IP=`curl -s -4 icanhazip.com`
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CFI_PORT}656\"|g" ~/.crossfid/config/config.toml > ~/.crossfid/config/config.toml.tmp
+mv ~/.crossfid/config/config.toml.tmp  ~/.crossfid/config/config.toml
+
+# Creating the Service File
+tee /etc/systemd/system/crossfid.service > /dev/null << EOF
+[Unit]
+Description=CrossFi Node
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which crossfid) start
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Enabling and Starting the Service
+```shell
+systemctl daemon-reload
+systemctl enable crossfid
+systemctl start crossfid
+```
+
+## Checking the Logs
+```shell
+journalctl -u crossfid -f -o cat
+```  
+
+🔴 **AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.**
+
+## Checking Synchronization
+Unless we get a `false` output, we do not move on to the next step, namely creating a validator.
+```shell
+crossfid status 2>&1 | jq .SyncInfo
+```
+
+## Wallet
+
+### Creating a New Wallet
+We do not change the `$CFI_WALLET` section, we named our wallet with variables at the beginning of the installation.
+```shell 
+crossfid keys add $CFI_WALLET
+```  
+
+### Importing an Existing Wallet
+```shell
+crossfid keys add $CFI_WALLET --recover
+```
+
+## Wallet and Valoper Info
+Here we add our wallet and valve information to the variable.
+
+```shell
+CFI_WALLET_ADDRESS=$(crossfid keys show $CFI_WALLET -a)
+CFI_VALOPER_ADDRESS=$(crossfid keys show $CFI_WALLET --bech val -a)
+```
+
+```shell
+echo 'export CFI_WALLET_ADDRESS='${CFI_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export CFI_VALOPER_ADDRESS='${CFI_VALOPER_ADDRESS} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+
+### Learn EIP-55 Address
+```shell
+crossfid debug addr $CFI_WALLET_ADDRESS
+```
+
+#### Faucet
+Request tokens by sending a message to the `#🚰┃testnet-faucet` channel on the Discord server as follows.
+
+`$request EIP-55_Address`
+
+### Checking Wallet Balance
+```
+crossfid query bank balances $CFI_WALLET_ADDRESS
+```
+
+🔴 **If the synchronization is completed, we proceed to the following step.**
+
+
+## Creating Validator
+You do not need to make any changes to the following command other than the places specified below;
+    - `identity` where it says `XXXX1111XXXX1111` you write your identification number given to you as a member of the [keybase](https://keybase.io/) site.
+    - `details` You can write information about yourself where it says `Always forward with the Anatolian Team 🚀`.
+    - `website` where it says `https://anatolianteam.com`, if you have a website or twitter etc. You can write your address.
+    - `security-contact` Your email address.
+ ```shell 
+crossfid tx staking create-validator \
+--amount=940000uart  \
+--pubkey=$(crossfid tendermint show-validator) \
+--moniker=$CFI_NODENAME \
+--chain-id=$CFI_CHAIN_ID \
+--commission-rate=0.10 \
+--commission-max-rate=0.20 \
+--commission-max-change-rate=0.05 \
+--min-self-delegation="1" \
+--gas-prices=0.25uart  \
+--gas-adjustment=1.5 \
+--gas=auto \
+--from=$CFI_WALLET \
+--details="Always forward with the Anatolian Team 🚀" \
+--security-contact="xxxxxxx@gmail.com" \
+--website="https://anatolianteam.com" \
+--identity="XXXX1111XXXX1111" \
+--yes
+```
+
+## Completely Deleting the Node 
+```shell 
+systemctl stop crossfid && \
+systemctl disable crossfid && \
+rm /etc/systemd/system/crossfid.service && \
+systemctl daemon-reload && \
+cd $HOME && \
+rm -rf .crossfid artela && \
+rm -rf $(which crossfid)
+sed -i '/CFI_/d' ~/.bash_profile
+```
