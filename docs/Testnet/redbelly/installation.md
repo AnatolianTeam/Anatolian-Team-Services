@@ -17,7 +17,7 @@ Buy a domain. Then, enter DNS management from the settings of the domain you pur
 
 After these settings, you will have an address such as `subdomain.domain.xyz`. 
 
-You can control the propagation of your DNS settings [here](https://dnschecker.org/). You can check the propagatio status by searching `subdomain.domain.xyz` on the site.
+You can control the propagation of your DNS settings [here](https://dnschecker.org/). You can check the propagation status by searching `subdomain.domain.xyz` on the site.
 
 ### Create EVM Wallets
 Create two wallets.
@@ -54,8 +54,9 @@ certbot certonly --standalone -d $DOMAIN. --non-interactive --agree-tos -m $EMAI
 ```
 
 ## Registering Node
-
-🔴 **Registration is now closed.**
+:::note
+Registration is now closed.
+:::
 Go to the Redbelly [registration page](https://vine.redbelly.network/nds-node-register), fill in the necessary information and then wait for the node ID to be sent.
 
 

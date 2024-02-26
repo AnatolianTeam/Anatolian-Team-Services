@@ -59,7 +59,9 @@ certbot certonly --standalone -d $DOMAIN. --non-interactive --agree-tos -m $EMAI
 ```
 
 ## Node Kayıt Etme
-🔴 **Kayıtlar şuan kapalı**
+:::note
+Kayıtlar şuan kapalı. 
+:::
 
 Redbelly [kayıt sayfasına](https://vine.redbelly.network/nds-node-register) giderek gerekli bilgileri doldurun. Ardından node id gönderimesini bekleyin
 
