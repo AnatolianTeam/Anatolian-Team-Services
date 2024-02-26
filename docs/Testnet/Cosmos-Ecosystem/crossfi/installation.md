@@ -58,7 +58,7 @@ source $HOME/.bash_profile
 ## Installing CrossFi
 :::info
 It will be prepared on March 15.
-:::
+::: 
 
 ```
 cd $HOME

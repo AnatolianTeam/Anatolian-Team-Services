@@ -58,7 +58,7 @@ source $HOME/.bash_profile
 ## CrossFi'nin Kurulması
 :::info
 15 Mart'ta hazırlanmış olacak.
-:::
+::: 
 ```
 cd $HOME
 ```
