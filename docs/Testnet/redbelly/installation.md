@@ -176,7 +176,7 @@ tail -f $HOME/logs/rbbcLogs
 | **Network name** | Redbelly Network |
 | **New RPC URL** | https://subdomain.domain.xyz:8545 // Change it to yours |
 | **Chain ID** | 152 |
-| **Currency symbol:** RBNT |
+| **Currency symbol:** | RBNT |
 | **Block explorer URL** | https://explorer.devnet.redbelly.network/ |
 
 And then check your wallet. 
