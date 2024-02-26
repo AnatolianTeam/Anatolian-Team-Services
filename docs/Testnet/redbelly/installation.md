@@ -171,7 +171,7 @@ tail -f $HOME/logs/rbbcLogs
 
 ### Add Redbelly Network to Wallet
 
-*| Field | Details |
+| Field | Details |
 | ------------ | ------------ |
 | **Network name** | Redbelly Network |
 | **New RPC URL** | https://subdomain.domain.xyz:8545 // Change it to yours |
