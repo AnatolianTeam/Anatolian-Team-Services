@@ -13,7 +13,7 @@ Testnete katılım şu an kapalı. Eğer ekipten katılımınıza ilişki bir e-
 
 ## İlk Yapılacaklar
 
-### Domain and DNS Ayarları
+### Domain ve DNS Ayarları
 Bir domain satın alın. Ardından panelinizden aldığınız domainin ayarlarından `DNS yönetimine` girin. Bir `A kaydı` oluşturun. `Kayıt` ya da `domain adı` bölümüne bir alt alan adı yazın. `IP bölümüne` ise sunucunuzun `IP` adresini yazın. 
 
 After these settings, you will have an address such as `subdomain.domain.xyz`. 
