@@ -56,16 +56,13 @@ source $HOME/.bash_profile
 ```
 
 ## CrossFi'nin Kurulması
+:::info
+15 Mart'ta hazırlanmış olacak.
+:::
 ```
 cd $HOME
-wget https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz && tar -xf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
-tar -xvf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
-chmod +x $HOME/bin/crossfid
-mv $HOME/bin/crossfid $HOME/go/bin
-rm -rf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz $HOME/bin
-crossfid version
 ```
-Versiyon çıktısı `v0.3.0-prebuild3` olacak.
+Versiyon çıktısı `` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
