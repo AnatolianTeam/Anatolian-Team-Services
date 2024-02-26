@@ -11,7 +11,7 @@ Testnete katılım şu an kapalı. Eğer ekipten katılımınıza ilişki bir e-
 
 **Kullanılan Portlar:** `8545`, `8546`, `1111`, and `1888`.
 
-## İlk Yapıalcaklar
+## İlk Yapılacaklar
 
 ### Domain and DNS Ayarları
 Bir domain satın alın. Ardından panelinizden aldığınız domainin ayarlarından `DNS yönetimine` girin. Bir `A kaydı` oluşturun. `Kayıt` ya da `domain adı` bölümüne bir alt alan adı yazın. `IP bölümüne` ise sunucunuzun `IP` adresini yazın. 
@@ -29,7 +29,7 @@ DNS ayarlarınızın yayılmasını [buradan](https://dnschecker.org/) kontrol e
 * Public Cüzdan: Ödüllerin geleceği cüzdan adresi.
 * Signer Cüzdan: İmzalama işlemlerini yapacak cüzdan.
 
-## sistemi Güncelleme
+## Sistemi Güncelleme
 ```shell
 apt update && apt upgrade -y
 ```
