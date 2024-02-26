@@ -174,12 +174,13 @@ tail -f $HOME/logs/rbbcLogs
 ## Nde'un Çalıştığını Doğrulama
 
 ### Redbelly Ağını Cüzdana Ekle
-
-**Network name:** Redbelly Network
-**New RPC URL:** https://subdomain.domain.xyz:8545 // Change it to yours
-**Chain ID:** 152
-**Currency symbol:** RBNT
-**Block explorer URL:** https://explorer.devnet.redbelly.network/
+| Alan | Detaylar |
+| ------------ | ------------ |
+| **Network name** | Redbelly Network |
+| **New RPC URL** | https://subdomain.domain.xyz:8545 // Domainiz ile değiştirin |
+| **Chain ID** | 152 |
+| **Currency symbol:** RBNT |
+| **Block explorer URL** | https://explorer.devnet.redbelly.network/ |
 
 
 Ardından cüzdanınızı kontrol edin. 
