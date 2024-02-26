@@ -152,7 +152,9 @@ systemctl start c4ed
 journalctl -u c4ed -f -o cat
 ```  
 
-🔴 **BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.**
+:::warning
+BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.
+:::
 
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
@@ -191,7 +193,9 @@ source $HOME/.bash_profile
 c4ed query bank balances $C4E_WALLET_ADDRESS
 ```
 
-🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
+:::warning
+Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.
+:::
 
 ## Validator Oluşturma
 Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik yapmanız gerekmez;

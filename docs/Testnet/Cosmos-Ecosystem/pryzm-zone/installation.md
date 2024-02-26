@@ -154,7 +154,9 @@ systemctl start pryzmd
 journalctl -u pryzmd -f -o cat
 ```  
 
-🔴 **AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.**
+:::warning
+AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.
+:::
 
 ## Checking Synchronization
 Unless we get a `false` output, we do not move on to the next step, namely creating a validator.
@@ -194,8 +196,9 @@ source $HOME/.bash_profile
 pryzmd query bank balances $PRYZM_WALLET_ADDRESS
 ```
 
-🔴 **If the synchronization is completed, we proceed to the following step.**
-
+:::warning
+If the synchronization is completed, we proceed to the following step.
+:::
 
 ## Creating Validator
 You do not need to make any changes to the following command other than the places specified below;

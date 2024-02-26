@@ -61,7 +61,10 @@ Path of the secret key file: /data/keystore/UTC--2021-01-18T11-36-28.705754426Z-
 - You must BACKUP your key file! Without the key, it's impossible to access account funds!
 - You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
 ```
-🔴 Then back up the files in your folder written (`/data/keystore`) in the output to keep them in a safe place.
+
+:::warning
+Then back up the files in your folder written (`/data/keystore`) in the output to keep them in a safe place.
+:::
 
 ### Importing an Existing Wallet
 If you already have a wallet, copy the json file (starting like UTC) to the keystore folder as shown below. (`/root/mainnet-public-tools/validator/keystore/`).

@@ -147,7 +147,9 @@ systemctl enable strided
 journalctl -u strided -f -o cat
 ```  
 
-🔴 **AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.**
+:::warning
+AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.
+:::
 
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
@@ -187,7 +189,9 @@ source $HOME/.bash_profile
 strided query bank balances $STRD_WALLET_ADDRESS
 ```
 
-🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
+:::warning
+Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.
+:::
 
 ## Validator Oluşturma
 Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik yapmanız gerekmez;

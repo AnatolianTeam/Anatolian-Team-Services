@@ -149,7 +149,9 @@ systemctl enable uptickd
 journalctl -u uptickd -f -o cat
 ```  
 
-🔴 **AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.**
+:::warning
+AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.
+:::
 
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
@@ -189,8 +191,9 @@ source $HOME/.bash_profile
 uptickd query bank balances $UPTICK_WALLET_ADDRESS
 ```
 
-🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
-
+:::warning
+If the synchronization is completed, we proceed to the following step.
+:::
 
 ## Creating Validator
 You do not need to make any changes to the following command other than the places specified below;

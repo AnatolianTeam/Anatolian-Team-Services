@@ -154,7 +154,9 @@ systemctl start crossfid
 journalctl -u crossfid -f -o cat
 ```  
 
-🔴 **BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.**
+:::warning
+BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.
+:::
 
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
@@ -203,7 +205,9 @@ Discord sunucusunda `#🚰┃testnet-faucet` kanalından aşağıdaki şekilde t
 crossfid query bank balances $CFI_WALLET_ADDRESS
 ```
 
-🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
+:::warning
+Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.
+:::
 
 ## Validator Oluşturma
 Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik yapmanız gerekmez;

@@ -61,7 +61,9 @@ Path of the secret key file: /data/keystore/UTC--2021-01-18T11-36-28.705754426Z-
 - You must BACKUP your key file! Without the key, it's impossible to access account funds!
 - You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
 ```
-🔴 Daha sonra çıktıda yazılı olan (`/data/keystore`) klasörünüzdeki dosyaları güvenli bir yerde saklamak için yedekleyin.
+:::warning
+Daha sonra çıktıda yazılı olan (`/data/keystore`) klasörünüzdeki dosyaları güvenli bir yerde saklamak için yedekleyin.
+:::
 
 ### Var Olan Cüzdanı İçeri Aktarma
 Zaten bir cüzdanınız varsa, json dosyasını (UTC ile başlayan) aşağıda gösterildiği gibi keystore klasörüne kopyalayın. (`/root/mainnet-public-tools/validator/keystore/`).

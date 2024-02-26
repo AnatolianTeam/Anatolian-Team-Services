@@ -63,7 +63,9 @@ apt-get install forta
 forta init --passphrase PASSWORD
 ```
 
-🔴 In the output of the above codes, you will see your Scanner address as follows. After sending 0.1 MATIC to this address from your EVM wallet, we continue the transactions.
+:::warning
+In the output of the above codes, you will see your Scanner address as follows. After sending 0.1 MATIC to this address from your EVM wallet, we continue the transactions.
+:::
 
 ```shell
 Scanner address: 0xAAA8C491232cB65a65FBf7F36b71220B3E695AAA

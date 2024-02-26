@@ -63,7 +63,9 @@ apt-get install forta
 forta init --passphrase SIFRENIZ
 ```
 
-🔴 Yukarıdaki kodların çıktısında aşağıdaki gibi Scanner adresinizi göreceksiniz. Bu adrese EVM cüzdanınızadan 0,1 MATIC gönderdikten sonra işlemlere devam ediyoruz.
+:::warning
+Yukarıdaki kodların çıktısında aşağıdaki gibi Scanner adresinizi göreceksiniz. Bu adrese EVM cüzdanınızadan 0,1 MATIC gönderdikten sonra işlemlere devam ediyoruz.
+:::
 
 ```shell
 Scanner address: 0xAAA8C491232cB65a65FBf7F36b71220B3E695AAA

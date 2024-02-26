@@ -155,7 +155,9 @@ systemctl start babylond
 journalctl -u babylond -f -o cat
 ```  
 
-🔴 **BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.**
+:::warning
+BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.
+:::
 
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
@@ -194,7 +196,9 @@ source $HOME/.bash_profile
 babylond query bank balances $BBN_WALLET_ADDRESS
 ```
 
-🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
+:::warning
+Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.
+:::
 
 ## BLS Key Oluşturma ve Yeniden Başlatma
 

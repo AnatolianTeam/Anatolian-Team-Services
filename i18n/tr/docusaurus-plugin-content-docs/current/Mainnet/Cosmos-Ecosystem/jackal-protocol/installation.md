@@ -147,7 +147,9 @@ systemctl enable canined
 journalctl -u canined -f -o cat
 ```  
 
-🔴 **AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.**
+:::warning
+AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.
+:::
 
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.

@@ -151,7 +151,9 @@ systemctl start okp4d
 journalctl -u okp4d -f -o cat
 ```  
 
-🔴 **BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.**
+:::warning
+BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.
+:::
 
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
@@ -190,7 +192,9 @@ source $HOME/.bash_profile
 okp4d query bank balances $OKP4_WALLET_ADDRESS
 ```
 
-🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
+:::warning
+Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.
+:::
 
 ## Validator Oluşturma
 Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik yapmanız gerekmez;
