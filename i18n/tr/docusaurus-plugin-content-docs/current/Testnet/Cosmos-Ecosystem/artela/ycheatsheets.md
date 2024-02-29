@@ -88,7 +88,7 @@ artelad query bank balances $ART_WALLET_ADDRESS
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-artelad tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
+artelad tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uself
 ```
 
 ### Proposal Oylamasına Katılma
@@ -137,7 +137,7 @@ artelad tx staking edit-validator \
 --moniker=YENI-NODE-ADI\
 --chain-id=$ART_CHAIN_ID\
 --from=$ART_WALLET\
---gas-prices 0.00001uc4e\
+--gas-prices 0.00001uself\
 --gas-adjustment 1.5\
 --gas auto -y
 ```

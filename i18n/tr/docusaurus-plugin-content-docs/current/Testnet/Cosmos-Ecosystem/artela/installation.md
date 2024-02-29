@@ -125,7 +125,7 @@ mv ~/.artelad/config/config.toml.tmp  ~/.artelad/config/config.toml
 # Servis Dosyası Oluşturma
 tee /etc/systemd/system/artelad.service > /dev/null << EOF
 [Unit]
-Description=OKP4 Node
+Description=Artela Node
 After=network-online.target
 
 [Service]
