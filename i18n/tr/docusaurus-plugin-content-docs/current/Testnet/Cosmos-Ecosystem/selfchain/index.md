@@ -2,18 +2,18 @@
 id: introduction
 hide_table_of_contents: true
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/selfchain/img/SelfChain-Service-Cover.jpg
+description: Self Chain Servis Sayfası
 keywords: [selfchain, self, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 # Self Chain
 
-![Artela](./img/SelfChain-Service.jpg)
+![SelfChain](./img/SelfChain-Service.jpg)
 
 ## Bağlantılar
- ✔️ [Website](https://artela.network/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Artela) |
- ✔️ [Doküman](https://docs.artela.network/main) |
- ✔️ [GitHub](https://github.com/artela-network) |
- ✔️ [Discord](https://discord.gg/artela)
+ ✔️ [Website](https://selfchain.xyz) |
+ ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/SelfChain) |
+ ✔️ [Doküman](https://docs.selfchain.xyz/) |
+ ✔️ [Discord](https://discord.gg/selfchainxyz)
 
 ## Gereksinimler
 
@@ -25,7 +25,7 @@ keywords: [selfchain, self, chain, kurulum, snapshot, statesync, güncelleme]
 
 ## Ağ Bilgisi 
 
-* Network Chain ID: artela_11822-1
+* Network Chain ID: self-dev-1
 * Binary: selfchaind
 * Denom: uself
 * Çalışma dizini: .selfchain
@@ -33,7 +33,7 @@ keywords: [selfchain, self, chain, kurulum, snapshot, statesync, güncelleme]
 ## Hizmetler
 * **RPC:** https://rpc-t-selfchain.anatolianteam.com/ 
 * **API:** https://api-t-selfchain.anatolianteam.com/
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/Artela
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/SelfChain
 
 ## Peering
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.

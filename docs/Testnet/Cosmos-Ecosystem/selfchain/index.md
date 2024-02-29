@@ -9,11 +9,10 @@ keywords: [selfchain, self, chain, installation, snapshot, statesync, update]
 ![SelfChain](./img/SelfChain-Service.jpg)
 
 ## Links
- ✔️ [Website](https://artela.network/) |
+ ✔️ [Website](https://selfchain.xyz) |
  ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/SelfChain) |
- ✔️ [Docs](https://docs.artela.network/main) |
- ✔️ [GitHub](https://github.com/artela-network) |
- ✔️ [Discord](https://discord.gg/artela)
+ ✔️ [Docs](https://docs.selfchain.xyz/) |
+ ✔️ [Discord](https://discord.gg/selfchainxyz)
 
 ## Requirements
 
@@ -24,7 +23,7 @@ keywords: [selfchain, self, chain, installation, snapshot, statesync, update]
 | Storage	| 250 GB SSD | 500 GB SSD |
 
 ## Network Info 
-* Network Chain ID: artela_11822-1
+* Network Chain ID: self-dev-1
 * Binary: selfchaind
 * Denom: uself
 * Working directory: .selfchain
