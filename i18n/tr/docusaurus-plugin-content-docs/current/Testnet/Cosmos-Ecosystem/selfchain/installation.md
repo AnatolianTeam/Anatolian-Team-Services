@@ -72,7 +72,7 @@ selfchaind config chain-id $SELF_CHAIN_ID
 selfchaind init --chain-id $SELF_CHAIN_ID $SELF_NODENAME
 
 # Genesis ve addrbook Dosyalarını Kopyalama
-wget https://testnet.anatolianteam.com/artela/genesis.json -O $HOME/.selfchain/config/genesis.json
+wget https://raw.githubusercontent.com/hotcrosscom/selfchain-genesis/main/networks/devnet/genesis.json -O $HOME/.selfchain/config/genesis.json
 wget https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/selfchain/files/addrbook.json -O $HOME/.selfchain/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
