@@ -2,6 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crowdcontrol/img/CC-Service-Cover.jpg
+description: Crowd Control Servis Sayfası
 keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 ---
 # Crowd Control

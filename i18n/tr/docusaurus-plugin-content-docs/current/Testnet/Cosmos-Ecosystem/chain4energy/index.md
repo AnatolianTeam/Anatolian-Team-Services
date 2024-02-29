@@ -2,6 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/chain4energy/img/C4E-Service-Cover.jpg
+description: Chain4Energy Servis Sayfası
 keywords: [chain4energy, c4e, kurulum, snapshot, statesync, güncelleme]
 ---
 # Chain4Energy

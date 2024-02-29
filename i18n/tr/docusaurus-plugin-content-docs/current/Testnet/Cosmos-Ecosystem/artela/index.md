@@ -2,6 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
+description: Artela Network Servis Sayfası
 keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
 ---
 # Artela Network

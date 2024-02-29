@@ -2,6 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/entangle/img/Entangle-Service-Cover.jpg
+description: Entangle Network Servis Sayfası
 keywords: [entangle, network, kurulum, snapshot, statesync, güncelleme]
 ---
 # Entangle

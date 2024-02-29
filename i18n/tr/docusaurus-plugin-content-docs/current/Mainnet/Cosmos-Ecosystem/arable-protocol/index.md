@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-description: Node kurulum rehberi.
+description: Arable Protokol Servis Sayfası.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Mainnet/Cosmos-Ecosystem/arable-protocol/img/Arable-Service-Cover.jpg
 keywords: [arable, protocol, acre, network, kurulum, snapshot, statesync, güncelleme]
 ---
