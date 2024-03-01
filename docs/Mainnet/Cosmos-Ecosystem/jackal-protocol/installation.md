@@ -113,7 +113,7 @@ s%:1317%:${JACKAL_PORT}317%g;
 s%:8080%:${JACKAL_PORT}080%g; 
 s%:9090%:${JACKAL_PORT}090%g; 
 s%:9091%:${JACKAL_PORT}091%g
-" $HOME/.empowerchain/config/app.toml
+" $HOME/.canine/config/app.toml
 sed -i.bak -e "s%:26657%:${JACKAL_PORT}657%g" $HOME/.canine/config/client.toml
 
 # Adding External Address
