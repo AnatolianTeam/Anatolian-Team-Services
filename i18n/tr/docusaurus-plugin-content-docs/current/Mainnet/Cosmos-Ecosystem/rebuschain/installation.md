@@ -115,7 +115,7 @@ s%:1317%:${REBUS_PORT}317%g;
 s%:8080%:${REBUS_PORT}080%g; 
 s%:9090%:${REBUS_PORT}090%g; 
 s%:9091%:${REBUS_PORT}091%g
-" $HOME/.empowerchain/config/app.toml
+" $HOME/.rebusd/config/app.toml
 sed -i.bak -e "s%:26657%:${REBUS_PORT}657%g" $HOME/.rebusd/config/client.toml
 
 # Adding External Address
