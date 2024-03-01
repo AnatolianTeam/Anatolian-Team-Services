@@ -63,7 +63,7 @@ git checkout v3.1.3
 make install
 canined version
 ```
-The version output will be `v3.1.2`.
+The version output will be `v3.1.3`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.

@@ -63,7 +63,7 @@ git checkout v3.1.3
 make install
 canined version
 ```
-The version output will be `v3.1.2`.
+The version output will be `v3.1.3`.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
