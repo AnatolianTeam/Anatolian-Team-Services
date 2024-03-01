@@ -2,7 +2,7 @@
 title: 💾 Installation
 description: Node installation guide.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/selfchain/img/SelfChain-Service-Cover.jpg
-description: Self Chain Servis Sayfası
+description: Self Chain Service Page
 keywords: [selfchain, self, chain, installation, snapshot, statesync, update]
 ---
 

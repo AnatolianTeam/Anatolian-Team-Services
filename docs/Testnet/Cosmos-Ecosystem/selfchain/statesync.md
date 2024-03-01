@@ -3,7 +3,6 @@ title: 🔄 StateSync
 description: Node synchronization with StateSync.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/selfchain/img/SelfChain-Service-Cover.jpg
 keywords: [selfchain, self, chain, installation, snapshot, statesync, update]
-description: Self Chain Servis Sayfası
 ---
 
 # StateSync
