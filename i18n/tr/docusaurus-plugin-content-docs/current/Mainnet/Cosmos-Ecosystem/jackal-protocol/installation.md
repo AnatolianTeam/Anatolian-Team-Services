@@ -59,7 +59,7 @@ source $HOME/.bash_profile
 ```shell
 cd $HOME
 git clone https://github.com/JackalLabs/canine-chain && cd canine-chain
-git checkout v3.1.2
+git checkout v3.1.3
 make install
 canined version
 ```
