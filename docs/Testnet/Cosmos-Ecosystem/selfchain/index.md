@@ -37,7 +37,7 @@ keywords: [selfchain, self, chain, installation, snapshot, statesync, update]
 ## Peering
 You can use peer for fast connection or state sync 
 ```shell
-peers="COMING SOON"
+peers="e8502eb858f555051f3f80edc13f46ea942e7507@23.111.23.233:26656,2ff64c736dd3fc7649a108b2ac139a3c5100f614@135.181.176.109:39356,108749a0b4f8c05534014a64697520b6385dc997@65.108.196.251:10156"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.selfchain/config/config.toml
 ```
 The address book is updated once three hour. You can use it for quick launch.
