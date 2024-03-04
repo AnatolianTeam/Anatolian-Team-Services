@@ -59,12 +59,12 @@ source $HOME/.bash_profile
 ```
 cd $HOME
 git clone https://github.com/DecentralCardGame/Cardchain
-wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.13.0/Cardchaind
+wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.14.2/cardchaind
 chmod +x Cardchaind
 mv $HOME/Cardchaind /usr/local/bin
 Cardchaind version
 ```
-The version output will be `0.13.0`.
+The version output will be `0.14.2`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.

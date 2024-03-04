@@ -59,12 +59,12 @@ source $HOME/.bash_profile
 ```
 cd $HOME
 git clone https://github.com/DecentralCardGame/Cardchain
-wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.13.0/Cardchaind
+wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.14.2/cardchaind
 chmod +x Cardchaind
 mv $HOME/Cardchaind /usr/local/bin
 Cardchaind version
 ```
-Versiyon çıktısı `0.11.0` olacak.
+Versiyon çıktısı `0.14.2` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 We copy and paste the codes below without making any changes.
