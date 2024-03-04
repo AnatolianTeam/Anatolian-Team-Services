@@ -29,7 +29,7 @@ keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 * Network Chain ID: cardtestnet-8
 * Binary: Cardchaind
 * Denom: ubpf
-* Working directory: .Cardchain
+* Working directory: .cardchaind
 
 ## Hizmetler
 * **RPC:** https://rpc-t-crowdcontrol.anatolianteam.com/
@@ -40,11 +40,11 @@ keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.Cardchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.cardchaind/config/config.toml
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.Cardchain/config/addrbook.json "https://testnet.anatolianteam.com/crowdcontrol/addrbook.json"
+wget -O $HOME/.cardchaind/config/addrbook.json "https://testnet.anatolianteam.com/crowdcontrol/addrbook.json"
 ```
 
 ```mdx-code-block

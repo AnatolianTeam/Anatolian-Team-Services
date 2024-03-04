@@ -28,7 +28,7 @@ keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, st
 * Network Chain ID: cardtestnet-8
 * Binary: Cardchaind
 * Denom: ubpf
-* Working directory: .Cardchain
+* Working directory: .cardchaind
 
 ## Public Services
 * **RPC:** https://rpc-t-carcrowdcontrol.anatolianteam.com/ 
@@ -39,11 +39,11 @@ keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, st
 You can use peer for fast connection or state sync.
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.Cardchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.cardchaind/config/config.toml
 ```
 The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.Cardchain/config/addrbook.json "https://testnet.anatolianteam.com/crowdcontrol/addrbook.json"
+wget -O $HOME/.cardchaind/config/addrbook.json "https://testnet.anatolianteam.com/crowdcontrol/addrbook.json"
 ```
 
 ```mdx-code-block

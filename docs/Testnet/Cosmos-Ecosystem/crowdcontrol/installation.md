@@ -74,31 +74,31 @@ Cardchaind config chain-id $CROWD_CHAIN_ID
 Cardchaind init --chain-id $CROWD_CHAIN_ID $CROWD_NODENAME
 
 # Copying the Genesis File
-wget http://45.136.28.158:3000/genesis.json -O $HOME/.Cardchain/config/genesis.json
+wget http://45.136.28.158:3000/genesis.json -O $HOME/.cardchaind/config/genesis.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0ubpf"|g' $HOME/.Cardchain/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0ubpf"|g' $HOME/.cardchaind/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.Cardchain/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.cardchaind/config/config.toml
 
 # Set up SEED and PEERS
 SEEDS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.Cardchain/config/config.toml
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.cardchaind/config/config.toml
 
 # Enabling Prometheus
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.Cardchain/config/config.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.cardchaind/config/config.toml
 
 # Set up Pruning 
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="50"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.Cardchain/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.Cardchain/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.Cardchain/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.Cardchain/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.cardchaind/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.cardchaind/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.cardchaind/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.cardchaind/config/app.toml
 
 # Set up Ports
 sed -i.bak -e "
@@ -107,19 +107,19 @@ s%:26657%:${CROWD_PORT}657%g;
 s%:6060%:${CROWD_PORT}060%g;
 s%:26656%:${CROWD_PORT}656%g;
 s%:26660%:${CROWD_PORT}660%g
-" $HOME/.Cardchain/config/config.toml
+" $HOME/.cardchaind/config/config.toml
 sed -i.bak -e "
 s%:1317%:${CROWD_PORT}317%g; 
 s%:8080%:${CROWD_PORT}080%g; 
 s%:9090%:${CROWD_PORT}090%g; 
 s%:9091%:${CROWD_PORT}091%g
-" $HOME/.Cardchain/config/app.toml
-sed -i.bak -e "s%:26657%:${CROWD_PORT}657%g" $HOME/.Cardchain/config/client.toml
+" $HOME/.cardchaind/config/app.toml
+sed -i.bak -e "s%:26657%:${CROWD_PORT}657%g" $HOME/.cardchaind/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CROWD_PORT}656\"|g" ~/.Cardchain/config/config.toml > ~/.Cardchain/config/config.toml.tmp
-mv ~/.Cardchain/config/config.toml.tmp  ~/.Cardchain/config/config.toml
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CROWD_PORT}656\"|g" ~/.cardchaind/config/config.toml > ~/.cardchaind/config/config.toml.tmp
+mv ~/.cardchaind/config/config.toml.tmp  ~/.cardchaind/config/config.toml
 
 # Creating the Service File
 tee /etc/systemd/system/Cardchaind.service > /dev/null << EOF
@@ -231,7 +231,7 @@ systemctl disable Cardchaind && \
 rm /etc/systemd/system/Cardchaind.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .Cardchain Cardchain && \
+rm -rf .cardchaind Cardchain && \
 rm -rf $(which Cardchaind)
 sed -i '/CROWD_/d' ~/.bash_profile
 ```
