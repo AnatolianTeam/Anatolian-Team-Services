@@ -134,7 +134,7 @@ selfchaind status 2>&1 | jq .ValidatorInfo
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 selfchaind tx staking edit-validator \
---moniker=YENI-NODE-ADI\
+--new-moniker=YENI-NODE-ADI\
 --chain-id=$SELF_CHAIN_ID\
 --from=$SELF_WALLET\
 --gas-prices 0.00001uself\

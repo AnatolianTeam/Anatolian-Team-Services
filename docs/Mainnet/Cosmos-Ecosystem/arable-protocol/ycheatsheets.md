@@ -134,7 +134,7 @@ acred status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 acred tx staking edit-validator \
---moniker=NEW-NODE-NAME\
+--new-moniker=NEW-NODE-NAME\
 --chain-id=$ACRE_CHAIN_ID\
 --from=$ACRE_WALLET\
 --gas-prices 0.00001aacre\

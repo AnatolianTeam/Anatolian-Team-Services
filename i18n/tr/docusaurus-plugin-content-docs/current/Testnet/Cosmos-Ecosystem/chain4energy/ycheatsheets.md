@@ -134,7 +134,7 @@ c4ed status 2>&1 | jq .ValidatorInfo
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 c4ed tx staking edit-validator \
---moniker=YENI-NODE-ADI\
+--new-moniker=YENI-NODE-ADI\
 --chain-id=$C4E_CHAIN_ID\
 --from=$C4E_WALLET\
 --gas-prices 0.00001uc4e\

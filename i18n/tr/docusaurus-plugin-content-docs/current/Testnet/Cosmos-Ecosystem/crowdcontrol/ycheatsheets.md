@@ -134,7 +134,7 @@ Cardchaind status 2>&1 | jq .ValidatorInfo
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 Cardchaind tx staking edit-validator \
---moniker=YENI-NODE-ADI\
+--new-moniker=YENI-NODE-ADI\
 --chain-id=$CROWD_CHAIN_ID\
 --from=$CROWD_WALLET\
 --gas-prices 0.00001ubpf\

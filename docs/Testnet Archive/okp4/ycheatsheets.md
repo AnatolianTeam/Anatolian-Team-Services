@@ -134,7 +134,7 @@ okp4d status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 okp4d tx staking edit-validator \
---moniker=NEW-NODE-NAME\
+--new-moniker=NEW-NODE-NAME\
 --chain-id=$OKP4_CHAIN_ID\
 --from=$OKP4_WALLET\
 --gas-prices 0.00001uknow\

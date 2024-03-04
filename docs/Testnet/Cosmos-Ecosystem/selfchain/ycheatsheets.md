@@ -134,7 +134,7 @@ selfchaind status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 selfchaind tx staking edit-validator \
---moniker=NEW-NODE-NAME\
+--new-moniker=NEW-NODE-NAME\
 --chain-id=$SELF_CHAIN_ID\
 --from=$SELF_WALLET\
 --gas-prices 0.00001uself\

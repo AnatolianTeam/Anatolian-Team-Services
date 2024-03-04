@@ -134,7 +134,7 @@ crossfid status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 crossfid tx staking edit-validator \
---moniker=NEW-NODE-NAME\
+--new-moniker=NEW-NODE-NAME\
 --chain-id=$CFI_CHAIN_ID\
 --from=$CFI_WALLET\
 --gas-prices 0.00001uart\

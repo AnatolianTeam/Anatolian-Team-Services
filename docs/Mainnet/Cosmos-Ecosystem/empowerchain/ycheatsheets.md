@@ -134,7 +134,7 @@ empowerd status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 empowerd tx staking edit-validator \
---moniker=NEW-NODE-NAME\
+--new-moniker=NEW-NODE-NAME\
 --chain-id=$EMPOW_CHAIN_ID\
 --from=$EMPOW_WALLET\
 --gas-prices 0.00001umpwr\

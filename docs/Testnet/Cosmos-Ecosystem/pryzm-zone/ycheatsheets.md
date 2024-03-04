@@ -134,7 +134,7 @@ pryzmd status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 pryzmd tx staking edit-validator \
---moniker=NEW-NODE-NAME\
+--new-moniker=NEW-NODE-NAME\
 --chain-id=$PRYZM_CHAIN_ID\
 --from=$PRYZM_WALLET\
 --gas-prices 0.00001upryzm\

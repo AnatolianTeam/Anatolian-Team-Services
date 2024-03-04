@@ -134,7 +134,7 @@ acred status 2>&1 | jq .ValidatorInfo
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
 ```
 acred tx staking edit-validator \
---moniker=YENI-NODE-ADI\
+--new-moniker=YENI-NODE-ADI\
 --chain-id=$REBUS_CHAIN_ID\
 --from=$REBUS_WALLET\
 --gas-prices 0.00001uc4e\
