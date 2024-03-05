@@ -134,11 +134,11 @@ c4ed status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 c4ed tx staking edit-validator \
---new-moniker=NEW-NODE-NAME\
+--new-moniker=NEW-NODE-NAME \
 --chain-id=$C4E_CHAIN_ID\
---from=$C4E_WALLET\
---gas-prices 0.00001uc4e\
---gas-adjustment 1.5\
+--from=$C4E_WALLET \
+--gas-prices 0.00001uc4e \
+--gas-adjustment 1.5 \
 --gas auto -y
 ```
 
@@ -153,7 +153,7 @@ Before changing this information, you must register at https://keybase.io/ and r
 `$C4E_NODENAME` and `$C4E_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 c4ed tx staking edit-validator \
---moniker=$C4E_NODENAME\
+--moniker=$C4E_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \

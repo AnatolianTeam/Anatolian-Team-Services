@@ -134,11 +134,11 @@ canined status 2>&1 | jq .ValidatorInfo
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakçer içermemelidir.
 ```
 canined tx staking edit-validator \
---new-moniker=YENI-NODE-ADI\
---chain-id=$JACKAL_CHAIN_ID\
---from=$JACKAL_WALLET\
---gas-prices 0.00001uc4e\
---gas-adjustment 1.5\
+--new-moniker=YENI-NODE-ADI \
+--chain-id=$JACKAL_CHAIN_ID \
+--from=$JACKAL_WALLET \
+--gas-prices 0.00001uc4e \
+--gas-adjustment 1.5 \
 --gas auto -y
 ```
 
@@ -153,11 +153,11 @@ Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak a�
 `$JACKAL_NODENAME` ve `$JACKAL_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 canined tx staking edit-validator \
---moniker=$JACKAL_NODENAME\
+--moniker=$JACKAL_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$JACKAL_CHAIN_ID\
+--chain-id=$JACKAL_CHAIN_ID \
 --from=$JACKAL_WALLET
 ```
 

@@ -134,11 +134,11 @@ selfchaind status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 selfchaind tx staking edit-validator \
---new-moniker=NEW-NODE-NAME\
---chain-id=$SELF_CHAIN_ID\
---from=$SELF_WALLET\
---gas-prices 0.00001uself\
---gas-adjustment 1.5\
+--new-moniker=NEW-NODE-NAME \
+--chain-id=$SELF_CHAIN_ID \
+--from=$SELF_WALLET \
+--gas-prices 0.00001uself \
+--gas-adjustment 1.5 \
 --gas auto -y
 ```
 
@@ -153,11 +153,11 @@ Before changing this information, you must register at https://keybase.io/ and r
 `$SELF_NODENAME` and `$SELF_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 selfchaind tx staking edit-validator \
---moniker=$SELF_NODENAME\
+--moniker=$SELF_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$SELF_CHAIN_ID\
+--chain-id=$SELF_CHAIN_ID \
 --from=$SELF_WALLET
 ```
 

@@ -134,11 +134,11 @@ uptickd status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 uptickd tx staking edit-validator \
---new-moniker=NEW-NODE-NAME\
---chain-id=$UPTICK_CHAIN_ID\
---from=$UPTICK_WALLET\
---gas-prices 0.00001auptick\
---gas-adjustment 1.5\
+--new-moniker=NEW-NODE-NAME \
+--chain-id=$UPTICK_CHAIN_ID \
+--from=$UPTICK_WALLET \
+--gas-prices 0.00001auptick \
+--gas-adjustment 1.5 \
 --gas auto -y
 ```
 
@@ -153,11 +153,11 @@ Before changing this information, you must register at https://keybase.io/ and r
 `$UPTICK_NODENAME` and `$UPTICK_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 uptickd tx staking edit-validator \
---moniker=$UPTICK_NODENAME\
+--moniker=$UPTICK_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$UPTICK_CHAIN_ID\
+--chain-id=$UPTICK_CHAIN_ID \
 --from=$UPTICK_WALLET
 ```
 

@@ -187,16 +187,6 @@ echo 'export SELF_VALOPER_ADDRESS='${SELF_VALOPER_ADDRESS} >> $HOME/.bash_profil
 source $HOME/.bash_profile
 ```
 
-### EIP-55 Adresini Öğrenme
-```shell
-selfchaind debug addr $SELF_WALLET_ADDRESS
-```
-
-#### Faucet
-Discord sunucusunda `#🚰┃testnet-faucet` kanalından aşağıdaki şekilde token istiyoruz..
-
-`$request EIP-55_Address`
-
 ### Cüzdan Bakiyesini Kontrol Etme 
 ```
 selfchaind query bank balances $SELF_WALLET_ADDRESS

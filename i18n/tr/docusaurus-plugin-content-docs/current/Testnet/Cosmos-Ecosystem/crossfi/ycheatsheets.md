@@ -134,11 +134,11 @@ crossfid status 2>&1 | jq .ValidatorInfo
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 crossfid tx staking edit-validator \
---new-moniker=YENI-NODE-ADI\
---chain-id=$CFI_CHAIN_ID\
---from=$CFI_WALLET\
---gas-prices 0.00001uc4e\
---gas-adjustment 1.5\
+--new-moniker=YENI-NODE-ADI \
+--chain-id=$CFI_CHAIN_ID \
+--from=$CFI_WALLET \
+--gas-prices 0.00001uc4e \
+--gas-adjustment 1.5 \
 --gas auto -y
 ```
 
@@ -153,11 +153,11 @@ Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak a�
 `$CFI_NODENAME` ve `$CFI_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 crossfid tx staking edit-validator \
---moniker=$CFI_NODENAME\
+--moniker=$CFI_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$CFI_CHAIN_ID\
+--chain-id=$CFI_CHAIN_ID \
 --from=$CFI_WALLET
 ```
 

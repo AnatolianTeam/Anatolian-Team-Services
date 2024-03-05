@@ -134,11 +134,11 @@ babylond status 2>&1 | jq .ValidatorInfo
 `YENI-NODE-ADI` yazan yere yeni validator/moniker isminizi yazınız. TR karakter içermemelidir.
 ```
 babylond tx staking edit-validator \
---new-moniker=YENI-NODE-ADI\
---chain-id=$BBN_CHAIN_ID\
---from=$BBN_WALLET\
---gas-prices 0.00001ubbn\
---gas-adjustment 1.5\
+--new-moniker=YENI-NODE-ADI \
+--chain-id=$BBN_CHAIN_ID \
+--from=$BBN_WALLET \
+--gas-prices 0.00001ubbn \
+--gas-adjustment 1.5 \
 --gas auto -y
 ```
 
@@ -153,11 +153,11 @@ Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak a�
 `$BBN_NODENAME` ve `$BBN_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 babylond tx staking edit-validator \
---moniker=$BBN_NODENAME\
+--moniker=$BBN_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$BBN_CHAIN_ID\
+--chain-id=$BBN_CHAIN_ID \
 --from=$BBN_WALLET
 ```
 
