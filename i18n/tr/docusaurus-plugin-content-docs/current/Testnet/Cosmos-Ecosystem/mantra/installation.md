@@ -59,7 +59,7 @@ source $HOME/.bash_profile
 ```
 cd $HOME
 wget -O /usr/lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.0/libwasmvm.x86_64.so
-wget https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/mantra/files/mantrachaind-linux-amd64.zip
+wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/mantrachaind-linux-amd64.zip
 unzip mantrachaind-linux-amd64.zip
 rm mantrachaind-linux-amd64.zip
 mv mantrachaind $HOME/go/bin
