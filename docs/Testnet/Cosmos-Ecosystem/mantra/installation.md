@@ -91,7 +91,7 @@ SEEDS="69fa5f7927f2b013f152b6dfc56324156feb1973@34.172.80.207:26656"
 PEERS="182a37a556ff0b6733fe58020e7746de3292492d@35.222.198.102:26656,64691a4202c1ad29a416b21ce21bfc9659783406@34.136.169.18:26656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.mantrachain/config/config.toml
 sed -i.bak -e "s/^seeds =.*/seeds = \"$SEEDS\"/" $HOME/.mantrachain/config/config.toml
-sed -i -e "s/^filter_peers *=.*/filter_peers = \"true\"/" $CONFIG_TOML
+sed -i -e "s/^filter_peers *=.*/filter_peers = \"true\"/" $HOME/.mantrachain/config/config.toml
 
 # Enabling Prometheus
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.mantrachain/config/config.toml
