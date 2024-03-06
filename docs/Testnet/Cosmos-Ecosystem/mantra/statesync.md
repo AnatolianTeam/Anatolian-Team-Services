@@ -13,7 +13,7 @@ systemctl stop mantrachaind
 cp $HOME/.mantrachain/data/priv_validator_state.json $HOME/.mantrachain/priv_validator_state.json.backup
 mantrachaind tendermint unsafe-reset-all --home $HOME/.mantrachain --keep-addr-book
 
-SNAP_RPC="https://rpc-t-babylon.anatolianteam.com:443"
+SNAP_RPC="https://rpc-t-mantra.anatolianteam.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
