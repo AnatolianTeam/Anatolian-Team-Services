@@ -202,15 +202,6 @@ mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.
 :::
 
-## BLS Key Oluşturma ve Yeniden Başlatma
-
-```shell
-sed -i -e "s|^key-name *=.*|key-name = \"$MANTRA_WALLET\"|" $HOME/.mantrachain/config/app.toml
-sed -i -e "s|^timeout_commit *=.*|timeout_commit = \"10s\"|" $HOME/.mantrachain/config/config.toml
-mantrachaind create-bls-key $(mantrachaind keys show $MANTRA_WALLET -a)
-sudo systemctl restart mantrachaind
-```
-
 ## Validator Oluşturma
 Aşağıdaki komutta aşağıda berlirttilen yerler dışında bir değişiklik yapmanız gerekmez;
    - `identity`  burada `XXXX1111XXXX1111` yazan yere [keybase](https://keybase.io/) sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.

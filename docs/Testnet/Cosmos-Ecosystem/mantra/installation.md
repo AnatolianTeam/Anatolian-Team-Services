@@ -38,7 +38,7 @@ The areas you need to change are written below.
 * `$MANTRA_WALLET` your wallet name
 *  If another node is using the port, you can change it below. You must enter a different value where it says `11`, again as two digits.
 ```shell
-echo "export MANTRA_NODENAME=$MANTRA_NODENAME"  >> $HOME/.bash_profile
+echo "export MANTRA_NODENAME=$MANTRA_NODENAME" >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=$MANTRA_WALLET" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=11" >> $HOME/.bash_profile
 echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
@@ -48,7 +48,7 @@ source $HOME/.bash_profile
 ### Sample
 Let's assume that your Node (`MANTRA_NODENAME`) and Wallet (`MANTRA_WALLET`) name is `Anatolian-Guide` and the port you will use (`MANTRA_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
-echo "export MANTRA_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export MANTRA_NODENAME=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=16" >> $HOME/.bash_profile
 echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
@@ -201,16 +201,6 @@ mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 :::warning
 If the synchronization is completed, we proceed to the following step.
 :::
-
-## Creating BLS Key and Restarting
-
-```shell
-# app.toml ve config.toml Düzenleme
-sed -i -e "s|^key-name *=.*|key-name = \"$MANTRA_WALLET\"|" $HOME/.mantrachain/config/app.toml
-sed -i -e "s|^timeout_commit *=.*|timeout_commit = \"10s\"|" $HOME/.mantrachain/config/config.toml
-mantrachaind create-bls-key $(mantrachaind keys show $MANTRA_WALLET -a)
-sudo systemctl restart mantrachaind
-```
 
 ## Creating Validator
 You do not need to make any changes to the following command other than the places specified below;
