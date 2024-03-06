@@ -209,7 +209,7 @@ You do not need to make any changes to the following command other than the plac
     - `website` where it says `https://anatolianteam.com`, if you have a website or twitter etc. You can write your address.
     - `security-contact` Your email address.
  ```shell 
-mantrachaind tx checkpointing create-validator \
+mantrachaind tx staking create-validator \
 --amount=1000000uaum \
 --pubkey=$(mantrachaind tendermint show-validator) \
 --moniker=$MANTRA_NODENAME \

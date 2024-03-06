@@ -209,7 +209,7 @@ Aşağıdaki komutta aşağıda berlirttilen yerler dışında bir değişiklik 
    - `website`  `https://anatolianteam.com` yazan yere varsa bir siteniz ya da twitter vb. adresinizi yazabilirsiniz.
    - `security-contact`  E-posta adresiniz.
  ```shell 
-mantrachaind tx checkpointing create-validator \
+mantrachaind tx staking create-validator \
 --amount=1000000ubbn \
 --pubkey=$(mantrachaind tendermint show-validator) \
 --moniker=$MANTRA_NODENAME \
