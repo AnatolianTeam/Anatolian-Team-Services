@@ -76,8 +76,8 @@ mantrachaind config chain-id $MANTRA_CHAIN_ID
 mantrachaind init --chain-id $MANTRA_CHAIN_ID $MANTRA_NODENAME
 
 # Copying the Genesis and addrbook File
-curl -L https://raw.githubusercontent.com/AnatolianTeam//Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/mantra/files/genesis.json > $HOME/.mantrachain/config/genesis.json
-curl -L https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/mantra/files/addrbook.json > $HOME/.mantrachain/config/addrbook.json
+curl -L https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/genesis.json > $HOME/.mantrachain/config/genesis.json
+curl -L https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/addrbook.json > $HOME/.mantrachain/config/addrbook.json
 
 # Set up the minimum gas price
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.002uaum"|g' $HOME/.mantrachain/config/app.toml
