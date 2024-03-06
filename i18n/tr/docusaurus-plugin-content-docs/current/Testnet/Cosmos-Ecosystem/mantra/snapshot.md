@@ -1,0 +1,28 @@
+---
+title: 📸 Snapshot
+description: Snapshot ile kurulum.
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/mantra/img/Mantra-Service-Cover.jpg
+keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
+---
+
+# Snapshot
+
+```shell
+# install lz4
+apt update
+apt install lz4 -y
+```
+
+```shell
+systemctl stop mantrachaind
+
+cp $HOME/.mantrachain/data/priv_validator_state.json $HOME/.mantrachain/priv_validator_state.json.backup 
+
+mantrachaind tendermint unsafe-reset-all --home $HOME/.mantrachain --keep-addr-book
+SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/babylon/ | egrep -o ">bbn-test-2_.*\.tar.lz4" | tr -d ">")
+curl https://testnet.anatolianteam.com/babylon/${SNAP_NAME} | lz4 -dc - | tar -xf - -C $HOME/.mantrachain
+
+mv $HOME/.mantrachain/priv_validator_state.json.backup $HOME/.mantrachain/data/priv_validator_state.json 
+
+systemctl restart mantrachaind && journalctl -u mantrachaind -f -o cat
+```
