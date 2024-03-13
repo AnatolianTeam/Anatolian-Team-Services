@@ -11,7 +11,7 @@ keywords: [crossfi, finance, cross finance, kurulum, snapshot, statesync, günce
 
 ## Bağlantılar
  ✔️ [Website](https://crossfi.org/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/CrossFi) |
+ ✔️ [Blockchain Explorer](https://test.xfiscan.com/validators) |
  ✔️ [Doküman](https://docs.crossfi.org) |
  ✔️ [GitHub](https://github.com/crossfichain) |
  ✔️ [Discord](https://discord.gg/crossfi)

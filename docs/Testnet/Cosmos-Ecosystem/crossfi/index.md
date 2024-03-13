@@ -11,7 +11,7 @@ keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, u
 
 ## Links
  ✔️ [Website](https://crossfi.org/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/CrossFi) |
+ ✔️ [Blockchain Explorer](https://test.xfiscan.com/validators) |
  ✔️ [Docs](https://docs.crossfi.org) |
  ✔️ [GitHub](https://github.com/crossfichain) |
  ✔️ [Discord](https://discord.gg/crossfi)

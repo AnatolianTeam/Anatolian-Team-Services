@@ -19,7 +19,7 @@ apt install make clang pkg-config libssl-dev libclang-dev build-essential git cu
 
 ## Installing Go
 ```shell
-ver="1.21.5"
+ver="1.21.6"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 rm -rf /usr/local/go
 tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
