@@ -29,7 +29,7 @@ keywords: [crossfi, finance, cross finance, kurulum, snapshot, statesync, günce
 * Network Chain ID: crossfi-evm-testnet-1
 * Binary: crossfid
 * Denom: mpx
-* Çalışma dizini: .crossfid
+* Çalışma dizini: .mineplex-chain
 
 ## Hizmetler
 * **RPC:** https://rpc-t-crossfi.anatolianteam.com/ 
@@ -40,11 +40,11 @@ keywords: [crossfi, finance, cross finance, kurulum, snapshot, statesync, günce
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.crossfid/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.mineplex-chain/config/config.toml
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.crossfid/config/addrbook.json "https://testnet.anatolianteam.com/crossfi/addrbook.json"
+wget -O $HOME/.mineplex-chain/config/addrbook.json "https://testnet.anatolianteam.com/crossfi/addrbook.json"
 ```
 
 ```mdx-code-block

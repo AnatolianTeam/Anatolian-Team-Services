@@ -1,8 +1,8 @@
 ---
 title: 💾 Installation
 description: Node installation guide.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
-keywords: [artela, installation, snapshot, statesync, update]
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+keywords: [crossfi, installation, snapshot, statesync, update]
 ---
 
 # Installation
@@ -56,13 +56,15 @@ source $HOME/.bash_profile
 ```
 
 ## Installing CrossFi
-:::info
-It will be prepared on March 15.
-::: 
-
 ```
 cd $HOME
-
+mkdir -p $HOME/go/bin
+curl -L https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz > crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
+tar -xvzf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
+chmod +x $HOME/bin/crossfid
+mv $HOME/bin/crossfid $HOME/go/bin
+rm -rf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz readme.md $HOME/bin
+crossfid version
 ```
 The version output will be ``.
 
@@ -72,35 +74,34 @@ We copy and paste the codes below without making any changes.
 crossfid config keyring-backend test
 crossfid config chain-id $CFI_CHAIN_ID
 crossfid init --chain-id $CFI_CHAIN_ID $CFI_NODENAME
-git clone https://github.com/crossfichain/testnet.git
-mv $HOME/testnet/ $HOME/.crossfid/
 
 # Copying the Genesis and addrbook Files
-wget https://raw.githubusercontent.com/crossfichain/testnet/master/config/genesis.json -O $HOME/.crossfid/config/genesis.json
+wget https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/crossfi/files/genesis.json -O $HOME/.mineplex-chain/config/genesis.json
+https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/crossfi/files/addrbook.json -O $HOME/.mineplex-chain/config/addrbook.json
 
 # Set up the minimum gas price
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0uart "|g' $HOME/.crossfid/config/app.toml
+sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "5000000000mpx"|' $HOME/.mineplex-chain/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.crossfid/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.mineplex-chain/config/config.toml
 
 # Set up SEED and PEERS
-SEEDS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.crossfid/config/config.toml
+SEEDS="89752fa7945a06e972d7d860222a5eeaeab5c357@128.140.70.97:26656,dd83e3c7c4e783f8a46dbb010ec8853135d29df0@crossfi-testnet-seed.itrocket.net:36656"
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.mineplex-chain/config/config.toml
 
 # Enabling Prometheus
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.crossfid/config/config.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.mineplex-chain/config/config.toml
 
 # Set up Pruning 
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="50"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.crossfid/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.crossfid/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.crossfid/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.mineplex-chain/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.mineplex-chain/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.mineplex-chain/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.mineplex-chain/config/app.toml
 
 # Set up Ports
 sed -i.bak -e "
@@ -109,19 +110,19 @@ s%:26657%:${CFI_PORT}657%g;
 s%:6060%:${CFI_PORT}060%g;
 s%:26656%:${CFI_PORT}656%g;
 s%:26660%:${CFI_PORT}660%g
-" $HOME/.crossfid/config/config.toml
+" $HOME/.mineplex-chain/config/config.toml
 sed -i.bak -e "
 s%:1317%:${CFI_PORT}317%g; 
 s%:8080%:${CFI_PORT}080%g; 
 s%:9090%:${CFI_PORT}090%g; 
 s%:9091%:${CFI_PORT}091%g
-" $HOME/.crossfid/config/app.toml
-sed -i.bak -e "s%:26657%:${CFI_PORT}657%g" $HOME/.crossfid/config/client.toml
+" $HOME/.mineplex-chain/config/app.toml
+sed -i.bak -e "s%:26657%:${CFI_PORT}657%g" $HOME/.mineplex-chain/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CFI_PORT}656\"|g" ~/.crossfid/config/config.toml > ~/.crossfid/config/config.toml.tmp
-mv ~/.crossfid/config/config.toml.tmp  ~/.crossfid/config/config.toml
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CFI_PORT}656\"|g" ~/.mineplex-chain/config/config.toml > ~/.mineplex-chain/config/config.toml.tmp
+mv ~/.mineplex-chain/config/config.toml.tmp  ~/.mineplex-chain/config/config.toml
 
 # Creating the Service File
 tee /etc/systemd/system/crossfid.service > /dev/null << EOF
@@ -190,16 +191,6 @@ echo 'export CFI_VALOPER_ADDRESS='${CFI_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-### Learn EIP-55 Address
-```shell
-crossfid debug addr $CFI_WALLET_ADDRESS
-```
-
-#### Faucet
-Request tokens by sending a message to the `#🚰┃testnet-faucet` channel on the Discord server as follows.
-
-`$request EIP-55_Address`
-
 ### Checking Wallet Balance
 ```
 crossfid query bank balances $CFI_WALLET_ADDRESS
@@ -217,7 +208,7 @@ You do not need to make any changes to the following command other than the plac
     - `security-contact` Your email address.
  ```shell 
 crossfid tx staking create-validator \
---amount=940000uart  \
+--amount=940000mpx  \
 --pubkey=$(crossfid tendermint show-validator) \
 --moniker=$CFI_NODENAME \
 --chain-id=$CFI_CHAIN_ID \
@@ -225,7 +216,7 @@ crossfid tx staking create-validator \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.25uart  \
+--gas-prices=0.25mpx  \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$CFI_WALLET \
@@ -243,7 +234,7 @@ systemctl disable crossfid && \
 rm /etc/systemd/system/crossfid.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .crossfid artela && \
+rm -rf .mineplex-chain crossfi && \
 rm -rf $(which crossfid)
 sed -i '/CFI_/d' ~/.bash_profile
 ```

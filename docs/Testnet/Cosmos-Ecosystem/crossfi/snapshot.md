@@ -1,8 +1,8 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
-keywords: [artela, installation, snapshot, statesync, update]
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+keywords: [crossfi, installation, snapshot, statesync, update]
 ---
 
 # Snapshot
@@ -16,13 +16,13 @@ apt install lz4 -y
 ```shell
 systemctl stop crossfid
 
-cp $HOME/.crossfid/data/priv_validator_state.json $HOME/.crossfid/priv_validator_state.json.backup 
+cp $HOME/.mineplex-chain/data/priv_validator_state.json $HOME/.mineplex-chain/priv_validator_state.json.backup 
 
-crossfid tendermint unsafe-reset-all --home $HOME/.crossfid --keep-addr-book
-SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/artela/ | egrep -o ">artela_11822-1_.*\.tar.lz4" | tr -d ">")
-curl -L https://testnet.anatolianteam.com/artela/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.pryzm
+crossfid tendermint unsafe-reset-all --home $HOME/.mineplex-chain --keep-addr-book
+SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/crossfi/ | egrep -o ">crossfi-evm-testnet-1_.*\.tar.lz4" | tr -d ">")
+curl -L https://testnet.anatolianteam.com/crossfi/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.mineplex-chain
 
-mv $HOME/.crossfid/priv_validator_state.json.backup $HOME/.crossfid/data/priv_validator_state.json 
+mv $HOME/.mineplex-chain/priv_validator_state.json.backup $HOME/.mineplex-chain/data/priv_validator_state.json 
 
 systemctl restart crossfid && journalctl -u crossfid -f -o cat
 ```

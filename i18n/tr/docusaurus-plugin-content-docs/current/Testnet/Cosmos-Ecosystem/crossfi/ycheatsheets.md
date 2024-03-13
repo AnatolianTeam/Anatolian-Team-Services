@@ -1,8 +1,8 @@
 ---
 title: ⤴️ Komutlar
-description: Node installation guide.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
-keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
+description: Faydalı komutlar.
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+keywords: [crossfi, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Komutlar
@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Node Peer Adresini Öğrenme
 ```
-echo $(crossfid tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.crossfid/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(crossfid tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.mineplex-chain/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Cüzdan Yönetimi
@@ -93,34 +93,34 @@ crossfid tx bank send $CFI_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uc4e
 
 ### Proposal Oylamasına Katılma
 ```
-crossfid tx gov vote 1 yes --from $CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
+crossfid tx gov vote 1 yes --from $CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-crossfid tx staking delegate $CFI_VALOPER_ADDRESS 100000000uart--from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
+crossfid tx staking delegate $CFI_VALOPER_ADDRESS 100000000mpx--from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-crossfid tx staking unbond $(crossfid keys show $CFI_WALLET --bech val -a) 1000000uart--from $CFI_WALLET --chain-id $CFI_CHAIN_ID --fees 3000uart-y
+crossfid tx staking unbond $(crossfid keys show $CFI_WALLET --bech val -a) 1000000mpx--from $CFI_WALLET --chain-id $CFI_CHAIN_ID --fees 3000mpx-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-crossfid tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uart--from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
+crossfid tx staking redelegate srcValidatorAddress destValidatorAddress 100000000mpx--from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-crossfid tx distribution withdraw-all-rewards --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
+crossfid tx distribution withdraw-all-rewards --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-crossfid tx distribution withdraw-rewards $CFI_VALOPER_ADDRESS --from=$CFI_WALLET --commission --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
+crossfid tx distribution withdraw-rewards $CFI_VALOPER_ADDRESS --from=$CFI_WALLET --commission --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -145,7 +145,7 @@ crossfid tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-crossfid tx staking edit-validator --commission-rate "0.02" --moniker=$CFI_NODENAME --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto - y
+crossfid tx staking edit-validator --commission-rate "0.02" --moniker=$CFI_NODENAME --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001mpx--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
@@ -178,7 +178,7 @@ crossfid q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-crossfid tx slashing unjail --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001uart--gas-adjustment 1.5 --gas auto -y
+crossfid tx slashing unjail --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001mpx--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

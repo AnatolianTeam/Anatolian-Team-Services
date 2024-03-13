@@ -1,8 +1,8 @@
 ---
 title: 🆙 Güncelleme
-description: Update node with manual or scheduled.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
-keywords: [artela, network, kurulum, snapshot, statesync, güncelleme]
+description: Node güncelleme.
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+keywords: [crossfi, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
 # Güncelleme 

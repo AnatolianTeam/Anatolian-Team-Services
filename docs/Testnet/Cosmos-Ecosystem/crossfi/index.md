@@ -1,6 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
+description: Cross Finance Service Page
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, update]
 ---
@@ -27,7 +28,7 @@ keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, u
 * Network Chain ID: crossfi-evm-testnet-1
 * Binary: crossfid
 * Denom: uarmpxt
-* Working directory: .crossfid
+* Working directory: .mineplex-chain
 
 ## Public Services
 * **RPC:** https://rpc-t-crossfi.anatolianteam.com/ 
@@ -38,11 +39,11 @@ keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, u
 You can use peer for fast connection or state sync 
 ```shell
 peers="COMING SOON"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.crossfid/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.mineplex-chain/config/config.toml
 ```
 The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.crossfid/config/addrbook.json "https://testnet.anatolianteam.com/crossfi/addrbook.json"
+wget -O $HOME/.mineplex-chain/config/addrbook.json "https://testnet.anatolianteam.com/crossfi/addrbook.json"
 ```
 
 ```mdx-code-block

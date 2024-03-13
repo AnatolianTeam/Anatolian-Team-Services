@@ -1,8 +1,8 @@
 ---
 title: ⤴️ Cheatsheets
 description: Useful commands.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/artela/img/Artela-Service-Cover.jpg
-keywords: [artela, installation, snapshot, statesync, update]
+image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+keywords: [crossfi, installation, snapshot, statesync, update]
 ---
 
 # Cheatsheets 
@@ -54,7 +54,7 @@ curl icanhazip.com
 
 ### Your node peer
 ```
-echo $(crossfid tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.crossfid/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(crossfid tendermint show-node-id)'@'$(wget -qO- eth0.me)':'$(cat $HOME/.mineplex-chain/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ## Wallet Management
@@ -88,39 +88,39 @@ crossfid query bank balances $CFI_WALLET_ADDRESS
 
 ### Transferring from One Wallet to Another
 ```
-crossfid tx bank send $CFI_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uart
+crossfid tx bank send $CFI_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000mpx
 ```
 
 ### Participating in Proposal Voting
 ```
-crossfid tx gov vote 1 yes --from $CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart --gas-adjustment 1.5 --gas auto -y
+crossfid tx gov vote 1 yes --from $CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-crossfid tx staking delegate $CFI_VALOPER_ADDRESS 100000000uart --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart --gas-adjustment 1.5 --gas auto -y
+crossfid tx staking delegate $CFI_VALOPER_ADDRESS 100000000mpx --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-crossfid tx staking unbond $(crossfid keys show $CFI_WALLET --bech val -a) 1000000uart --from $CFI_WALLET --chain-id indigo-1 --fees 3000uart -y
+crossfid tx staking unbond $(crossfid keys show $CFI_WALLET --bech val -a) 1000000mpx --from $CFI_WALLET --chain-id indigo-1 --fees 3000mpx -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-crossfid tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uart --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart --gas-adjustment 1.5 --gas auto -y
+crossfid tx staking redelegate srcValidatorAddress destValidatorAddress 100000000mpx --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-crossfid tx distribution withdraw-all-rewards --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart --gas-adjustment 1.5 --gas auto -y
+crossfid tx distribution withdraw-all-rewards --from=$CFI_WALLET --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-crossfid tx distribution withdraw-rewards $CFI_VALOPER_ADDRESS --from=$CFI_WALLET --commission --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001uart --gas-adjustment 1.5 --gas auto -y
+crossfid tx distribution withdraw-rewards $CFI_VALOPER_ADDRESS --from=$CFI_WALLET --commission --chain-id=$CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -137,7 +137,7 @@ crossfid tx staking edit-validator \
 --new-moniker=NEW-NODE-NAME \
 --chain-id=$CFI_CHAIN_ID \
 --from=$CFI_WALLET \
---gas-prices 0.00001uart \
+--gas-prices 0.00001mpx \
 --gas-adjustment 1.5 \
 --gas auto -y
 ```
@@ -145,7 +145,7 @@ crossfid tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-crossfid tx staking edit-validator --commission-rate "0.02" --moniker=$CFI_NODENAME --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001uart --gas-adjustment 1.5 --gas auto - y
+crossfid tx staking edit-validator --commission-rate "0.02" --moniker=$CFI_NODENAME --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
@@ -178,7 +178,7 @@ crossfid q slashing params
 
 ### Recovering Validator from Jail
 ```
-crossfid tx slashing unjail --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001uart --gas-adjustment 1.5 --gas auto -y
+crossfid tx slashing unjail --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List
