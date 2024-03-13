@@ -11,7 +11,7 @@ keywords: [lava, network, kurulum, snapshot, statesync, güncelleme]
 
 ## Bağlantılar
  ✔️ [Website](https://www.lavanet.xyz) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Lava) |
+ ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Lava%20Network) |
  ✔️ [Doküman](https://docs.lavanet.xyz/) |
  ✔️ [GitHub](https://github.com/lavanet) |
  ✔️ [Discord](https://discord.gg/zyvZ93yZpM)
@@ -34,7 +34,7 @@ keywords: [lava, network, kurulum, snapshot, statesync, güncelleme]
 ## Hizmetler
 * **RPC:** https://rpc-t-lava.anatolianteam.com/ 
 * **API:** https://api-t-lava.anatolianteam.com/
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/Lava
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/Lava%20Network
 
 ## Peering
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.

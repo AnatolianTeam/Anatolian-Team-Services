@@ -11,7 +11,7 @@ keywords: [lava, network, installation, snapshot, statesync, update]
 
 ## Links/
  ✔️ [Website](https://www.lavanet.xyz) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Lava) |
+ ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Lava%20Network) |
  ✔️ [Docs](https://docs.lavanet.xyz/) |
  ✔️ [GitHub](https://github.com/lavanet) |
  ✔️ [Discord](https://discord.gg/zyvZ93yZpM)
@@ -33,7 +33,7 @@ keywords: [lava, network, installation, snapshot, statesync, update]
 ## Public Services
 * **RPC:** https://rpc-t-lava.anatolianteam.com/ 
 * **API:** https://api-t-lava.anatolianteam.com/
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/Lava
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/Lava%20Network
 
 ## Peering
 You can use peer for fast connection or state sync 
