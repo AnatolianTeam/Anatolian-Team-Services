@@ -33,7 +33,7 @@ keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, u
 ## Public Services
 * **RPC:** https://rpc-t-crossfi.anatolianteam.com/ 
 * **API:** https://api-t-crossfi.anatolianteam.com/
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/CrossFi
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/Cross%20Finance
 
 ## Peering
 You can use peer for fast connection or state sync 
