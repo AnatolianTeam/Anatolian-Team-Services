@@ -66,7 +66,7 @@ mv $HOME/bin/crossfid $HOME/go/bin
 rm -rf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz readme.md $HOME/bin
 crossfid version
 ```
-Versiyon çıktısı `` olacak.
+Versiyon çıktısı `0.3.0-prebuild3` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
