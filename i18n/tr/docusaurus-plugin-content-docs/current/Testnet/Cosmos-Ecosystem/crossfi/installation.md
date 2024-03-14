@@ -107,6 +107,8 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 # Portları Ayarlama
 sed -i.bak -e "
+s%:8545%:${CFI_PORT}545%g;
+s%:8546%:${CFI_PORT}546%g;
 s%:26658%:${CFI_PORT}658%g;
 s%:26657%:${CFI_PORT}657%g;
 s%:6060%:${CFI_PORT}060%g;
