@@ -231,7 +231,7 @@ systemctl disable selfchaind && \
 rm /etc/systemd/system/selfchaind.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .selfchain artela && \
+rm -rf .selfchain && \
 rm -rf $(which selfchaind)
 sed -i '/SELF_/d' ~/.bash_profile
 ```

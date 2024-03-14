@@ -13,7 +13,7 @@ systemctl stop selfchaind
 cp $HOME/.selfchain/data/priv_validator_state.json $HOME/.selfchain/priv_validator_state.json.backup
 selfchaind tendermint unsafe-reset-all --home $HOME/.selfchain --keep-addr-book
 
-SNAP_RPC="https://rpc-t-artela.anatolianteam.com:443"
+SNAP_RPC="https://rpc-t-selfchain.anatolianteam.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
