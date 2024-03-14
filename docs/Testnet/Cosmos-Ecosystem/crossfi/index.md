@@ -5,7 +5,7 @@ description: Cross Finance Service Page
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, update]
 ---
-# CrossFi Network 
+# Cross Finance 
 
 ![Chain4Energy](./img/CrossFi-Service.jpg)
 
