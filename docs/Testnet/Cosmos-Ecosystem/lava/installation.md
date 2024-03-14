@@ -190,11 +190,6 @@ echo 'export LAVA_VALOPER_ADDRESS='${LAVA_VALOPER_ADDRESS} >> $HOME/.bash_profil
 source $HOME/.bash_profile
 ```
 
-### Learn EIP-55 Address
-```shell
-lavad debug addr $LAVA_WALLET_ADDRESS
-```
-
 #### Faucet
 Request tokens by sending a message to the `#🚰┃faucet` channel on the [Discord](https://discord.gg/zyvZ93yZpM) server as follows.
 

@@ -189,11 +189,6 @@ echo 'export LAVA_VALOPER_ADDRESS='${LAVA_VALOPER_ADDRESS} >> $HOME/.bash_profil
 source $HOME/.bash_profile
 ```
 
-### EIP-55 Adresini Öğrenme
-```shell
-lavad debug addr $LAVA_WALLET_ADDRESS
-```
-
 #### Faucet
 [Discord](https://discord.gg/zyvZ93yZpM) sunucusunda `#🚰┃faucet` kanalından aşağıdaki şekilde token istiyoruz.
 
