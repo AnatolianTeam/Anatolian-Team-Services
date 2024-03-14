@@ -27,7 +27,7 @@ keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, u
 ## Network Info 
 * Network Chain ID: crossfi-evm-testnet-1
 * Binary: crossfid
-* Denom: uarmpxt
+* Denom: mpx
 * Working directory: .mineplex-chain
 
 ## Public Services
