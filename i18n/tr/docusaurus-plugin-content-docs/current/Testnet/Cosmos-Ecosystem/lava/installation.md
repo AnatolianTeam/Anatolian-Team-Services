@@ -75,8 +75,8 @@ lavad config chain-id $LAVA_CHAIN_ID
 lavad init --chain-id $LAVA_CHAIN_ID $LAVA_NODENAME
 
 # Genesis ve addrbook Dosyalarını Kopyalama
-wget https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/lava/files/genesis.json -O $HOME/.lava/config/genesis.json
-wget https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/lava/files/addrbook.json -O $HOME/.lava/config/addrbook.json
+wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/lava/files/genesis.json -O $HOME/.lava/config/genesis.json
+wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/lava/files/addrbook.json -O $HOME/.lava/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.025ulava"|g' $HOME/.lava/config/app.toml
