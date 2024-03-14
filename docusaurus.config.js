@@ -212,6 +212,7 @@ const config = {
       colorMode: {
         defaultMode: 'dark'
       },
+      /*
       announcementBar: {
         id: 'support_us',
         content:
@@ -220,6 +221,7 @@ const config = {
         textColor: '#091E42',
         isCloseable: true,
       },
+      */
     }),
     plugins: [
       [
