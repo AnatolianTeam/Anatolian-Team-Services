@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <Layout
       title={`Services`}
-      description="Anatolian Team Services Website <head />">
+      description="Anatolian Team Services Website">
       <HomepageHeader />
       <div className={styles.topShape}>
         <svg
