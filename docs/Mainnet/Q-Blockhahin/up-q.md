@@ -3,6 +3,7 @@ title: 🆙 Update Q
 description: Update node.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Mainnet/Q-Blockhahin/img/Q-Service-Cover.jpg
 keywords: [Q, blockchain, installation, snapshot, statesync, update]
+slug: update
 ---
 
 # Q Update

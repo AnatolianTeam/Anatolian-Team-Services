@@ -3,6 +3,7 @@ title: ⤴️ Cheatsheets
 description: Useful commands.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/entangle/img/Entangle-Service-Cover.jpg
 keywords: [entangle, installation, snapshot, statesync, update]
+slug: cheatsheets
 ---
 
 # Cheatsheets 

@@ -3,6 +3,7 @@ title: ⤴️ Komutlar
 description: Faydalı komutlar.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/selfchain/img/SelfChain-Service-Cover.jpg
 keywords: [selfchain, self, chain, kurulum, snapshot, statesync, güncelleme]
+slug: cheatsheets
 ---
 
 # Komutlar

@@ -3,6 +3,7 @@ title: ⤴️ Cheatsheets
 description: Useful commands.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Mainnet/Cosmos-Ecosystem/empowerchain/img/Empower-Service-Cover.jpg
 keywords: [empower, chain, empowerchain, network, installation, snapshot, statesync, update]
+slug: cheatsheets
 ---
 
 # Cheatsheets 

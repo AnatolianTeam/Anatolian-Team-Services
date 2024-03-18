@@ -3,6 +3,7 @@ title: ⤴️ Komutlar
 description: Node installation guide.
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/babylon/img/Babylon-Service-Cover.jpg
 keywords: [babylon, kurulum, snapshot, statesync, güncelleme]
+slug: cheatsheets
 ---
 
 # Komutlar
