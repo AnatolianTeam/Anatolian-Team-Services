@@ -1,6 +1,7 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
+position: 3
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, installation, snapshot, statesync, update]
 ---

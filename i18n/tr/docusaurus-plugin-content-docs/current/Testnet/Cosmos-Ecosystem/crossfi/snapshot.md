@@ -1,6 +1,7 @@
 ---
 title: 📸 Snapshot
 description: Snapshot ile node senkronizasyonu.
+position: 3
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, network, kurulum, snapshot, statesync, güncelleme]
 ---

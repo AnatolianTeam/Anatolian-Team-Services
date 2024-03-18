@@ -1,10 +1,12 @@
 ---
 title: ⤴️ Komutlar
 description: Faydalı komutlar.
+position: 6
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, network, kurulum, snapshot, statesync, güncelleme]
 ---
-
+https://services.anatolianteam.com/docs/Testnet/Cosmos-Ecosystem/crossfi/user-guide.md
+https://services.anatolianteam.com/tr/docs/Testnet/Cosmos-Ecosystem/crossfi/user-guide.md
 # Komutlar
 :::note
 Rehberimizden kurulum yaptıysanız aksi belirtilmediği sürece aşağıdaki kodlarda herhangi bir değişiklik yapmanıza gerek yoktur.

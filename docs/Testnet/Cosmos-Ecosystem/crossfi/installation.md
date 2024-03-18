@@ -1,6 +1,7 @@
 ---
 title: 💾 Installation
 description: Node installation guide.
+position: 2
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, installation, snapshot, statesync, update]
 ---

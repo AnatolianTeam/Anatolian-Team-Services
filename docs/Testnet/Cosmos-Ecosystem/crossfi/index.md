@@ -2,6 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 description: Cross Finance Service Page
+position: 1
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, update]
 ---
