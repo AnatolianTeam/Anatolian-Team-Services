@@ -1,5 +1,5 @@
 ---
-title: 👤 Use Guide
+title: 👤 User Guide
 description: User guide for the CrossFi incentivized testnet.
 position: 7
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
@@ -11,7 +11,7 @@ slug: user-guide
 
 ## Video
 
-[![Watch the video](./img/CrossFinanceVideoGuide.jpg)](https://youtu.be/nTQUwghvy5Q)
+[![Watch the video](./img/CrossFinanceVideoGuide.jpg)](https://youtu.be/pbIo7NSZq3c)
 
 ## Reward Pool
 

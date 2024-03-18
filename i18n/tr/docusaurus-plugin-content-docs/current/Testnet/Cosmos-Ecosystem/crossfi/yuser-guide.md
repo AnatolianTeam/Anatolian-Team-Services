@@ -10,8 +10,7 @@ slug: user-guide
 # Kullanıcı Rehberi
 
 ## Video
-[![Watch the video](https://github.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFinanceVideoGuide.jpg
-)](https://youtu.be/nTQUwghvy5Q)
+[![Watch the video](./img/CrossFinanceVideoGuide.jpg)](https://youtu.be/pbIo7NSZq3c)
 
 ## Ödül Havuzu
 
