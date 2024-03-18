@@ -60,12 +60,10 @@ source $HOME/.bash_profile
 cd $HOME
 git clone https://github.com/lavanet/lava
 cd lava
-git checkout v0.35.0
-export LAVA_BINARY=lavad
-make install
-lavad version
+git checkout v1.0.1
+install
 ```
-Versiyon çıktısı `v0.35.0` olacak.
+Versiyon çıktısı `v1.0.1` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.

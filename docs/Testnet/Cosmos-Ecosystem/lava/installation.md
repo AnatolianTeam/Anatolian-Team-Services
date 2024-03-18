@@ -60,12 +60,10 @@ source $HOME/.bash_profile
 cd $HOME
 git clone https://github.com/lavanet/lava
 cd lava
-git checkout v0.35.0
-export LAVA_BINARY=lavad
-make install
-lavad version
+git checkout v1.0.1
+install
 ```
-The version output will be `v0.35.0`.
+The version output will be `v1.0.1`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
