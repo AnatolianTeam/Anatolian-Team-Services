@@ -4,6 +4,7 @@ description: CrossFi teşvikli testneti için kullanıcı rehberi.
 position: 7
 image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, installation, snapshot, statesync, update]
+slug: user-guide
 ---
 
 # Kullanıcı Rehberi
