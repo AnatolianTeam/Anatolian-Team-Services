@@ -38,7 +38,7 @@ Here it is explained how to install the server.
 Select `Humanode Mainnet` and click to `Install` button.
 ![Step-6](./img/Step-6.png)
 
-### Seting the Node Name and Wallet
+### Setting the Node Name and Wallet
 1. Click on the settings tab on the screen that appears.
 ![Step-7](./img/Step-7.png)
 

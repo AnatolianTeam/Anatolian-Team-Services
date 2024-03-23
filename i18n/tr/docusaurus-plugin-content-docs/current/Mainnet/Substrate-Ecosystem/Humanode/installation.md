@@ -7,22 +7,22 @@ keywords: [Humanode, network, insan, node]
 
 # Kurulum
 
-## Humanode Launcher Yükleme
+## Humanode Launcher'ın Yüklenmesi
 [Launcher web sitesine](https://launcher.humanode.io/) gidin ve sisteminize uygun Humanode Launcher'ı yükleyin.
 
 ## Humanode Launcher'da Yapılacaklar
 Burada yapılması gereken adımlar ekran görüntüleri ile anlatılmıştır.
 
-### Workspace Oluşturma
+### Workspace'in Oluşturulması
 `Create Workspace` butonuna tıklayın.
-![Step-1](././././././././docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-1.png)
+![Step-1](../docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-1.png)
 
-### Kurulumun Nereye Yapılacağına Karar Verme
+### Kurulum Yerinin Belirlenmesi
 Bilgisayarınıza kuracaksanız `Locally`, sunucunuza kuracaksanız `Remotely` seçeneğini seçin.
 Burada sunucuya nasıl kurulacağı anlatılmaktadır. Yani Remotely seçeneği.
 ![Step-2](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-2.png)
 
-### Sunucu Bağlantısını Ayarlama
+### Sunucu Bağlantısının Ayarlanması
 1. Sunucu IP adresinizi yazın.
 2. Sunucu kullanıcı adınızı yazın (root, ubuntu vb.)
 3. `+ More Connection Options` seçeneğine tıklayın.
@@ -34,11 +34,11 @@ Burada sunucuya nasıl kurulacağı anlatılmaktadır. Yani Remotely seçeneği.
 5. Sunucu şifrenizi yazın ve bağlanın.
 ![Step-5](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-5.png)
 
-### Humanode Mainnet Yükleme
+### Humanode Mainnet'in Yüklenmesi
 `Humanode Mainnet` seçin ve `Install` butonuna tıklayın.
 ![Step-6](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-6.png)
 
-### Node Adını ve Cüzdanı Ayarlama
+### NNode Adının ve Cüzdanının Ayarlanması
 1. Karşınıza çıkan ekranda ayarlar sekmesine tıklayın.
 ![Step-7](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-7.png)
 
@@ -47,7 +47,7 @@ Burada sunucuya nasıl kurulacağı anlatılmaktadır. Yani Remotely seçeneği.
 
 3. İkinci bölümde cüzdanınız varsa anımsatıcılarınızı yazın. Cüzdanınız yoksa Oluştur butonuna tıklayarak bir tane oluşturun ve size verilen anımsatıcıları kullanın. Daha sonra cüzdanınıza en az bir "HMND" jetonu gönderin.
 :::danger
-Menemonic kelimelerinizi güvenli bir yere saklayın.
+Tohum kelimelerinizi güvenli bir yere saklayın.
 :::
 ![Step-9](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-9.png)
 :::info
@@ -58,7 +58,7 @@ Bu bölümde bir hata alırsanız [burayı](./solutions.md) kontrol edin.
 Ana sayfada, `START NODE` düğmesine tıklayın ve ardından düğümünüzün senkronize edilmesini bekleyin. Aşağıdaki resimde görüldüğü gibi olduğunda bir sonraki adıma geçiyoruz.
 ![Step-10](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-10.png)
 
-### Node'u Ayarlama
+### Node'un Kurulması
 1. Ana sayfadaki barkodu cep telefonunuzla tarattığınızda sizi bir sayfaya yönlendirecektir. Orada, önce `SETUP THE NODE` düğmesine dokunun.
 ![Step-11](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-11.png)
 
