@@ -1,7 +1,7 @@
 ---
 title: 🆙 Solutions
 description: Update node with manual or scheduled.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Mainnet/Humanode/img/Humanode-Service-Cover.jpg
+image: ./img/Humanode-Service-Cover.jpg
 keywords: [Humanode, network, security, intel]
 ---
 

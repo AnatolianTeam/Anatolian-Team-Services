@@ -1,7 +1,7 @@
 ---
 title: ⚙️ Çözümler
 description: Node kurulum rehberi.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Mainnet/Humanode/img/Humanode-Service-Cover.jpg
+image: ./img/Humanode-Service-Cover.jpg
 keywords: [Humanode, network, insan, node]
 ---
 
