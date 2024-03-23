@@ -20,7 +20,7 @@ Burada yapılması gereken adımlar ekran görüntüleri ile anlatılmıştır.
 ### Kurulum Yerinin Belirlenmesi
 Bilgisayarınıza kuracaksanız `Locally`, sunucunuza kuracaksanız `Remotely` seçeneğini seçin.
 Burada sunucuya nasıl kurulacağı anlatılmaktadır. Yani Remotely seçeneği.
-![Step-2](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-2.png)
+![Step-2](https://github.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-2.png)
 
 ### Sunucu Bağlantısının Ayarlanması
 1. Sunucu IP adresinizi yazın.
