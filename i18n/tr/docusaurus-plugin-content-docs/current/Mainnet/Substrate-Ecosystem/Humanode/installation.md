@@ -15,7 +15,7 @@ Burada yapılması gereken adımlar ekran görüntüleri ile anlatılmıştır.
 
 ### Workspace Oluşturma
 `Create Workspace` butonuna tıklayın.
-![Step-1](https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-1.png)
+![Step-1](././././././././docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-1.png)
 
 ### Kurulumun Nereye Yapılacağına Karar Verme
 Bilgisayarınıza kuracaksanız `Locally`, sunucunuza kuracaksanız `Remotely` seçeneğini seçin.
