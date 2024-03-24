@@ -64,7 +64,7 @@ Ana sayfada, `START NODE` düğmesine tıklayın ve ardından düğümünüzün 
 ![Step-11](./../../../../../../../docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-11.png)
 
 2. `SETUP THE NODE` sayfasında, aşağıda gösterilen `Rotate and Set Session Keys` sayfasına gidin ve onaylamak için `YES I UNDERSTAND` düğmesine basın. Bu işlemin ücreti cüzdanınızdan kesilecektir.
-![Step-12](./../../../../../../../docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-12.PNG)
+![Step-12](./../../../../../../../docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-12.PNG | width=100)
 
 3. Bu sefer, `SETUP THE NODE` sayfasındaki `Enroll` sayfasına gidin ve onaylamak için `YES I UNDERSTAND` düğmesine basın.
 ![Step-13](./../../../../../../../docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-13.PNG)
