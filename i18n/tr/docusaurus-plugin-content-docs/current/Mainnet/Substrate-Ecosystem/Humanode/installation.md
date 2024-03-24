@@ -15,7 +15,7 @@ Burada yapılması gereken adımlar ekran görüntüleri ile anlatılmıştır.
 
 ### Workspace'in Oluşturulması
 `Create Workspace` butonuna tıklayın.
-![Step-1](./docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-1.png)
+![Step-1](/docs/Mainnet/Substrate-Ecosystem/Humanode/img/Step-1.png)
 
 ### Kurulum Yerinin Belirlenmesi
 Bilgisayarınıza kuracaksanız `Locally`, sunucunuza kuracaksanız `Remotely` seçeneğini seçin.
