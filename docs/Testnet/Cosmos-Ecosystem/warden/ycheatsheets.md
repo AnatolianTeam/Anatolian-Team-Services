@@ -1,7 +1,7 @@
 ---
 title: ⤴️ Cheatsheets
 description: Useful commands.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/selfchain/img/SelfChain-Service-Cover.jpg
+image: ./img/Warden-Service-Cover.jpg
 keywords: [warden, protocol, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 

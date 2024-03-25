@@ -1,7 +1,7 @@
 ---
 title: 💾 Installation
 description: Node installation guide.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/lava/img/Lava-Service-Cover.jpg
+image: ./lava/img/Lava-Service-Cover.jpg
 keywords: [lava, installation, snapshot, statesync, update]
 ---
 

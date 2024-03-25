@@ -1,7 +1,7 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/entangle/img/Entangle-Service-Cover.jpg
+image: ./img/Entangle-Service-Cover.jpg
 keywords: [entangle, network, kurulum, snapshot, statesync, güncelleme]
 ---
 

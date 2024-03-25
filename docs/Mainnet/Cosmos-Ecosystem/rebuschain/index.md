@@ -2,7 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 description: Node installation guide.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Mainnet/Cosmos-Ecosystem/rebuschain/img/Rebus-Service-Cover.jpg
+image: ./img/Rebus-Service-Cover.jpg
 keywords: [rebus, chain, network, installation, snapshot, statesync, update]
 ---
 # Rebus Chain

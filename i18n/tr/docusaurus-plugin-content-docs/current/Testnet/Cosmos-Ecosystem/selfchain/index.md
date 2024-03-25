@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/selfchain/img/SelfChain-Service-Cover.jpg
+image: ./img/SelfChain-Service-Cover.jpg
 description: Self Chain Servis Sayfası
 keywords: [selfchain, self, chain, kurulum, snapshot, statesync, güncelleme]
 ---

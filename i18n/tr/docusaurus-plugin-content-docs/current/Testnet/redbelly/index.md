@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/redbelly/img/Redbelly-Service-Cover.jpg
+image: ./img/Redbelly-Service-Cover.jpg
 description: Redbelly Network Servis Sayfası
 keywords: [redbelly, network, kurulum, snapshot, statesync, güncelleme]
 ---

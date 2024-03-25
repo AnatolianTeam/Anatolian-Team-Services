@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Substrate-Ecosystem/avail-project/img/Avail-Service-Cover.jpg
+image: ./img/Avail-Service-Cover.jpg
 keywords: [avail, project, essential, blockchains, base, layer, installation, snapshot, statesync, update]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 📸 Snapshot
 description: Snapshot ile node senkronizasyonu.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/lava/img/Lava-Service-Cover.jpg
+image: ./img/Lava-Service-Cover.jpg
 keywords: [lava, network, kurulum, snapshot, statesync, güncelleme]
 ---
 

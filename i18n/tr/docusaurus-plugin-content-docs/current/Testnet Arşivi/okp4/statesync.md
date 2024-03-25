@@ -1,7 +1,7 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/okp4/img/OKP4-Service-Cover.jpg
+image: ./img/OKP4-Service-Cover.jpg
 keywords: [okp4, open, knowledge, protocol, kurulum, snapshot, statesync, güncelleme]
 ---
 

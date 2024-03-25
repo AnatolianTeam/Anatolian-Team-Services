@@ -2,7 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 description: Mantra Chain Servis Sayfası
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/mantra/img/Mantra-Service-Cover.jpg
+image: ./img/Mantra-Service-Cover.jpg
 keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 # Mantra Chain

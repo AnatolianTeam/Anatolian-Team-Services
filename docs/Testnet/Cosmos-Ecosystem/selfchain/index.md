@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/selfchain/img/SelfChain-Service-Cover.jpg
+image: ./img/SelfChain-Service-Cover.jpg
 description: Self Chain Service Page
 keywords: [selfchain, self, chain, installation, snapshot, statesync, update]
 ---

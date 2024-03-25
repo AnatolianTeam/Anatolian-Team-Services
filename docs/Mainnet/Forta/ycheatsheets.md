@@ -1,7 +1,7 @@
 ---
 title: ⤴️ Cheatsheets
 description: Useful commands.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Mainnet/Forta/img/Forta-Service-Cover.jpg
+image: ./img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
 slug: cheatsheets
 ---

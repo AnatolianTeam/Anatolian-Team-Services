@@ -2,7 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 description: Node kurulum rehberi.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Mainnet/Cosmos-Ecosystem/empowerchain/img/Empower-Service-Cover.jpg
+image: ./img/Empower-Service-Cover.jpg
 keywords: [empower, chain, empowerchain, network, kurulum, snapshot, statesync, güncelleme]
 ---
 # Empower Chain

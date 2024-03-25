@@ -2,7 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 description: Lava Network Service Page
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/lava/img/Lava-Service-Cover.jpg
+image: ./lava/img/Lava-Service-Cover.jpg
 keywords: [lava, network, installation, snapshot, statesync, update]
 ---
 # Lava Network 

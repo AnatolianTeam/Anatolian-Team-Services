@@ -1,8 +1,9 @@
 ---
 title: ⚙️ OmniBridge Kurulumu
 description: OmniBridge Oracle guide.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Mainnet/Q-Blockhahin/img/Q-Service-Cover.jpg
+image: ./img/Q-Service-Cover.jpg
 keywords: [Q, blockchain, OmniBridge, Oracle, installation, snapshot, statesync, update]
+slug: omnibridge-setup
 ---
 
 # OmniBridge Kurulumu

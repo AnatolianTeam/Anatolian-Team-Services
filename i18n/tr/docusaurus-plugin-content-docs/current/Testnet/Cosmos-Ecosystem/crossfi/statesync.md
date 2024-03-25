@@ -2,7 +2,7 @@
 title: 🔄 StateSync
 description: StateSync ile node senkronizasyonu.
 position: 4
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+image: ./img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, network, kurulum, snapshot, statesync, güncelleme]
 ---
 

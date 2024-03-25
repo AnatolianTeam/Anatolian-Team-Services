@@ -2,7 +2,7 @@
 title: ⤴️ Cheatsheets
 description: Useful commands.
 position: 6
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+image: ./img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, installation, snapshot, statesync, update]
 slug: cheatsheets
 ---

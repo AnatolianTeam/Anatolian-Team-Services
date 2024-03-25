@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/babylon/img/Babylon-Service-Cover.jpg
+image: ./img/Babylon-Service-Cover.jpg
 description: Babylon Chain Servis Sayfası
 keywords: [babylon, kurulum, snapshot, statesync, güncelleme]
 ---

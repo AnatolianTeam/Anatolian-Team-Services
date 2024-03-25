@@ -2,7 +2,7 @@
 title: ⤴️ Komutlar
 description: Faydalı komutlar.
 position: 6
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+image: ./img/CrossFi-Service-Cover.jpg
 keywords: [crossfi, network, kurulum, snapshot, statesync, güncelleme]
 slug: cheatsheets
 ---

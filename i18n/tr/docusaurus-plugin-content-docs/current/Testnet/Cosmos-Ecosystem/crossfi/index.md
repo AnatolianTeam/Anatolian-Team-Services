@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/crossfi/img/CrossFi-Service-Cover.jpg
+image: ./img/CrossFi-Service-Cover.jpg
 description: Cross Finance Servis Sayfası
 position: 1
 keywords: [crossfi, finance, cross finance, kurulum, snapshot, statesync, güncelleme]

@@ -1,8 +1,9 @@
 ---
 title: 🆙 Taşıma
 description: Node kurulum rehberi.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Mainnet/Forta/img/Forta-Service-Cover.jpg
+image: ./img/Forta-Service-Cover.jpg
 keywords: [forta, network, security, intel]
+slug: migrate
 ---
 
 # Forta Node Taşıma

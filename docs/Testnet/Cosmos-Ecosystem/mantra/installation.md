@@ -1,7 +1,7 @@
 ---
 title: 💾 Installation
 description: Node installation guide.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/mantra/img/Mantra-Service-Cover.jpg
+image: ./img/Mantra-Service-Cover.jpg
 keywords: [mantra, chain, installation, snapshot, statesync, update]
 ---
 

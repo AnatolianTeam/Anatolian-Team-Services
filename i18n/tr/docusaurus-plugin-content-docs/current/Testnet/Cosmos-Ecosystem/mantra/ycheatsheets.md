@@ -1,7 +1,7 @@
 ---
 title: ⤴️ Komutlar
 description: Faydalı komutlar.
-image: https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/i18n/tr/docusaurus-plugin-content-docs/current/Testnet/Cosmos-Ecosystem/mantra/img/Mantra-Service-Cover.jpg
+image: ./img/Mantra-Service-Cover.jpg
 keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 slug: cheatsheets
 ---
