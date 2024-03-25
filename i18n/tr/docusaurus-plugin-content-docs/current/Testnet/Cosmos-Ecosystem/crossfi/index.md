@@ -35,7 +35,7 @@ keywords: [crossfi, finance, cross finance, kurulum, snapshot, statesync, günce
 ## Hizmetler
 * **RPC:** https://rpc-t-crossfi.anatolianteam.com/ 
 * **API:** https://api-t-crossfi.anatolianteam.com/
-* **Explorer:** https://cosmos-testnet.anatolianteam.com/Cross%20Finance
+* **Explorer:** https://cosmos-testnet.anatolianteam.com/CrossFinance
 
 ## Peering
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.

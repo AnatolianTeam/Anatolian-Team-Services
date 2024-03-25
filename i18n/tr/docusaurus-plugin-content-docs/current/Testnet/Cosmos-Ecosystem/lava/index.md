@@ -11,7 +11,7 @@ keywords: [lava, network, kurulum, snapshot, statesync, güncelleme]
 
 ## Bağlantılar
  ✔️ [Website](https://www.lavanet.xyz) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Lava%20Network) |
+ ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/LavaNetwork) |
  ✔️ [Doküman](https://docs.lavanet.xyz/) |
  ✔️ [GitHub](https://github.com/lavanet) |
  ✔️ [Discord](https://discord.gg/zyvZ93yZpM)

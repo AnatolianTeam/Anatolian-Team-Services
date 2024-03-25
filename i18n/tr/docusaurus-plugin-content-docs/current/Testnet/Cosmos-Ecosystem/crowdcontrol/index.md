@@ -11,7 +11,7 @@ keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 
 ## Bağlantılar
  ✔️ [Website](https://crowdcontrol.network/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Crowd%20Control) |
+ ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/CrowdControl) |
  ✔️ [Doküman](https://github.com/DecentralCardGame/whitepaper/blob/master/whitepaper.pdf) |
  ✔️ [GitHub](https://github.com/DecentralCardGame) |
  ✔️ [Discord](https://discord.gg/5DYef3CpME)

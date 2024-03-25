@@ -11,7 +11,7 @@ keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 
 ## Bağlantılar
  ✔️ [Website](https://www.mantrachain.io/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Mantra%20Chain) |
+ ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Mantra) |
  ✔️ [Doküman](https://docs.mantrachain.io/) |
  ✔️ [Discord](https://discord.gg/nthADXJHKM)
 
