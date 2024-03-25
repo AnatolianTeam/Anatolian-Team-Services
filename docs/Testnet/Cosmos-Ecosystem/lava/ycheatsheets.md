@@ -1,7 +1,7 @@
 ---
 title: ⤴️ Cheatsheets
 description: Useful commands.
-image: ./lava/img/Lava-Service-Cover.jpg
+image: ./img/Lava-Service-Cover.jpg
 keywords: [lava, installation, snapshot, statesync, update]
 slug: cheatsheets
 ---

@@ -1,7 +1,7 @@
 ---
 title: 🆙 Update
 description: Update node with manual or scheduled.
-image: ./lava/img/Lava-Service-Cover.jpg
+image: ./img/Lava-Service-Cover.jpg
 keywords: [lava, installation, snapshot, statesync, update]
 ---
 

@@ -2,7 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 description: Lava Network Service Page
-image: ./lava/img/Lava-Service-Cover.jpg
+image: ./img/Lava-Service-Cover.jpg
 keywords: [lava, network, installation, snapshot, statesync, update]
 ---
 # Lava Network 

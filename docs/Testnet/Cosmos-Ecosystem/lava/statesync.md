@@ -1,7 +1,7 @@
 ---
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
-image: ./lava/img/Lava-Service-Cover.jpg
+image: ./img/Lava-Service-Cover.jpg
 keywords: [lava, installation, snapshot, statesync, update]
 ---
 

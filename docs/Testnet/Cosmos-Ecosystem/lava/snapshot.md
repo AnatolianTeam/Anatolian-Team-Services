@@ -1,7 +1,7 @@
 ---
 title: 📸 Snapshot
 description: Node installation with snapshot.
-image: ./lava/img/Lava-Service-Cover.jpg
+image: ./img/Lava-Service-Cover.jpg
 keywords: [lava, installation, snapshot, statesync, update]
 ---
 
