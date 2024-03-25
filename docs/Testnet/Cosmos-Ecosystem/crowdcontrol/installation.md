@@ -57,12 +57,10 @@ source $HOME/.bash_profile
 
 ## Installing Cardchain
 ```
-cd $HOME
 git clone https://github.com/DecentralCardGame/Cardchain
-wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.14.2/cardchaind
-chmod +x Cardchaind
-mv $HOME/Cardchaind /usr/local/bin
-Cardchaind version
+cd Cardchain
+git checkout v0.14.2
+make install
 ```
 The version output will be `0.14.2`.
 

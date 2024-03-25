@@ -57,12 +57,10 @@ source $HOME/.bash_profile
 
 ## Cardchain'in Kurulması
 ```
-cd $HOME
 git clone https://github.com/DecentralCardGame/Cardchain
-wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.14.2/cardchaind
-chmod +x Cardchaind
-mv $HOME/Cardchaind /usr/local/bin
-Cardchaind version
+cd Cardchain
+git checkout v0.14.2
+make install
 ```
 Versiyon çıktısı `0.14.2` olacak.
 
