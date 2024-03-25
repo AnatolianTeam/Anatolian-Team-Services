@@ -63,10 +63,10 @@ On the home page, click to `START NODE` button and then wait for your node to sy
 ![Step-11](./img/Step-11.png)
 
 2. On the `SETUP THE NODE` page, go to the `Rotate and Set Session Keys` page shown below and press the `YES I UNDERSTAND` button to confirm. The fee for this transaction will be debited from your wallet.
-![Step-12](./img/Step-12.png)
+![Step-12](./img/Step-12.PNG)
 
 3. This time, go to the `Enroll` page on the `SETUP THE NODE` page and press the `YES I UNDERSTAND` button to confirm.
-![Step-13](./img/Step-13.png)
+![Step-13](./img/Step-13.PNG)
 
 :::info
 We will repeat these processes every seven days.
