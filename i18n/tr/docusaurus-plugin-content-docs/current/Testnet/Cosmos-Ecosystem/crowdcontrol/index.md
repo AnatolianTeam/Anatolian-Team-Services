@@ -26,7 +26,7 @@ keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 
 ## Ağ Bilgisi 
 
-* Network Chain ID: cardtestnet-8
+* Network Chain ID: cardtestnet-10
 * Binary: Cardchaind
 * Denom: ubpf
 * Working directory: .cardchaind

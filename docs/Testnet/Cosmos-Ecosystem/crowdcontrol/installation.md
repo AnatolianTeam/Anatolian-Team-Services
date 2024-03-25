@@ -41,7 +41,7 @@ The areas you need to change are written below.
 echo "export CROWD_NODENAME=$CROWD_NODENAME"  >> $HOME/.bash_profile
 echo "export CROWD_WALLET=$CROWD_WALLET" >> $HOME/.bash_profile
 echo "export CROWD_PORT=11" >> $HOME/.bash_profile
-echo "export CROWD_CHAIN_ID=cardtestnet-8" >> $HOME/.bash_profile
+echo "export CROWD_CHAIN_ID=cardtestnet-10" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Let's assume that your Node (`CROWD_NODENAME`) and Wallet (`CROWD_WALLET`) name 
 echo "export CROWD_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export CROWD_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export CROWD_PORT=16" >> $HOME/.bash_profile
-echo "export CROWD_CHAIN_ID=cardtestnet-8" >> $HOME/.bash_profile
+echo "export CROWD_CHAIN_ID=cardtestnet-10" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 

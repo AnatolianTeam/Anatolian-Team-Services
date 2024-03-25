@@ -25,7 +25,7 @@ keywords: [crowdcontrol, cardchain, card game, trade, installation, snapshot, st
 
 ## Network Info 
 
-* Network Chain ID: cardtestnet-8
+* Network Chain ID: cardtestnet-10
 * Binary: Cardchaind
 * Denom: ubpf
 * Working directory: .cardchaind
