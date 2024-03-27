@@ -74,7 +74,7 @@ wardend init --chain-id $WARDEN_CHAIN_ID $WARDEN_NODENAME
 
 # Copying the Genesis and addrbook Files
 wget https://raw.githubusercontent.com/warden-protocol/networks/main/testnet-alfama/genesis.json -O $HOME/.warden/config/genesis.json
-wget ./files/addrbook.json -O $HOME/.warden/config/addrbook.json
+wget https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/main/docs/Testnet/Cosmos-Ecosystem/warden/files/addrbook.json -O $HOME/.warden/config/addrbook.json
 
 # Set up the minimum gas price
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.005uward "|g' $HOME/.warden/config/app.toml
