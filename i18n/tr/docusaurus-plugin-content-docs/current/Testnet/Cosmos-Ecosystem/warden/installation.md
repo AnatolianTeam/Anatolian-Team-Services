@@ -58,15 +58,10 @@ source $HOME/.bash_profile
 ## Warden Protocol'ün Kurulması
 ```
 cd $HOME
-mkdir -p $HOME/go/bin/
 git clone https://github.com/warden-protocol/wardenprotocol
 cd  wardenprotocol
-git checkout v0.1.0
-
-# Build binary
-cd  warden/cmd/wardend
-go build
-mv wardend $HOME/go/bin
+git checkout v0.2.0
+make install-wardend
 ```
 
 ## Uygulamayı Yapılandırma ve Başlatma
