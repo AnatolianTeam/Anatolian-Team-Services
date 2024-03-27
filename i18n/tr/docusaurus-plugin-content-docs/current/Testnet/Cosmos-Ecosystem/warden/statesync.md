@@ -13,7 +13,7 @@ systemctl stop wardend
 cp $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup
 wardend tendermint unsafe-reset-all --home $HOME/.warden --keep-addr-book
 
-SNAP_RPC="https://rpc-t-selfchain.anatolianteam.com:443"
+SNAP_RPC="https://rpc-t-warden.anatolianteam.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
