@@ -101,7 +101,7 @@ eigenlayer operator keys export --key-type bls KEY_NAME
 
 ## Obtaining Holešky ETH
 
-Obtain test ETH using (PoW Faucet)[https://holesky-faucet.pk910.de/].
+Obtain test ETH using [PoW Faucet](https://holesky-faucet.pk910.de).
 
 ## Operator Registration
 
@@ -158,9 +158,9 @@ MAKE SURE YOU HAVE ETH IN YOUR WALLET BEFORE GOING TO THE NEXT STEP.
 eigenlayer operator register operator.yaml
 ```
 
-After entering this code, we wait a bit. Once the transaction is successful it will give us our TX Hash id. You can check this in (explorer)[https://holesky.etherscan.io/].
+After entering this code, we wait a bit. Once the transaction is successful it will give us our TX Hash id. You can check this in [explorer](https://holesky.etherscan.io).
 
-After a while, your operator will start to appear at (this address)[https://holesky.eigenlayer.xyz/operator].
+After a while, your operator will start to appear at [this address](https://holesky.eigenlayer.xyz/operator).
 
 
 ## Checking Status of Registration
