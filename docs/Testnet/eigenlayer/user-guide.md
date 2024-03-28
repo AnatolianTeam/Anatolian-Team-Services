@@ -1,6 +1,6 @@
 ---
 title: 👤 User Guide
-description: EigenLayer Holešky User Guide.
+description: Eigen Layer Holešky User Guide.
 image: ./img/EigenLayer-Service-Cover.jpg
 keywords: [Eigen Layer, Eigen, Layer, restake, user, guide, Holešky, Holesky]
 ---
