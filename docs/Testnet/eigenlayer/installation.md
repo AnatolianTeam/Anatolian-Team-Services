@@ -50,8 +50,7 @@ cp eigenlayer-cli/build/eigenlayer /usr/local/bin/
 We create two keys here. If you have installed it before, proceed to the import step.
 
 The areas you need to change are written below:
-`KEY_NAME`: your key name. Give your key a name.
-
+* `KEY_NAME`: your key name. Give your key a name.
 
 :::warning
 Enter the codes below one by one, set your password and keep the outputs in a safe place.
@@ -68,8 +67,8 @@ eigenlayer operator keys create --key-type bls KEY_NAME
 
 ### Import Keys
 The areas you need to change are written below:
-`KEY_NAME`: your key name. Give your key a name.
-`PRIV_KEY`: private key of your key
+* `KEY_NAME`: your key name. Give your key a name.
+* `PRIV_KEY`: private key of your key
 ```shell
 eigenlayer operator keys import --key-type ecdsa KEY_NAME PRIV_KEY
 eigenlayer operator keys import --key-type bls KEY_NAME PRIV_KEY
@@ -137,6 +136,7 @@ nano operator.yaml
 ```
 
 In this file, we only edit the following section.
+
 We add the `link to the metadata.json file` we created above.
 ```shell
 .

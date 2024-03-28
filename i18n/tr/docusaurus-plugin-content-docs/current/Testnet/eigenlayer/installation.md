@@ -51,7 +51,7 @@ cp eigenlayer-cli/build/eigenlayer /usr/local/bin/
 Burada iki anahtar oluşturuyoruz. Daha önce yüklediyseniz içe aktarma adımına geçin.
 
 Değiştirmeniz gereken alanlar aşağıda yazılmıştır:
-`KEY_NAME`: anahtar adınız. Anahtarınıza bir ad verin.
+* `KEY_NAME`: anahtar adınız. Anahtarınıza bir ad verin.
 
 :::warning
 Aşağıdaki kodları tek tek girin, şifrenizi belirleyin ve çıktıları güvenli bir yerde saklayın.
@@ -68,8 +68,8 @@ eigenlayer operator keys create --key-type bls KEY_NAME
 
 ### Keyleri İçeri Aktarma (Import)
 Değiştirmeniz gereken alanlar aşağıda yazılmıştır:
-`KEY_NAME`: anahtar adınız. Anahtarınıza bir ad verin.
-`PRIV_KEY`: anahtarınızın özel anahtarı
+* `KEY_NAME`: anahtar adınız. Anahtarınıza bir ad verin.
+* `PRIV_KEY`: anahtarınızın özel anahtarı
 ```shell
 eigenlayer operator keys import --key-type ecdsa KEY_NAME PRIV_KEY
 eigenlayer operator keys import --key-type bls KEY_NAME PRIV_KEY
@@ -100,7 +100,6 @@ eigenlayer operator keys export --key-type bls KEY_NAME
 
 ## Holešky ETH Edinme
 
-Obtain test ETH using [PoW Faucet](https://holesky-faucet.pk910.de).
 [PoW Faucet](https://holesky-faucet.pk910.de) adresinden biraz test ETH temin edin.
 
 ## Operatör Kaydı
@@ -141,6 +140,7 @@ nano operator.yaml
 ```
 
 Bu dosyada sadece aşağıdaki bölümü düzenliyoruz.
+
 Yukarıda oluşturduğumuz `metadata.json dosyasına olan bağlantıyı` ekliyoruz.
 
 ```shell
