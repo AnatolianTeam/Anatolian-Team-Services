@@ -1,13 +1,13 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./../../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.jpg
+image: ./../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.jpg
 description: EigenLayer Kurulum Rehberi
 keywords: [EigenLayer, restake, Holesky, Holesky, Holešky, kurulum]
 ---
 # EigenLayer 
 
-![EigenLayer](./../../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service.jpg)
+![EigenLayer](./../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service.jpg)
 
 ## Bağlantılar
  ✔️ [Website](https://www.eigenlayer.xyz) |

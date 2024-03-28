@@ -1,7 +1,7 @@
 ---
 title: 👤 Kullanıcı Rehberi
 description: EigenLayer Holešky kullanıcı rehberi.
-image: ./../../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.jpg
+image: ./../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.jpg
 keywords: [EigenLayer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 ---
 
