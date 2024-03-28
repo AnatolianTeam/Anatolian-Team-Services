@@ -10,7 +10,7 @@ keywords: [redbelly, network, kurulum, snapshot, statesync, güncelleme]
 Komutlarda aksi belirtilmedikçe değişiklik yapılmamalıdır.
 :::
 
-## sisyemi Güncelleme ve Phyton Kurulumu
+## Sistemi Güncelleme ve Phyton Kurulumu
 ```shell
 apt update && apt upgrade -y
 sudo apt install python3
