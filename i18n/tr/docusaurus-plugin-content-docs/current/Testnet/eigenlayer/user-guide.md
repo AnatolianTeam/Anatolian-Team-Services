@@ -16,7 +16,7 @@ keywords: [Eigen Layer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 * Block explorer URL: https://holesky.etherscan.io/
 * Block explorer URL (Alternatif): https://holesky.beaconcha.in
 
-* Holešky ağını Web3 cüzdanınıza ekleyin (örnek talimatlar (burada)[https://www.coingecko.com/learn/holesky-testnet-eth#add-the-holesky-testnet-to-metamask]).
+* Holešky ağını Web3 cüzdanınıza ekleme ile ilgili olarak [burayı](https://www.coingecko.com/learn/holesky-testnet-eth#add-the-holesky-testnet-to-metamask) ziayret edebilirsiniz.
 
 
 ## Holešky ETH Temin Etme
@@ -68,7 +68,7 @@ keywords: [Eigen Layer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 
 ### sfrxETH Mint ve Swap İşlemi
 1. Cüzdanınızı `manuel olarak` Holesky ağına geçirin. Frax Finance uygulaması kullanıcının doğrudan Holesky'yi seçmesine izin vermiyor.
-2. Frax Finance Mint uygulamasını açın: [app.frax.finance/frxeth/mint](https://app.frax.finance/frxeth/mint].
+2. Frax Finance Mint uygulamasını açın: [app.frax.finance/frxeth/mint](https://app.frax.finance/frxeth/mint).
 3. Mint etmek istediğiniz miktarı girin ve `Mint & Stake` seçeneğine tıklayın.
 4. Token bakiyenizi görüntülemek için `Holesky sfrxETH` token adresini (`0xa63f56985F9C7F3bc9fFc5685535649e0C1a55f3`) web3 cüzdanınıza aktarın.
 
@@ -84,7 +84,7 @@ keywords: [Eigen Layer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 
 ## ReStake
 
-[holesky.eigenlayer.xyz](https://holesky.eigenlayer.xyz/restake) adresini ziyaret edin ve tokenlerinizi deposit edin.
+[holesky.eigenlayer.xyz/restake](https://holesky.eigenlayer.xyz/restake) adresine gidin ve tokenlerinizi deposit edin.
 
 ## Delegate 
 
