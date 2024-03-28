@@ -60,7 +60,7 @@ keywords: [Eigen Layer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 4. `Stake edilmiş holETH`'nizi `osETH`'ye dönüştürmek için `Mint`'e tıklayın ve Web3 cüzdanınızdaki işlemi doğrulayın.
 5. `Add osETH to your Wallet`'ı tıklayın ya da token bakiyenizi görüntülemek için `Holesky stETH token`'in `osETH adresini` (`0xF603c5A3F774F05d4D848A9bB139809790890864`) web3 cüzdanınıza aktarın.
 
-### LsETH Edinin (Liquid Collective'den Liquid Stacked ETH)​
+### lsETH Edinin (Liquid Collective'den Liquid Stacked ETH)​
 1. Etherscan'da `Liquid Staked ETH LsETH proxy sözleşmesinin Proxy Olarak Yaz` sözleşmesini buradan ziyaret edin: [0x1d8b30cC38Dba8aBce1ac29Ea27d9cFd05379A09](https://holesky.etherscan.io/address/0x1d8b30cC38Dba8aBce1ac29Ea27d9cFd05379A09#writeProxyContract).
 2. Web3 cüzdanınızı bağlamak için `Connect to Web3`'ü tıklayın.
 3. Sekmeyi genişletmek için `5.deposit()` fonksiyonuna tıklayın:
