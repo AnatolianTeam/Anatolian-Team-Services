@@ -9,12 +9,14 @@ keywords: [Eigen Layer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 
 ## Holešky Ağını Cüzdanınıza Ekleme
 
-* Network Adı: Holešky  
-* RPC URL: https://ethereum-holesky-rpc.publicnode.com
-* Network Chain ID: 17000
-* Currency symbol: holETH
-* Block explorer URL: https://holesky.etherscan.io/
-* Block explorer URL (Alternatif): https://holesky.beaconcha.in
+| Field | Details |
+| ------------ | ------------ |
+| **Network adı** | Holešky |
+| **New RPC URL** | https://ethereum-holesky-rpc.publicnode.com |
+| **Chain ID** | 17000 |
+| **Currency symbol:** | holETH |
+| **Block explorer URL** | hhttps://holesky.etherscan.io/ |
+| **Block explorer URL (Alternatif)** | hhttps://holesky.etherscan.io/ |
 
 * Holešky ağını Web3 cüzdanınıza ekleme ile ilgili olarak [burayı](https://www.coingecko.com/learn/holesky-testnet-eth#add-the-holesky-testnet-to-metamask) ziayret edebilirsiniz.
 
