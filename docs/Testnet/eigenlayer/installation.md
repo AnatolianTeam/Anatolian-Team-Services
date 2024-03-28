@@ -2,10 +2,10 @@
 title: 💾 Installation
 description: Holešky Operator installation guide.
 image: ./img/EigenLayer-Service-Cover.jpg
-keywords: [EigenLayer, restake, Holešky, installation, Holesky]
+keywords: [Eigen Layer, Eigen, Layer, restake, Holešky, installation, Holesky]
 ---
 
-# EigenLayer Holešky Operatör Installation 
+# Eigen Layer Holešky Operatör Installation 
 
 ## Updating the System
 ```shell

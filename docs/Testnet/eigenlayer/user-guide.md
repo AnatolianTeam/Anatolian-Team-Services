@@ -2,10 +2,10 @@
 title: 👤 User Guide
 description: EigenLayer Holešky User Guide.
 image: ./img/EigenLayer-Service-Cover.jpg
-keywords: [EigenLayer, restake, user, guide, Holešky, Holesky]
+keywords: [Eigen Layer, Eigen, Layer, restake, user, guide, Holešky, Holesky]
 ---
 
-# EigenLayer Holešky User Guide
+# Eigen Layer Holešky User Guide
 
 ## Add the Holešky Testnet to Wallet
 

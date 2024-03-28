@@ -2,9 +2,9 @@
 id: introduction
 hide_table_of_contents: true
 image: ./img/EigenLayer-Service-Cover.jpg
-keywords: [EigenLayer, restake, installation]
+keywords: [Eigen Layer, Eigen, Layer, restake, installation]
 ---
-# EigenLayer 
+# Eigen Layer 
 
 ![EigenLayer](./img/EigenLayer-Service.jpg) 
 
