@@ -5,7 +5,7 @@ image: ./img/EigenLayer-Service-Cover.jpg
 keywords: [EigenLayer, restake, Holešky, installation, Holesky]
 ---
 
-# Installation 
+# EigenLayer Holešky Operatör Installation 
 
 ## Updating the System
 ```shell

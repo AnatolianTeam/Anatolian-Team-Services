@@ -1,6 +1,6 @@
 ---
 title: 💾 Kurulum
-description: Holešky Operatör kurulumu rehberi.
+description: Holešky Operatör kurulum rehberi.
 image: ./../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.jpg
 keywords: [EigenLayer, restake, Holešky, kurulum, rehber, Holesky]
 ---

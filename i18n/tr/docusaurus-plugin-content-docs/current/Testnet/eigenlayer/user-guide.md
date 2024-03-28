@@ -5,7 +5,7 @@ image: ./../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.
 keywords: [EigenLayer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 ---
 
-# EigenLayer Holešky Holešky Kullanıcı Rehberi
+# EigenLayer Holešky Kullanıcı Rehberi
 
 ## Holešky Ağını Cüzdanınıza Ekleme
 
