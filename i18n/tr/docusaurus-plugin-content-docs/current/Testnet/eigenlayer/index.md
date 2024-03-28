@@ -2,7 +2,7 @@
 id: introduction
 hide_table_of_contents: true
 image: ./../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.jpg
-description: EigenLayer Kurulum Rehberi
+description: Eigen Layer Rehberi
 keywords: [Eigen Layer, Eigen, Layer, restake, Holesky, Holesky, Holešky, kurulum]
 ---
 # Eigen Layer 
