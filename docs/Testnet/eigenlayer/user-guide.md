@@ -88,4 +88,4 @@ Visit [holesky.eigenlayer.xyz](https://holesky.eigenlayer.xyz/restake) and depos
 
 ## Delegate 
 
-Go to [Anatolian Team Operator](https://holesky.eigenlayer.xyz/operator/0xb32d1d947b19983d49025856297df3337ce04bad) and delegate your tokens. 
+You can go to [Anatolian Team Operator](https://holesky.eigenlayer.xyz/operator/0xb32d1d947b19983d49025856297df3337ce04bad) and delegate your tokens to us.

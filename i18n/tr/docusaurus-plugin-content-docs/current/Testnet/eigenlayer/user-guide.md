@@ -90,4 +90,4 @@ keywords: [Eigen Layer, restake, Holesky, Holešky, kullanıcı rehberi, rehber]
 
 ## Delegate 
 
-[Anatolian Team Operator](https://holesky.eigenlayer.xyz/operator/0xb32d1d947b19983d49025856297df3337ce04bad) adresine gidin ve tokenlerinizi bize delege edin. 
+[Anatolian Team Operator](https://holesky.eigenlayer.xyz/operator/0xb32d1d947b19983d49025856297df3337ce04bad) adresine gidip tokenlerinizi bize delege edebilirsiniz.  
