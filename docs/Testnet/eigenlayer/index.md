@@ -2,10 +2,10 @@
 id: introduction
 hide_table_of_contents: true
 image: ./img/EigenLayer-Service-Cover.jpg
-description: Eigen Layer Guides.
-keywords: [Eigen Layer, Eigen, Layer, restake, installation]
+description: EigenLayer Guides.
+keywords: [EigenLayer, Eigen, Layer, restake, installation]
 ---
-# Eigen Layer 
+# EigenLayer 
 
 ![EigenLayer](./img/EigenLayer-Service.jpg) 
 

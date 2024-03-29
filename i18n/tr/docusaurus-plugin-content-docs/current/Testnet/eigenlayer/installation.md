@@ -2,12 +2,12 @@
 title: 💾 Kurulum
 description: Holešky Operatör kurulum rehberi.
 image: ./../../../../../../docs/Testnet/eigenlayer/img/EigenLayer-Service-Cover.jpg
-keywords: [Eigen Layer, Eigen, Layer, restake, Holešky, kurulum, rehber, Holesky]
+keywords: [EigenLayer, Eigen, Layer, restake, Holešky, kurulum, rehber, Holesky]
 ---
 
-# Eigen Layer Holešky Operatör Kurulum 
+# EigenLayer Holešky Operatör Kurulum 
 
-## Sitemi Güncelleme
+## Sistemi Güncelleme
 ```shell
 apt update && apt upgrade -y
 ```
