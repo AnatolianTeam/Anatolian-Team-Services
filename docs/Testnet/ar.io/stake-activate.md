@@ -1,6 +1,6 @@
 ---
-title: ▶️ Stake Aktif Etme
-description: Ar.io testnete katılım rehberi.
+title: ▶️ Stake Activation
+description: Ar.io atake activation guide.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
 ---
