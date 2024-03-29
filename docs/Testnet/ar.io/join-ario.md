@@ -113,3 +113,8 @@ To get the role, we send the following information to the `#testnet-participants
 * https://ar.domain.com/ar-io/healthcheck
 
 A moderator will then ask you to send a screenshot of your name appearing in your address below. Take a screenshot and send it with your name on the site, with the address below also visible on the screen.
+
+Then send the following information to the `#testnet` channel.
+
+* https://ar.domain.com/ar-io/info
+* Wallet Address

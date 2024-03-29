@@ -109,4 +109,9 @@ Rolü almak için [ar.io Discord](https://discord.gg/ApxXjvwECK) suncusunda `#te
 * https://ar.domain.com/ar-io/info
 * https://ar.domain.com/ar-io/healthcheck
 
-Ardından bir moderator sizden aşağıdaki adresinizde kendi isminizin gözüktüğü bir ekran görüntüsü göndermenizi isteyecek. Alağıdaki adres de ekranda gözükecek şekilde sitede kendi adınızın bulunduğu şekilde bir ekran görüntüsü alıp gönderin.
+Ardından bir moderator sizden aşağıdaki adresinizde kendi isminizin gözüktüğü bir ekran görüntüsü göndermenizi isteyecek. Aşağıdaki adres de ekranda gözükecek şekilde sitede kendi adınızın bulunduğu şekilde bir ekran görüntüsü alıp gönderin.
+
+Ardından `#testnet` kanalına aşağıdaki bilgileri gönderiyoruz.
+
+* https://ar.domain.com/ar-io/info
+* Cüzdan Adresi
