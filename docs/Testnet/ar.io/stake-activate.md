@@ -1,5 +1,5 @@
 ---
-title: ▶️ Stake Activation
+title: 💰 Stake Activation
 description: Ar.io atake activation guide.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]

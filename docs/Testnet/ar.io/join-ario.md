@@ -1,5 +1,5 @@
 ---
-title: ▶️  Joining the Testnet
+title: ▶️ Joining the Testnet
 description: Joining the Ar.io Testnet Guide
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, Permaweb, installation]
