@@ -126,6 +126,7 @@ import {
   );
 })();
 ```
+
 </TabItem>
 <TabItem value="Değiştirilmiş Hali">
 
