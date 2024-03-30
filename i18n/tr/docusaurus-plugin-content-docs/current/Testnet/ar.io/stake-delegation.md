@@ -7,4 +7,25 @@ keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
 
 # Ar.io Delegasyon Rehberi
 
-Bir önceki sayfadaki işlemleri yaptıysanız burada delegasyon işlemini yapacağız. 
+Bu bölümde bir başkasına ya da kendinize delege etmek için yapılması gerekenler anlatılmıştır.
+
+## delegate-stake.ts Dosyasnın Düzenlenmesi
+
+Aşağıdaki kod ile dosyası açıyoruz.
+```shell
+nano $HOME/testnet-contract/tools/delegate-stake.ts
+```
+
+Ardından aşağıdaki değişiklikleri yapıyoruz:
+1. `const qty = 500;` Ne kadar stake etmek istiyorsanız miktarı değiştiriyorsunuz
+2. `const target = 'CÜZDAN_ADRESİ';` Stake etmek istediğiniz validatorün cüzdan adresini yazıyorsunuz.
+
+Değişiklikleri tamamladıysanız aşağıdaki komutu çalıştırıp stake işlemini başlatıyoruz:
+```shell
+cd $HOME/testnet-contract
+yarn ts-node tools/delegate-stake.ts
+```
+
+:::warning
+Her stake işleminden önce bu dosyayı düzenlemeyi unutmayın yoksa sürekli aynı adrese stake edersiniz.
+:::
