@@ -7,4 +7,4 @@ keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
 
 # Ar.io Delegation Guide
 
-If you have completed the operations on the previous page, we will activate staking here.
+If you have completed the operations on the previous page, we will do delegation here.
