@@ -26,6 +26,9 @@ Değişkenlerin başında bulunan `//` 'ları kaldırıyoruz.
 6. `minDelegatedStake,`
 * Değişecek yerleri aşağıdan inceleyebilirsiniz.
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <Tabs>
 <TabItem value="Orijinal Hali">
 

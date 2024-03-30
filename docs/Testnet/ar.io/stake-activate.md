@@ -26,10 +26,13 @@ Remove the `//` from the beginning of the variables.
 6. `minDelegatedStake,`
 * You can view the places that will change below.
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <Tabs>
 <TabItem value="Original Version">
 
-``` 
+```
 import { JWKInterface } from 'arweave/node/lib/wallet';
 
 import { IOState } from '../src/types';
@@ -128,6 +131,7 @@ import {
 ```
 
 </TabItem>
+
 <TabItem value="Modified Version">
 
 ```
