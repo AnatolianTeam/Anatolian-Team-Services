@@ -24,10 +24,12 @@ Değişkenlerin başında bulunan `//` 'ları kaldırıyoruz.
 4. `allowDelegatedStaking,`
 5. `delegateRewardShareRatio,`
 6. `minDelegatedStake,`
-* Değişecek yerleri aşağıdan inceleyebilirsiniz.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+<details>
+<summary>* Değişecek yerleri bıradan inceleyebilirsiniz.</summary>
 
 <Tabs>
 <TabItem value="Orijinal Hali">
@@ -234,6 +236,7 @@ import {
 </TabItem>
 </Tabs>
 
+</details>
 
 Değişiklikleri tamamladıysanız aşağıdaki komutu çalıştırıyoruz:
 ```shell

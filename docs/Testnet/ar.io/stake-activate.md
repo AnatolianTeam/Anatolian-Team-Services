@@ -24,10 +24,11 @@ Remove the `//` from the beginning of the variables.
 4. `allowDelegatedStaking,`
 5. `delegateRewardShareRatio,`
 6. `minDelegatedStake,`
-* You can view the places that will change below.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+<details>
+<summary>* You can review the areas that will be changed here.</summary>
 
 <Tabs>
 <TabItem value="Original Version">
@@ -235,6 +236,7 @@ import {
 </TabItem>
 </Tabs>
 
+</details>
 
 If you have completed the changes, run the following command:
 ```shell
