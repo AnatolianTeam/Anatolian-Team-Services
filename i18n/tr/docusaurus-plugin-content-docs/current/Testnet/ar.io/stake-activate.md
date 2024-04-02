@@ -29,212 +29,213 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <details>
-<summary>* Değişecek yerleri bıradan inceleyebilirsiniz.</summary>
 
-<Tabs>
-<TabItem value="Orijinal Hali">
+<summary>Değişecek yerleri bıradan inceleyebilirsiniz.</summary>
 
-``` 
-import { JWKInterface } from 'arweave/node/lib/wallet';
+    <Tabs>
+    <TabItem value="Orijinal Hali">
 
-import { IOState } from '../src/types';
-import {
-  arnsContractTxId,
-  arweave,
-  getContractManifest,
-  initialize,
-  loadWallet,
-  warp,
-} from './utilities';
+    ``` 
+    import { JWKInterface } from 'arweave/node/lib/wallet';
 
-/* eslint-disable no-console */
-// This script will update the settings for a gateway that is already joined to the network
-// Only the gateway's wallet owner is authorized to adjust these settings
-(async () => {
-  initialize();
+    import { IOState } from '../src/types';
+    import {
+      arnsContractTxId,
+      arweave,
+      getContractManifest,
+      initialize,
+      loadWallet,
+      warp,
+    } from './utilities';
 
-  // the friendly label for this gateway
-  // const label = 'Test Gateway';
+    /* eslint-disable no-console */
+    // This script will update the settings for a gateway that is already joined to the network
+    // Only the gateway's wallet owner is authorized to adjust these settings
+    (async () => {
+      initialize();
 
-  // the fully qualified domain name for this gateway eg. arweave.net
-  // const fqdn = 'permanence-testing.org';
+      // the friendly label for this gateway
+      // const label = 'Test Gateway';
 
-  // uncomment the below settings and update as needed
-  // the port used for this gateway eg. 443
-  // const port = 443
+      // the fully qualified domain name for this gateway eg. arweave.net
+      // const fqdn = 'permanence-testing.org';
 
-  // the application layer protocol used by this gateway eg http or https
-  // const protocol = 'https'
+      // uncomment the below settings and update as needed
+      // the port used for this gateway eg. 443
+      // const port = 443
 
-  // an optional gateway properties file located at this Arweave transaction id eg.
-  // const properties = 'FH1aVetOoulPGqgYukj0VE0wIhDy90WiQoV3U2PeY44'
+      // the application layer protocol used by this gateway eg http or https
+      // const protocol = 'https'
 
-  // an optional, short note to further describe this gateway and its status
-  // const note = 'Give me feedback about this gateway at my Xwitter @testgatewayguy'
+      // an optional gateway properties file located at this Arweave transaction id eg.
+      // const properties = 'FH1aVetOoulPGqgYukj0VE0wIhDy90WiQoV3U2PeY44'
 
-  // The observer wallet public address eg.iKryOeZQMONi2965nKz528htMMN_sBcjlhc-VncoRjA which is used to upload observation reports
-  // const observerWallet = '';
+      // an optional, short note to further describe this gateway and its status
+      // const note = 'Give me feedback about this gateway at my Xwitter @testgatewayguy'
 
-  // Enable or disable delegated staking.  If true, other token holders can delegate their stake to this gateway
-  // const allowDelegatedStaking: boolean = true;
+      // The observer wallet public address eg.iKryOeZQMONi2965nKz528htMMN_sBcjlhc-VncoRjA which is used to upload observation reports
+      // const observerWallet = '';
 
-  // Number between 0-100 indicating the percent of gateway and observer rewards given to delegates eg. 30 is 30% distributed to delegates
-  // The default is 0
-  // const delegateRewardShareRatio: number = 10;
+      // Enable or disable delegated staking.  If true, other token holders can delegate their stake to this gateway
+      // const allowDelegatedStaking: boolean = true;
 
-  // The minimum stake in IO a delegate must use for this for this gateway.  Must be greater than the contracts minimum delegated stake
-  // The default is 100 IO
-  // const minDelegatedStake: number = 200;
+      // Number between 0-100 indicating the percent of gateway and observer rewards given to delegates eg. 30 is 30% distributed to delegates
+      // The default is 0
+      // const delegateRewardShareRatio: number = 10;
 
-  // Get the key file used for the distribution
-  const wallet: JWKInterface = loadWallet();
+      // The minimum stake in IO a delegate must use for this for this gateway.  Must be greater than the contracts minimum delegated stake
+      // The default is 100 IO
+      // const minDelegatedStake: number = 200;
 
-  // wallet address
-  const walletAddress = await arweave.wallets.getAddress(wallet);
+      // Get the key file used for the distribution
+      const wallet: JWKInterface = loadWallet();
 
-  // get contract manifest
-  const { evaluationOptions = {} } = await getContractManifest({
-    contractTxId: arnsContractTxId,
-  });
+      // wallet address
+      const walletAddress = await arweave.wallets.getAddress(wallet);
 
-  // Read the ANT Registry Contract
-  const contract = await warp
-    .contract<IOState>(arnsContractTxId)
-    .connect(wallet)
-    .setEvaluationOptions(evaluationOptions)
-    .syncState(`https://api.arns.app/v1/contract/${arnsContractTxId}`, {
-      validity: true,
-    });
+      // get contract manifest
+      const { evaluationOptions = {} } = await getContractManifest({
+        contractTxId: arnsContractTxId,
+      });
 
-  // Include any settings as needed below
-  const writeInteraction = await contract.writeInteraction(
-    {
-      function: 'updateGatewaySettings',
-      // label,
-      // fqdn,
-      // observerWallet,
-      // port,
-      // protocol,
-      // properties,
-      // allowDelegatedStaking,
-      // delegateRewardShareRatio,
-      // minDelegatedStake,
-      // note
-    },
-    {
-      disableBundling: true,
-    },
-  );
+      // Read the ANT Registry Contract
+      const contract = await warp
+        .contract<IOState>(arnsContractTxId)
+        .connect(wallet)
+        .setEvaluationOptions(evaluationOptions)
+        .syncState(`https://api.arns.app/v1/contract/${arnsContractTxId}`, {
+          validity: true,
+        });
 
-  console.log(
-    `${walletAddress} successfully updated gateway settings with TX id: ${writeInteraction?.originalTxId}`,
-  );
-})();
-```
+      // Include any settings as needed below
+      const writeInteraction = await contract.writeInteraction(
+        {
+          function: 'updateGatewaySettings',
+          // label,
+          // fqdn,
+          // observerWallet,
+          // port,
+          // protocol,
+          // properties,
+          // allowDelegatedStaking,
+          // delegateRewardShareRatio,
+          // minDelegatedStake,
+          // note
+        },
+        {
+          disableBundling: true,
+        },
+      );
 
-</TabItem>
-<TabItem value="Değiştirilmiş Hali">
+      console.log(
+        `${walletAddress} successfully updated gateway settings with TX id: ${writeInteraction?.originalTxId}`,
+      );
+    })();
+    ```
 
-```
-import { JWKInterface } from 'arweave/node/lib/wallet';
+    </TabItem>
+    <TabItem value="Değiştirilmiş Hali">
 
-import { IOState } from '../src/types';
-import {
-  arnsContractTxId,
-  arweave,
-  getContractManifest,
-  initialize,
-  loadWallet,
-  warp,
-} from './utilities';
+    ```
+    import { JWKInterface } from 'arweave/node/lib/wallet';
 
-/* eslint-disable no-console */
-// This script will update the settings for a gateway that is already joined to the network
-// Only the gateway's wallet owner is authorized to adjust these settings
-(async () => {
-  initialize();
+    import { IOState } from '../src/types';
+    import {
+      arnsContractTxId,
+      arweave,
+      getContractManifest,
+      initialize,
+      loadWallet,
+      warp,
+    } from './utilities';
 
-  // the friendly label for this gateway
-  // const label = 'Test Gateway';
+    /* eslint-disable no-console */
+    // This script will update the settings for a gateway that is already joined to the network
+    // Only the gateway's wallet owner is authorized to adjust these settings
+    (async () => {
+      initialize();
 
-  // the fully qualified domain name for this gateway eg. arweave.net
-  // const fqdn = 'permanence-testing.org';
+      // the friendly label for this gateway
+      // const label = 'Test Gateway';
 
-  // uncomment the below settings and update as needed
-  // the port used for this gateway eg. 443
-  // const port = 443
+      // the fully qualified domain name for this gateway eg. arweave.net
+      // const fqdn = 'permanence-testing.org';
 
-  // the application layer protocol used by this gateway eg http or https
-  // const protocol = 'https'
+      // uncomment the below settings and update as needed
+      // the port used for this gateway eg. 443
+      // const port = 443
 
-  // an optional gateway properties file located at this Arweave transaction id eg.
-  // const properties = 'FH1aVetOoulPGqgYukj0VE0wIhDy90WiQoV3U2PeY44'
+      // the application layer protocol used by this gateway eg http or https
+      // const protocol = 'https'
 
-  // an optional, short note to further describe this gateway and its status
-  // const note = 'Give me feedback about this gateway at my Xwitter @testgatewayguy'
+      // an optional gateway properties file located at this Arweave transaction id eg.
+      // const properties = 'FH1aVetOoulPGqgYukj0VE0wIhDy90WiQoV3U2PeY44'
 
-  // The observer wallet public address eg.iKryOeZQMONi2965nKz528htMMN_sBcjlhc-VncoRjA which is used to upload observation reports
-  // const observerWallet = '';
+      // an optional, short note to further describe this gateway and its status
+      // const note = 'Give me feedback about this gateway at my Xwitter @testgatewayguy'
 
-  // Enable or disable delegated staking.  If true, other token holders can delegate their stake to this gateway
-  const allowDelegatedStaking: boolean = true;
+      // The observer wallet public address eg.iKryOeZQMONi2965nKz528htMMN_sBcjlhc-VncoRjA which is used to upload observation reports
+      // const observerWallet = '';
 
-  // Number between 0-100 indicating the percent of gateway and observer rewards given to delegates eg. 30 is 30% distributed to delegates
-  // The default is 0
-  const delegateRewardShareRatio: number = 10;
+      // Enable or disable delegated staking.  If true, other token holders can delegate their stake to this gateway
+      const allowDelegatedStaking: boolean = true;
 
-  // The minimum stake in IO a delegate must use for this for this gateway.  Must be greater than the contracts minimum delegated stake
-  // The default is 100 IO
-  const minDelegatedStake: number = 100000000;
+      // Number between 0-100 indicating the percent of gateway and observer rewards given to delegates eg. 30 is 30% distributed to delegates
+      // The default is 0
+      const delegateRewardShareRatio: number = 10;
 
-  // Get the key file used for the distribution
-  const wallet: JWKInterface = loadWallet();
+      // The minimum stake in IO a delegate must use for this for this gateway.  Must be greater than the contracts minimum delegated stake
+      // The default is 100 IO
+      const minDelegatedStake: number = 100000000;
 
-  // wallet address
-  const walletAddress = await arweave.wallets.getAddress(wallet);
+      // Get the key file used for the distribution
+      const wallet: JWKInterface = loadWallet();
 
-  // get contract manifest
-  const { evaluationOptions = {} } = await getContractManifest({
-    contractTxId: arnsContractTxId,
-  });
+      // wallet address
+      const walletAddress = await arweave.wallets.getAddress(wallet);
 
-  // Read the ANT Registry Contract
-  const contract = await warp
-    .contract<IOState>(arnsContractTxId)
-    .connect(wallet)
-    .setEvaluationOptions(evaluationOptions)
-    .syncState(`https://api.arns.app/v1/contract/${arnsContractTxId}`, {
-      validity: true,
-    });
+      // get contract manifest
+      const { evaluationOptions = {} } = await getContractManifest({
+        contractTxId: arnsContractTxId,
+      });
 
-  // Include any settings as needed below
-  const writeInteraction = await contract.writeInteraction(
-    {
-      function: 'updateGatewaySettings',
-      // label,
-      // fqdn,
-      // observerWallet,
-      // port,
-      // protocol,
-      // properties,
-      allowDelegatedStaking,
-      delegateRewardShareRatio,
-      minDelegatedStake,
-      // note
-    },
-    {
-      disableBundling: true,
-    },
-  );
+      // Read the ANT Registry Contract
+      const contract = await warp
+        .contract<IOState>(arnsContractTxId)
+        .connect(wallet)
+        .setEvaluationOptions(evaluationOptions)
+        .syncState(`https://api.arns.app/v1/contract/${arnsContractTxId}`, {
+          validity: true,
+        });
 
-  console.log(
-    `${walletAddress} successfully updated gateway settings with TX id: ${writeInteraction?.originalTxId}`,
-  );
-})();
-```
+      // Include any settings as needed below
+      const writeInteraction = await contract.writeInteraction(
+        {
+          function: 'updateGatewaySettings',
+          // label,
+          // fqdn,
+          // observerWallet,
+          // port,
+          // protocol,
+          // properties,
+          allowDelegatedStaking,
+          delegateRewardShareRatio,
+          minDelegatedStake,
+          // note
+        },
+        {
+          disableBundling: true,
+        },
+      );
 
-</TabItem>
-</Tabs>
+      console.log(
+        `${walletAddress} successfully updated gateway settings with TX id: ${writeInteraction?.originalTxId}`,
+      );
+    })();
+    ```
+
+    </TabItem>
+    </Tabs>
 
 </details>
 

@@ -27,7 +27,9 @@ Remove the `//` from the beginning of the variables.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
 <details>
+
 <summary>* You can review the areas that will be changed here.</summary>
 
 <Tabs>
