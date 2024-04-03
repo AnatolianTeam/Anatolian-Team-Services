@@ -18,14 +18,15 @@ nano $HOME/testnet-contract/tools/delegate-stake.ts
 
 Then make the following changes:
 1. `const qty = 500;` You change the amount how much you want to stake
-2. `const target = 'WALLET_ADDRESS';` You write the wallet address of the validator you want to stake.
+2. `const target = 'WALLET_ADDRESS';` You write the wallet address of the validator you want to delegate.
 
-If you have completed the changes, run the command below to start the staking process:
+If you have completed the changes, run the command below to start the delegating process:
 ```shell
 cd $HOME/testnet-contract
 yarn ts-node tools/delegate-stake.ts
 ```
 
 :::warning
-Don't forget to edit this file before each stake, otherwise you will always stake to the same address.
+Don't forget to edit this file before each delegation, otherwise you will always delegate to the same address.
 :::
+

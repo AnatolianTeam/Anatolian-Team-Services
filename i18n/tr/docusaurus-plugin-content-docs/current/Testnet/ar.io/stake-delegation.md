@@ -18,7 +18,7 @@ nano $HOME/testnet-contract/tools/delegate-stake.ts
 
 Ardından aşağıdaki değişiklikleri yapıyoruz:
 1. `const qty = 500;` Ne kadar stake etmek istiyorsanız miktarı değiştiriyorsunuz
-2. `const target = 'CÜZDAN_ADRESİ';` Stake etmek istediğiniz validatorün cüzdan adresini yazıyorsunuz.
+2. `const target = 'CÜZDAN_ADRESİ';` delege etmek istediğiniz validatorün cüzdan adresini yazıyorsunuz.
 
 Değişiklikleri tamamladıysanız aşağıdaki komutu çalıştırıp stake işlemini başlatıyoruz:
 ```shell
@@ -27,5 +27,6 @@ yarn ts-node tools/delegate-stake.ts
 ```
 
 :::warning
-Her stake işleminden önce bu dosyayı düzenlemeyi unutmayın yoksa sürekli aynı adrese stake edersiniz.
+Her delege işleminden önce bu dosyayı düzenlemeyi unutmayın yoksa sürekli aynı adrese delege edersiniz.
 :::
+
