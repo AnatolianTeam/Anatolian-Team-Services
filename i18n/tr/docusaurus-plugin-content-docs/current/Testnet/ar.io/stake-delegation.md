@@ -30,3 +30,16 @@ yarn ts-node tools/delegate-stake.ts
 Her delege işleminden önce bu dosyayı düzenlemeyi unutmayın yoksa sürekli aynı adrese delege edersiniz.
 :::
 
+### Delege Etmek için Adresler
+
+Aşağıdaki adreslere delege edebilirsiniz.
+
+* `EhkVW8-6SnOm1UBVI-TJH2Hsmoz9ppv1jQMRaSo2W_g`
+* `BIa3UE0QEPRJC4HBSU252qHtA8ZOR4ClnzBq1LZQ_WU`
+* `lC5I5rQvGZn36DodBvWiMD_abkprE20p6GgGiZakk9Y`
+* `k5GhUmInR23Jt0I14A_EMFAtFHBCRSZyN7Ibr_2cY-k`
+* `Z7gvVfG9n_AXsCQL9hfpknYQawYR30DFNTuBAzWzoOk`
+
+:::info
+Adreslerinizi [telegram kanalımızdan](https://t.me/AnatolianTeam) yazarsanız listeye ekleyelim.
+:::

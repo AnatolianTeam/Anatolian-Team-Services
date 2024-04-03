@@ -30,3 +30,16 @@ yarn ts-node tools/delegate-stake.ts
 Don't forget to edit this file before each delegation, otherwise you will always delegate to the same address.
 :::
 
+### Addresses to Delegate
+
+You can delegate to the addresses below.
+
+* `EhkVW8-6SnOm1UBVI-TJH2Hsmoz9ppv1jQMRaSo2W_g`
+* `BIa3UE0QEPRJC4HBSU252qHtA8ZOR4ClnzBq1LZQ_WU`
+* `lC5I5rQvGZn36DodBvWiMD_abkprE20p6GgGiZakk9Y`
+* `k5GhUmInR23Jt0I14A_EMFAtFHBCRSZyN7Ibr_2cY-k`
+* `Z7gvVfG9n_AXsCQL9hfpknYQawYR30DFNTuBAzWzoOk`
+
+:::info
+If you write your addresses on our [telegram channel](https://t.me/AnatolianTeam), we will add them to the list.
+:::
