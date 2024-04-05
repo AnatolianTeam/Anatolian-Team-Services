@@ -17,7 +17,7 @@ nano $HOME/testnet-contract/tools/delegate-stake.ts
 ```
 
 Then make the following changes:
-1. `const qty = 500;` You change the amount how much you want to stake
+1. `const qty = 100;` You change the amount how much you want to stake
 2. `const target = 'WALLET_ADDRESS';` You write the wallet address of the validator you want to delegate.
 
 If you have completed the changes, run the command below to start the delegating process:
@@ -39,6 +39,7 @@ You can delegate to the addresses below.
 * `lC5I5rQvGZn36DodBvWiMD_abkprE20p6GgGiZakk9Y`
 * `k5GhUmInR23Jt0I14A_EMFAtFHBCRSZyN7Ibr_2cY-k`
 * `Z7gvVfG9n_AXsCQL9hfpknYQawYR30DFNTuBAzWzoOk`
+* `vOrKy_8JvhhIxzWj7fe9E59AGKVi4Jb6YfgauAvCvxU`
 
 :::info
 If you write your addresses on our [telegram channel](https://t.me/AnatolianTeam), we will add them to the list.
