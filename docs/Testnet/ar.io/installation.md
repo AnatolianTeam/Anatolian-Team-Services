@@ -125,7 +125,7 @@ Please pay attention to the following when recording `TXT`. If your domain name 
 You will use 'the code given in the output' as the value.
 
 :::warning
-Before moving on to the next step, go to a DNS Checker and search for `_acme-challenge.ar.domain.com` to see if the record is propagated. Propagation may take a while. Press `Enter` when the propagation starts.
+Before moving on to the next step, go to a [DNS Checker](https://dnschecker.org/) and search for `_acme-challenge.ar.domain.com` to see if the record is propagated. Propagation may take a while. Press `Enter` when the propagation starts.
 :::
 
 Finally, you will receive a printout showing you the directory of your certificate files.

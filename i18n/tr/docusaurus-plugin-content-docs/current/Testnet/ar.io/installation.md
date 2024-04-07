@@ -122,7 +122,7 @@ Bu kısımda dikkatli olun. Size `TXT` kaydı için iki kod verecek birisi `kay�
 Değer olarak ise `çıktıda verilen kodu` kullanacaksınız.
 
 :::warning
-Bir sonraki aıma geçmeden önce kaydın yayıldığını görmek için bir DNS Checker adresine gidip `_acme-challenge.ar.domain.com` şeklinde arama yapın. Yayılma biraz uzun sürebilir. Yayılma başladığında `Enter` tuşuna basın.
+Bir sonraki adıma geçmeden önce kaydın yayıldığını görmek için [DNS Checker](https://dnschecker.org/) adresine gidip `_acme-challenge.ar.domain.com` şeklinde arama yapın. Yayılma biraz uzun sürebilir. Yayılma başladığında `Enter` tuşuna basın.
 :::
 
 Son olarak size sertifika dosylarınızın dizinini gösteren bir çıktı alacaksınız. 
@@ -163,7 +163,7 @@ server {
 }
 ```
 
-Ardından aşağıdaki kodları sırasıyle giriyoruz.
+Ardından aşağıdaki kodları sırasıyla giriyoruz.
 
 ```shell
 unlink /etc/nginx/sites-enabled/default
