@@ -55,7 +55,7 @@ echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Warden Protocol'ün Kurulması
+## 0G Kurulması
 ```
 cd $HOME
 git clone https://github.com/0glabs/0g-evmos.git

@@ -55,7 +55,7 @@ echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Installing 0G Protocol
+## Installing 0G
 ```
 git clone https://github.com/0glabs/0g-evmos.git
 cd 0g-evmos
