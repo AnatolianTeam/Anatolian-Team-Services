@@ -64,7 +64,6 @@ make install
 evmosd version
 ```
 
-
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
 ```
@@ -173,6 +172,12 @@ evmosd keys add $OG_WALLET
 ```shell
 evmosd keys add $OG_WALLET --recover
 ```
+
+### Learning Your EVM Address
+```shell
+echo "0x$(evmosd debug addr $(evmosd keys show $OG_WALLET -a) | grep hex | awk '{print $3}')"
+```
+And then request tokens from the faucet to your address above.
 
 ## Wallet and Valoper Info
 Here we add our wallet and valve information to the variable.

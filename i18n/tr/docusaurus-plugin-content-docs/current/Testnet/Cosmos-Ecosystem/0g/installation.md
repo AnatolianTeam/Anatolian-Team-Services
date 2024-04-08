@@ -174,6 +174,13 @@ evmosd keys add $OG_WALLET
 evmosd keys add $OG_WALLET --recover
 ```
 
+### EVM Adresinizi Öğrenme
+```shell
+echo "0x$(evmosd debug addr $(evmosd keys show $OG_WALLET -a) | grep hex | awk '{print $3}')"
+```
+Daha sonra musluktan yukarıda çıkan adresinize token isteyin.
+
+
 ## Cüzdan ve Valoper Bilgileri
 Burada cüzdan ve valoper bilgileri değişkene ekleniyor.
 ```shell
