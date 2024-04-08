@@ -223,7 +223,6 @@ Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik y
    - `website`  `https://anatolianteam.com` yazan yere varsa bir siteniz ya da twitter vb. adresinizi yazabilirsiniz.
    - `security-contact`  E-posta adresiniz.
  ```shell 
- ```shell 
 evmosd tx staking create-validator \
 --amount=10000000000000000aevmos \
 --pubkey=$(evmosd tendermint show-validator) \
