@@ -179,6 +179,14 @@ echo "0x$(evmosd debug addr $(evmosd keys show $OG_WALLET -a) | grep hex | awk '
 ```
 And then request tokens from the faucet to your address above.
 
+#### Add Network to Wallet
+| Field | Details |
+| ------------ | ------------ |
+| **Network name** |0g Newton Testnet |
+| **New RPC URL** | https://rpc-testnet.0g.ai/ |
+| **Chain ID** | 9000 |
+| **Currency symbol:** | A0GI |
+
 ## Wallet and Valoper Info
 Here we add our wallet and valve information to the variable.
 

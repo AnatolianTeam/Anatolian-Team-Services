@@ -180,6 +180,19 @@ echo "0x$(evmosd debug addr $(evmosd keys show $OG_WALLET -a) | grep hex | awk '
 ```
 Daha sonra musluktan yukarıda çıkan adresinize token isteyin.
 
+#### EVM Cüzdan Private Key Öğrenme
+```shell
+evmosd keys unsafe-export-eth-key $OG_WALLET
+```
+Ardından cüzdanınızı içe aktarabilirsiniz.
+
+#### Ağı Cüzdana Ekleme 
+| Alan | Detaylar |
+| ------------ | ------------ |
+| **Network name** |0g Newton Testnet |
+| **New RPC URL** | https://rpc-testnet.0g.ai/ |
+| **Chain ID** | 9000 |
+| **Currency symbol:** | A0GI |
 
 ## Cüzdan ve Valoper Bilgileri
 Burada cüzdan ve valoper bilgileri değişkene ekleniyor.
