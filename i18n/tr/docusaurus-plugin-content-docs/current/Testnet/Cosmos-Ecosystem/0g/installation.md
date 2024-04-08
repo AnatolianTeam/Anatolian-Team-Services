@@ -224,7 +224,7 @@ Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik y
    - `security-contact`  E-posta adresiniz.
  ```shell 
 evmosd tx staking create-validator \
---amount=10000000000000000aevmos \
+--amount=90000000000000000aevmos \
 --pubkey=$(evmosd tendermint show-validator) \
 --moniker=$OG_NODENAME \
 --chain-id=$OG_CHAIN_ID \
@@ -232,7 +232,7 @@ evmosd tx staking create-validator \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.25aevmos \
+--gas-prices=7aevmos \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$OG_WALLET \
@@ -242,6 +242,9 @@ evmosd tx staking create-validator \
 --identity="XXXX1111XXXX1111" \
 --yes
 ```
+:::info
+Eğer hata alırsanız `--yes`'den önce şunu ekleyin: `--node=https://rpc-t-0g.anatolianteam.com:443 \` 
+:::
 
 ## Node'u Tamamen Silme
  ```shell 

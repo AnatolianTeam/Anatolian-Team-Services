@@ -236,6 +236,9 @@ evmosd tx staking create-validator \
 --identity="XXXX1111XXXX1111" \
 --yes
 ```
+:::info
+If you get an error, add this before `--yes`: `--node=https://rpc-t-0g.anatolianteam.com:443 \`
+::::
 
 ## Completely Deleting the Node 
 ```shell 
