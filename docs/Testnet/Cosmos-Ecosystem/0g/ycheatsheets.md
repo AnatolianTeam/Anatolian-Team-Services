@@ -66,61 +66,61 @@ evmosd keys list
 
 ### Seeing Wallet Address
 ```
-evmosd keys show $0G_WALLET --bech val -a
+evmosd keys show $OG_WALLET --bech val -a
 ```
 
 ### Importing Wallet
 ```
-evmosd keys add $0G_WALLET --recover
+evmosd keys add $OG_WALLET --recover
 ```
 
 ### Deleting Your Wallet
 ```
-evmosd keys delete $0G_WALLET
+evmosd keys delete $OG_WALLET
 ```
 
 ### Checking Wallet Balance
 ```
-evmosd query bank balances $0G_WALLET_ADDRESS
+evmosd query bank balances $OG_WALLET_ADDRESS
 ```
 
 ## Tokens
 
 ### Transferring from One Wallet to Another
 ```
-evmosd tx bank send $0G_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aevmos
+evmosd tx bank send $OG_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aevmos
 ```
 
 ### Participating in Proposal Voting
 ```
-evmosd tx gov vote 1 yes --from $0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
+evmosd tx gov vote 1 yes --from $OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-evmosd tx staking delegate $0G_VALOPER_ADDRESS 100000000aevmos --from=$0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
+evmosd tx staking delegate $OG_VALOPER_ADDRESS 100000000aevmos --from=$OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-evmosd tx staking unbond $(evmosd keys show $0G_WALLET --bech val -a) 1000000aevmos --from $0G_WALLET --chain-id indigo-1 --fees 3000aevmos -y
+evmosd tx staking unbond $(evmosd keys show $OG_WALLET --bech val -a) 1000000aevmos --from $OG_WALLET --chain-id indigo-1 --fees 3000aevmos -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-evmosd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aevmos --from=$0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
+evmosd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aevmos --from=$OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-evmosd tx distribution withdraw-all-rewards --from=$0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
+evmosd tx distribution withdraw-all-rewards --from=$OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-evmosd tx distribution withdraw-rewards $0G_VALOPER_ADDRESS --from=$0G_WALLET --commission --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
+evmosd tx distribution withdraw-rewards $OG_VALOPER_ADDRESS --from=$OG_WALLET --commission --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -135,8 +135,8 @@ Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should n
 ```
 evmosd tx staking edit-validator \
 --new-moniker=NEW-NODE-NAME \
---chain-id=$0G_CHAIN_ID \
---from=$0G_WALLET \
+--chain-id=$OG_CHAIN_ID \
+--from=$OG_WALLET \
 --gas-prices 0.00001aevmos \
 --gas-adjustment 1.5 \
 --gas auto -y
@@ -145,20 +145,20 @@ evmosd tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-evmosd tx staking edit-validator --commission-rate "0.02" --moniker=$0G_NODENAME --from $0G_WALLET --chain-id $0G_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto - y
+evmosd tx staking edit-validator --commission-rate "0.02" --moniker=$OG_NODENAME --from $OG_WALLET --chain-id $OG_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
 Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
-`$0G_NODENAME` and `$0G_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
+`$OG_NODENAME` and `$OG_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
 evmosd tx staking edit-validator \
---moniker=$0G_NODENAME \
+--moniker=$OG_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$0G_CHAIN_ID \
---from=$0G_WALLET
+--chain-id=$OG_CHAIN_ID \
+--from=$OG_WALLET
 ```
 
 ### Validator Details
@@ -178,7 +178,7 @@ evmosd q slashing params
 
 ### Recovering Validator from Jail
 ```
-evmosd tx slashing unjail --from $0G_WALLET --chain-id $0G_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
+evmosd tx slashing unjail --from $OG_WALLET --chain-id $OG_CHAIN_ID --gas-prices 0.00001aevmos --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List

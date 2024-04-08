@@ -34,24 +34,24 @@ go version
 
 ## Setting Variables
 The areas you need to change are written below.
-* `$0G_NODENAME` your validator name
-* `$0G_WALLET` your wallet name
+* `$OG_NODENAME` your validator name
+* `$OG_WALLET` your wallet name
 *  If another node is using the port, you can change it below. You must enter a different value where it says `11`, again as two digits.
 ```shell
-echo "export 0G_NODENAME=$0G_NODENAME"  >> $HOME/.bash_profile
-echo "export 0G_WALLET=$0G_WALLET" >> $HOME/.bash_profile
-echo "export 0G_PORT=11" >> $HOME/.bash_profile
-echo "export 0G_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export OG_NODENAME=$OG_NODENAME"  >> $HOME/.bash_profile
+echo "export OG_WALLET=$OG_WALLET" >> $HOME/.bash_profile
+echo "export OG_PORT=11" >> $HOME/.bash_profile
+echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Sample
-Let's assume that your Node (`0G_NODENAME`) and Wallet (`0G_WALLET`) name is `Anatolian-Guide` and the port you will use (`0G_PORT`) will be `16656`. The code will be arranged as shown below.
+Let's assume that your Node (`OG_NODENAME`) and Wallet (`OG_WALLET`) name is `Anatolian-Guide` and the port you will use (`OG_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
-echo "export 0G_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
-echo "export 0G_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
-echo "export 0G_PORT=16" >> $HOME/.bash_profile
-echo "export 0G_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export OG_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export OG_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
+echo "export OG_PORT=16" >> $HOME/.bash_profile
+echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -68,9 +68,9 @@ evmosd version
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
 ```
-evmosd config chain-id $0G_CHAIN_ID
+evmosd config chain-id $OG_CHAIN_ID
 evmosd config keyring-backend test
-evmosd init --chain-id $0G_CHAIN_ID $0G_NODENAME
+evmosd init --chain-id $OG_CHAIN_ID $OG_NODENAME
 
 # Copying the Genesis and addrbook Files
 wget https://github.com/0glabs/0g-evmos/releases/download/v1.0.0-testnet/genesis.json -O $HOME/.evmosd/config/genesis.json
@@ -102,23 +102,23 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 # Set up Ports
 sed -i.bak -e "
-s%:26658%:${0G_PORT}658%g;
-s%:26657%:${0G_PORT}657%g;
-s%:6060%:${0G_PORT}060%g;
-s%:26656%:${0G_PORT}656%g;
-s%:26660%:${0G_PORT}660%g
+s%:26658%:${OG_PORT}658%g;
+s%:26657%:${OG_PORT}657%g;
+s%:6060%:${OG_PORT}060%g;
+s%:26656%:${OG_PORT}656%g;
+s%:26660%:${OG_PORT}660%g
 " $HOME/.evmosd/config/config.toml
 sed -i.bak -e "
-s%:1317%:${0G_PORT}317%g; 
-s%:8080%:${0G_PORT}080%g; 
-s%:9090%:${0G_PORT}090%g; 
-s%:9091%:${0G_PORT}091%g
+s%:1317%:${OG_PORT}317%g; 
+s%:8080%:${OG_PORT}080%g; 
+s%:9090%:${OG_PORT}090%g; 
+s%:9091%:${OG_PORT}091%g
 " $HOME/.evmosd/config/app.toml
-sed -i.bak -e "s%:26657%:${0G_PORT}657%g" $HOME/.evmosd/config/client.toml
+sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.evmosd/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${0G_PORT}656\"|g" ~/.evmosd/config/config.toml > ~/.evmosd/config/config.toml.tmp
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${OG_PORT}656\"|g" ~/.evmosd/config/config.toml > ~/.evmosd/config/config.toml.tmp
 mv ~/.evmosd/config/config.toml.tmp  ~/.evmosd/config/config.toml
 
 # Creating the Service File
@@ -164,33 +164,33 @@ evmosd status 2>&1 | jq .SyncInfo
 ## Wallet
 
 ### Creating a New Wallet
-We do not change the `$0G_WALLET` section, we named our wallet with variables at the beginning of the installation.
+We do not change the `$OG_WALLET` section, we named our wallet with variables at the beginning of the installation.
 ```shell 
-evmosd keys add $0G_WALLET
+evmosd keys add $OG_WALLET
 ```  
 
 ### Importing an Existing Wallet
 ```shell
-evmosd keys add $0G_WALLET --recover
+evmosd keys add $OG_WALLET --recover
 ```
 
 ## Wallet and Valoper Info
 Here we add our wallet and valve information to the variable.
 
 ```shell
-0G_WALLET_ADDRESS=$(evmosd keys show $0G_WALLET -a)
-0G_VALOPER_ADDRESS=$(evmosd keys show $0G_WALLET --bech val -a)
+OG_WALLET_ADDRESS=$(evmosd keys show $OG_WALLET -a)
+OG_VALOPER_ADDRESS=$(evmosd keys show $OG_WALLET --bech val -a)
 ```
 
 ```shell
-echo 'export 0G_WALLET_ADDRESS='${0G_WALLET_ADDRESS} >> $HOME/.bash_profile
-echo 'export 0G_VALOPER_ADDRESS='${0G_VALOPER_ADDRESS} >> $HOME/.bash_profile
+echo 'export OG_WALLET_ADDRESS='${OG_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export OG_VALOPER_ADDRESS='${OG_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Checking Wallet Balance
 ```
-evmosd query bank balances $0G_WALLET_ADDRESS
+evmosd query bank balances $OG_WALLET_ADDRESS
 ```
 
 :::warning
@@ -207,8 +207,8 @@ You do not need to make any changes to the following command other than the plac
 evmosd tx staking create-validator \
 --amount=10000000000000000aevmos \
 --pubkey=$(evmosd tendermint show-validator) \
---moniker=$0G_NODENAME \
---chain-id=$0G_CHAIN_ID \
+--moniker=$OG_NODENAME \
+--chain-id=$OG_CHAIN_ID \
 --commission-rate=0.10 \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
@@ -216,7 +216,7 @@ evmosd tx staking create-validator \
 --gas-prices=0.25aevmos  \
 --gas-adjustment=1.5 \
 --gas=auto \
---from=$0G_WALLET \
+--from=$OG_WALLET \
 --details="Always forward with the Anatolian Team 🐆" \
 --security-contact="xxxxxxx@gmail.com" \
 --website="https://anatolianteam.com" \
@@ -233,5 +233,5 @@ systemctl daemon-reload && \
 cd $HOME && \
 rm -rf .evmosd 0g-evmos && \
 rm -rf $(which evmosd)
-sed -i '/0G_/d' ~/.bash_profile
+sed -i '/OG_/d' ~/.bash_profile
 ```

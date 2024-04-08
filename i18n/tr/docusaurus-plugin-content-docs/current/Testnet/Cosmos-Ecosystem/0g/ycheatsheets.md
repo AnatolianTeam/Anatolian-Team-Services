@@ -67,61 +67,61 @@ evmosd keys list
 
 ### Cüzdan Adresini Görme
 ```
-evmosd keys show $0G_WALLET --bech val -a
+evmosd keys show $OG_WALLET --bech val -a
 ```
 
 ### Cüzdanı İçeri Aktarma
 ```
-evmosd keys add $0G_WALLET --recover
+evmosd keys add $OG_WALLET --recover
 ```
 
 ### Cüzdanı Silme
 ```
-evmosd keys delete $0G_WALLET
+evmosd keys delete $OG_WALLET
 ```
 
 ### Cüzdan Bakiyesini Kontrol Etme
 ```
-evmosd query bank balances $0G_WALLET_ADDRESS
+evmosd query bank balances $OG_WALLET_ADDRESS
 ```
 
 ## Token İşlemleri
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-evmosd tx bank send $0G_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aevmos
+evmosd tx bank send $OG_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000aevmos
 ```
 
 ### Proposal Oylamasına Katılma
 ```
-evmosd tx gov vote 1 yes --from $0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
+evmosd tx gov vote 1 yes --from $OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-evmosd tx staking delegate $0G_VALOPER_ADDRESS 100000000aevmos--from=$0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
+evmosd tx staking delegate $OG_VALOPER_ADDRESS 100000000aevmos--from=$OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-evmosd tx staking unbond $(evmosd keys show $0G_WALLET --bech val -a) 1000000aevmos--from $0G_WALLET --chain-id $0G_CHAIN_ID --fees 3000aevmos-y
+evmosd tx staking unbond $(evmosd keys show $OG_WALLET --bech val -a) 1000000aevmos--from $OG_WALLET --chain-id $OG_CHAIN_ID --fees 3000aevmos-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-evmosd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aevmos--from=$0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
+evmosd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000aevmos--from=$OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-evmosd tx distribution withdraw-all-rewards --from=$0G_WALLET --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
+evmosd tx distribution withdraw-all-rewards --from=$OG_WALLET --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-evmosd tx distribution withdraw-rewards $0G_VALOPER_ADDRESS --from=$0G_WALLET --commission --chain-id=$0G_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
+evmosd tx distribution withdraw-rewards $OG_VALOPER_ADDRESS --from=$OG_WALLET --commission --chain-id=$OG_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -136,8 +136,8 @@ evmosd status 2>&1 | jq .ValidatorInfo
 ```
 evmosd tx staking edit-validator \
 --new-moniker=YENI-NODE-ADI \
---chain-id=$0G_CHAIN_ID \
---from=$0G_WALLET \
+--chain-id=$OG_CHAIN_ID \
+--from=$OG_WALLET \
 --gas-prices 0.00001aevmos \
 --gas-adjustment 1.5 \
 --gas auto -y
@@ -146,20 +146,20 @@ evmosd tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-evmosd tx staking edit-validator --commission-rate "0.02" --moniker=$0G_NODENAME --from $0G_WALLET --chain-id $0G_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto - y
+evmosd tx staking edit-validator --commission-rate "0.02" --moniker=$OG_NODENAME --from $OG_WALLET --chain-id $OG_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
 Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak aşağıdaki kodda görüldüğü gibi 16 haneli (XXXX0000XXXX0000) kodunuzu almalısınız. Ayrıca profil resmi vs. ayarları da yapabilirsiniz. 
-`$0G_NODENAME` ve `$0G_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
+`$OG_NODENAME` ve `$OG_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 evmosd tx staking edit-validator \
---moniker=$0G_NODENAME \
+--moniker=$OG_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$0G_CHAIN_ID \
---from=$0G_WALLET
+--chain-id=$OG_CHAIN_ID \
+--from=$OG_WALLET
 ```
 
 ### Validator Detayları
@@ -179,7 +179,7 @@ evmosd q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-evmosd tx slashing unjail --from $0G_WALLET --chain-id $0G_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
+evmosd tx slashing unjail --from $OG_WALLET --chain-id $OG_CHAIN_ID --gas-prices 0.00001aevmos--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi
