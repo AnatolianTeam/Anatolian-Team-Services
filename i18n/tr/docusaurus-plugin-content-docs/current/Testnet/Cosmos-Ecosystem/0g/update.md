@@ -1,7 +1,7 @@
 ---
 title: 🆙 Güncelleme
 description: Node güncelleme.
-image: ./img/Warden-Service-Cover.jpg
+image: ./img/0G-Service-Cover.jpg
 keywords: [0g, ai, yapay zeka, modüler, zincir, kurulum, snapshot, statesync, güncelleme]
 ---
 
