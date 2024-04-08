@@ -202,7 +202,9 @@ evmosd keys add $OG_WALLET --recover
 ```shell
 echo "0x$(evmosd debug addr $(evmosd keys show $OG_WALLET -a) | grep hex | awk '{print $3}')"
 ```
-And then request tokens from the faucet to your address above.
+
+#### Faucet
+And then request tokens from the [faucet](https://faucet.0g.ai/) to your address above.
 
 #### Add Network to Wallet
 | Field | Details |

@@ -203,7 +203,9 @@ evmosd keys add $OG_WALLET --recover
 ```shell
 echo "0x$(evmosd debug addr $(evmosd keys show $OG_WALLET -a) | grep hex | awk '{print $3}')"
 ```
-Daha sonra musluktan yukarıda çıkan adresinize token isteyin.
+
+#### Musluk
+Daha sonra [musluktan](https://faucet.0g.ai/) yukarıda çıkan adresinize token isteyin.
 
 #### EVM Cüzdan Private Key Öğrenme
 ```shell
