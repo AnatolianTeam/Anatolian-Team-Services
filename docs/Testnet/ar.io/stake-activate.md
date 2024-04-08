@@ -3,6 +3,7 @@ title: 💰 Stake Activation
 description: Ar.io stake activation guide.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
+sidebar_position: 3
 ---
 
 # Ar.io Stake Aktif Etme Rehberi

@@ -3,6 +3,7 @@ title: 💰 Delegation
 description: Ar.io delegation guide.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
+sidebar_position: 4
 ---
 
 # Ar.io Delegation Guide

@@ -3,6 +3,7 @@ title: 💾 Kurulum
 description: Ar.io kurulum rehberi.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
+sidebar_position: 1
 ---
 
 # Ar.io Kurulum Rehberi

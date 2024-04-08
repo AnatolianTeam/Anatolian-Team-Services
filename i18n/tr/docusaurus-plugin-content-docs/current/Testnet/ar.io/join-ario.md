@@ -3,6 +3,7 @@ title: ▶️ Testnete Katılım
 description: Ar.io testnete katılım rehberi.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
+sidebar_position: 2
 ---
 
 # Ar.io Testnete Katılım Rehberi

@@ -3,6 +3,7 @@ title: 💾 Installation
 description: Ar.io Node Installation guide.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, Permaweb, installation]
+sidebar_position: 1
 ---
 
 # Ar.io Node Installation 
