@@ -11,6 +11,7 @@ keywords: [Penumbra, Zone, özel, gizlilik, seromoni, kurulum]
 
 ## Bağlantılar
  ✔️ [Website](https://penumbra.zone/) |
+ ✔️ [Testnet App](https://app.testnet.penumbra.zone/) |
  ✔️ [Summoning Website](https://summoning.penumbra.zone/) |
  ✔️ [Ceromony Phase 2 Explorer](https://summoning.penumbra.zone/phase/2) |
  ✔️ [Doküman](https://guide.penumbra.zone/main/index.html) |
