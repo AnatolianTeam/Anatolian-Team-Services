@@ -10,11 +10,12 @@ keywords: [0g, ai, modular, chain, installation, snapshot, statesync, update]
 ![Penumbra](./img/Penumbra-Service.jpg)
 
 ## Links
- ✔️ [Website](https://0g.ai/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Penumbra) |
- ✔️ [Docs](https://0glabs.gitbook.io/) |
- ✔️ [GitHub](https://github.com/0glabs) |
- ✔️ [Discord](https://discord.gg/0glabs)
+ ✔️ [Website](https://penumbra.zone/) |
+ ✔️ [Summoning Website](https://summoning.penumbra.zone/) |
+ ✔️ [Ceromony Phase 2 Explorer](https://summoning.penumbra.zone/phase/2) |
+ ✔️ [Docs](https://guide.penumbra.zone/main/index.html) |
+ ✔️ [GitHub](https://github.com/penumbra-zone) |
+ ✔️ [Discord](https://discord.gg/T7E5U929AV)
 
 ## Requirements (Full Node)
 Ubuntu 22.04+
