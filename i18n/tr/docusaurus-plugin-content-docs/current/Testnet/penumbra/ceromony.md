@@ -79,7 +79,7 @@ pcli view balance
 Bu aşamada teklifi artırmanız gerekebilir. [Explorer](https://summoning.penumbra.zone/phase/2)'daki en yüksek bahsi kontrol ederek kendi teklifinizi artırabilirsiniz. Bunu yapmak için '80penumbra' yazan yeri değiştirmeniz yeterlidir. İşlem uzun zaman alabilir, bu nedenle kodu ekranda çalıştırıyoruz. Ekrandan çıkmak için 'CTRL A D' tuşunlarına basın.
 ```shell
 screen -S pen
-pcli ceremony contribute --phase 2 --bid 80penumbra --coordinator-address YOUR_WALLET_ADDRESS
+pcli ceremony contribute --phase 2 --bid 80penumbra
 ```
 
 ## X'te Paylaşım Yapma

@@ -76,7 +76,7 @@ pcli view balance
 
 You may need to increase the bid at this stage. You can increase your own bid by checking the highest bet in [Explorer](https://summoning.penumbra.zone/phase/2). To do this, just change where it says `80penumbra`. The process may take a long time, so run the code in screen. Press `CTRL A D` to exit the screen.
 ```shell
-
+screen -S pen
 pcli ceremony contribute --phase 2 --bid 80penumbra 
 ```
 
