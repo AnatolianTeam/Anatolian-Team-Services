@@ -61,7 +61,7 @@ pcli init soft-kms import-phrase
 pcli view address 0
 ```
 
-#### Musluk
+### Musluk
 Cüzdan adresinizi [Discord](https://discord.gg/T7E5U929AV) sunucusundaki `#🚰┃testnet-faucet` kanalına göndererek token isteyin.
 
 ### Cüzdanı Senkronize Etme

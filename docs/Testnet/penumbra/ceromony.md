@@ -59,7 +59,7 @@ pcli init soft-kms import-phrase
 pcli view address 0
 ```
 
-#### Faucet
+### Faucet
 Request tokens by sending your wallet address to the `#🚰┃testnet-faucet` channel on the [Discord](https://discord.gg/T7E5U929AV) server.
 
 ### Sync Wallet
