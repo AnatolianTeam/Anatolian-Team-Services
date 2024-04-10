@@ -1,11 +1,11 @@
 ---
-title: 🎊 Ceromony
-description: Penumbra Summoning Ceromony installation guide.
+title: 🎊 Ceremony
+description: Penumbra Summoning Ceremony installation guide.
 image: ./img/Penumbra-Service-Cover.jpg
-keywords: [penumbra, summoning, ceromony, private, chain, installation,]
+keywords: [penumbra, summoning, ceremony, private, chain, installation,]
 ---
 
-# Penumbra Ceromony Phase 2 Installation
+# Penumbra Ceremony Phase 2 Installation
 
 ## Updating the System
 ```shell
@@ -67,7 +67,7 @@ Request tokens by sending your wallet address to the `#🚰┃testnet-faucet` ch
 pcli view sync
 ```
 
-### Cheking Balance
+### Checking Balance
 ```shell
 pcli view balance
 ```
