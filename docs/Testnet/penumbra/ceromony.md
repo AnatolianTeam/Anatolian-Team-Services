@@ -37,8 +37,8 @@ pcli view reset
 **No wallet needs to be generated. The existing wallet will be used automatically.**
 
 ## Wallet
-Penumbra cüzdanı [buradan](https://chromewebstore.google.com/detail/penumbra-wallet/lkpmkhpnhknhmibgnmmhdhgdilepfghe) indirebilirsiniz.
 You can download the Penumbra wallet [here](https://chromewebstore.google.com/detail/penumbra-wallet/lkpmkhpnhknhmibgnmmhdhgdilepfghe).
+
 ### Creating a New Wallet
 Create a new wallet by running the code below.
 ```shell 
