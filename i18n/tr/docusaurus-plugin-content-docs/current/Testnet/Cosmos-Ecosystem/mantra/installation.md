@@ -55,7 +55,7 @@ echo "export MANTRA_CHAIN_ID=bbn-test-2" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Babylon'un Kurulması
+## Mantra'nın Kurulması
 ```
 cd $HOME
 wget -O /usr/lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.0/libwasmvm.x86_64.so

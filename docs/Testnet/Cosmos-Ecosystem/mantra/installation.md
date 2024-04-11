@@ -55,7 +55,7 @@ echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Installing Babylon
+## Installing Mantra
 ```
 cd $HOME
 wget -O /usr/lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.0/libwasmvm.x86_64.so
