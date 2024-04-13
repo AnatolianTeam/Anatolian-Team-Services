@@ -3,7 +3,7 @@ title: 🌐 ArRNS Domain
 description: Ar.io ArRNS domain purchasing guide.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # ArRNS Domain Purchasing Guide
