@@ -1,9 +1,9 @@
 ---
-title: ArNS Domain
+title: 🌐 ArNS Domain
 description: Ar.io ArNS domain alma rehberi.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # ArNS Domain Alma Rehberi
