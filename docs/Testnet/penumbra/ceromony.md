@@ -29,7 +29,7 @@ The version output will be `pcli v0.71.0`.
 
 ### Updating pcli
 :::warning
-If you have participated in Phase 1 before and the PC version is installed on your server, run the code below. If not, you do not need to do this.
+If you have participated in Phase 1 before and the previous pcli version is installed on your server, run the code below. If not, you do not need to do this.
 :::
 ```shell
 pcli view reset

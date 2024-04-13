@@ -30,7 +30,7 @@ Versiyon çıktısı `pcli v0.71.0` olacak.
 ### pcli Güncelleme
 
 :::warning
-Eğer daha önce Faz 1'e katıldoysanız ve pcli sürümü sunucunuzda yüklü ise aşağıdaki kodu çalıştırın. Değilse bu işlemi yapmanıza gerek yoktur.
+Eğer daha önce Faz 1'e katıldoysanız ve eski pcli sürümü sunucunuzda yüklü ise aşağıdaki kodu çalıştırın. Değilse bu işlemi yapmanıza gerek yoktur.
 :::
 
 ```shell
