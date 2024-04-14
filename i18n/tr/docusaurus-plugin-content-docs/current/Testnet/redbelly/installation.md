@@ -16,10 +16,6 @@ Testnete katılım şu an kapalı. Eğer ekipten katılımınıza ilişki bir e-
 ### Domain ve DNS Ayarları
 Bir domain satın alın. Ardından panelinizden aldığınız domainin ayarlarından `DNS yönetimine` girin. Bir `A kaydı` oluşturun. `Kayıt` ya da `domain adı` bölümüne bir alt alan adı yazın. `IP bölümüne` ise sunucunuzun `IP` adresini yazın. 
 
-After these settings, you will have an address such as `subdomain.domain.xyz`. 
-
-You can control the propagation of your DNS settings [here](https://dnschecker.org/). You can check the propagatio status by searching `subdomain.domain.xyz` on the site.
-
 Bu ayarlar sonrasında `subdomain.domain.xyz` gibi bir adrese sahip olacaksınız.
 
 DNS ayarlarınızın yayılmasını [buradan](https://dnschecker.org/) kontrol edebilirsiniz. Sitede subdomain.domain.xyz şeklinde arama yaparak yayılma durumunu kontrol edebilirsiniz.
