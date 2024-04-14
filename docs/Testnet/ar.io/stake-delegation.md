@@ -41,6 +41,7 @@ You can delegate to the addresses below.
 * `k5GhUmInR23Jt0I14A_EMFAtFHBCRSZyN7Ibr_2cY-k`
 * `Z7gvVfG9n_AXsCQL9hfpknYQawYR30DFNTuBAzWzoOk`
 * `vOrKy_8JvhhIxzWj7fe9E59AGKVi4Jb6YfgauAvCvxU`
+* `lCzTnlf_Xmi0I0CTtsZgCI-aljcf4L0H8GcrddkDH7Y`
 
 :::info
 If you write your addresses on our [telegram channel](https://t.me/AnatolianTeam), we will add them to the list.
