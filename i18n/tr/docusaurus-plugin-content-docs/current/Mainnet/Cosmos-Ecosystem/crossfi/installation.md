@@ -67,7 +67,7 @@ mv $HOME/mineplex-chaind $HOME/go/bin/crossfid
 rm mineplex-2-node._v0.1.1_linux_amd64.tar.gz
 crossfid version
 ```
-Versiyon çıktısı `v0.1.1` olacak.
+Versiyon çıktısı `0.1.1` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
@@ -75,8 +75,8 @@ Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştır�
 crossfid config keyring-backend test
 crossfid config chain-id $CFI_CHAIN_ID
 crossfid init --chain-id $CFI_CHAIN_ID $CFI_NODENAME
-git clone https://github.com/crossfichain/testnet.git
-mv $HOME/testnet/ $HOME/.mineplex-chain/
+git clone https://github.com/crossfichain/mainnet.git
+mv $HOME/mainnet/ $HOME/.mineplex-chain/
 
 # Copying the Genesis and addrbook Files
 wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/genesis.json -O $HOME/.mineplex-chain/config/genesis.json
