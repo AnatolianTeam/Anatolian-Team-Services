@@ -164,7 +164,7 @@ empowerd tx staking edit-validator \
 
 ### Validator Details
 ```
-empowerd q staking validator $(empowerd keys show $WALLET --bech val -a)
+empowerd q staking validator $(empowerd keys show $EMPOW_WALLET --bech val -a)
 ```
 
 ### Jailing info

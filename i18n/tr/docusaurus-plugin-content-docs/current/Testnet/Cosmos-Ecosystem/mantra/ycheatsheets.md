@@ -164,7 +164,7 @@ mantrachaind tx staking edit-validator \
 
 ### Validator Detayları
 ```
-mantrachaind q staking validator $(mantrachaind keys show $WALLET --bech val -a)
+mantrachaind q staking validator $(mantrachaind keys show $BBN_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi

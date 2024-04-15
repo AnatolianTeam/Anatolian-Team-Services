@@ -164,7 +164,7 @@ wardend tx staking edit-validator \
 
 ### Validator Detayları
 ```
-wardend q staking validator $(wardend keys show $WALLET --bech val -a)
+wardend q staking validator $(wardend keys show $WARDEN_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi

@@ -164,7 +164,7 @@ c4ed tx staking edit-validator \
 
 ### Validator Details
 ```
-c4ed q staking validator $(c4ed keys show $WALLET --bech val -a)
+c4ed q staking validator $(c4ed keys show $C4E_WALLET --bech val -a)
 ```
 
 ### Jailing info

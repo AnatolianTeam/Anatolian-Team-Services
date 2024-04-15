@@ -164,7 +164,7 @@ artelad tx staking edit-validator \
 
 ### Validator Details
 ```
-artelad q staking validator $(artelad keys show $WALLET --bech val -a)
+artelad q staking validator $(artelad keys show $ART_WALLET --bech val -a)
 ```
 
 ### Jailing info

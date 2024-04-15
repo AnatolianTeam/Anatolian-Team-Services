@@ -103,7 +103,7 @@ pryzmd tx staking delegate $PRYZM_VALOPER_ADDRESS 100000000upryzm --from=$PRYZM_
 ```
 ### Unbonding
 ```
-pryzmd tx staking unbond $(pryzmd keys show $WALLET --bech val -a) 1000000upryzm --from $PRYZM_WALLET --chain-id indigo-1 --fees 3000upryzm -y
+pryzmd tx staking unbond $(pryzmd keys show $PRYZM_WALLET --bech val -a) 1000000upryzm --from $PRYZM_WALLET --chain-id indigo-1 --fees 3000upryzm -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
@@ -164,7 +164,7 @@ pryzmd tx staking edit-validator \
 
 ### Validator Details
 ```
-pryzmd q staking validator $(pryzmd keys show $WALLET --bech val -a)
+pryzmd q staking validator $(pryzmd keys show $PRYZM_WALLET --bech val -a)
 ```
 
 ### Jailing info

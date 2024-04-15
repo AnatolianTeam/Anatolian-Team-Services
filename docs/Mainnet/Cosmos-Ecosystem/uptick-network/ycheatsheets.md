@@ -164,7 +164,7 @@ uptickd tx staking edit-validator \
 
 ### Validator Details
 ```
-uptickd q staking validator $(uptickd keys show $WALLET --bech val -a)
+uptickd q staking validator $(uptickd keys show $UPTICK_WALLET --bech val -a)
 ```
 
 ### Jailing info

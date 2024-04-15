@@ -164,7 +164,7 @@ babylond tx staking edit-validator \
 
 ### Validator Details
 ```
-babylond q staking validator $(babylond keys show $WALLET --bech val -a)
+babylond q staking validator $(babylond keys show $BBN_WALLET --bech val -a)
 ```
 
 ### Jailing info

@@ -164,7 +164,7 @@ acred tx staking edit-validator \
 
 ### Validator Detayları
 ```
-acred q staking validator $(acred keys show $WALLET --bech val -a)
+acred q staking validator $(acred keys show $ACRE_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi

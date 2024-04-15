@@ -165,7 +165,7 @@ crossfid tx staking edit-validator \
 
 ### Validator Details
 ```
-crossfid q staking validator $(crossfid keys show $WALLET --bech val -a)
+crossfid q staking validator $(crossfid keys show $CFI_WALLET --bech val -a)
 ```
 
 ### Jailing info

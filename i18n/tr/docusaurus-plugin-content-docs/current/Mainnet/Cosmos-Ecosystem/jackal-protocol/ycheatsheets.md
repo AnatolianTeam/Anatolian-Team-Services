@@ -164,7 +164,7 @@ canined tx staking edit-validator \
 
 ### Validator Detayları
 ```
-canined q staking validator $(canined keys show $WALLET --bech val -a)
+canined q staking validator $(canined keys show $JACKAL_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi

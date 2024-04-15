@@ -164,7 +164,7 @@ lavad tx staking edit-validator \
 
 ### Validator Detayları
 ```
-lavad q staking validator $(lavad keys show $WALLET --bech val -a)
+lavad q staking validator $(lavad keys show $LAVA_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi

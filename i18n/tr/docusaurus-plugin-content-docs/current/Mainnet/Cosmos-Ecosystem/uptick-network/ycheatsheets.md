@@ -104,7 +104,7 @@ uptickd tx staking delegate $UPTICK_VALOPER_ADDRESS 100000000auptick--from=$UPTI
 
 ### Stake'ten Çıkma
 ```
-uptickd tx staking unbond $(uptickd keys show $WALLET --bech val -a) 1000000auptick--from $WALLET --chain-id $UPTICK_CHAIN_ID --fees 3000auptick-y
+uptickd tx staking unbond $(uptickd keys show $UPTICK_WALLET --bech val -a) 1000000auptick--from $UPTICK_WALLET --chain-id $UPTICK_CHAIN_ID --fees 3000auptick-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
@@ -164,7 +164,7 @@ uptickd tx staking edit-validator \
 
 ### Validator Detayları
 ```
-uptickd q staking validator $(uptickd keys show $WALLET --bech val -a)
+uptickd q staking validator $(uptickd keys show $UPTICK_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi

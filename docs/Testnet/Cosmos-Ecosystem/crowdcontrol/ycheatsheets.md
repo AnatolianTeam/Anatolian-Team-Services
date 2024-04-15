@@ -164,7 +164,7 @@ Cardchaind tx staking edit-validator \
 
 ### Validator Details
 ```
-Cardchaind q staking validator $(Cardchaind keys show $WALLET --bech val -a)
+Cardchaind q staking validator $(Cardchaind keys show $CROWD_WALLET --bech val -a)
 ```
 
 ### Jailing info

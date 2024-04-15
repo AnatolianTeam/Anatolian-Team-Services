@@ -164,7 +164,7 @@ strided tx staking edit-validator \
 
 ### Validator Details
 ```
-strided q staking validator $(strided keys show $WALLET --bech val -a)
+strided q staking validator $(strided keys show $STRD_WALLET --bech val -a)
 ```
 
 ### Jailing info

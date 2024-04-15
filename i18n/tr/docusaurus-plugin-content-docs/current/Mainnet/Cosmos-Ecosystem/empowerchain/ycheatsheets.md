@@ -164,7 +164,7 @@ empowerd tx staking edit-validator \
 
 ### Validator Detayları
 ```
-empowerd q staking validator $(empowerd keys show $WALLET --bech val -a)
+empowerd q staking validator $(empowerd keys show $ART_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi

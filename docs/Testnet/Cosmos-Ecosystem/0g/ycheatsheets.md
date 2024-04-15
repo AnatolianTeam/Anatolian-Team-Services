@@ -163,7 +163,7 @@ evmosd tx staking edit-validator \
 
 ### Validator Details
 ```
-evmosd q staking validator $(evmosd keys show $WALLET --bech val -a)
+evmosd q staking validator $(evmosd keys show $OG_WALLET --bech val -a)
 ```
 
 ### Jailing info

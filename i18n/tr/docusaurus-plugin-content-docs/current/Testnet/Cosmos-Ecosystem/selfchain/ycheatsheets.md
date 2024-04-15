@@ -164,7 +164,7 @@ selfchaind tx staking edit-validator \
 
 ### Validator Detayları
 ```
-selfchaind q staking validator $(selfchaind keys show $WALLET --bech val -a)
+selfchaind q staking validator $(selfchaind keys show $SELF_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi
