@@ -167,7 +167,7 @@ server {
 Ardından aşağıdaki kodları sırasıyla giriyoruz.
 
 ```shell
-unlink /etc/nginx/sites-enabled/default
+unlink /etc/nginx/sites-available/default
 ```
 
 ```shell
