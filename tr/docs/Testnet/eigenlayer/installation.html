@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">💾 Kurulum | Anatolian Team</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:url" content="https://services.anatolianteam.com/tr/docs/Testnet/eigenlayer/installation"><meta data-rh="true" property="og:locale" content="tr"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="tr"><meta data-rh="true" name="docsearch:language" content="tr"><meta data-rh="true" name="robots" content="index, follow"><meta data-rh="true" name="og:image" content="img/anatolian-doc-social-card.jpg"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="og:title" content="Anatolian Team | Service"><meta data-rh="true" name="og:description" content="Anatolian Team Services Website. Installation Guides, Snaphots, StateSync for the testnet networks... "><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="💾 Kurulum | Anatolian Team"><meta data-rh="true" name="description" content="Holešky Operatör kurulum rehberi."><meta data-rh="true" property="og:description" content="Holešky Operatör kurulum rehberi."><meta data-rh="true" name="keywords" content="EigenLayer,Eigen,Layer,restake,Holešky,kurulum,rehber,Holesky"><meta data-rh="true" property="og:image" content="https://services.anatolianteam.com/tr/assets/images/EigenLayer-Service-Cover-6db45b40f02a21b64896597432ad1e3a.jpg"><meta data-rh="true" name="twitter:image" content="https://services.anatolianteam.com/tr/assets/images/EigenLayer-Service-Cover-6db45b40f02a21b64896597432ad1e3a.jpg"><link data-rh="true" rel="icon" href="/tr/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://services.anatolianteam.com/tr/docs/Testnet/eigenlayer/installation"><link data-rh="true" rel="alternate" href="https://services.anatolianteam.com/docs/Testnet/eigenlayer/installation" hreflang="en"><link data-rh="true" rel="alternate" href="https://services.anatolianteam.com/tr/docs/Testnet/eigenlayer/installation" hreflang="tr"><link data-rh="true" rel="alternate" href="https://services.anatolianteam.com/docs/Testnet/eigenlayer/installation" hreflang="x-default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500&display=swap"><link rel="stylesheet" href="/tr/assets/css/styles.3c149c7b.css">
-<script src="/tr/assets/js/runtime~main.e498b24f.js" defer="defer"></script>
+<script src="/tr/assets/js/runtime~main.82ae1a5b.js" defer="defer"></script>
 <script src="/tr/assets/js/main.f167fd19.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -52,30 +52,10 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="config-dosyalarını-oluşturma">Config Dosyalarını Oluşturma<a href="#config-dosyalarını-oluşturma" class="hash-link" aria-label="Config Dosyalarını Oluşturma doğrudan bağlantı" title="Config Dosyalarını Oluşturma doğrudan bağlantı">​</a></h3>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">eigenlayer operator config create</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Kodu panoya kopyala" title="Kopyala" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <ul>
-<li>
-<p>In the <code>Would you like to populate config files</code> question, first press <code>y</code> and then press <code>enter</code>.</p>
-</li>
-<li>
-<p>In the <code>Enter your operator address</code> and <code>Enter your earning address</code> questions, type <code>your Ethereum address</code> given when creating the ECDSA key.</p>
-</li>
-<li>
-<p>In the <code>Enter your ETH rpc url:</code> question, type: <code>https://ethereum-holesky-rpc.publicnode.com</code></p>
-</li>
-<li>
-<p><code>In the Enter your ecdsa key path</code> question, type the path specified in the output when you entered the <code>eigenlayer operator keys list</code> code above.</p>
-</li>
-<li>
-<p><code>Would you like to populate config files</code> sorusunda önce <code>y</code>ye, ardından <code>enter</code>&#x27;a basın.</p>
-</li>
-<li>
-<p><code>Enter your operator address</code> ve <code>Enter your earning address</code>  sorularına ECDSA anahtarını oluştururken verilen <code>Ethereum adresinizi</code> yazın.</p>
-</li>
-<li>
-<p><code>Enter your ETH rpc url:</code> sorusuna şunu yazın: <code>https://ethereum-holesky-rpc.publicnode.com</code></p>
-</li>
-<li>
-<p><code>In the Enter your ecdsa key path</code> sorusuna, yukarıdaki <code>eigenlayer operator keys list</code> kodunu girdiğinizde çıktıda belirtilen yolu yazın.</p>
-</li>
+<li><code>Would you like to populate config files</code> sorusunda önce <code>y</code>ye, ardından <code>enter</code>&#x27;a basın.</li>
+<li><code>Enter your operator address</code> ve <code>Enter your earning address</code>  sorularına ECDSA anahtarını oluştururken verilen <code>Ethereum adresinizi</code> yazın.</li>
+<li><code>Enter your ETH rpc url:</code> sorusuna şunu yazın: <code>https://ethereum-holesky-rpc.publicnode.com</code></li>
+<li><code>In the Enter your ecdsa key path</code> sorusuna, yukarıdaki <code>eigenlayer operator keys list</code> kodunu girdiğinizde çıktıda belirtilen yolu yazın.</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="metadatajson-dosyası-oluşturma">metadata.json Dosyası Oluşturma<a href="#metadatajson-dosyası-oluşturma" class="hash-link" aria-label="metadata.json Dosyası Oluşturma doğrudan bağlantı" title="metadata.json Dosyası Oluşturma doğrudan bağlantı">​</a></h4>
 <p>Aşağıdaki kodlarla bir metadata.json dosyası oluşturun ve bu dosyayı github&#x27;a veya siteniz varsa herkesin erişebileceği bir yere yükleyin. Bunun için github hesabınızı kullanabilirsiniz.</p>
