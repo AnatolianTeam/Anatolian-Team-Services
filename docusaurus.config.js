@@ -161,6 +161,19 @@ const config = {
             ],
           },
           {
+            title: 'Blockchain Explorer',
+            items: [
+              {
+                label: 'Cosmos Testnet',
+                href: 'https://cosmos-testnet.anatolianteam.com',
+              },
+              {
+                label: 'Cosmos Mainnet',
+                href: 'https://cosmos.anatolianteam.com',
+              },            
+            ],
+          },          
+          {
             title: 'Community',
             items: [
               {
