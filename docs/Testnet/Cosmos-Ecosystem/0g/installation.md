@@ -73,9 +73,10 @@ evmosd init --chain-id $OG_CHAIN_ID $OG_NODENAME
 
 # Copying the Genesis and addrbook Files
 wget https://github.com/0glabs/0g-evmos/releases/download/v1.0.0-testnet/genesis.json -O $HOME/.evmosd/config/genesis.json
+wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.evmosd/config/addrbook.json
 
 # Set up the minimum gas price
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.005aevmos "|g' $HOME/.evmosd/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "330000000aevmos"|g' $HOME/.evmosd/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
