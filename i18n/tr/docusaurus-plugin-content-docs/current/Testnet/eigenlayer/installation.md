@@ -109,11 +109,6 @@ eigenlayer operator keys export --key-type bls KEY_NAME
 eigenlayer operator config create
 ```
 
-* In the `Would you like to populate config files` question, first press `y` and then press `enter`.
-* In the `Enter your operator address` and `Enter your earning address` questions, type `your Ethereum address` given when creating the ECDSA key.
-* In the `Enter your ETH rpc url:` question, type: `https://ethereum-holesky-rpc.publicnode.com`
-* `In the Enter your ecdsa key path` question, type the path specified in the output when you entered the `eigenlayer operator keys list` code above.
-
 * `Would you like to populate config files` sorusunda önce `y`ye, ardından `enter`'a basın.
 * `Enter your operator address` ve `Enter your earning address`  sorularına ECDSA anahtarını oluştururken verilen `Ethereum adresinizi` yazın.
 * `Enter your ETH rpc url:` sorusuna şunu yazın: `https://ethereum-holesky-rpc.publicnode.com`
