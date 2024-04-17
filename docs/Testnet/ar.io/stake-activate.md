@@ -21,7 +21,7 @@ Then make the following changes:
 Remove the `//` from the beginning of the variables.
 1. `const allowDelegatedStaking: boolean = true;`
 2. `const delegateRewardShareRatio: number = 10;`
-3. `const minDelegatedStake: number = 100000000;`
+3. `const minDelegatedStake: number = 100;`
 4. `allowDelegatedStaking,`
 5. `delegateRewardShareRatio,`
 6. `minDelegatedStake,`
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 <details>
 
-<summary>* You can review the areas that will be changed here.</summary>
+<summary>You can review the areas that will be changed here.</summary>
 
 <Tabs>
 <TabItem value="Original Version">
@@ -188,7 +188,7 @@ import {
 
   // The minimum stake in IO a delegate must use for this for this gateway.  Must be greater than the contracts minimum delegated stake
   // The default is 100 IO
-  const minDelegatedStake: number = 100000000;
+  const minDelegatedStake: number = 100;
 
   // Get the key file used for the distribution
   const wallet: JWKInterface = loadWallet();

@@ -21,7 +21,7 @@ Ardından aşağıdaki değişiklikleri yapıyoruz:
 Değişkenlerin başında bulunan `//` 'ları kaldırıyoruz. 
 1. `const allowDelegatedStaking: boolean = true;`
 2. `const delegateRewardShareRatio: number = 10;`
-3. `const minDelegatedStake: number = 100000000;`
+3. `const minDelegatedStake: number = 100;`
 4. `allowDelegatedStaking,`
 5. `delegateRewardShareRatio,`
 6. `minDelegatedStake,`
@@ -33,8 +33,8 @@ import TabItem from '@theme/TabItem';
 
 <summary>Değişecek yerleri bıradan inceleyebilirsiniz.</summary>
 
-    <Tabs>
-    <TabItem value="Orijinal Hali">
+<Tabs>
+  <TabItem value="Orijinal Hali">
 
     ``` 
     import { JWKInterface } from 'arweave/node/lib/wallet';
@@ -134,8 +134,8 @@ import TabItem from '@theme/TabItem';
     })();
     ```
 
-    </TabItem>
-    <TabItem value="Değiştirilmiş Hali">
+  </TabItem>
+  <TabItem value="Değiştirilmiş Hali">
 
     ```
     import { JWKInterface } from 'arweave/node/lib/wallet';
@@ -187,7 +187,7 @@ import TabItem from '@theme/TabItem';
 
       // The minimum stake in IO a delegate must use for this for this gateway.  Must be greater than the contracts minimum delegated stake
       // The default is 100 IO
-      const minDelegatedStake: number = 100000000;
+      const minDelegatedStake: number = 100;
 
       // Get the key file used for the distribution
       const wallet: JWKInterface = loadWallet();
@@ -235,8 +235,8 @@ import TabItem from '@theme/TabItem';
     })();
     ```
 
-    </TabItem>
-    </Tabs>
+  </TabItem>
+</Tabs>
 
 </details>
 
