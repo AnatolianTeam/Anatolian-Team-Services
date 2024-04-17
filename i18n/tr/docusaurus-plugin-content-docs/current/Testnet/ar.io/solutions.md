@@ -32,7 +32,7 @@ SyntaxError: Unexpected token '.'
 ### Çözüm 1
 Aşağıdaki kodları sunucunuzda çalıştırın ve tekrar deneyin.
 ```shell
-curl -sL https://deb.nodesource.com/setup_21.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_21.x | -E bash -
 apt-get install -y nodejs
 apt update -y && apt upgrade -y
 ```

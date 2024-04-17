@@ -192,8 +192,8 @@ Go to your domain address in your browser and if you get an output similar to th
 
 ### Restarting the Node
 ```shell
-sudo docker-compose down
-sudo docker-compose up -d
+docker-compose down
+docker-compose up -d
 ```
 
 ### Checking the Node
