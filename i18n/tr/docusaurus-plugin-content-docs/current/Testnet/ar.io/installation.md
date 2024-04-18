@@ -197,11 +197,23 @@ docker-compose up -d
 
 ### Node'u Kontrol Etme
 Aşağıdaki adreste domaininizi yazıp kontrol edin.
-https://ar.domain.com/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ
+* `https://ar.domain.com/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ`
 
 ## Testnete Katılım Başvurusu
 
 ar.io Testnet'e katılmak için en az 10.000 Test IO tokeni stake etmek gerekiyor. Test IO tokeni almak için [ar.io Discord](https://discord.gg/ApxXjvwECK) suncusunda `#testnet` kanalında `/apply` yazıp `Application to join the ar.io Testnet!` seçiyoruz ve bir bot bize mesaj atıyor. Oradaki soruları cevaplıyoruz. Ardından testnet tokenlerinin gelmesini bekliyoruz...
+
+Sorularda sizden bazı adresler isteyecek, Aşağıdaki örnek adreslerde domainizi düzelterek hem kontrol sağlayın hem de sorulara cevap olarak gönderin.: 
+* `https://ar.domain.com/`
+* `https://gateways.ar.domain.com/`
+* `https://ar.domain.com/ar-io/info`
+* `https://ar.domain.com/ar-io/healthcheck`
+* `https://ar.domain.com/ar-io/observer/reports/current`
+* `https://ardrive.ar.domain.com/`
+* `What project, team, or community are you with? (optional)`, bu soruya Anatolian Team yazabilirsiniz.
+* `How did you find out about ar.io and the testnet?` bu soruya da Anatolian Team yazabilirsiniz.
+
+Takıldığınız yerler olursa telegram sohbet kanalımızdan bize ulaşabilirsiniz.
 
 ## Ar.io Testnetine Katılma
 

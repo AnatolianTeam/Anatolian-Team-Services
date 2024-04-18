@@ -198,11 +198,23 @@ docker-compose up -d
 
 ### Checking the Node
 Write your domain at the address below and check.
-https://ar.domain.com/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ
+* `https://ar.domain.com/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ`
 
 ## Application to Participate in Testnet
 
 To participate in the ar.io Testnet, it is necessary to stake at least 10,000 Test IO tokens. To get Test IO token, we type `/apply` in the `#testnet` channel on the [ar.io Discord](https://discord.gg/ApxXjvwECK) server and select `Application to join the ar.io Testnet!` and and a bot is messaging us. We answer the questions there. Then we wait for the testnet tokens to arrive...
+
+It will ask you for some addresses in the questions. By correcting your domain in the sample addresses below, you can check it and send it as an answer to the questions:
+* `https://ar.domain.com/`
+* `https://gateways.ar.domain.com/`
+* `https://ar.domain.com/ar-io/info`
+* `https://ar.domain.com/ar-io/healthcheck`
+* `https://ar.domain.com/ar-io/observer/reports/current`
+* `https://ardrive.ar.domain.com/`
+* `What project, team, or community are you with? (optional)`, you can write Anatolian Team to this question.
+* `How did you find out about ar.io and the testnet? You can also write Anatolian Team to this question.
+
+If you get stuck, you can contact us via our telegram chat channel.
 
 ## Joining the Ar.io Testnet
 
