@@ -198,6 +198,10 @@ source $HOME/.bash_profile
 mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 ```
 
+### Musluk
+
+https://faucet.hongbai.mantrachain.io/
+
 :::warning
 Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.
 :::

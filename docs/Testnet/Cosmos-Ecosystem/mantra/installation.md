@@ -198,6 +198,10 @@ source $HOME/.bash_profile
 mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 ```
 
+### Faucet
+
+https://faucet.hongbai.mantrachain.io/
+
 :::warning
 If the synchronization is completed, we proceed to the following step.
 :::
