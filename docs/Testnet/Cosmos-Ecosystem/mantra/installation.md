@@ -41,7 +41,7 @@ The areas you need to change are written below.
 echo "export MANTRA_NODENAME=$MANTRA_NODENAME" >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=$MANTRA_WALLET" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=11" >> $HOME/.bash_profile
-echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
+echo "export MANTRA_CHAIN_ID=mantra-hongbai-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Let's assume that your Node (`MANTRA_NODENAME`) and Wallet (`MANTRA_WALLET`) nam
 echo "export MANTRA_NODENAME=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=16" >> $HOME/.bash_profile
-echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
+echo "export MANTRA_CHAIN_ID=mantra-hongbai-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
