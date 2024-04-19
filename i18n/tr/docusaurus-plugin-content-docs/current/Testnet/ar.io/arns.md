@@ -12,6 +12,8 @@ sidebar_position: 7
 
 Öncelikle [ar.io Discord](https://discord.gg/ApxXjvwECK) suncusunda `#testnet` kanalında `/apply` yazıp `Application to test ArNS!` seçiyoruz ve bir bot bize mesaj atıyor. Oradaki soruları cevaplıyoruz. Ardından testnet tokenlerinin gelmesini bekliyoruz...
 
+* Botun size sorduğu şu soruya (`Question: How did you hear about ar.io / the ArNS test?`) `Anatolian Team` yazabilirsiniz.
+
 ## Alan Adı Alma
 Test tokenlerimiz geldiyse [ArNS](https://arns.app/) adresine gidip alan adımızı alıyoruz.
 
