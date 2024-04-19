@@ -58,14 +58,14 @@ source $HOME/.bash_profile
 ## Installing Mantra
 ```
 cd $HOME
-wget -O /usr/lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.0/libwasmvm.x86_64.so
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/mantrachaind-linux-amd64.zip
+wget -O /usr/lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.1/libwasmvm.x86_64.so
+wget https://github.com/MANTRA-Finance/public/raw/main/mantrachain-hongbai/mantrachaind-linux-amd64.zip
 unzip mantrachaind-linux-amd64.zip
 rm mantrachaind-linux-amd64.zip
 mv mantrachaind $HOME/go/bin
 mantrachaind version
 ```
-The version output will be `1.0.0`.
+The version output will be `3.0.0`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
@@ -76,11 +76,11 @@ mantrachaind config chain-id $MANTRA_CHAIN_ID
 mantrachaind init --chain-id $MANTRA_CHAIN_ID $MANTRA_NODENAME
 
 # Copying the Genesis and addrbook File
-curl -L https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/genesis.json > $HOME/.mantrachain/config/genesis.json
-curl -L https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/addrbook.json > $HOME/.mantrachain/config/addrbook.json
+curl -L https://testnet.anatolianteam.com/mantra/genesis.json > $HOME/.mantrachain/config/genesis.json
+curl -L https://testnet.anatolianteam.com/mantra/addrbook.json > $HOME/.mantrachain/config/addrbook.json
 
 # Set up the minimum gas price
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.002uaum"|g' $HOME/.mantrachain/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0002uom"|g' $HOME/.mantrachain/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
@@ -210,7 +210,7 @@ You do not need to make any changes to the following command other than the plac
     - `security-contact` Your email address.
  ```shell 
 mantrachaind tx staking create-validator \
---amount=1000000uaum \
+--amount=1000000uom \
 --pubkey=$(mantrachaind tendermint show-validator) \
 --moniker=$MANTRA_NODENAME \
 --chain-id=$MANTRA_CHAIN_ID \
@@ -218,7 +218,7 @@ mantrachaind tx staking create-validator \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.1uaum \
+--gas-prices=0.002uom \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$MANTRA_WALLET \

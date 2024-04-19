@@ -41,7 +41,7 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 echo "export MANTRA_NODENAME=$MANTRA_NODENAME"  >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=$MANTRA_WALLET" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=11" >> $HOME/.bash_profile
-echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
+echo "export MANTRA_CHAIN_ID=mantra-hongbai-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,21 +51,21 @@ Node (`MANTRA_NODENAME`) ve Cüzdan (`MANTRA_WALLET`) adımızın `Anatolian-Gui
 echo "export MANTRA_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=16" >> $HOME/.bash_profile
-echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
+echo "export MANTRA_CHAIN_ID=mantra-hongbai-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ## Mantra'nın Kurulması
 ```
 cd $HOME
-wget -O /usr/lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.0/libwasmvm.x86_64.so
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/mantrachaind-linux-amd64.zip
+wget -O /usr/lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.1/libwasmvm.x86_64.so
+wget https://github.com/MANTRA-Finance/public/raw/main/mantrachain-hongbai/mantrachaind-linux-amd64.zip
 unzip mantrachaind-linux-amd64.zip
 rm mantrachaind-linux-amd64.zip
 mv mantrachaind $HOME/go/bin
 mantrachaind version
 ```
-Versiyon çıktısı `1.0.0` olacak.
+Versiyon çıktısı `3.0.0` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
@@ -76,11 +76,11 @@ mantrachaind config chain-id $MANTRA_CHAIN_ID
 mantrachaind init --chain-id $MANTRA_CHAIN_ID $MANTRA_NODENAME
 
 # Genesis ve addrbook Dosyalarını Kopyalama 
-curl -L https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/genesis.json > $HOME/.mantrachain/config/genesis.json
-curl -L https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/mantra/files/addrbook.json > $HOME/.mantrachain/config/addrbook.json
+curl -L https://testnet.anatolianteam.com/mantra/genesis.json > $HOME/.mantrachain/config/genesis.json
+curl -L https://testnet.anatolianteam.com/mantra/addrbook.json > $HOME/.mantrachain/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001ubbn"|g' $HOME/.mantrachain/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0002uom"|g' $HOME/.mantrachain/config/app.toml
 
 # Indexer Kapatma -Opsiyonel
 indexer="null"
@@ -210,7 +210,7 @@ Aşağıdaki komutta aşağıda berlirttilen yerler dışında bir değişiklik 
    - `security-contact`  E-posta adresiniz.
  ```shell 
 mantrachaind tx staking create-validator \
---amount=1000000ubbn \
+--amount=1000000uom \
 --pubkey=$(mantrachaind tendermint show-validator) \
 --moniker=$MANTRA_NODENAME \
 --chain-id=$MANTRA_CHAIN_ID \
@@ -218,7 +218,7 @@ mantrachaind tx staking create-validator \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.1ubbn \
+--gas-prices=0.002uom \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$MANTRA_WALLET \
