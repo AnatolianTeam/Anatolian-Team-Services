@@ -2,6 +2,7 @@
 title: ⤴️ Komutlar
 description: Faydalı komutlar.
 image: ./img/Mantra-Service-Cover.jpg
+position: 5
 keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 slug: cheatsheets
 ---

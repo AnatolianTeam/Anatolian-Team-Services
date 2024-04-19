@@ -2,6 +2,7 @@
 title: 🆙 Update
 description: Update node with manual or scheduled.
 image: ./img/Mantra-Service-Cover.jpg
+position: 4
 keywords: [mantra, chain, installation, snapshot, statesync, update]
 ---
 

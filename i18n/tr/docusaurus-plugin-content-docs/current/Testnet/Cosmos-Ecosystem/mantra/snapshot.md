@@ -2,6 +2,7 @@
 title: 📸 Snapshot
 description: Snapshot ile kurulum.
 image: ./img/Mantra-Service-Cover.jpg
+position: 2
 keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 

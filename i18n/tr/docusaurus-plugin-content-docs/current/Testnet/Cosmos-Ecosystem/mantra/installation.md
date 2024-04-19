@@ -2,6 +2,7 @@
 title: 💾 Kurulum
 description: Node kurulum rehberi.
 image: ./img/Mantra-Service-Cover.jpg
+position: 1
 keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 

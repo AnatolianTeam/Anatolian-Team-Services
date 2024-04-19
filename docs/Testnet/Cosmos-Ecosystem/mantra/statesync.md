@@ -2,6 +2,7 @@
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
 image: ./img/Mantra-Service-Cover.jpg
+position: 3
 keywords: [mantra, chain, installation, snapshot, statesync, update]
 ---
 

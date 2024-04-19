@@ -2,6 +2,7 @@
 title: 💾 Installation
 description: Node installation guide.
 image: ./img/Mantra-Service-Cover.jpg
+position: 1
 keywords: [mantra, chain, installation, snapshot, statesync, update]
 ---
 

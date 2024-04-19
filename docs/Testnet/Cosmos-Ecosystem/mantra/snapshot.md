@@ -2,6 +2,7 @@
 title: 📸 Snapshot
 description: Node installation with snapshot.
 image: ./img/Mantra-Service-Cover.jpg
+position: 2
 keywords: [mantra, chain, installation, snapshot, statesync, update]
 ---
 

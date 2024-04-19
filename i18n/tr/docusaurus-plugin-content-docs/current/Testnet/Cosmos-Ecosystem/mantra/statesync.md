@@ -2,6 +2,7 @@
 title: 🔄 StateSync
 description: StateSync ile kurulum.
 image: ./img/Mantra-Service-Cover.jpg
+position: 3
 keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 

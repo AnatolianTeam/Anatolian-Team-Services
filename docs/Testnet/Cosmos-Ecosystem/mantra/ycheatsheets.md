@@ -3,6 +3,7 @@ title: ⤴️ Cheatsheets
 description: Useful commands.
 image: ./img/Mantra-Service-Cover.jpg
 keywords: [mantra, chain, installation, snapshot, statesync, update]
+position: 5
 slug: cheatsheets
 ---
 

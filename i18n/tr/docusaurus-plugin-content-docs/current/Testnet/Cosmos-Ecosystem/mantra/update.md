@@ -2,6 +2,7 @@
 title: 🆙 Güncelleme
 description: Manuel ve otomatik planlanmış güncelleme.
 image: ./img/Mantra-Service-Cover.jpg
+position: 4
 keywords: [mantra, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 
