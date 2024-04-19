@@ -41,7 +41,7 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 echo "export MANTRA_NODENAME=$MANTRA_NODENAME"  >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=$MANTRA_WALLET" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=11" >> $HOME/.bash_profile
-echo "export MANTRA_CHAIN_ID=bbn-test-3" >> $HOME/.bash_profile
+echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Node (`MANTRA_NODENAME`) ve Cüzdan (`MANTRA_WALLET`) adımızın `Anatolian-Gui
 echo "export MANTRA_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export MANTRA_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export MANTRA_PORT=16" >> $HOME/.bash_profile
-echo "export MANTRA_CHAIN_ID=bbn-test-2" >> $HOME/.bash_profile
+echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
