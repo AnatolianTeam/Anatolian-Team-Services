@@ -45,3 +45,66 @@ source ~/.bashrc
 
 nvm install 20.12.0 && nvm use 20.12.0
 ```
+
+## Freeing up Space on Disk
+
+```shell
+cd $HOME/ar-io-node
+docker-compose down --rmi all
+git pull 
+git checkout main 
+docker-compose up -d
+```
+
+If you get an error like below;
+
+```shell
+error Could not write file "/root/ar-io-node/yarn-error.log": "ENOSPC: no space left on device, write"
+error An unexpected error occurred: "ENOSPC: no space left on device, mkdir '/usr/local/share/.cache/yarn/v6/npm-apollo-server-express-3.13.0-0d8d9bbba3b8b8264912d215f63fd44e74d5f42a-integrity'".
+```
+
+run this code.
+```shell
+/bin/sh -c yarn install && yarn build && rm -rf node_modules && yarn install --production
+```
+
+
+### If Disk Problem Continues
+
+#### Deleting the Data  
+```shell
+docker-compose down -v
+rm -rf /root/ar-io-node/data
+```
+
+#### Docker Prune (Optional)
+:::warning
+Run the prune code if there is no other application using docker on your system.
+:::
+
+```shell
+docker system prune
+```
+
+#### Editing .env File
+
+Open the .env file and change the `START_HEIGHT=` section to `START_HEIGHT=1407900`.
+```shell
+nano $HOME/ar-io-node/.env
+```
+
+#### Restarting
+
+```shell
+cd $HOME/ar-io-node
+git pull 
+git checkout main 
+docker-compose up -d
+```
+
+#### Checking the Logs
+```shell
+docker-compose logs -f --tail=0
+```
+And then close the logs by pressing `CTRL C`.
+

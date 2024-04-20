@@ -87,7 +87,7 @@ Burada iki farklı cüzdan adresi kullanılıyor ancak biz Observer cüzdan olar
 ```shell
 GRAPHQL_HOST=arweave.net
 GRAPHQL_PORT=443
-START_HEIGHT=0
+START_HEIGHT=1407900
 RUN_OBSERVER=true
 ARNS_ROOT_HOST=DOMAİN_ADRESİNİZ // Örnek: ar.domain.com
 AR_IO_WALLET=CÜZDAN_ADRESİNİZ

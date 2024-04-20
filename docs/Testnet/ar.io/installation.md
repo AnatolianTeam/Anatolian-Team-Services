@@ -88,7 +88,7 @@ Two different wallet addresses are used here, but we will use the same wallet as
 ```shell
 GRAPHQL_HOST=arweave.net
 GRAPHQL_PORT=443
-START_HEIGHT=0
+START_HEIGHT=1407900
 RUN_OBSERVER=true
 ARNS_ROOT_HOST=DOMAİN_ADDRESS // Example: ar.domain.com
 AR_IO_WALLET=WaLLET_ADDRESS
@@ -106,7 +106,7 @@ docker-compose up -d
 ```shell
 docker-compose logs -f --tail=0
 ```
-You can close the logs by saying `CTRL C`.
+You can close the logs by pressing `CTRL C`.
 
 ## Set up Networking
 
