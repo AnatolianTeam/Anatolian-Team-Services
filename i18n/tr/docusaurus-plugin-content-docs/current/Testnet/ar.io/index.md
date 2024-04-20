@@ -17,7 +17,7 @@ keywords: [Ar.io, Ar, permaweb, kurulum]
 
 ## Gereksinimler
 
-| Bşleşenler | Minimum | **Önerilen** |
+| Bileşenler | Minimum | **Önerilen** |
 | ------------ | ------------ | ------------ |
 | CPU |	4 | 12 |
 | RAM	| 4 GB | 32 GB |
