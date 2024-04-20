@@ -7,7 +7,7 @@ keywords: [redbelly, network, kurulum, snapshot, statesync, güncelleme]
 
 # Kurulum
 
-Testnete katılım şu an kapalı. Eğer ekipten katılımınıza ilişki bir e-posta aldıysanız ve size bir node id verildiyse katılabilirsiniz.
+Testnete katılım şu an kapalı ([Bağlantı](https://vine.redbelly.network/nds-node-running#apply)). Eğer ekipten katılımınıza ilişki bir e-posta aldıysanız ve size bir node id verildiyse katılabilirsiniz.
 
 **Kullanılan Portlar:** `8545`, `8546`, `1111`, and `1888`.
 

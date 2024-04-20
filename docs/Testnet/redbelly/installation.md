@@ -6,7 +6,7 @@ keywords: [Redbelly, network, installation, snapshot, statesync, update]
 ---
 
 # Installation 
-Participation in the testnet is currently closed. If you have received an e-mail from the team regarding your participation and you have been given a node id, you can participate.
+Participation in the testnet is currently closed ([Link](https://vine.redbelly.network/nds-node-running#apply)).. If you have received an e-mail from the team regarding your participation and you have been given a node id, you can participate.
 
 **Ports Used:** `8545`, `8546`, `1111`, and `1888`.
 
