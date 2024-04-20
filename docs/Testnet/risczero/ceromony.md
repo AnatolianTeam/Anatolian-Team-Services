@@ -45,6 +45,13 @@ npx phase2cli auth
 npx phase2cli contribute
 ```
 
+## Cleaning
+
+```shell
+npx phase2cli clean
+npx phase2cli logout
+```
+
 ## Logging Out
 You can always log out by running the phase2cli logout command
 ```shell

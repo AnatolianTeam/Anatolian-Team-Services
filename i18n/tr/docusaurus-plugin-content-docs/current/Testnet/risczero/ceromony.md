@@ -45,6 +45,13 @@ npx phase2cli auth
 npx phase2cli contribute
 ```
 
+## Verileri Temizleme
+
+```shell
+npx phase2cli clean
+npx phase2cli logout
+```
+
 ## Oturumu Kapatma
 Aşağıdaki komutun çalıştırarak her zaman oturumu kapatabilirsiniz
 ```shell
