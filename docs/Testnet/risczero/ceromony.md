@@ -39,6 +39,12 @@ npm i @p0tion/phase2cli
 npx phase2cli auth
 ```
 
+## Contribute
+
+```shell
+npx phase2cli contribute
+```
+
 ## Logging Out
 You can always log out by running the phase2cli logout command
 ```shell

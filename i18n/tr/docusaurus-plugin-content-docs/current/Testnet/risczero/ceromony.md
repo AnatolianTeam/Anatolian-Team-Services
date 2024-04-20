@@ -39,6 +39,12 @@ npm i @p0tion/phase2cli
 npx phase2cli auth
 ```
 
+## Katılım 
+
+```shell
+npx phase2cli contribute
+```
+
 ## Oturumu Kapatma
 Aşağıdaki komutun çalıştırarak her zaman oturumu kapatabilirsiniz
 ```shell
