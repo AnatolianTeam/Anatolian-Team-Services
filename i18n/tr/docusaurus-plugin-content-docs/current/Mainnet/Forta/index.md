@@ -18,7 +18,7 @@ keywords: [forta, network, security, intel]
 
 
 ## Bizimle Stake Edin ♻️
-* Arbitrum: https://app.forta.network/nodePool/832 & https://app.forta.network/nodePool/830
+* Arbitrum: https://app.forta.network/nodePool/830
 * Optimism: https://app.forta.network/nodePool/226 & https://app.forta.network/nodePool/222
 * Polygon: https://app.forta.network/nodePool/586
 
