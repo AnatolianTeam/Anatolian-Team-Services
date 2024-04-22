@@ -45,14 +45,17 @@ npx phase2cli auth
 npx phase2cli contribute
 ```
 
-## Verileri Temizleme
+## Katılım Sonrası
+Katılımızını tamaladıktan sonra aşağıdaki işlemleri yapabilirsiniz.
+
+### Verileri Temizleme
 
 ```shell
 npx phase2cli clean
 npx phase2cli logout
 ```
 
-## Oturumu Kapatma
+### Oturumu Kapatma
 Aşağıdaki komutun çalıştırarak her zaman oturumu kapatabilirsiniz
 ```shell
 phase2cli logout 
