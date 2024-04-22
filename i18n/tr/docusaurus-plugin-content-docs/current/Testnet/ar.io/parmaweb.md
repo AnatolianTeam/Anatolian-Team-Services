@@ -1,6 +1,6 @@
 ---
 title: 🌐 PermaPages
-description: Ar.io ArNS PermaPages rehberi.
+description: Ar.io PermaPages rehberi.
 image: ./img/Ar-Service-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kurulum, rehber]
 sidebar_position: 8
