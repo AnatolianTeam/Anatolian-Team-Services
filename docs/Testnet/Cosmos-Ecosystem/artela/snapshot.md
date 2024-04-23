@@ -20,7 +20,7 @@ cp $HOME/.artelad/data/priv_validator_state.json $HOME/.artelad/priv_validator_s
 
 artelad tendermint unsafe-reset-all --home $HOME/.artelad --keep-addr-book
 SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/artela/ | egrep -o ">artela_11822-1_.*\.tar.lz4" | tr -d ">")
-curl -L https://testnet.anatolianteam.com/artela/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.pryzm
+curl -L https://testnet.anatolianteam.com/artela/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.artelad
 
 mv $HOME/.artelad/priv_validator_state.json.backup $HOME/.artelad/data/priv_validator_state.json 
 

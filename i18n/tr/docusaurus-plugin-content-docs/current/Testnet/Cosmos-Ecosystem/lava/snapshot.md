@@ -20,7 +20,7 @@ cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.j
 
 lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
 SNAP_NAME=$(curl -s COMING_SOON | egrep -o ">lava-testnet-2_.*\.tar.lz4" | tr -d ">")
-curl -L https://testnet.anatolianteam.com/lava/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.pryzm
+curl -L https://testnet.anatolianteam.com/lava/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.lava
 
 mv $HOME/.lava/priv_validator_state.json.backup $HOME/.lava/data/priv_validator_state.json 
 

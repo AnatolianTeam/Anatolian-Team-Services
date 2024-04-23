@@ -20,7 +20,7 @@ cp $HOME/.evmosd/data/priv_validator_state.json $HOME/.evmosd/priv_validator_sta
 
 evmosd tendermint unsafe-reset-all --home $HOME/.evmosd --keep-addr-book
 SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/0g/ | egrep -o ">zgtendermint_9000-1.*\.tar.lz4" | tr -d ">")
-curl -L https://testnet.anatolianteam.com/0g/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.pryzm
+curl -L https://testnet.anatolianteam.com/0g/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.evmosd
 
 mv $HOME/.evmosd/priv_validator_state.json.backup $HOME/.evmosd/data/priv_validator_state.json 
 
