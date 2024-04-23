@@ -66,7 +66,9 @@ Go to the Redbelly [registration page](https://vine.redbelly.network/nds-node-re
 Download the Redbelly Binary file and move it to the relevant directory.
 ```shell
 cd $HOME
+mkdir -p Redbelly
 curl -s https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/redbelly/files/RedbellyBinary > rbbc
+mv rbbc $HOME/Redbelly/
 ```
 
 ### Download Config File

@@ -66,9 +66,12 @@ Redbelly [kayıt sayfasına](https://vine.redbelly.network/nds-node-register) gi
 
 ### Binary Dosyasınu İndirme
 Redbelly Binary dosyasını inidirip ilgili dizine taşıyoruz.
+
 ```shell
 cd $HOME
+mkdir -p Redbelly
 curl -s https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/redbelly/files/RedbellyBinary > rbbc
+mv rbbc $HOME/Redbelly/
 ```
 
 ### config.yaml Dosyasını İndirme
