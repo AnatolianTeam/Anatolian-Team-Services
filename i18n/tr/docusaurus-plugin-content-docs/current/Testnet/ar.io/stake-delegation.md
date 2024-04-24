@@ -48,6 +48,7 @@ Aşağıdaki adreslere delege edebilirsiniz.
 * `lQ1e2TNADS1kLJy5gUTW2GS0s1po6s3GI15hHsgNKks`
 * `9my2TT05SwQrk8TCXmASpr3nh_DuEIKh5GicUfn4d-Q`
 * `GY0MysWAv83ANosil942egXtxMxxlAPEiI1LFF5hxjA`
+* `EUc8hlu2jMeMRC8rF14OMJ8k5jZ9Mu-eAidjw_a5Vtw`
 
 :::info
 Adreslerinizi [telegram kanalımızdan](https://t.me/AnatolianTeam) yazarsanız listeye ekleyelim.
