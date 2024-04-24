@@ -5,7 +5,7 @@ image: ./img/Gasp-Service-Cover.jpg
 keywords: [Gasp, EigenLayer, Eigen, Layer, restake, Holešky, installation, Holesky]
 ---
 
-# Gasp Holešky Operatör Installation 
+# Gasp Holešky Operator Installation 
 
 **Things to do before you start:**
 1. Make the your EigenLayer [operator installation](../eigenlayer/installation.md).
