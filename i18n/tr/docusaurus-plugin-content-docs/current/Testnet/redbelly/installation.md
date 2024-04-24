@@ -172,7 +172,7 @@ cd $HOME
 tail -f $HOME/logs/rbbcLogs
 ```
 
-## Nde'un Çalıştığını Doğrulama
+## Node'un Çalıştığını Doğrulama
 
 ### Redbelly Ağını Cüzdana Ekle
 | Alan | Detaylar |
