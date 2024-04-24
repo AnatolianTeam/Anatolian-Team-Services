@@ -11,7 +11,7 @@ slug: user-guide
 
 
 ## Mantra Hongbai Ağı
-Go to [Keplr](https://chains.keplr.app) ya da bizim [explorer](https://cosmos-testnet.anatolianteam.com/wallet/suggest)'a gidip Hongbai ağını cüzdanınıza ekleyebilirsiniz.
+[Keplr](https://chains.keplr.app) ya da Anatolian [explorer](https://cosmos-testnet.anatolianteam.com/wallet/suggest)'a gidip Hongbai ağını cüzdanınıza ekleyebilirsiniz.
 
 ## Musluk
 
