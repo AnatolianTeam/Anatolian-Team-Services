@@ -1,7 +1,7 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./img/EigenLayer-Service-Cover.jpg
+image: ./img/Gasp-Service-Cover.jpg
 description: Gasp Guide.
 keywords: [Gasp, EigenLayer, Eigen, Layer, restake, installation]
 ---
