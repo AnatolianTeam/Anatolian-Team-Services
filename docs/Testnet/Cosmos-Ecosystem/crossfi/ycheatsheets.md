@@ -180,7 +180,7 @@ crossfid q slashing params
 
 ### Recovering Validator from Jail
 ```
-crossfid tx slashing unjail --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 0.00001mpx --gas-adjustment 1.5 --gas auto -y
+crossfid tx slashing unjail --from $CFI_WALLET --chain-id $CFI_CHAIN_ID --gas-prices 10000000000000mpx --gas-adjustment 1.5 --gas auto --node https://rpc-t-crossfi.anatolianteam.com:443 -y
 ```
 
 ### Active Validators List
