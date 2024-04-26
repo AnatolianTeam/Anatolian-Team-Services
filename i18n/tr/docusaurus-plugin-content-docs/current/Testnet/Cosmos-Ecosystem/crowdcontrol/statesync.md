@@ -10,8 +10,8 @@ keywords: [crowdcontrol, cardchain, kurulum, snapshot, statesync, güncelleme]
 ```shell
 systemctl stop Cardchaind
 
-cp $HOME/.Cardchain/data/priv_validator_state.json $HOME/.Cardchain/priv_validator_state.json.backup
-Cardchaind tendermint unsafe-reset-all --home $HOME/.Cardchain --keep-addr-book
+cp $HOME/.cardchaind/data/priv_validator_state.json $HOME/.cardchaind/priv_validator_state.json.backup
+Cardchaind tendermint unsafe-reset-all --home $HOME/.cardchaind --keep-addr-book
 
 SNAP_RPC="https://rpc-t-crowdcontrol.anatolianteam.com:443"
 
@@ -21,12 +21,12 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-sed -i 's|^enable *=.*|enable = true|' $HOME/.Cardchain/config/config.toml
-sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.Cardchain/config/config.toml
-sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.Cardchain/config/config.toml
-sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.Cardchain/config/config.toml
+sed -i 's|^enable *=.*|enable = true|' $HOME/.cardchaind/config/config.toml
+sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.cardchaind/config/config.toml
+sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.cardchaind/config/config.toml
+sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.cardchaind/config/config.toml
 
-mv $HOME/.Cardchain/priv_validator_state.json.backup $HOME/.Cardchain/data/priv_validator_state.json
+mv $HOME/.cardchaind/priv_validator_state.json.backup $HOME/.cardchaind/data/priv_validator_state.json
 
 systemctl restart Cardchaind && journalctl -u Cardchaind -f -o cat
 ```

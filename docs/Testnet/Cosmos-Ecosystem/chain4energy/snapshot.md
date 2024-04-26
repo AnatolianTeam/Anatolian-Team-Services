@@ -19,7 +19,7 @@ systemctl stop c4ed
 cp $HOME/.c4e-chain/data/priv_validator_state.json $HOME/.c4e-chain/priv_validator_state.json.backup 
 
 c4ed tendermint unsafe-reset-all --home $HOME/.c4e-chain --keep-addr-book
-SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/c4e/ | egrep -o ">babajaga-1_.*\.tar.lz4" | tr -d ">")
+SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/c4e/ | egrep -o ">babajaga-1.*\.tar.lz4" | tr -d ">")
 curl -L https://testnet.anatolianteam.com/c4e/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.c4e-chain
 
 mv $HOME/.c4e-chain/priv_validator_state.json.backup $HOME/.c4e-chain/data/priv_validator_state.json 

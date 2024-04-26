@@ -51,7 +51,7 @@ Node (`BBN_NODENAME`) ve Cüzdan (`BBN_WALLET`) adımızın `Anatolian-Guide` ol
 echo "export BBN_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export BBN_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export BBN_PORT=16" >> $HOME/.bash_profile
-echo "export BBN_CHAIN_ID=bbn-test-2" >> $HOME/.bash_profile
+echo "export BBN_CHAIN_ID=bbn-test-3" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 

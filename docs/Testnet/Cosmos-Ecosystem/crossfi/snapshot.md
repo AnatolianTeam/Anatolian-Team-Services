@@ -20,7 +20,7 @@ systemctl stop crossfid
 cp $HOME/.mineplex-chain/data/priv_validator_state.json $HOME/.mineplex-chain/priv_validator_state.json.backup 
 
 crossfid tendermint unsafe-reset-all --home $HOME/.mineplex-chain --keep-addr-book
-SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/crossfi/ | egrep -o ">crossfi-evm-testnet-1_.*\.tar.lz4" | tr -d ">")
+SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/crossfi/ | egrep -o ">crossfi-evm-testnet-1.*\.tar.lz4" | tr -d ">")
 curl -L https://testnet.anatolianteam.com/crossfi/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.mineplex-chain
 
 mv $HOME/.mineplex-chain/priv_validator_state.json.backup $HOME/.mineplex-chain/data/priv_validator_state.json 

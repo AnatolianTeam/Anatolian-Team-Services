@@ -19,7 +19,7 @@ systemctl stop artelad
 cp $HOME/.artelad/data/priv_validator_state.json $HOME/.artelad/priv_validator_state.json.backup 
 
 artelad tendermint unsafe-reset-all --home $HOME/.artelad --keep-addr-book
-SNAP_NAME=$(curl -s COMING_SOON | egrep -o ">artela_11822-1_.*\.tar.lz4" | tr -d ">")
+SNAP_NAME=$(curl -s COMING_SOON | egrep -o ">artela_11822-1.*\.tar.lz4" | tr -d ">")
 curl -L https://testnet.anatolianteam.com/artela/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.artelad
 
 mv $HOME/.artelad/priv_validator_state.json.backup $HOME/.artelad/data/priv_validator_state.json 
