@@ -46,7 +46,6 @@ cd $HOME
 git clone https://github.com/mangata-finance/avs-operator-setup.git
 cd avs-operator-setup
 chmod +x run.sh
-nano .env
 ```
 
 #### .env Dosyasının Düzenlenmesi
@@ -81,6 +80,11 @@ BLS_KEY_FILE_HOST=~/.eigenlayer/operator_keys/koltigin.bls.key.json // koltigin 
 # TODO: Operators need to add password to decrypt the above keys
 ECDSA_KEY_PASSWORD=SIFRENIZ
 BLS_KEY_PASSWORD=SIFRENIZ
+```
+
+## Scripti Çalıştırma
+```shell
+./run.sh opt-in
 ```
 
 ## Docker Compose Çalıştırma

@@ -83,6 +83,11 @@ ECDSA_KEY_PASSWORD=SIFRENIZ
 BLS_KEY_PASSWORD=SIFRENIZ
 ```
 
+## Run the Script
+```shell
+./run.sh opt-in
+```
+
 ## Run the Docker Compose
 
 ```shell
