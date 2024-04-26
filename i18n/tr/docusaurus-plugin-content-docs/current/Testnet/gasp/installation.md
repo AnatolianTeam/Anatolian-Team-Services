@@ -9,9 +9,8 @@ keywords: [Gasp, EigenLayer, Eigen, Layer, restake, Holešky, kurulum, rehber, H
 
 **Başlamadan önce yapılacaklar:**
 1. EigenLayer [operator kurulumunuzu](../eigenlayer/installation.md) yapınız.
-2. [Infura](https://app.infura.io/)'dan **Holešky** `http` ve `wss` rpc adreslerinizi temin ediniz. 
-3. [PoW Faucet](https://holesky-faucet.pk910.de) adresinden en az 10.1 ya da 10.05 holETH temin edin.
-4. [Ank](https://testnet.ankr.com/staking/stake/ethereum/) adresinden en az 10 holETH stake edin. Ardından [EigenLayer](https://holesky.eigenlayer.xyz/restake/ankrETH)'da reStake edin ardından etmediyseniz EigenLayer operatorünüze delege edin.
+2. [PoW Faucet](https://holesky-faucet.pk910.de) adresinden en az 10.1 ya da 10.05 holETH temin edin.
+3. [Ank](https://testnet.ankr.com/staking/stake/ethereum/) adresinden en az 10 holETH stake edin. Ardından [EigenLayer](https://holesky.eigenlayer.xyz/restake/ankrETH)'da reStake edin ardından etmediyseniz EigenLayer operatorünüze delege edin.
 
 ## Sistemi Güncelleme
 ```shell
