@@ -46,7 +46,6 @@ cd $HOME
 git clone https://github.com/mangata-finance/avs-operator-setup.git
 cd avs-operator-setup
 chmod +x run.sh
-nano .env
 ```
 
 #### Editing the .env File
