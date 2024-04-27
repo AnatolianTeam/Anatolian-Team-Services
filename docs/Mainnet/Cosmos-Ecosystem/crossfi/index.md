@@ -26,7 +26,7 @@ keywords: [crossfi, finance, cross finance, installation, snapshot, statesync, u
 | Storage	| 250 GB SSD | 500 GB SSD |
 
 ## Network Info 
-* Network Chain ID: cmineplex-mainnet-1
+* Network Chain ID: mineplex-mainnet-1
 * Binary: crossfid
 * Denom: mpx
 * Working directory: .mineplex-chain
