@@ -219,7 +219,7 @@ You do not need to make any changes to the following command other than the plac
 ```shell 
 cd $HOME
 echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(wardend comet show-validator | grep -Po '\"key\":\s*\"\K[^"]*')\"},
-    \"amount\": \"1000000uward\",
+    \"amount\": \"9900000uward\",
     \"moniker\": \"$WARDEN_NODENAME\",
     \"commission-rate\": \"0.1\",
     \"commission-max-rate\": \"0.2\",
@@ -235,6 +235,7 @@ echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(warde
 ### Creating Validator Using the json File
 ```shell 
 wardend tx staking create-validator $HOME/validator.json \
+    --chain-id=$WARDEN_CHAIN_ID \
     --gas-prices=0.25uward \
     --gas-adjustment=1.5 \
     --gas=auto \
