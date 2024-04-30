@@ -7,6 +7,10 @@ keywords: [warden, protocol, chain, kurulum, snapshot, statesync, güncelleme]
 
 # Snapshot
 
+:::info
+Snapshots are taken every 6 hours.
+::::
+
 ```shell
 sudo apt update
 sudo apt install lz4 -y
