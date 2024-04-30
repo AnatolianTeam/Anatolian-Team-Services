@@ -213,26 +213,32 @@ Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik y
    - `details` `Always forward with the Anatolian Team 🐆` yazan yere kendiniz hakkında bilgiler yazabilirsiniz.
    - `website`  `https://anatolianteam.com` yazan yere varsa bir siteniz ya da twitter vb. adresinizi yazabilirsiniz.
    - `security-contact`  E-posta adresiniz.
- ```shell 
- ```shell 
-wardend tx staking create-validator \
---amount=1000000uward \
---pubkey=$(wardend tendermint show-validator) \
---moniker=$WARDEN_NODENAME \
---chain-id=$WARDEN_CHAIN_ID \
---commission-rate=0.10 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.05 \
---min-self-delegation="1" \
---gas-prices=0.25uward \
---gas-adjustment=1.5 \
---gas=auto \
---from=$WARDEN_WALLET \
---details="Always forward with the Anatolian Team 🐆" \
---security-contact="xxxxxxx@gmail.com" \
---website="https://anatolianteam.com" \
---identity="XXXX1111XXXX1111" \
---yes
+
+### validator.json Dosyası Oluşturma
+```shell 
+cd $HOME
+echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(wardend comet show-validator | grep -Po '\"key\":\s*\"\K[^"]*')\"},
+    \"amount\": \"1000000uward\",
+    \"moniker\": \"$WARDEN_NODENAME\",
+    \"commission-rate\": \"0.1\",
+    \"commission-max-rate\": \"0.2\",
+    \"commission-max-change-rate\": \"0.01\",
+    \"min-self-delegation\": \"1\",
+    \"details\": \"Always forward with the Anatolian Team 🐆\",
+    \"security\": \"xxxxxxx@gmail.com\",
+    \"website\": \"https://anatolianteam.com\",
+    \"identity\": \"XXXX1111XXXX1111\"
+}" > validator.json
+```
+
+### json Dosyasıyla Validator Oluşturma
+```shell 
+wardend tx staking create-validator $HOME/validator.json \
+    --gas-prices=0.25uward \
+    --gas-adjustment=1.5 \
+    --gas=auto \
+    --from=$WARDEN_WALLET \
+    --yes
 ```
 
 ## Node'u Tamamen Silme
