@@ -8,9 +8,8 @@ keywords: [warden, protocol, chain, kurulum, snapshot, statesync, güncelleme]
 # Snapshot
 
 ```shell
-# install lz4
-apt update
-apt install lz4 -y
+sudo apt update
+sudo apt install lz4 -y
 ```
 
 ```shell
