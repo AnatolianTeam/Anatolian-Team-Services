@@ -41,7 +41,7 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 echo "export WARDEN_NODENAME=$WARDEN_NODENAME"  >> $HOME/.bash_profile
 echo "export WARDEN_WALLET=$WARDEN_WALLET" >> $HOME/.bash_profile
 echo "export WARDEN_PORT=11" >> $HOME/.bash_profile
-echo "export WARDEN_CHAIN_ID=alfama" >> $HOME/.bash_profile
+echo "export WARDEN_CHAIN_ID=buenavista-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Node (`WARDEN_NODENAME`) ve Cüzdan (`WARDEN_WALLET`) adımızın `Anatolian-Gui
 echo "export WARDEN_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export WARDEN_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export WARDEN_PORT=16" >> $HOME/.bash_profile
-echo "export WARDEN_CHAIN_ID=alfama" >> $HOME/.bash_profile
+echo "export WARDEN_CHAIN_ID=buenavista-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
