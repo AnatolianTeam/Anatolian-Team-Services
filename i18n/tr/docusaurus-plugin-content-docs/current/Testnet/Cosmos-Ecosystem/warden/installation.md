@@ -159,7 +159,12 @@ BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.
 ## Senkronizasyonu Kontrol Etme
 `false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
 ```shell
-wardend status 2>&1 | jq .SyncInfo
+wardend status 2>&1 | jq .sync_info
+```
+
+ya da
+```shell
+wardend status 2>&1 | jq -r .sync_info.catching_up
 ```
 
 ## Cüzdan

@@ -159,7 +159,12 @@ AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.
 ## Checking Synchronization
 Unless we get a `false` output, we do not move on to the next step, namely creating a validator.
 ```shell
-wardend status 2>&1 | jq .SyncInfo
+wardend status 2>&1 | jq .sync_info
+```
+
+or
+```shell
+wardend status 2>&1 | jq -r .sync_info.catching_up
 ```
 
 ## Wallet
