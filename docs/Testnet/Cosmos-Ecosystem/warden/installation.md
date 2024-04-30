@@ -67,8 +67,8 @@ make install
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
 ```
-wardend config chain-id $WARDEN_CHAIN_ID
-wardend config keyring-backend test
+wardend config set client chain-id $WARDEN_CHAIN_ID
+wardend config set client keyring-backend test
 wardend init --chain-id $WARDEN_CHAIN_ID $WARDEN_NODENAME
 
 # Copying the Genesis and addrbook Files

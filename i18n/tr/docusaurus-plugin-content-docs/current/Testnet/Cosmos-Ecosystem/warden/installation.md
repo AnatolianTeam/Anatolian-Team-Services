@@ -67,8 +67,8 @@ make install
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
 ```
-wardend config chain-id $WARDEN_CHAIN_ID
-wardend config keyring-backend test
+wardend config set client chain-id $WARDEN_CHAIN_ID
+wardend config set client keyring-backend test
 wardend init --chain-id $WARDEN_CHAIN_ID $WARDEN_NODENAME
 
 # Genesis ve addrbook Dosyalarını Kopyalama
