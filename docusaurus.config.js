@@ -97,13 +97,12 @@ const config = {
             items: [
               {
                 type: 'html',
-                value: '<a href="https://cosmos-testnet.anatolianteam.com" target="_blank" title="Anatolian Cosmos Testnet Explorer"><span id="navbarDropdownItem"><img id="navbarDropdownImage" src="/img/cosmos-t-icon.svg"/>Cosmos Testnet </span></a>'
+                value: '<a href="https://cosmos-testnet.anatolianteam.com" target="_blank" title="Cosmos Testnet Explorer"><span id="navbarDropdownItem"><img id="navbarDropdownImage" src="/img/cosmos-t-icon.svg"/>Cosmos Testnet </span></a>'
               },
               {
                 type: 'html',
-                value: '<a href="https://cosmos.anatolianteam.com" target="_blank" title="Anatolian Cosmos Mainnet Explorer"><span id="navbarDropdownItem"><img id="navbarDropdownImage" src="/img/cosmos-icon.svg"/>Cosmos Mainnet</span></a>'
+                value: '<a href="https://cosmos.anatolianteam.com" target="_blank" title="Cosmos Mainnet Explorer"><span id="navbarDropdownItem"><img id="navbarDropdownImage" src="/img/cosmos-icon.svg"/>Cosmos Mainnet</span></a>'
               },
-
             ]
           },          
           {
