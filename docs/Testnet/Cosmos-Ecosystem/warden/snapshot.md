@@ -5,7 +5,7 @@ image: ./img/Warden-Service-Cover.jpg
 keywords: [warden, protocol, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot
+# Snapshot (COMING SOON)
 
 :::info
 Snapshots are taken every 6 hours.
