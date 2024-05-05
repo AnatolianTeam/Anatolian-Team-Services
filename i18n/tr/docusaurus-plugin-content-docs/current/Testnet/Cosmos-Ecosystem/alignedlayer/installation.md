@@ -38,20 +38,20 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 * `$ALIGNED_WALLET` cüzdan adınız
 *  Eğer portu başka bir node kullanıyorsa aşağıdan değiştirebilirsiniz. `11` yazan yere farklı bir değer girmelisiniz yine iki haneli olacak şekilde.
 ```shell
-echo "export OG_NODENAME=$ALIGNED_NODENAME"  >> $HOME/.bash_profile
-echo "export OG_WALLET=$ALIGNED_WALLET" >> $HOME/.bash_profile
-echo "export OG_PORT=11" >> $HOME/.bash_profile
-echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export ALIGNED_NODENAME=$ALIGNED_NODENAME"  >> $HOME/.bash_profile
+echo "export ALIGNED_WALLET=$ALIGNED_WALLET" >> $HOME/.bash_profile
+echo "export ALIGNED_PORT=11" >> $HOME/.bash_profile
+echo "export ALIGNED_CHAIN_ID=alignedlayer" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Örnek
-Node (`OG_NODENAME`) ve Cüzdan (`OG_WALLET`) adımızın `Anatolian-Guide` olduğunu ve kullanacağınız portun (`OG_PORT`) da `16656` olacağını varsayalım. Kod aşağıdaki şekilde düzenlenecektir. 
+Node (`ALIGNED_NODENAME`) ve Cüzdan (`ALIGNED_WALLET`) adımızın `Anatolian-Guide` olduğunu ve kullanacağınız portun (`ALIGNED_PORT`) da `16656` olacağını varsayalım. Kod aşağıdaki şekilde düzenlenecektir. 
 ```shell
-echo "export OG_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
-echo "export OG_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
-echo "export OG_PORT=16" >> $HOME/.bash_profile
-echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export ALIGNED_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export ALIGNED_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
+echo "export ALIGNED_PORT=16" >> $HOME/.bash_profile
+echo "export ALIGNED_CHAIN_ID=alignedlayer" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -116,23 +116,23 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 # Portları Ayarlama
 sed -i.bak -e "
-s%:26658%:${OG_PORT}658%g;
-s%:26657%:${OG_PORT}657%g;
-s%:6060%:${OG_PORT}060%g;
-s%:26656%:${OG_PORT}656%g;
-s%:26660%:${OG_PORT}660%g
+s%:26658%:${ALIGNED_PORT}658%g;
+s%:26657%:${ALIGNED_PORT}657%g;
+s%:6060%:${ALIGNED_PORT}060%g;
+s%:26656%:${ALIGNED_PORT}656%g;
+s%:26660%:${ALIGNED_PORT}660%g
 " $HOME/.alignedlayer/config/config.toml
 sed -i.bak -e "
-s%:1317%:${OG_PORT}317%g; 
-s%:8080%:${OG_PORT}080%g; 
-s%:9090%:${OG_PORT}090%g; 
-s%:9091%:${OG_PORT}091%g
+s%:1317%:${ALIGNED_PORT}317%g; 
+s%:8080%:${ALIGNED_PORT}080%g; 
+s%:9090%:${ALIGNED_PORT}090%g; 
+s%:9091%:${ALIGNED_PORT}091%g
 " $HOME/.alignedlayer/config/app.toml
-sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.alignedlayer/config/client.toml
+sed -i.bak -e "s%:26657%:${ALIGNED_PORT}657%g" $HOME/.alignedlayer/config/client.toml
 
 # Harici Adres Ekleme
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${OG_PORT}656\"|g" ~/.alignedlayer/config/config.toml > ~/.alignedlayer/config/config.toml.tmp
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${ALIGNED_PORT}656\"|g" ~/.alignedlayer/config/config.toml > ~/.alignedlayer/config/config.toml.tmp
 mv ~/.alignedlayer/config/config.toml.tmp  ~/.alignedlayer/config/config.toml
 
 # Servis Dosyası Oluşturma
@@ -238,13 +238,13 @@ Ardından cüzdanınızı içe aktarabilirsiniz.
 ## Cüzdan ve Valoper Bilgileri
 Burada cüzdan ve valoper bilgileri değişkene ekleniyor.
 ```shell
-OG_WALLET_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET -a)
-OG_VALOPER_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET --bech val -a)
+ALIGNED_WALLET_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET -a)
+ALIGNED_VALOPER_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET --bech val -a)
 ```
 
 ```shell
-echo 'export OG_WALLET_ADDRESS='${OG_WALLET_ADDRESS} >> $HOME/.bash_profile
-echo 'export OG_VALOPER_ADDRESS='${OG_VALOPER_ADDRESS} >> $HOME/.bash_profile
+echo 'export ALIGNED_WALLET_ADDRESS='${ALIGNED_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export ALIGNED_VALOPER_ADDRESS='${ALIGNED_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -296,5 +296,5 @@ systemctl daemon-reload && \
 cd $HOME && \
 rm -rf .alignedlayer aligned_layer_tendermint && \
 rm -rf $(which alignedlayerd)
-sed -i '/OG_/d' ~/.bash_profile
+sed -i '/ALIGNED_/d' ~/.bash_profile
  ```

@@ -41,17 +41,17 @@ The areas you need to change are written below.
 echo "export ALIGNED_NODENAME=$ALIGNED_NODENAME"  >> $HOME/.bash_profile
 echo "export ALIGNED_WALLET=$ALIGNED_WALLET" >> $HOME/.bash_profile
 echo "export ALIGNED_PORT=11" >> $HOME/.bash_profile
-echo "export ALIGNED_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export ALIGNED_CHAIN_ID=alignedlayer" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Sample
-Let's assume that your Node (`OG_NODENAME`) and Wallet (`OG_WALLET`) name is `Anatolian-Guide` and the port you will use (`OG_PORT`) will be `16656`. The code will be arranged as shown below.
+Let's assume that your Node (`ALIGNED_NODENAME`) and Wallet (`ALIGNED_WALLET`) name is `Anatolian-Guide` and the port you will use (`ALIGNED_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
 echo "export ALIGNED_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export ALIGNED_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export ALIGNED_PORT=16" >> $HOME/.bash_profile
-echo "export ALIGNED_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export ALIGNED_CHAIN_ID=alignedlayer" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -128,11 +128,11 @@ s%:8080%:${ALIGNED_PORT}080%g;
 s%:9090%:${ALIGNED_PORT}090%g; 
 s%:9091%:${ALIGNED_PORT}091%g
 " $HOME/.alignedlayer/config/app.toml
-sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.alignedlayer/config/client.toml
+sed -i.bak -e "s%:26657%:${ALIGNED_PORT}657%g" $HOME/.alignedlayer/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${OG_PORT}656\"|g" ~/.alignedlayer/config/config.toml > ~/.alignedlayer/config/config.toml.tmp
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${ALIGNED_PORT}656\"|g" ~/.alignedlayer/config/config.toml > ~/.alignedlayer/config/config.toml.tmp
 mv ~/.alignedlayer/config/config.toml.tmp  ~/.alignedlayer/config/config.toml
 
 # Creating the Service File
