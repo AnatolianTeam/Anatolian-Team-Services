@@ -38,20 +38,20 @@ The areas you need to change are written below.
 * `$ALIGNED_WALLET` your wallet name
 *  If another node is using the port, you can change it below. You must enter a different value where it says `11`, again as two digits.
 ```shell
-echo "export OG_NODENAME=$ALIGNED_NODENAME"  >> $HOME/.bash_profile
-echo "export OG_WALLET=$ALIGNED_WALLET" >> $HOME/.bash_profile
-echo "export OG_PORT=11" >> $HOME/.bash_profile
-echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export ALIGNED_NODENAME=$ALIGNED_NODENAME"  >> $HOME/.bash_profile
+echo "export ALIGNED_WALLET=$ALIGNED_WALLET" >> $HOME/.bash_profile
+echo "export ALIGNED_PORT=11" >> $HOME/.bash_profile
+echo "export ALIGNED_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Sample
 Let's assume that your Node (`OG_NODENAME`) and Wallet (`OG_WALLET`) name is `Anatolian-Guide` and the port you will use (`OG_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
-echo "export OG_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
-echo "export OG_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
-echo "export OG_PORT=16" >> $HOME/.bash_profile
-echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export ALIGNED_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo "export ALIGNED_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
+echo "export ALIGNED_PORT=16" >> $HOME/.bash_profile
+echo "export ALIGNED_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -116,17 +116,17 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 # Set up Ports
 sed -i.bak -e "
-s%:26658%:${OG_PORT}658%g;
-s%:26657%:${OG_PORT}657%g;
-s%:6060%:${OG_PORT}060%g;
-s%:26656%:${OG_PORT}656%g;
-s%:26660%:${OG_PORT}660%g
+s%:26658%:${ALIGNED_PORT}658%g;
+s%:26657%:${ALIGNED_PORT}657%g;
+s%:6060%:${ALIGNED_PORT}060%g;
+s%:26656%:${ALIGNED_PORT}656%g;
+s%:26660%:${ALIGNED_PORT}660%g
 " $HOME/.alignedlayer/config/config.toml
 sed -i.bak -e "
-s%:1317%:${OG_PORT}317%g; 
-s%:8080%:${OG_PORT}080%g; 
-s%:9090%:${OG_PORT}090%g; 
-s%:9091%:${OG_PORT}091%g
+s%:1317%:${ALIGNED_PORT}317%g; 
+s%:8080%:${ALIGNED_PORT}080%g; 
+s%:9090%:${ALIGNED_PORT}090%g; 
+s%:9091%:${ALIGNED_PORT}091%g
 " $HOME/.alignedlayer/config/app.toml
 sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.alignedlayer/config/client.toml
 
@@ -138,7 +138,7 @@ mv ~/.alignedlayer/config/config.toml.tmp  ~/.alignedlayer/config/config.toml
 # Creating the Service File
 tee /etc/systemd/system/alignedlayerd.service > /dev/null << EOF
 [Unit]
-Description=0G Node
+Description=Aligned Layer Node
 After=network-online.target
 
 [Service]
@@ -233,13 +233,13 @@ And then request tokens from the [faucet](https://faucet.0g.ai/) to your address
 Here we add our wallet and valve information to the variable.
 
 ```shell
-OG_WALLET_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET -a)
-OG_VALOPER_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET --bech val -a)
+ALIGNED_WALLET_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET -a)
+ALIGNED_VALOPER_ADDRESS=$(alignedlayerd keys show $ALIGNED_WALLET --bech val -a)
 ```
 
 ```shell
-echo 'export OG_WALLET_ADDRESS='${OG_WALLET_ADDRESS} >> $HOME/.bash_profile
-echo 'export OG_VALOPER_ADDRESS='${OG_VALOPER_ADDRESS} >> $HOME/.bash_profile
+echo 'export ALIGNED_WALLET_ADDRESS='${ALIGNED_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export ALIGNED_VALOPER_ADDRESS='${ALIGNED_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -284,12 +284,12 @@ If you get an error, add this before `--yes`: `--node=https://rpc-t-0g.anatolian
 
 ## Completely Deleting the Node 
 ```shell 
-systemctl stop alignedlayerd && \
-systemctl disable alignedlayerd && \
-rm /etc/systemd/system/alignedlayerd.service && \
-systemctl daemon-reload && \
-cd $HOME && \
-rm -rf .alignedlayer aligned_layer_tendermint && \
-rm -rf $(which alignedlayerd)
-sed -i '/OG_/d' ~/.bash_profile
+sudo systemctl stop alignedlayerd
+sudo systemctl disable alignedlayerd
+sudo rm /etc/systemd/system/alignedlayerd.service
+sudo systemctl daemon-reload
+sudo rm -f /usr/local/bin/alignedlayerd
+sudo rm -f $(which alignedlayerd)
+sudo rm -rf $HOME/.alignedlayer
+sudo rm -rf $HOME/aligned_layer_tendermint
 ```
