@@ -25,7 +25,7 @@ keywords: [warden, protocol, chain, installation, snapshot, statesync, update]
 | Storage	| 250 GB SSD | 500 GB SSD |
 
 ## Network Info 
-* Network Chain ID: alfama
+* Network Chain ID: buenavista-1
 * Binary: wardend
 * Denom: uward
 * Working directory: .warden
