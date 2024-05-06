@@ -213,27 +213,8 @@ alignedlayerd keys add $ALIGNED_WALLET
 alignedlayerd keys add $ALIGNED_WALLET --recover
 ```
 
-### EVM Adresinizi Öğrenme
-```shell
-echo "0x$(alignedlayerd debug addr $(alignedlayerd keys show $ALIGNED_WALLET -a) | grep hex | awk '{print $3}')"
-```
-
 ### Musluk
-Daha sonra [musluktan](https://faucet.0g.ai/) yukarıda çıkan adresinize token isteyin.
-
-### EVM Cüzdan Private Key Öğrenme
-```shell
-alignedlayerd keys unsafe-export-eth-key $ALIGNED_WALLET
-```
-Ardından cüzdanınızı içe aktarabilirsiniz.
-
-#### Ağı Cüzdana Ekleme 
-| Alan | Detaylar |
-| ------------ | ------------ |
-| **Network name** |0g Newton Testnet |
-| **New RPC URL** | https://rpc-testnet.0g.ai/ |
-| **Chain ID** | 9000 |
-| **Currency symbol:** | A0GI |
+Aligned adresinize [musluktan](https://faucet.alignedlayer.com/) token isteyin.
 
 ## Cüzdan ve Valoper Bilgileri
 Burada cüzdan ve valoper bilgileri değişkene ekleniyor.

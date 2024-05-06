@@ -213,21 +213,8 @@ alignedlayerd keys add $ALIGNED_WALLET
 alignedlayerd keys add $ALIGNED_WALLET --recover
 ```
 
-### Learning Your EVM Address
-```shell
-echo "0x$(alignedlayerd debug addr $(alignedlayerd keys show $ALIGNED_WALLET -a) | grep hex | awk '{print $3}')"
-```
-
 ### Faucet
-And then request tokens from the [faucet](https://faucet.0g.ai/) to your address above.
-
-### Add Network to Wallet
-| Field | Details |
-| ------------ | ------------ |
-| **Network name** |0g Newton Testnet |
-| **New RPC URL** | https://rpc-testnet.0g.ai/ |
-| **Chain ID** | 9000 |
-| **Currency symbol:** | A0GI |
+And then request tokens from the [faucet](https://faucet.alignedlayer.com/) to your Aligned address.
 
 ## Wallet and Valoper Info
 Here we add our wallet and valve information to the variable.
