@@ -249,26 +249,35 @@ You do not need to make any changes to the following command other than the plac
     - `details` You can write information about yourself where it says `Always forward with the Anatolian Team 🐆`.
     - `website` where it says `https://anatolianteam.com`, if you have a website or twitter etc. You can write your address.
     - `security-contact` Your email address.
- ```shell 
-alignedlayerd tx staking create-validator \
---amount=10000000000000000stake \
---pubkey=$(alignedlayerd tendermint show-validator) \
---moniker=$ALIGNED_NODENAME \
---chain-id=$ALIGNED_CHAIN_ID \
---commission-rate=0.10 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.05 \
---min-self-delegation="1" \
---gas-prices=0.25stake  \
---gas-adjustment=1.5 \
---gas=auto \
---from=$ALIGNED_WALLET \
---details="Always forward with the Anatolian Team 🐆" \
---security-contact="xxxxxxx@gmail.com" \
---website="https://anatolianteam.com" \
---identity="XXXX1111XXXX1111" \
---yes
+
+### Creating the validator.json File
+```shell 
+cd $HOME
+echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(alignedlayerd comet show-validator | grep -Po '\"key\":\s*\"\K[^"]*')\"},
+    \"amount\": \"9900000stake\",
+    \"moniker\": \"$ALIGNED_NODENAME\",
+    \"commission-rate\": \"0.1\",
+    \"commission-max-rate\": \"0.2\",
+    \"commission-max-change-rate\": \"0.01\",
+    \"min-self-delegation\": \"1\",
+    \"details\": \"Always forward with the Anatolian Team 🐆\",
+    \"security\": \"xxxxxxx@gmail.com\",
+    \"website\": \"https://anatolianteam.com\",
+    \"identity\": \"XXXX1111XXXX1111\"
+}" > validator.json
 ```
+
+### Creating Validator Using the json File
+```shell 
+alignedlayerd tx staking create-validator $HOME/validator.json \
+    --chain-id=$ALIGNED_CHAIN_ID \
+    --gas-prices=0.25stake \
+    --gas-adjustment=1.5 \
+    --gas=auto \
+    --from=$ALIGNED_WALLET \
+    --yes
+```
+
 :::info
 If you get an error, add this before `--yes`: `--node=https://rpc-t-aligned.anatolianteam.com:443 \`
 ::::
