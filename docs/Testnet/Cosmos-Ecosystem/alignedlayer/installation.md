@@ -197,7 +197,11 @@ AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.
 ## Checking Synchronization
 Unless we get a `false` output, we do not move on to the next step, namely creating a validator.
 ```shell
-alignedlayerd status 2>&1 | jq .SyncInfo
+alignedlayerd status 2>&1 | jq -r .sync_info.catching_up
+```
+or
+```shell
+alignedlayerd status 2>&1 | jq .sync_info
 ```
 
 ## Wallet
