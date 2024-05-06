@@ -76,7 +76,7 @@ const config = {
         {name: 'og:description', content: 'Anatolian Team Services Website. Installation Guides, Snaphots, StateSync for the testnet networks... '},
       ],
       // Replace with your project's social card
-      // image: 'img/anatolian-doc-social-card.jpg',
+      image: 'img/anatolian-doc-social-card.jpg',
       navbar: {
         title: 'Anatolian Team',
         logo: {
