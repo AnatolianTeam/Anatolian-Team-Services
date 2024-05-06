@@ -23,7 +23,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'AnatolianTeam', // Usually your GitHub org/user name.
+  organizationName: 'Anatolian Team', // Usually your GitHub org/user name.
   projectName: 'Anatolian-Team-Services', // Usually your repo name.
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
