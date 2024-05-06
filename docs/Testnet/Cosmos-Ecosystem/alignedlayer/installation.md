@@ -86,8 +86,8 @@ alignedlayerd config keyring-backend test
 alignedlayerd init --chain-id $ALIGNED_CHAIN_ID $ALIGNED_NODENAME
 
 # Copying the Genesis and addrbook Files
-wget https://github.com/0glabs/0gevmoskkk/releases/download/v1.0.0-testnet/genesis.json -O $HOME/.alignedlayer/config/genesis.json
-wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.alignedlayer/config/addrbook.json
+wget https://testnet.anatolianteam.com/aligned/genesis.json -O $HOME/.alignedlayer/config/genesis.json
+wget https://testnet.anatolianteam.com/aligned/addrbook.json.new -O $HOME/.alignedlayer/config/addrbook.json
 
 # Set up the minimum gas price
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001stake"|g' $HOME/.alignedlayer/config/app.toml
@@ -266,7 +266,7 @@ alignedlayerd tx staking create-validator \
 --yes
 ```
 :::info
-If you get an error, add this before `--yes`: `--node=https://rpc-t-0g.anatolianteam.com:443 \`
+If you get an error, add this before `--yes`: `--node=https://rpc-t-aligned.anatolianteam.com:443 \`
 ::::
 
 ## Completely Deleting the Node 
