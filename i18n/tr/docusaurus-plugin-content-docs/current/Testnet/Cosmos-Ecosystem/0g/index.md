@@ -26,10 +26,10 @@ keywords: [0g, ai, yapay zeka, modüler, zincir, kurulum, snapshot, statesync, g
 
 ## Ağ Bilgisi 
 
-* Network Chain ID: zgtendermint_9000-1
-* Binary: evmosd
-* Denom: aevmos
-* Çalışma dizini: .evmosd
+* Network Chain ID: zgtendermint_16600-1
+* Binary: 0gchaind
+* Denom: ua0gi
+* Çalışma dizini: .0gchain
 
 ## Hizmetler
 * **RPC:** https://rpc-t-0g.anatolianteam.com/ 
@@ -40,11 +40,11 @@ keywords: [0g, ai, yapay zeka, modüler, zincir, kurulum, snapshot, statesync, g
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
 ```shell
 PEERS="1248487ea585730cdf5d3c32e0c2a43ad0cda973@peer-zero-gravity-testnet.trusted-point.com:26326,b2a30b824a4358f8bc2ee648770b31b5eba3a853@85.10.200.82:26656"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.evmosd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.0gchain/config/config.toml
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.
 ```shell
-wget -O $HOME/.evmosd/config/addrbook.json "https://testnet.anatolianteam.com/0g/addrbook.json"
+wget -O $HOME/.0gchain/config/addrbook.json "https://testnet.anatolianteam.com/0g/addrbook.json"
 ```
 
 ```mdx-code-block

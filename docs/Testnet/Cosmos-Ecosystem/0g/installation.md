@@ -72,7 +72,7 @@ We copy and paste the codes below without making any changes.
 0gchaind init --chain-id $OG_CHAIN_ID $OG_NODENAME
 
 # Copying the Genesis and addrbook Files
-wget https://github.com/0glabs/0g-chain/releases/download/v0.1.0/genesis.json -O $HOME/.0gchain/config/genesis.json
+wget https://testnet.anatolianteam.com/0g/genesis.json -O $HOME/.0gchain/config/genesis.json
 wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.0gchain/config/addrbook.json
 
 # Set up the minimum gas price
@@ -247,7 +247,7 @@ You do not need to make any changes to the following command other than the plac
     - `security-contact` Your email address.
  ```shell 
 0gchaind tx staking create-validator \
---amount=10000000000000000aevmos \
+--amount=1000000ua0gi \
 --pubkey=$(0gchaind tendermint show-validator) \
 --moniker=$OG_NODENAME \
 --chain-id=$OG_CHAIN_ID \
@@ -255,7 +255,7 @@ You do not need to make any changes to the following command other than the plac
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=0.25aevmos  \
+--gas-prices=0.25ua0gi  \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$OG_WALLET \
@@ -276,7 +276,7 @@ systemctl disable 0gchaind && \
 rm /etc/systemd/system/0gchaind.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .0gchain 0g-evmos && \
+rm -rf .0gchain 0g-chain && \
 rm -rf $(which 0gchaind)
 sed -i '/OG_/d' ~/.bash_profile
 ```

@@ -25,10 +25,10 @@ keywords: [0g, ai, modular, chain, installation, snapshot, statesync, update]
 | Storage	| 250 GB SSD | 500 GB SSD |
 
 ## Network Info 
-* Network Chain ID: zgtendermint_9000-1
-* Binary: evmosd
-* Denom: aevmos
-* Working directory: .evmosd
+* Network Chain ID: zgtendermint_16600-1
+* Binary: 0gchaind
+* Denom: ua0gi
+* Working directory: .0gchain
 
 ## Public Services
 * **RPC:** https://rpc-t-0g.anatolianteam.com/ 
@@ -39,11 +39,11 @@ keywords: [0g, ai, modular, chain, installation, snapshot, statesync, update]
 You can use peer for fast connection or state sync 
 ```shell
 PEERS="1248487ea585730cdf5d3c32e0c2a43ad0cda973@peer-zero-gravity-testnet.trusted-point.com:26326,b2a30b824a4358f8bc2ee648770b31b5eba3a853@85.10.200.82:26656"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.evmosd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.0gchain/config/config.toml
 ```
 The address book is updated once three hour. You can use it for quick launch.
 ```shell
-wget -O $HOME/.evmosd/config/addrbook.json "https://testnet.anatolianteam.com/0g/addrbook.json"
+wget -O $HOME/.0gchain/config/addrbook.json "https://testnet.anatolianteam.com/0g/addrbook.json"
 ```
 
 ```mdx-code-block

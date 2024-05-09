@@ -72,33 +72,33 @@ Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştır�
 0gchaind init --chain-id $OG_CHAIN_ID $OG_NODENAME
 
 # Genesis ve addrbook Dosyalarını Kopyalama
-wget https://github.com/0glabs/0g-chain/releases/download/v0.1.0/genesis.json -O $HOME/.0gchain/config/genesis.json
-wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.0gchaind/config/addrbook.json
+wget https://testnet.anatolianteam.com/0g/genesis.json -O $HOME/.0gchain/config/genesis.json
+wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.0gchain/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ua0gi\"/" $HOME/.0gchain/config/app.toml
 
 # Indexer Kapatma -Opsiyonel
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.0gchaind/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.0gchain/config/config.toml
 
 # SEEDS ve PEERS Ayarlaması
 PEERS="1248487ea585730cdf5d3c32e0c2a43ad0cda973@peer-zero-gravity-testnet.trusted-point.com:26326,b2a30b824a4358f8bc2ee648770b31b5eba3a853@85.10.200.82:26656"
 SEEDS="8c01665f88896bca44e8902a30e4278bed08033f@54.241.167.190:26656,b288e8b37f4b0dbd9a03e8ce926cd9c801aacf27@54.176.175.48:26656,8e20e8e88d504e67c7a3a58c2ea31d965aa2a890@54.193.250.204:26656,e50ac888b35175bfd4f999697bdeb5b7b52bfc06@54.215.187.94:26656"
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.0gchaind/config/config.toml
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.0gchain/config/config.toml
 
 # Prometheus'u Aktif Etme
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.0gchaind/config/config.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.0gchain/config/config.toml
 
 # Pruning Ayarlama 
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="50"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.0gchaind/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.0gchaind/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.0gchaind/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.0gchaind/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.0gchain/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.0gchain/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.0gchain/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.0gchain/config/app.toml
 
 # Portları Ayarlama
 sed -i.bak -e "
@@ -107,19 +107,19 @@ s%:26657%:${OG_PORT}657%g;
 s%:6060%:${OG_PORT}060%g;
 s%:26656%:${OG_PORT}656%g;
 s%:26660%:${OG_PORT}660%g
-" $HOME/.0gchaind/config/config.toml
+" $HOME/.0gchain/config/config.toml
 sed -i.bak -e "
 s%:1317%:${OG_PORT}317%g; 
 s%:8080%:${OG_PORT}080%g; 
 s%:9090%:${OG_PORT}090%g; 
 s%:9091%:${OG_PORT}091%g
-" $HOME/.0gchaind/config/app.toml
-sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.0gchaind/config/client.toml
+" $HOME/.0gchain/config/app.toml
+sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.0gchain/config/client.toml
 
 # Harici Adres Ekleme
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${OG_PORT}656\"|g" ~/.0gchaind/config/config.toml > ~/.0gchaind/config/config.toml.tmp
-mv ~/.0gchaind/config/config.toml.tmp  ~/.0gchaind/config/config.toml
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${OG_PORT}656\"|g" ~/.0gchain/config/config.toml > ~/.0gchain/config/config.toml.tmp
+mv ~/.0gchain/config/config.toml.tmp  ~/.0gchain/config/config.toml
 
 # Servis Dosyası Oluşturma
 tee /etc/systemd/system/0gchaind.service > /dev/null << EOF
@@ -155,8 +155,8 @@ journalctl -u 0gchaind -f -o cat
 ```shell
 systemctl stop 0gchaind
 
-cp $HOME/.0gchaind/data/priv_validator_state.json $HOME/.0gchaind/priv_validator_state.json.backup
-0gchaind tendermint unsafe-reset-all --home $HOME/.0gchaind --keep-addr-book
+cp $HOME/.0gchain/data/priv_validator_state.json $HOME/.0gchain/priv_validator_state.json.backup
+0gchaind tendermint unsafe-reset-all --home $HOME/.0gchain --keep-addr-book
 
 SNAP_RPC="https://rpc-t-0g.anatolianteam.com:443"
 
@@ -166,12 +166,12 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-sed -i 's|^enable *=.*|enable = true|' $HOME/.0gchaind/config/config.toml
-sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.0gchaind/config/config.toml
-sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.0gchaind/config/config.toml
-sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.0gchaind/config/config.toml
+sed -i 's|^enable *=.*|enable = true|' $HOME/.0gchain/config/config.toml
+sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.0gchain/config/config.toml
+sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.0gchain/config/config.toml
+sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.0gchain/config/config.toml
 
-mv $HOME/.0gchaind/priv_validator_state.json.backup $HOME/.0gchaind/data/priv_validator_state.json
+mv $HOME/.0gchain/priv_validator_state.json.backup $HOME/.0gchain/data/priv_validator_state.json
 
 systemctl restart 0gchaind && journalctl -u 0gchaind -f -o cat
 ```
@@ -251,7 +251,7 @@ Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik y
    - `security-contact`  E-posta adresiniz.
  ```shell 
 0gchaind tx staking create-validator \
---amount=90000000000000000aevmos \
+--amount=1000000ua0gi \
 --pubkey=$(0gchaind tendermint show-validator) \
 --moniker=$OG_NODENAME \
 --chain-id=$OG_CHAIN_ID \
@@ -280,7 +280,7 @@ systemctl disable 0gchaind && \
 rm /etc/systemd/system/0gchaind.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .0gchaind 0g-evmos && \
+rm -rf .0gchain 0g-chain && \
 rm -rf $(which 0gchaind)
 sed -i '/OG_/d' ~/.bash_profile
  ```
