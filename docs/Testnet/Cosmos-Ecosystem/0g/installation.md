@@ -14,7 +14,7 @@ apt update && apt upgrade -y
 
 ## Installing the Necessary Libraries
 ```shell
-apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp jq llvm tmux htop screen gcc lz4 -y < "/dev/null"
+apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp wget jq llvm tmux htop screen unzip gcc lz4 -y < "/dev/null"
 ```
 
 ## Installing Go
@@ -57,48 +57,49 @@ source $HOME/.bash_profile
 
 ## Installing 0G
 ```
-git clone https://github.com/0glabs/0g-evmos.git
-cd 0g-evmos
-git checkout v1.0.0-testnet
-make install
-evmosd version
+cd $HOME
+git clone -b v0.1.0 https://github.com/0glabs/0g-chain.git
+./0g-chain/networks/testnet/install.sh
+source .profile
+0gchaind version
 ```
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
 ```
-evmosd config chain-id $OG_CHAIN_ID
-evmosd config keyring-backend test
-evmosd init --chain-id $OG_CHAIN_ID $OG_NODENAME
+0gchaind config chain-id $OG_CHAIN_ID
+0gchaind config keyring-backend test
+0gchaind init --chain-id $OG_CHAIN_ID $OG_NODENAME
 
 # Copying the Genesis and addrbook Files
-wget https://github.com/0glabs/0g-evmos/releases/download/v1.0.0-testnet/genesis.json -O $HOME/.evmosd/config/genesis.json
-wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.evmosd/config/addrbook.json
+wget https://github.com/0glabs/0g-chain/releases/download/v0.1.0/genesis.json -O $HOME/.0gchain/config/genesis.json
+wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.0gchain/config/addrbook.json
 
 # Set up the minimum gas price
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "330000000aevmos"|g' $HOME/.evmosd/config/app.toml
+sed -i "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ua0gi\"/" $HOME/.0gchain/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.evmosd/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.0gchain/config/config.toml
 
 # Set up SEED and PEERS
 PEERS="1248487ea585730cdf5d3c32e0c2a43ad0cda973@peer-zero-gravity-testnet.trusted-point.com:26326,b2a30b824a4358f8bc2ee648770b31b5eba3a853@85.10.200.82:26656"
-SEEDS="8c01665f88896bca44e8902a30e4278bed08033f@54.241.167.190:26656,b288e8b37f4b0dbd9a03e8ce926cd9c801aacf27@54.176.175.48:26656,8e20e8e88d504e67c7a3a58c2ea31d965aa2a890@54.193.250.204:26656,e50ac888b35175bfd4f999697bdeb5b7b52bfc06@54.215.187.94:26656"
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.evmosd/config/config.toml
+SEEDS="c4d619f6088cb0b24b4ab43a0510bf9251ab5d7f@54.241.167.190:26656,44d11d4ba92a01b520923f51632d2450984d5886@54.176.175.48:26656,f2693dd86766b5bf8fd6ab87e2e970d564d20aff@54.193.250.204:26656,f878d40c538c8c23653a5b70f615f8dccec6fb9f@54.215.187.94:26656"
+
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.0gchain/config/config.toml
 
 # Enabling Prometheus
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.evmosd/config/config.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.0gchain/config/config.toml
 
 # Set up Pruning 
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="50"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.evmosd/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.evmosd/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.evmosd/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.evmosd/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.0gchain/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.0gchain/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.0gchain/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.0gchain/config/app.toml
 
 # Set up Ports
 sed -i.bak -e "
@@ -107,29 +108,29 @@ s%:26657%:${OG_PORT}657%g;
 s%:6060%:${OG_PORT}060%g;
 s%:26656%:${OG_PORT}656%g;
 s%:26660%:${OG_PORT}660%g
-" $HOME/.evmosd/config/config.toml
+" $HOME/.0gchain/config/config.toml
 sed -i.bak -e "
 s%:1317%:${OG_PORT}317%g; 
 s%:8080%:${OG_PORT}080%g; 
 s%:9090%:${OG_PORT}090%g; 
 s%:9091%:${OG_PORT}091%g
-" $HOME/.evmosd/config/app.toml
-sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.evmosd/config/client.toml
+" $HOME/.0gchain/config/app.toml
+sed -i.bak -e "s%:26657%:${OG_PORT}657%g" $HOME/.0gchain/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${OG_PORT}656\"|g" ~/.evmosd/config/config.toml > ~/.evmosd/config/config.toml.tmp
-mv ~/.evmosd/config/config.toml.tmp  ~/.evmosd/config/config.toml
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${OG_PORT}656\"|g" ~/.0gchain/config/config.toml > ~/.0gchain/config/config.toml.tmp
+mv ~/.0gchain/config/config.toml.tmp  ~/.0gchain/config/config.toml
 
 # Creating the Service File
-tee /etc/systemd/system/evmosd.service > /dev/null << EOF
+tee /etc/systemd/system/0gchaind.service > /dev/null << EOF
 [Unit]
 Description=0G Node
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which evmosd) start
+ExecStart=$(which 0gchaind) start --home $HOME
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
@@ -142,21 +143,21 @@ EOF
 ## Enabling and Starting the Service
 ```shell
 systemctl daemon-reload
-systemctl enable evmosd
-systemctl start evmosd
+systemctl enable 0gchaind
+systemctl start 0gchaind
 ```
 
 ## Checking the Logs
 ```shell
-journalctl -u evmosd -f -o cat
+journalctl -u 0gchaind -f -o cat
 ```  
 
 ## StateSync
 ```shell
-systemctl stop evmosd
+systemctl stop 0gchaind
 
-cp $HOME/.evmosd/data/priv_validator_state.json $HOME/.evmosd/priv_validator_state.json.backup
-evmosd tendermint unsafe-reset-all --home $HOME/.evmosd --keep-addr-book
+cp $HOME/.0gchain/data/priv_validator_state.json $HOME/.0gchain/priv_validator_state.json.backup
+0gchaind tendermint unsafe-reset-all --home $HOME/.0gchain --keep-addr-book
 
 SNAP_RPC="https://rpc-t-0g.anatolianteam.com:443"
 
@@ -166,14 +167,14 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-sed -i 's|^enable *=.*|enable = true|' $HOME/.evmosd/config/config.toml
-sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.evmosd/config/config.toml
-sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.evmosd/config/config.toml
-sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.evmosd/config/config.toml
+sed -i 's|^enable *=.*|enable = true|' $HOME/.0gchain/config/config.toml
+sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.0gchain/config/config.toml
+sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.0gchain/config/config.toml
+sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.0gchain/config/config.toml
 
-mv $HOME/.evmosd/priv_validator_state.json.backup $HOME/.evmosd/data/priv_validator_state.json
+mv $HOME/.0gchain/priv_validator_state.json.backup $HOME/.0gchain/data/priv_validator_state.json
 
-systemctl restart evmosd && journalctl -u evmosd -f -o cat
+systemctl restart 0gchaind && journalctl -u 0gchaind -f -o cat
 ```
 
 :::warning
@@ -183,7 +184,7 @@ AFTER THIS STAGE, WE EXPECT OUR NODE TO SYNC.
 ## Checking Synchronization
 Unless we get a `false` output, we do not move on to the next step, namely creating a validator.
 ```shell
-evmosd status 2>&1 | jq .SyncInfo
+0gchaind status 2>&1 | jq .SyncInfo
 ```
 
 ## Wallet
@@ -191,17 +192,17 @@ evmosd status 2>&1 | jq .SyncInfo
 ### Creating a New Wallet
 We do not change the `$OG_WALLET` section, we named our wallet with variables at the beginning of the installation.
 ```shell 
-evmosd keys add $OG_WALLET
+0gchaind keys add $OG_WALLET
 ```  
 
 ### Importing an Existing Wallet
 ```shell
-evmosd keys add $OG_WALLET --recover
+0gchaind keys add $OG_WALLET --recover
 ```
 
 ### Learning Your EVM Address
 ```shell
-echo "0x$(evmosd debug addr $(evmosd keys show $OG_WALLET -a) | grep hex | awk '{print $3}')"
+echo "0x$(0gchaind debug addr $(0gchaind keys show $OG_WALLET -a) | grep hex | awk '{print $3}')"
 ```
 
 ### Faucet
@@ -219,8 +220,8 @@ And then request tokens from the [faucet](https://faucet.0g.ai/) to your address
 Here we add our wallet and valve information to the variable.
 
 ```shell
-OG_WALLET_ADDRESS=$(evmosd keys show $OG_WALLET -a)
-OG_VALOPER_ADDRESS=$(evmosd keys show $OG_WALLET --bech val -a)
+OG_WALLET_ADDRESS=$(0gchaind keys show $OG_WALLET -a)
+OG_VALOPER_ADDRESS=$(0gchaind keys show $OG_WALLET --bech val -a)
 ```
 
 ```shell
@@ -231,7 +232,7 @@ source $HOME/.bash_profile
 
 ### Checking Wallet Balance
 ```
-evmosd query bank balances $OG_WALLET_ADDRESS
+0gchaind query bank balances $OG_WALLET_ADDRESS
 ```
 
 :::warning
@@ -245,9 +246,9 @@ You do not need to make any changes to the following command other than the plac
     - `website` where it says `https://anatolianteam.com`, if you have a website or twitter etc. You can write your address.
     - `security-contact` Your email address.
  ```shell 
-evmosd tx staking create-validator \
+0gchaind tx staking create-validator \
 --amount=10000000000000000aevmos \
---pubkey=$(evmosd tendermint show-validator) \
+--pubkey=$(0gchaind tendermint show-validator) \
 --moniker=$OG_NODENAME \
 --chain-id=$OG_CHAIN_ID \
 --commission-rate=0.10 \
@@ -270,12 +271,12 @@ If you get an error, add this before `--yes`: `--node=https://rpc-t-0g.anatolian
 
 ## Completely Deleting the Node 
 ```shell 
-systemctl stop evmosd && \
-systemctl disable evmosd && \
-rm /etc/systemd/system/evmosd.service && \
+systemctl stop 0gchaind && \
+systemctl disable 0gchaind && \
+rm /etc/systemd/system/0gchaind.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .evmosd 0g-evmos && \
-rm -rf $(which evmosd)
+rm -rf .0gchain 0g-evmos && \
+rm -rf $(which 0gchaind)
 sed -i '/OG_/d' ~/.bash_profile
 ```

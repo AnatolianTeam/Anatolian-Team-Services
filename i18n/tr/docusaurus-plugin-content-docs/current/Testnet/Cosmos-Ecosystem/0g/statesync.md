@@ -8,10 +8,10 @@ keywords: [0g, ai, yapay zeka, modüler, zincir, kurulum, snapshot, statesync, g
 # StateSync
 
 ```shell
-systemctl stop evmosd
+systemctl stop 0gchaind
 
-cp $HOME/.evmosd/data/priv_validator_state.json $HOME/.evmosd/priv_validator_state.json.backup
-evmosd tendermint unsafe-reset-all --home $HOME/.evmosd --keep-addr-book
+cp $HOME/.0gchain/data/priv_validator_state.json $HOME/.0gchain/priv_validator_state.json.backup
+0gchaind tendermint unsafe-reset-all --home $HOME/.0gchain --keep-addr-book
 
 SNAP_RPC="https://rpc-t-0g.anatolianteam.com:443"
 
@@ -21,12 +21,12 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-sed -i 's|^enable *=.*|enable = true|' $HOME/.evmosd/config/config.toml
-sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.evmosd/config/config.toml
-sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.evmosd/config/config.toml
-sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.evmosd/config/config.toml
+sed -i 's|^enable *=.*|enable = true|' $HOME/.0gchain/config/config.toml
+sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.0gchain/config/config.toml
+sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.0gchain/config/config.toml
+sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.0gchain/config/config.toml
 
-mv $HOME/.evmosd/priv_validator_state.json.backup $HOME/.evmosd/data/priv_validator_state.json
+mv $HOME/.0gchain/priv_validator_state.json.backup $HOME/.0gchain/data/priv_validator_state.json
 
-systemctl restart evmosd && journalctl -u evmosd -f -o cat
+systemctl restart 0gchaind && journalctl -u 0gchaind -f -o cat
 ```

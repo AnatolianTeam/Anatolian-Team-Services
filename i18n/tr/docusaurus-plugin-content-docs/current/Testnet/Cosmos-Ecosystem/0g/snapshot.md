@@ -14,15 +14,15 @@ apt install lz4 -y
 ```
 
 ```shell
-systemctl stop evmosd
+systemctl stop 0gchaind
 
-cp $HOME/.evmosd/data/priv_validator_state.json $HOME/.evmosd/priv_validator_state.json.backup 
+cp $HOME/.0gchain/data/priv_validator_state.json $HOME/.0gchain/priv_validator_state.json.backup 
 
-evmosd tendermint unsafe-reset-all --home $HOME/.evmosd --keep-addr-book
+0gchaind tendermint unsafe-reset-all --home $HOME/.0gchain --keep-addr-book
 SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/0g/ | egrep -o ">zgtendermint_9000-1.*\.tar.lz4" | tr -d ">")
-curl -L https://testnet.anatolianteam.com/0g/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.evmosd
+curl -L https://testnet.anatolianteam.com/0g/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.0gchain
 
-mv $HOME/.evmosd/priv_validator_state.json.backup $HOME/.evmosd/data/priv_validator_state.json 
+mv $HOME/.0gchain/priv_validator_state.json.backup $HOME/.0gchain/data/priv_validator_state.json 
 
-systemctl restart evmosd && journalctl -u evmosd -f -o cat
+systemctl restart 0gchaind && journalctl -u 0gchaind -f -o cat
 ```
