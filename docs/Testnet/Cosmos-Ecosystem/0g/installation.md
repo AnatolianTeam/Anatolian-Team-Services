@@ -129,7 +129,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which 0gchaind) start --home $HOME
+ExecStart=$(which 0gchaind) start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
