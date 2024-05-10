@@ -24,7 +24,7 @@ Bizim validatorümüzün [sayfasına](https://cosmos-testnet.anatolianteam.com/0
 
 ### Yönetişim
 
-[Yönetişim sayfasına](https://cosmos-testnet.anatolianteam.com/CrossFinance/gov) ziyaret edip aktif tekliflere oy verebilirsiniz.
+[Yönetişim sayfasına](https://cosmos-testnet.anatolianteam.com/0G/gov) ziyaret edip aktif tekliflere oy verebilirsiniz.
 
 ## Metamask İşlemleri
 

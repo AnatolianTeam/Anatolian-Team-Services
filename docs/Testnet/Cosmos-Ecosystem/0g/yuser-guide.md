@@ -24,7 +24,7 @@ Go to our validator [page](https://cosmos-testnet.anatolianteam.com/0G/staking/e
 
 ### Governance
 
-Go to [governance page](https://cosmos-testnet.anatolianteam.com/CrossFinance/gov) and vote the active proposals.
+Go to [governance page](https://cosmos-testnet.anatolianteam.com/0G/gov) and vote the active proposals.
 
 ## Metamask Transactions
 
