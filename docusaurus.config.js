@@ -89,6 +89,10 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'right',
             label: 'Services',
+            logo: {
+              alt: 'Anatolian Logo',
+              src: 'img/service-icon.svg',
+            },
           },
           {
             type: 'dropdown',
