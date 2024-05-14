@@ -13,6 +13,15 @@ slug: user-guide
 ## Mantra Hongbai Ağı
 [Keplr](https://chains.keplr.app) ya da Anatolian [explorer](https://cosmos-testnet.anatolianteam.com/wallet/suggest)'a gidip Hongbai ağını cüzdanınıza ekleyebilirsiniz.
 
+### Anatolian Explorer'dan Ağı Ekleme
+
+#### Ağı Ekleme
+![User Guide 1](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-1.png)
+
+#### Ağı Akltive Etme
+![User Guide 1](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-2.png)
+![User Guide 1](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-3.png)
+
 ## Musluk
 
 [Musluk](https://faucet.hongbai.mantrachain.io/)'a gidip OM token alın.

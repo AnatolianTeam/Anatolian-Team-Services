@@ -13,6 +13,16 @@ slug: user-guide
 
 Go to [keplr](https://chains.keplr.app) or our [explorer](https://cosmos-testnet.anatolianteam.com/wallet/suggest) and add network to your keplr wallet.
 
+### Add Network from Anatolian Explorer
+
+#### Add Network
+![User Guide 1](./img/user-guide-1.png)
+
+#### Activate Network
+![User Guide 1](./img/user-guide-2.png)
+![User Guide 1](./img/user-guide-3.png)
+
+
 ## Faucet
 
 Go to [faucet](https://faucet.hongbai.mantrachain.io/) and claim tokens.
