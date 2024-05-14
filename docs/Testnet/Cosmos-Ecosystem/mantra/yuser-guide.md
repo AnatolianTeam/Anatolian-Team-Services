@@ -19,8 +19,8 @@ Go to [keplr](https://chains.keplr.app) or our [explorer](https://cosmos-testnet
 ![User Guide 1](./img/user-guide-1.png)
 
 #### Activate Network
-![User Guide 1](./img/user-guide-2.png)
-![User Guide 1](./img/user-guide-3.png)
+![User Guide 2](./img/user-guide-2.png)
+![User Guide 3](./img/user-guide-3.png)
 
 
 ## Faucet
@@ -30,3 +30,8 @@ Go to [faucet](https://faucet.hongbai.mantrachain.io/) and claim tokens.
 ## Delegate
 
 You can go to our validator [page](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) and you can delegate 0.49 of the 0.5 OM tokens you receive from the faucet to us.
+
+![User Guide 4](./img/user-guide-4.png)
+![User Guide 5](./img/user-guide-5.png)
+
+

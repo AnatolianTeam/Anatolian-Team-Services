@@ -19,8 +19,8 @@ slug: user-guide
 ![User Guide 1](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-1.png)
 
 #### Ağı Akltive Etme
-![User Guide 1](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-2.png)
-![User Guide 1](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-3.png)
+![User Guide 2](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-2.png)
+![User Guide 3](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-3.png)
 
 ## Musluk
 
@@ -30,3 +30,5 @@ slug: user-guide
 
 Bizim validatorümüzün [sayfasına](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) giderek aldığınız 0.5 OM tokenin, 0.49'unu bize delege edebilirsiniz. 
 
+![User Guide 4](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-4.png)
+![User Guide 5](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-5.png)
