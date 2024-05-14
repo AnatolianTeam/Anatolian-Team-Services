@@ -27,7 +27,7 @@ keywords: [initia, chain, installation, snapshot, statesync, update]
 ## Network Info 
 * Network Chain ID: initiation-1
 * Binary: initiad
-* Denom: uusdc
+* Denom: uinit, uusdc
 * Working directory: .initia
 
 ## Public Services

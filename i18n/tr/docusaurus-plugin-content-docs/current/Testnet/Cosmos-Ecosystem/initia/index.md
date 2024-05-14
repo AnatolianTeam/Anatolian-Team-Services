@@ -28,7 +28,7 @@ keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
 
 * Network Chain ID: initiation-1
 * Binary: initiad
-* Denom: uusdc
+* Denom: uinit, uusdc
 * Çalışma dizini: .initia
 
 ## Hizmetler

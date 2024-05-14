@@ -76,7 +76,7 @@ wget https://testnet.anatolianteam.com/initia/genesis.json -O $HOME/.initia/conf
 wget https://testnet.anatolianteam.com/initia/addrbook.json -O $HOME/.initia/config/addrbook.json
 
 # Set up the minimum gas price
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.005uusdc "|g' $HOME/.initia/config/app.toml
+sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "0.15uinit,0.01uusdc"|g' $HOME/.initia/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
