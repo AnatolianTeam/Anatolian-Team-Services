@@ -19,5 +19,4 @@ Go to [faucet](https://faucet.hongbai.mantrachain.io/) and claim tokens.
 
 ## Delegate
 
-Go to our validator [page](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) and stake your OM tokens.
-
+You can go to our validator [page](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) and you can delegate 0.49 of the 0.5 OM tokens you receive from the faucet to us.

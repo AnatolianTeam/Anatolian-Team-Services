@@ -19,5 +19,5 @@ slug: user-guide
 
 ## Delege Etme
 
-Bizim validatorümüzün [sayfasına](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) giderek OM tokenlerinizi stake edebilirsiniz.
+Bizim validatorümüzün [sayfasına](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) giderek aldığınız 0.5 OM tokenin, 0.49'unu bize delege edebilirsiniz. 
 
