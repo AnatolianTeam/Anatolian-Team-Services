@@ -91,7 +91,7 @@ pcli view balance
 ```
 curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.75.0/pd-x86_64-unknown-linux-gnu.tar.gz
 tar -xf pd-x86_64-unknown-linux-gnu.tar.gz
-sudo mv pd-x86_64-unknown-linux-gnu/pd /usr/local/bin/
+mv pd-x86_64-unknown-linux-gnu/pd /usr/local/bin/
 ```
 
 Confirm the successful installation of Penumbra:
@@ -135,7 +135,7 @@ pd testnet join --external-address 123.456.78:26656 --moniker Anatolian Team
 
 You'll create a file to run your Penumbra node in the background:
 ```
-sudo tee /etc/systemd/system/penumbra.service > /dev/null <<EOF
+tee /etc/systemd/system/penumbra.service > /dev/null <<EOF
 [Unit]
 Description=Penumbra Node
 After=network.target
@@ -166,7 +166,7 @@ Please be aware that your node won't operate until the CometBFT node is activate
 
 Once Penumbra is launched, establish a new file to initiate the CometBFT node, essential for Penumbra's functionality:
 ```
-sudo tee /etc/systemd/system/cometbft.service > /dev/null <<EOF
+tee /etc/systemd/system/cometbft.service > /dev/null <<EOF
 [Unit]
 Description=Cometbft Node
 After=network.target

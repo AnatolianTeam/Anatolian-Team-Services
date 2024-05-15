@@ -1,23 +1,23 @@
 ---
-title: 💾 Installation
-description: Node installation guide.
+title: 💾 Kurulum
+description: Node kurulum rehberi.
 image: ./img/Penumbra-Service-Cover.jpg
 keywords: [penumbra, installation, snapshot, statesync, update]
 ---
 
-# Installation
+# Kurulum
 
-## Updating the System
+## Sistemi Güncelleme
 ```shell
 apt update && apt upgrade -y
 ```
 
-## Installing the Necessary Libraries
+## Gerekli Kütüphanelerin Kurulması
 ```
 apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp wget jq llvm tmux htop screen unzip gcc lz4 -y < "/dev/null"
 ```
 
-## Installing Go
+## Go Kurulumu
 ```shell
 ver="1.21.6"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
@@ -33,12 +33,12 @@ go version
 ```
 
 
-## Penumbra Command Line Interface (CLI) Installation
+## Penumbra Command Line Interface (CLI) Kurulumu
 
-Requirements: Ubuntu version 22.04
+Gereklilik: Ubuntu versiyon 22.04
 
 :::note
-Important Note: This guide assumes you're comfortable using the command line.
+Önemli Not: Bu kılavuz, komut satırını rahatça kullandığınızı varsayar.
 :::
 
 ```
@@ -49,57 +49,57 @@ source $HOME/.cargo/env
 ```
 
 :::warning
-Please confirm that the Command Line Interface (CLI) installation has been successfully finalized.
+Lütfen Komut Satırı Arayüzü (CLI) kurulumunun başarıyla tamamlandığını doğrulayın.
 :::
 
 ```
 pcli --version
 ```
 
-## Creating a Penumbra Wallet
+## Penumbra Cüzdan Oluşturma
 
-Utilizing the CLI, you'll initiate the wallet generation.
+CLI'yi kullanarak cüzdan oluşturma işlemini başlatma
 ```
 pcli init soft-kms generate
 ```
 
 :::warning
-As you go through the process, a private key (Private Seed) will be generated. It's crucial to safeguard this key diligently, as it serves as a lifeline in the unfortunate event of losing access to your wallet.
+Süreç boyunca ilerledikçe özel bir anahtar (Private Seed) oluşturulacaktır. Bu anahtarı özenle korumak çok önemlidir çünkü talihsiz bir durumda cüzdanınıza erişiminizi kaybetmeniz durumunda bir cankurtaran halatı görevi görür.
 :::
 
-To locate your wallet address, employ the subsequent command:
+Cüzdan adresinizi bulmak için aşağıdaki komutu kullanın:
 ```
 pcli view address
 ```
 
-Should you need to import a wallet you've previously generated:
+Daha önce oluşturduğunuz bir cüzdanı içe aktarmanız gerekirse:
 ```
 pcli init soft-kms import-phrase
 ```
 
-Head over to the [Penumbra Discord](https://discord.gg/2Ez55n4txb) to redeem faucet tokens for the wallet you've generated.
+Oluşturduğunuz cüzdan için musluk jetonlarını kullanmak üzere [Penumbra Discord'a](https://discord.gg/2Ez55n4txb) gidin.
 
-Insert your wallet address into the #-testnet-faucet channel.
+Cüzdan adresinizi #-testnet-faucet kanalına ekleyin.
 
-Check your wallet balance:
+Cüzdan bakiyenizi kontrol edin:
 ```
 pcli view sync
 pcli view balance
 ```
 
-## Set up Penumbra and CometBFT.
+## Penumbra and CometBFT Kurulumu
 ```
 curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.75.0/pd-x86_64-unknown-linux-gnu.tar.gz
 tar -xf pd-x86_64-unknown-linux-gnu.tar.gz
-sudo mv pd-x86_64-unknown-linux-gnu/pd /usr/local/bin/
+mv pd-x86_64-unknown-linux-gnu/pd /usr/local/bin/
 ```
 
-Confirm the successful installation of Penumbra:
+Penumbra'nın başarıyla kurulup kurulmadığını kontrol etdin:
 ```
 pd --version
 ```
 
-Install CometBFT to ensure the smooth operation of the node alongside Penumbra.
+Node'un Penumbra ile birlikte sorunsuz çalışmasını sağlamak için CometBFT'yi yükleyin.
 ```
 echo export GOPATH=\"\$HOME/go\" >> ~/.bash_profile
 echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
@@ -113,29 +113,30 @@ cd cometbft
 make install
 ```
 
-Verify the successful installation of CometBFT:
+CometBFT'nin başarılı kurulumunu doğrulayın:
 ```
 cometbft version
 ```
 
-Initialize the configuration files to commence the Full Node:
+Full Node'u başlatmak için yapılandırma dosyalarını başlatmak için hazırlama:
 ```
 pd testnet unsafe-reset-all
 ```
 
 Next, initialize the node, substituting "IP" with the IP address of your VPS and "NAME" with the desired name for your node:
+Ardından, `IPADDRESS` yerine `VPS'nizin IP adresini` ve `NAME` yerine `node'unuz için istediğiniz adı` yazarak node'u başlatın:
 ```
 pd testnet join --external-address IPADDRESS:26656 --moniker NAME
 ```
 
-Example:
+Örnek:
 ```
-pd testnet join --external-address 123.456.78:26656 --moniker Anatolian Team
+pd testnet join --external-address 123.456.78:26656 --moniker "Anatolian Team"
 ```
 
-You'll create a file to run your Penumbra node in the background:
+Penumbra node'unu arka planda çalıştırmak için servis dosyası oluşturma:
 ```
-sudo tee /etc/systemd/system/penumbra.service > /dev/null <<EOF
+tee /etc/systemd/system/penumbra.service > /dev/null <<EOF
 [Unit]
 Description=Penumbra Node
 After=network.target
@@ -150,23 +151,24 @@ WantedBy=multi-user.target
 EOF
 ```
 
-Subsequently, initiate your Penumbra node:
+Hizmeti Etkinleştirme ve Başlatma
 ```
 systemctl daemon-reload
 systemctl enable penumbra
 systemctl start penumbra
 ```
 
-To ensure your node is functioning correctly:
+Node'un doğru çalıştığından emin olmak için:
 ```
 journalctl -fu penumbra -n 50
 ```
 
-Please be aware that your node won't operate until the CometBFT node is activated.
+CometBFT node'u etkinleştirilene kadar node'un çalışmayacağını lütfen unutmayın.
 
-Once Penumbra is launched, establish a new file to initiate the CometBFT node, essential for Penumbra's functionality:
+Penumbra başlatıldığında, Penumbra'nın işlevselliği için gerekli olan CometBFT node'u başlatmak için yeni bir servis dosyası oluşturun:
+
 ```
-sudo tee /etc/systemd/system/cometbft.service > /dev/null <<EOF
+tee /etc/systemd/system/cometbft.service > /dev/null <<EOF
 [Unit]
 Description=Cometbft Node
 After=network.target
@@ -181,39 +183,40 @@ WantedBy=multi-user.target
 EOF
 ```
 
-Initiate your CometBFT node:
+CometBFT Node Hizmeti Etkinleştirme ve Başlatma
+:
 ```
 systemctl daemon-reload
 systemctl enable cometbft
 systemctl start cometbft
 ```
 
-To check if your node is working correctly:
+Node'un doğru çalıştığından emin olmak için:
 ```
 journalctl -fu cometbft -n 50
 ```
 
-Once CometBFT is launched, your Penumbra node will start automatically.
+CometBFT başlatıldığında Penumbra node otomatik olarak başlayacaktır.
 
-## Validator Configuration:
+## Validator Yapılandırması
 
-If you wish to convert your full node into a validator node, you'll need to furnish a configuration file and delegate an adequate number of tokens for your validator node to activate.
+Full node'unuzu bir validator node'a dönüştürmek istiyorsanız, bir yapılandırma dosyası sağlamanız ve validator node'unuzun etkinleştirilmesi için yeterli sayıda token delege etmeniz gerekir.
 
-Begin by identifying the value of your consensus_key:
+Consensus_key'inizin değerini tanımlayarak başlayın:
 ```
 grep -A3 pub_key ~/.penumbra/testnet_data/node0/cometbft/config/priv_validator_key.json
 ```
 
-Keep this value handy as you'll need it to complete your configuration file.
+Yapılandırma dosyanızı tamamlamak için ihtiyacınız olacağından bu değeri el altında bulundurun.
 
-Generate your configuration file:
+Yapılandırma dosyanızı oluşturun:
 ```
 pcli validator definition template \
     --tendermint-validator-keyfile ~/.penumbra/testnet_data/node0/cometbft/config/priv_validator_key.json \
     --file validator.toml
 ```
 
-You will be able to customize your validator file
+Validator dosyanızı özelleştirmek için:
 ```
 nano validator.toml
 ```
@@ -222,32 +225,35 @@ nano validator.toml
 
 Edit the configuration file by replacing the placeholder "value" in "consensus_key" with the actual value you obtained earlier, and update "enabled = false" to "enabled = true".
 
-## Validator Registration:
-Now that you've configured the validator.toml file, you're ready to register your validator:
+`Consensus_key` içindeki `value` yer tutucusunu daha önce elde ettiğiniz gerçek değerle değiştirerek yapılandırma dosyasını düzenleyin ve `enabled = false` ifadesini `enabled = true` olarak güncelleyin.
+
+## Validator Kaydı
+validator.toml dosyasını yapılandırdığınıza göre artık doğrulayıcınızı kaydetmeye hazırsınız:
 ```
 pcli validator definition upload --file validator.toml
 ```
 
-## Delegation on the Validator Node:
+## Validator Node'a Delege Etme
 
-To activate your validator, you'll need to delegate faucet tokens.
+Validatorünüzü etkinleştirmek için musluktan aldığınız tokenleri delege etmeniz gerekir.
 
-Begin by identifying the address of your validator:
+Validatorünüzün adresini tanımlayarak başlayın:
 ```
 pcli validator identity
 ```
 
-Delegate faucet tokens from Penumbra to your validator:
+Tokenleri delege etme:
 ```
 pcli tx delegate 1penumbra --to [YOUR_VALIDATOR_IDENTITY_KEY]
 ```
 
 You can verify how many tokens you have delegated :
+Kaç token delege ettiğinizi doğrulayabilirsiniz:
 ```
 pcli view balance
 ```
 
-You can verify that your validator node is active by searching for it in the list :
+Validatorünüzün etkin olduğunu listede arayarak doğrulayabilirsiniz:
 ```
 pcli query validator list --detailed
 ```
