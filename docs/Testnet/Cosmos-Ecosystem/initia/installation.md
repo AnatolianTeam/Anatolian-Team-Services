@@ -218,7 +218,7 @@ You do not need to make any changes to the following command other than the plac
 ```shell 
 cd $HOME
 echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(initiad comet show-validator | grep -Po '\"key\":\s*\"\K[^"]*')\"},
-    \"amount\": \"9900000uusdc\",
+    \"amount\": \"28000000uinit\",
     \"moniker\": \"$INITIA_NODENAME\",
     \"commission-rate\": \"0.1\",
     \"commission-max-rate\": \"0.2\",

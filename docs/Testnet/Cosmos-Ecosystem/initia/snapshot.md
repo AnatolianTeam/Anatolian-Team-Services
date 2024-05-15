@@ -5,7 +5,7 @@ image: ./img/Initia-Service-Cover.jpg
 keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (COMING SOON)
+# Snapshot
 
 :::info
 Snapshots are taken every 6 hours.

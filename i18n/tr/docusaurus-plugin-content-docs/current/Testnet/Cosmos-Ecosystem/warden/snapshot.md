@@ -5,7 +5,7 @@ image: ./img/Warden-Service-Cover.jpg
 keywords: [warden, protocol, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (YAKINDA)
+# Snapshot
 
 ```shell
 # install lz4

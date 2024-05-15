@@ -5,7 +5,7 @@ image: ./img/Initia-Service-Cover.jpg
 keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (YAKINDA)
+# Snapshot
 
 ```shell
 # install lz4
