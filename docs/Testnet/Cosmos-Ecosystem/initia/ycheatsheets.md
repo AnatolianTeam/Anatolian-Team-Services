@@ -98,18 +98,18 @@ initiad tx gov vote 1 yes --from $INITIA_WALLET --chain-id=$INITIA_CHAIN_ID --ga
 
 ### Validatore Staking / Delegation
 ```
-initiad tx staking delegate $INITIA_VALOPER_ADDRESS 100000000uusdc --from=$INITIA_WALLET --chain-id=$INITIA_CHAIN_ID --gas-prices 0.00001uusdc --gas-adjustment 1.5 --gas auto -y
+initiad tx mstaking delegate $INITIA_VALOPER_ADDRESS 100000000uusdc --from=$INITIA_WALLET --chain-id=$INITIA_CHAIN_ID --gas-prices 0.00001uusdc --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-initiad tx staking unbond $(initiad keys show $INITIA_WALLET --bech val -a) 1000000uusdc --from $INITIA_WALLET --chain-id indigo-1 --fees 3000uusdc -y
+initiad tx mstaking unbond $(initiad keys show $INITIA_WALLET --bech val -a) 1000000uusdc --from $INITIA_WALLET --chain-id indigo-1 --fees 3000uusdc -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-initiad tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uusdc --from=$INITIA_WALLET --chain-id=$INITIA_CHAIN_ID --gas-prices 0.00001uusdc --gas-adjustment 1.5 --gas auto -y
+initiad tx mstaking redelegate srcValidatorAddress destValidatorAddress 100000000uusdc --from=$INITIA_WALLET --chain-id=$INITIA_CHAIN_ID --gas-prices 0.00001uusdc --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
@@ -133,7 +133,7 @@ initiad status 2>&1 | jq .ValidatorInfo
 ### Changing Validator Name
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
-initiad tx staking edit-validator \
+initiad tx mstaking edit-validator \
 --new-moniker=NEW-NODE-NAME \
 --chain-id=$INITIA_CHAIN_ID \
 --from=$INITIA_WALLET \
@@ -145,14 +145,14 @@ initiad tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-initiad tx staking edit-validator --commission-rate "0.02" --moniker=$INITIA_NODENAME --from $INITIA_WALLET --chain-id $INITIA_CHAIN_ID --gas-prices 0.00001uusdc --gas-adjustment 1.5 --gas auto - y
+initiad tx mstaking edit-validator --commission-rate "0.02" --moniker=$INITIA_NODENAME --from $INITIA_WALLET --chain-id $INITIA_CHAIN_ID --gas-prices 0.00001uusdc --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
 Before changing this information, you must register at https://keybase.io/ and receive your 16-digit code (XXXX0000XXXX0000) as seen in the code below. Also profile picture etc. You can also adjust the settings.
 `$INITIA_NODENAME` and `$INITIA_WALLET`: Your Validator (Moniker) and wallet name, you do not need to change it. Because we added it to variables.
 ```
-initiad tx staking edit-validator \
+initiad tx mstaking edit-validator \
 --moniker=$INITIA_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
@@ -163,7 +163,7 @@ initiad tx staking edit-validator \
 
 ### Validator Details
 ```
-initiad q staking validator $(initiad keys show $INITIA_WALLET --bech val -a)
+initiad q mstaking validator $(initiad keys show $INITIA_WALLET --bech val -a)
 ```
 
 ### Jailing info
@@ -183,12 +183,12 @@ initiad tx slashing unjail --from $INITIA_WALLET --chain-id $INITIA_CHAIN_ID --g
 
 ### Active Validators List
 ```
-initiad q staking validators -oj --limit=2000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl
+initiad q mstaking validators -oj --limit=2000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl
 ```
 
 ### Checking Validator key
 ```
-[[ $(initiad q staking validator $VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(initiad status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "Your key status is ok" || echo -e "Your key status is error"
+[[ $(initiad q mstaking validator $VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(initiad status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "Your key status is ok" || echo -e "Your key status is error"
 ```
 
 ### Signing info
