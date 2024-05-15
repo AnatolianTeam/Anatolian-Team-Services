@@ -11,7 +11,7 @@ keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
 
 ## Bağlantılar
  ✔️ [Website](https://initia.xyz/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Initia) |
+ ✔️ [Blockchain Explorer](https://scan.testnet.initia.xyz/initiation-1/validators) |
  ✔️ [Doküman](https://docs.initia.xyz/) |
  ✔️ [GitHub](https://github.com/initia-labs) |
  ✔️ [Discord](https://discord.gg/initia)
@@ -39,7 +39,7 @@ keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
 ## Peering
 Hızlı bağlantı ya da durum senkronizasyonu (statesync) için eş (peer) kullanabilirsiniz.
 ```shell
-PEERS="093e1b89a498b6a8760ad2188fbda30a05e4f300@35.240.207.217:26656"
+PEERS="0cb7dc2a96dfdf228547ef4a89da838ffc036f39@85.10.200.82:26656,093e1b89a498b6a8760ad2188fbda30a05e4f300@35.240.207.217:26656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.initia/config/config.toml
 ```
 Adres defteri üç saatte bir güncellenir. Hızlı başlatma için kullanabilirsiniz.

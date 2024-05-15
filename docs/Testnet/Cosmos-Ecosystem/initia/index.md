@@ -11,7 +11,7 @@ keywords: [initia, chain, installation, snapshot, statesync, update]
 
 ## Links
  ✔️ [Website](https://initia.xyz/) |
- ✔️ [Blockchain Explorer](https://cosmos-testnet.anatolianteam.com/Initia) |
+ ✔️ [Blockchain Explorer](https://scan.testnet.initia.xyz/initiation-1/validators) |
  ✔️ [Docs](https://docs.initia.xyz/) |
  ✔️ [GitHub](https://github.com/initia-labs) |
  ✔️ [Discord](https://discord.gg/initia)
@@ -39,7 +39,7 @@ keywords: [initia, chain, installation, snapshot, statesync, update]
 You can use peer for fast connection or state sync 
 ```shell
 SEEDS=""
-PEERS="093e1b89a498b6a8760ad2188fbda30a05e4f300@35.240.207.217:26656"
+PEERS="0cb7dc2a96dfdf228547ef4a89da838ffc036f39@85.10.200.82:26656,093e1b89a498b6a8760ad2188fbda30a05e4f300@35.240.207.217:26656"
 sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.initia/config/config.toml
 ```
 The address book is updated once three hour. You can use it for quick launch.

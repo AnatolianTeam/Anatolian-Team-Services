@@ -84,7 +84,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.initia/config/config.
 
 # SEEDS ve PEERS Ayarlaması
 SEEDS="2eaa272622d1ba6796100ab39f58c75d458b9dbc@34.142.181.82:26656,c28827cb96c14c905b127b92065a3fb4cd77d7f6@testnet-seeds.whispernode.com:25756"
-PEERS="093e1b89a498b6a8760ad2188fbda30a05e4f300@35.240.207.217:26656"
+PEERS="0cb7dc2a96dfdf228547ef4a89da838ffc036f39@85.10.200.82:26656,093e1b89a498b6a8760ad2188fbda30a05e4f300@35.240.207.217:26656"
 sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.initia/config/config.toml
 
 
@@ -125,7 +125,7 @@ mv ~/.initia/config/config.toml.tmp  ~/.initia/config/config.toml
 # Servis Dosyası Oluşturma
 tee /etc/systemd/system/initiad.service > /dev/null << EOF
 [Unit]
-Description=SelfChain Node
+Description=Initia Node
 After=network-online.target
 
 [Service]
