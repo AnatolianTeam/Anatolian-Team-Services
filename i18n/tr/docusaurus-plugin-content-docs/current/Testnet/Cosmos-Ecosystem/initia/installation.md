@@ -194,9 +194,8 @@ source $HOME/.bash_profile
 ```
 
 ### Musluk
-```shell
-curl --data '{"address": "$INITIA_WALLET_ADDRESS"}' https://faucet.buenavista.initiaprotocol.org
-```
+https://faucet.testnet.initia.xyz
+
 
 ### Cüzdan Bakiyesini Kontrol Etme 
 ```

@@ -195,9 +195,8 @@ source $HOME/.bash_profile
 ```
 
 ### Faucet
-```shell
-curl --data '{"address": "$INITIA_WALLET_ADDRESS"}' https://faucet.buenavista.initiaprotocol.org
-```
+
+https://faucet.testnet.initia.xyz
 
 ### Checking Wallet Balance
 ```
