@@ -1,7 +1,7 @@
 ---
 title: 💾 Installation
 description: Node installation guide.
-image: 
+image: ./img/Penumbra-Service-Cover.jpg
 keywords: [penumbra, installation, snapshot, statesync, update]
 ---
 
