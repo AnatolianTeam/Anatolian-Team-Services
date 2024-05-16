@@ -17,6 +17,7 @@ keywords: [Liteseed, ao, veri, kurulum, rehber]
  ✔️ [Discord](https://discord.gg/yh4xsTUWUn)
 
 
+
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
 
