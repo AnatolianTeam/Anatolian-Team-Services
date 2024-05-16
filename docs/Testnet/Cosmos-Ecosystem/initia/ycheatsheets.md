@@ -134,12 +134,14 @@ initiad status 2>&1 | jq .ValidatorInfo
 Write your new validator/moniker name where it says 'NEW-NODE-NAME'. It should not contain TR characters.
 ```
 initiad tx mstaking edit-validator \
---new-moniker=NEW-NODE-NAME \
+--new-moniker=YENI-NODE-ADI \
 --chain-id=$INITIA_CHAIN_ID \
 --from=$INITIA_WALLET \
---gas-prices 0.00001uusdc \
---gas-adjustment 1.5 \
---gas auto -y
+--node=https://rpc-t-initia.anatolianteam.com:443 \
+--gas-prices=11uinit \
+--gas-adjustment=1.5 \
+--gas=auto \
+--yes
 ```
 
 ### Changing Validator Commission Rate
@@ -159,6 +161,11 @@ initiad tx mstaking edit-validator \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
 --chain-id=$INITIA_CHAIN_ID \
 --from=$INITIA_WALLET
+--node=https://rpc-t-initia.anatolianteam.com:443 \
+--gas-prices=11uinit \
+--gas-adjustment=1.5 \
+--gas=auto \
+--yes
 ```
 
 ### Validator Details

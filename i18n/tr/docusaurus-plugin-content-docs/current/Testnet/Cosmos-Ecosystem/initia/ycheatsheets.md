@@ -138,9 +138,11 @@ initiad tx mstaking edit-validator \
 --new-moniker=YENI-NODE-ADI \
 --chain-id=$INITIA_CHAIN_ID \
 --from=$INITIA_WALLET \
---gas-prices 0.00001uusdc \
---gas-adjustment 1.5 \
---gas auto -y
+--node=https://rpc-t-initia.anatolianteam.com:443 \
+--gas-prices=11uinit \
+--gas-adjustment=1.5 \
+--gas=auto \
+--yes
 ```
 
 ### Validator Komisyon Oranını Değiştirme
@@ -160,6 +162,11 @@ initiad tx mstaking edit-validator \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
 --chain-id=$INITIA_CHAIN_ID \
 --from=$INITIA_WALLET
+--node=https://rpc-t-initia.anatolianteam.com:443 \
+--gas-prices=11uinit \
+--gas-adjustment=1.5 \
+--gas=auto \
+--yes
 ```
 
 ### Validator Detayları
