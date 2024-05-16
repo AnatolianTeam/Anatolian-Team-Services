@@ -11,7 +11,6 @@ keywords: [Liteseed, ao, data, installation, guide]
 
 ## Links
  ✔️ [Website](https://liteseed.xyz) |
- ✔️ [Blockchain Explorer]() |
  ✔️ [Docs](https://docs.liteseed.xyz/) |
  ✔️ [GitHub](https://github.com/liteseed) |
  ✔️ [Discord](https://discord.gg/yh4xsTUWUn)

@@ -12,7 +12,6 @@ keywords: [Liteseed, ao, veri, kurulum, rehber]
 
 ## Bağlantılar
  ✔️ [Website](https://liteseed.xyz) |
- ✔️ [Blockchain Explorer]() |
  ✔️ [Doküman](https://docs.liteseed.xyz/) |
  ✔️ [GitHub](https://github.com/liteseed) |
  ✔️ [Discord](https://discord.gg/yh4xsTUWUn)
