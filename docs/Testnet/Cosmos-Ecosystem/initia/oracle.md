@@ -20,7 +20,7 @@ mv build/slinky /usr/local/bin/
 
 ## Creating the Service File
 
-:::warn
+:::warning
 If you `have not done` the node installation according to our guide, change the `127.0.0.1:${INITIA_PORT}090` section in the code below according to which port your node uses. Ex.: `127.0.0.1:15090`
 :::
 
@@ -42,7 +42,7 @@ EOF
 
 ## Configuring the Initia Node
 
-:::warn
+:::warning
 If you have not done the node setup according to our guide, use the 2nd code below and change the 'PORT' section according to which port your node uses. Ex.: `PORT=15080`
 :::
 ```shell

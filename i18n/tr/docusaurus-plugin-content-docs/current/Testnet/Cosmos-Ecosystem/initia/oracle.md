@@ -18,7 +18,7 @@ mv build/slinky /usr/local/bin/
 ```
 
 ## Servis Dosyası Oluşturma
-:::warn
+:::warning
 Eğer node kurulumunu bizim rehberimizden `yapmadıysanız` aşağıdaki kodda `127.0.0.1:${INITIA_PORT}090` bölümünü, node'unuz hangi portu kullanıyorsa ona göre değiştirin. Örn.: `127.0.0.1:15090`
 :::
 ```
@@ -39,7 +39,7 @@ EOF
 
 ## Initia Node Yapılandırması
 
-:::warn
+:::warning
 Eğer node kurulumunu bizim rehberimizden `yapmadıysanız` aşağıdaki 2 kodu kullnın ve `PORT` bölümünü node'unuz hangi portu kullanıyorsa ona göre değiştirin. Örn.: `PORT=15080`
 :::
 
