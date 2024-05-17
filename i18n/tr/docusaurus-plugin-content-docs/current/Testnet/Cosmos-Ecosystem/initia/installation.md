@@ -55,7 +55,7 @@ echo "export INITIA_CHAIN_ID=initiation-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Initia Protocol'ün Kurulması
+## Initia Kurulması
 ```
 cd $HOME
 git clone https://github.com/initia-labs/initia.git

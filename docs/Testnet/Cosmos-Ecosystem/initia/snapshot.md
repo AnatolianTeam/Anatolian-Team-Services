@@ -2,7 +2,7 @@
 title: 📸 Snapshot
 description: Node installation with snapshot.
 image: ./img/Initia-Service-Cover.jpg
-keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
+keywords: [initia, oracle, installation, snapshot, statesync, update]
 ---
 
 # Snapshot

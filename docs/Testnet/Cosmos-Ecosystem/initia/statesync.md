@@ -2,7 +2,7 @@
 title: 🔄 StateSync
 description: Node synchronization with StateSync.
 image: ./img/Initia-Service-Cover.jpg
-keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
+keywords: [initia, oracle, installation, snapshot, statesync, update]
 ---
 
 # StateSync

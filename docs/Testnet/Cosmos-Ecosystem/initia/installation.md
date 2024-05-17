@@ -2,7 +2,7 @@
 title: 💾 Installation
 description: Node installation guide.
 image: ./img/Initia-Service-Cover.jpg
-keywords: [initia, chain, kurulum, snapshot, statesync, güncelleme]
+keywords: [initia, chain, installation, snapshot, statesync, update]
 ---
 
 # Installation
@@ -55,7 +55,7 @@ echo "export INITIA_CHAIN_ID=initiation-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Installing Initia Protocol
+## Installing Initia
 ```
 cd $HOME
 git clone https://github.com/initia-labs/initia.git
