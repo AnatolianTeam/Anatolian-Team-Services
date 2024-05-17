@@ -67,10 +67,12 @@ Balance: 1000 LSD
 Staked:  No
 ```
 
-To get tokens, send your wallet address and your affiliate website or Twitter address to hello@liteseed.xyz.
+## Requesting Tokens
+
+To receive tokens, send your wallet address and your website (if applicable) or Twitter address to `hello@liteseed.xyz`.
 
 ## Staking 
-Write your address in the e-mail you sent to request tokens where it says `https://yourbundlerurl.com`.
+To request a token, write the address (twitter or website) you gave in the e-mail you sent to where it says `https://yourbundlerurl.com`.
 ```shell
 docker run -v liteseed:/data edge stake -u "https://yourbundlerurl.com"
 ```

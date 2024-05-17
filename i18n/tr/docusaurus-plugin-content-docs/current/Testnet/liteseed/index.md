@@ -6,7 +6,7 @@ description: Liteseed Servis Sayfası
 keywords: [Liteseed, ao, veri, kurulum, rehber]
 ---
 
-# Liteseed Rehberi
+# Liteseed
 
 ![Liteseed](./img/Liteseed-Service.jpg)
 
