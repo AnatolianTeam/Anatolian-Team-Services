@@ -1,5 +1,5 @@
 ---
-title: 💾 Kurulum
+title: 💾 Oracle
 description: Oracle kurulum rehberi.
 image: ./img/Initia-Service-Cover.jpg
 keywords: [initia, oracle, kurulum, snapshot, statesync, güncelleme]
@@ -18,8 +18,6 @@ mv build/slinky /usr/local/bin/
 ```
 
 ## Servis Dosyası Oluşturma
-
-
 :::warn
 Eğer node kurulumunu bizim rehberimizden `yapmadıysanız` aşağıdaki kodda `127.0.0.1:${INITIA_PORT}090` bölümünü, node'unuz hangi portu kullanıyorsa ona göre değiştirin. Örn.: `127.0.0.1:15090`
 :::
@@ -40,9 +38,26 @@ EOF
 ```
 
 ## Initia Node Yapılandırması
+
+:::warn
+Eğer node kurulumunu bizim rehberimizden `yapmadıysanız` aşağıdaki 2 kodu kullnın ve `PORT` bölümünü node'unuz hangi portu kullanıyorsa ona göre değiştirin. Örn.: `PORT=15080`
+:::
+
 ```shell
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.initia/config/app.toml
+sed -i.bak -e "
+s|oracle_address = \"\"|oracle_address = \"127.0.0.1:${INITIA_PORT}080\"|
+" $HOME/.initia/config/app.toml
 ```
+
+
+```shell
+PORT=15080
+sed -i.bak -e "
+s|oracle_address = \"\"|oracle_address = \"127.0.0.1:${PORT}\"|
+" $HOME/.initia/config/app.toml
+```
+
+
 
 ## Hizmeti Etkinleştirme ve Başlatma
 ```shell

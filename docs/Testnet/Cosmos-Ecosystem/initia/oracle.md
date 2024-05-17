@@ -1,5 +1,5 @@
 ---
-title: 💾 Installation
+title: 💾 Oracle
 description: Oracle installation guide.
 image: ./img/Initia-Service-Cover.jpg
 keywords: [initia, oracle, installation, snapshot, statesync, update]
@@ -41,8 +41,14 @@ EOF
 ```
 
 ## Configuring the Initia Node
+
+:::warn
+If you have not done the node setup according to our guide, use the 2nd code below and change the 'PORT' section according to which port your node uses. Ex.: `PORT=15080`
+:::
 ```shell
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.initia/config/app.toml
+sed -i.bak -e "
+s|oracle_address = \"\"|oracle_address = \"127.0.0.1:${INITIA_PORT}080\"|
+" $HOME/.initia/config/app.toml
 ```
 
 ## Enabling and Starting the Services
