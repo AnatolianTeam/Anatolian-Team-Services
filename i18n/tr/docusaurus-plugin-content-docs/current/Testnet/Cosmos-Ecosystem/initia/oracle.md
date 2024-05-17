@@ -40,7 +40,7 @@ EOF
 ## Initia Node Yapılandırması
 
 :::warning
-Eğer node kurulumunu bizim rehberimizden `yapmadıysanız` aşağıdaki 2 kodu kullnın ve `PORT` bölümünü node'unuz hangi portu kullanıyorsa ona göre değiştirin. Örn.: `PORT=15080`
+Eğer node kurulumunu bizim rehberimizden `yapmadıysanız` aşağıdaki 2. kodu kullnın ve `PORT` bölümünü node'unuz hangi portu kullanıyorsa ona göre değiştirin. Örn.: `PORT=15080`
 :::
 
 ```shell

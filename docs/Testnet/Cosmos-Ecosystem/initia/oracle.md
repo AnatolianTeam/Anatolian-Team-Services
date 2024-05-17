@@ -45,9 +45,17 @@ EOF
 :::warning
 If you have not done the node setup according to our guide, use the 2nd code below and change the 'PORT' section according to which port your node uses. Ex.: `PORT=15080`
 :::
+
 ```shell
 sed -i.bak -e "
 s|oracle_address = \"\"|oracle_address = \"127.0.0.1:${INITIA_PORT}080\"|
+" $HOME/.initia/config/app.toml
+```
+
+```shell
+PORT=15080
+sed -i.bak -e "
+s|oracle_address = \"\"|oracle_address = \"127.0.0.1:${PORT}\"|
 " $HOME/.initia/config/app.toml
 ```
 
