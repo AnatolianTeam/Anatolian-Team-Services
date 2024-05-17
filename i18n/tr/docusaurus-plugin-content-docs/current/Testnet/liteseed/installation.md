@@ -89,8 +89,13 @@ Balance: 0 LSD
 Staked:  Yes
 ```
 
-## Bundlr'ı Çalıştırma
+## Node'u Tekrar Başlatma
 Artık hem $AR hem de $LSD kazanmaya başlayabilirsiniz.
 ```shell
 docker run -v liteseed:/data edge start
+```
+
+## Cüzdanı Yedekleme
+```shell
+cat /var/lib/docker/volumes/liteseed/_data/signer.json
 ```
