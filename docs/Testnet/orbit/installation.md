@@ -116,6 +116,12 @@ Handlers.add("ReceiveData",
 EOF
 ```
 
+### Running the AOS
+
+```shell
+aos orbit --cron 30-seconds
+```
+
 ### Loading the Process
 
 ```shell
@@ -224,6 +230,12 @@ Handlers.add(
     fetchNewsPeriodically
 )
 EOF
+```
+
+### Running the AOS
+
+```shell
+aos orbit --cron 30-seconds
 ```
 
 ### Loading the Process

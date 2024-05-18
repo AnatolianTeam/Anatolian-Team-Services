@@ -117,6 +117,12 @@ Handlers.add("ReceiveData",
 EOF
 ```
 
+### AOS Çalıştırma
+
+```shell
+aos orbit --cron 30-seconds
+```
+
 ### İşlemi Yükleme
 ```shell
 .load 0rbit-Price-Feed.lua
@@ -225,6 +231,12 @@ Handlers.add(
     fetchNewsPeriodically
 )
 EOF
+```
+
+### AOS Çalıştırma
+
+```shell
+aos orbit --cron 30-seconds
 ```
 
 ### İşlemi Yükleme
