@@ -52,7 +52,7 @@ Write the Process ID (PID) and GITHUB username in the values ​​below.
 ```shell
 PID=YOUR_PROCESS_ID
 GITHUB=YOUR_GIHUB_HANDLE
-```shell
+```
 
 ```shell
 tee $HOME/0rbit-Price-Feed.lua > /dev/null << EOF
@@ -148,7 +148,7 @@ aos 0rbitNewsFeed --cron 30-seconds
 Write the Process ID (PID) in the values ​​below.
 ```shell
 PID=YOUR_PROCESS_ID
-```shell
+```
 
 ```shell
 tee $HOME/0rbit-News-Feed.lua > /dev/null << EOF

@@ -53,7 +53,7 @@ Write the Process ID (PID) and GITHUB username in the values ​​below.
 ```shell
 PID=PROCESS_ID_NUMARANIZ
 GITHUB=GIHUB_KULLANICI_ADINIZ
-```shell
+```
 
 ```shell
 tee $HOME/0rbit-Price-Feed.lua > /dev/null << EOF
@@ -149,7 +149,7 @@ Aşağıdaki değere Process ID (PID)'nizi yazın.
 
 ```shell
 PID=PROCESS_ID_NUMARANIZ
-```shell
+```
 
 ```shell
 tee $HOME/0rbit-News-Feed.lua > /dev/null << EOF
