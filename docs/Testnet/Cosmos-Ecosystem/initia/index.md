@@ -42,13 +42,13 @@ peers="0aa35c1eaa0933218089b5fb1876e2d46d8f2240@37.60.229.199:27656,ebefecfd0482
 
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.initia/config/config.toml
 
-systemctl restart initiad && sudo journalctl -u initiad -f -o cat
+systemctl restart initiad && journalctl -u initiad -f -o cat
 ```
 
 The address book is updated once three hour. You can use it for quick launch.
 ```shell
 wget -O $HOME/.initia/config/addrbook.json "https://testnet.anatolianteam.com/initia/addrbook.json"
-systemctl restart initiad && sudo journalctl -u initiad -f -o cat
+systemctl restart initiad && journalctl -u initiad -f -o cat
 ```
 
 ```mdx-code-block
