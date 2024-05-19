@@ -32,6 +32,23 @@ source $HOME/.bash_profile
 go version
 ```
 
+:::warning
+Sunucunuz ARM ise aşağıdaki kodu kullanın.
+:::
+```shell
+ver="1.22.2"
+wget "https://golang.org/dl/go$ver.linux-arm64.tar.gz"
+rm -rf /usr/local/go
+tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+rm -rf "go$ver.linux-amd64.tar.gz"
+echo 'export GOROOT=/usr/local/go' >> $HOME/.bash_profile
+echo 'export GOPATH=$HOME/go' >> $HOME/.bash_profile
+echo 'export GO111MODULE=on' >> $HOME/.bash_profile
+echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
+source $HOME/.bash_profile
+go version
+```
+
 ## Değişkenleri Yükleme
 Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 * `$INITIA_NODENAME` validator adınız
