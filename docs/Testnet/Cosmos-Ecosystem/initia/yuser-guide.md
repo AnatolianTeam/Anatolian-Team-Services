@@ -30,7 +30,7 @@ Go to [testnet page](https://app.testnet.initia.xyz/) and follow the steps menti
 ![User Guide 2](./img/user-guide-2.png)
 
 3. Select Inactive Validator Tab
-![User Guide 3](./img/user-guide-4.png)
+![User Guide 3](./img/user-guide-3.png)
 
 4. Write Anatolian Team and Select
 ![User Guide 4](./img/user-guide-4.png)
