@@ -36,11 +36,9 @@ Go to [testnet page](https://app.testnet.initia.xyz/) and follow the steps menti
 ![User Guide 4](./img/user-guide-4.png)
 
 5. Select Stake
-#### Add Network
 ![User Guide 5](./img/user-guide-5.png)
 
 6. Select Init
-#### Activate Network
 ![User Guide 6](./img/user-guide-6.png)
 
 7. Write the token amount
