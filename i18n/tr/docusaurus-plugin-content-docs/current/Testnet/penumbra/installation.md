@@ -123,7 +123,6 @@ Full Node'u başlatmak için yapılandırma dosyalarını başlatmak için hazı
 pd testnet unsafe-reset-all
 ```
 
-Next, initialize the node, substituting "IP" with the IP address of your VPS and "NAME" with the desired name for your node:
 Ardından, `IPADDRESS` yerine `VPS'nizin IP adresini` ve `NAME` yerine `node'unuz için istediğiniz adı` yazarak node'u başlatın:
 ```
 pd testnet join --external-address IPADDRESS:26656 --moniker NAME
@@ -222,8 +221,6 @@ nano validator.toml
 ```
 
 ![Adsız tasarım (6)](https://github.com/AnatolianTeam/Anatolian-Team-Services/assets/107190154/c297d632-23ac-443e-9085-e5100f29c698)
-
-Edit the configuration file by replacing the placeholder "value" in "consensus_key" with the actual value you obtained earlier, and update "enabled = false" to "enabled = true".
 
 `Consensus_key` içindeki `value` yer tutucusunu daha önce elde ettiğiniz gerçek değerle değiştirerek yapılandırma dosyasını düzenleyin ve `enabled = false` ifadesini `enabled = true` olarak güncelleyin.
 
