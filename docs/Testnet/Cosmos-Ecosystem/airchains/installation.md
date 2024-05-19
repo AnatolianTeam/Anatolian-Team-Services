@@ -194,6 +194,8 @@ source $HOME/.bash_profile
 
 ### Faucet
 
+Request tokens by sending your wallet address to the `#🚰❘switchyard-faucet-bot` on the [Discord](https://discord.gg/wuT88TCQsw) server.
+
 
 ### Checking Wallet Balance
 ```

@@ -194,6 +194,8 @@ source $HOME/.bash_profile
 
 ### Musluk
 
+Cüzdan adresinizi [Discord](https://discord.gg/wuT88TCQsw) sunucusundaki `#🚰❘switchyard-faucet-bot` kanalına göndererek token isteyin.
+
 
 ### Cüzdan Bakiyesini Kontrol Etme 
 ```
