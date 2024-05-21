@@ -8,11 +8,16 @@ sidebar_position: 4
 
 # Update 
 
+## Checking the Version
+```shell
+curl http://localhost:3000/ar-io/info
+```
+
 ## Removing the containers and the volumes
 
 ```shell
-cd ar-io-node/
-docker-compose down -v 
+cd $HOME/ar-io-node/
+docker-compose down --rmi all
 ```
 
 ## Pulling Updated Containers

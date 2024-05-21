@@ -8,11 +8,15 @@ sidebar_position: 5
 
 # Ar Node Güncelleme 
 
-## Konteyner ve Birimleri Kaldırma
+## Versiyon Kontrolü
+```shell
+curl http://localhost:3000/ar-io/info
+```
 
+## Konteyner ve Birimleri Kaldırma
 ```shell
 cd $HOME/ar-io-node/
-docker-compose down -v 
+docker-compose down --rmi all
 ```
 
 ## Güncel Konteynerları Çekme
