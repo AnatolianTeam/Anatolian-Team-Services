@@ -16,7 +16,7 @@ curl http://localhost:3000/ar-io/info
 ## Konteyner ve Birimleri Kaldırma
 ```shell
 cd $HOME/ar-io-node/
-docker-compose down --rmi all
+docker-compose down
 ```
 
 ## Güncel Konteynerları Çekme
@@ -36,6 +36,6 @@ docker-compose logs -f --tail=0
 ## Redis Error Çözümü
 ```shell
 docker-compose down --rmi all
-rm -rf /root/ar-io-node/data  
+rm -rf $HOME/ar-io-node/data/redis
 docker-compose up -d
 ```

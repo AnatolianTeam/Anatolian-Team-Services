@@ -120,6 +120,6 @@ Ardından `CTRL C` tuşlayarak logları kapatın.
 ## Redis Error Çözümü
 ```shell
 docker-compose down --rmi all
-rm -rf /root/ar-io-node/data  
+rm -rf $HOME/ar-io-node/data/redis
 docker-compose up -d
 ```

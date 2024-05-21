@@ -17,7 +17,7 @@ curl http://localhost:3000/ar-io/info
 
 ```shell
 cd $HOME/ar-io-node/
-docker-compose down --rmi all
+docker-compose down
 ```
 
 ## Pulling Updated Containers
@@ -37,6 +37,6 @@ And then close the logs with `CTRL C`. If you run it on a screen without closing
 ## Redis Error Solution
 ```shell
 docker-compose down --rmi all
-rm -rf /root/ar-io-node/data  
+rm -rf $HOME/ar-io-node/data/redis
 docker-compose up -d
 ```
