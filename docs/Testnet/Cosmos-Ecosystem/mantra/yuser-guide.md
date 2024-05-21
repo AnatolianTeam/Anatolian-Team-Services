@@ -25,11 +25,12 @@ Go to [keplr](https://chains.keplr.app) or our [explorer](https://cosmos-testnet
 
 ## Faucet
 
-Go to [faucet](https://faucet.hongbai.mantrachain.io/) and claim tokens.
+You can get 0.5 OM tokens once a day by going to the [Discord](https://discord.gg/3ZnyCFhxqD) server and sending a message to the `#🚰︱hongbai-faucet` channel as `/request mantra_wallet_address`.
+[Faucet](https://faucet.hongbai.mantrachain.io/) website also currently redirects to discord.
 
 ## Delegate
 
-You can go to our validator [page](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) and you can delegate 0.49 of the 0.5 OM tokens you receive from the faucet to us.
+You can go to our validator [page](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) and you can delegate OM tokens you receive from the faucet to us.
 
 ![User Guide 4](./img/user-guide-4.png)
 ![User Guide 5](./img/user-guide-5.png)

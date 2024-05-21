@@ -24,11 +24,14 @@ slug: user-guide
 
 ## Musluk
 
-[Musluk](https://faucet.hongbai.mantrachain.io/)'a gidip OM token alın.
+[Discord](https://discord.gg/3ZnyCFhxqD) sunucusuna gidip `#🚰︱hongbai-faucet` kanalından 0.5 OM token alın. 
+[Musluk](https://faucet.hongbai.mantrachain.io/) websitesi de şuan discord'a yönlendiriyor. 
+
+[Discord](https://discord.gg/3ZnyCFhxqD) sunucusuna gidip `#🚰︱hongbai-faucet` kanalına `/request mantra_cüzdan_adresi` şeklinde mesaj atarak günde bir kez 0.5 OM token alabilirsiniz. 
 
 ## Delege Etme
 
-Bizim validatorümüzün [sayfasına](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) giderek aldığınız 0.5 OM tokenin, 0.49'unu bize delege edebilirsiniz. 
+Bizim validatorümüzün [sayfasına](https://cosmos-testnet.anatolianteam.com/Mantra/staking/mantravaloper10h68k03qdtq67nlqp30tg77uhfrfjmcgqzu7js) giderek aldığınız tokenleri bize delege edebilirsiniz. 
 
 ![User Guide 4](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-4.png)
 ![User Guide 5](./../../../../../../../docs/Testnet/Cosmos-Ecosystem/mantra/img/user-guide-5.png)
