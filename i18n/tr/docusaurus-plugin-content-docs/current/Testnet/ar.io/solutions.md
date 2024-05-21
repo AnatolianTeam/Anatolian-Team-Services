@@ -116,3 +116,10 @@ docker-compose up -d
 docker-compose logs -f --tail=0
 ```
 Ardından `CTRL C` tuşlayarak logları kapatın.
+
+## Redis Error Çözümü
+```shell
+docker-compose down --rmi all
+rm -rf /root/ar-io-node/data  
+docker-compose up -d
+```

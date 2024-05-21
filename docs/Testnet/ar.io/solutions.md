@@ -108,3 +108,9 @@ docker-compose logs -f --tail=0
 ```
 And then close the logs by pressing `CTRL C`.
 
+## Redis Error Solution
+```shell
+docker-compose down --rmi all
+rm -rf /root/ar-io-node/data  
+docker-compose up -d
+```

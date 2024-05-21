@@ -33,3 +33,10 @@ docker-compose up -d
 docker-compose logs -f --tail=0
 ```
 And then close the logs with `CTRL C`. If you run it on a screen without closing it, these logs will take up space on your disk over time.
+
+## Redis Error Solution
+```shell
+docker-compose down --rmi all
+rm -rf /root/ar-io-node/data  
+docker-compose up -d
+```
