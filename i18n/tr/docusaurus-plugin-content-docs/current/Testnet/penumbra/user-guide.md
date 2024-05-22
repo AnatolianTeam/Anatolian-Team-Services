@@ -15,7 +15,9 @@ keywords: [penumbra, stake, swap, kullanıcı rehberi, rehber]
 
 [Discord](https://discord.gg/AWshYAkKTb) sunucusuna katıldıktan sonra `#🚰-testnet-faucet` kanalına cüzdan adresinizi gönderin.
 
-* Musluktan her 6 saatte bir `100 UM` token alabilirsiniz.
+:::warning
+Musluktan `her 6 saatte bir` token isteyebilirsiniz. Musluk yoğun kullanıma karşı sınırlandırılmıştır. Günde en fazla `100 UM` token alabilirsiniz.
+:::
 
 ## İşlemler
 

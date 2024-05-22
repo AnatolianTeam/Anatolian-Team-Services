@@ -15,7 +15,9 @@ Before starting the process, install the Penumbra add-on wallet [Prax](https://c
 
 After joining the [Discord](https://discord.gg/AWshYAkKTb) server, send your wallet address to the `#🚰-testnet-faucet` channel.
 
-* You can request `100 UM` tokens from the tap every 6 hours.
+:::warning
+You can request tokens from the faucet `every 6 hours`. The tap is restricted against heavy use. You can receive a maximum of `100 UM` tokens per day.
+:::
 
 ## Transactions
 
