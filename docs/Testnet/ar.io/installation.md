@@ -136,8 +136,9 @@ We create a new .conf file.
 ```shell
 nano /etc/nginx/conf.d/ar.node.conf
 ```
-Ardından  aşağıdaki kodları kendinize göre düzenleyerek bu dosyaya kaydedip çıkıyoruz. Çıkmak için `CTRL X` ardından `Enter` diyoruz.
-* `ar.domain.com` yazan yerleri kendi alan adınıza göre düzenleyiniz.
+
+Then, we edit the codes below and save them to this file and exit. To exit, we say `CTRL X` then `Enter`.
+* Edit the fields that say `ar.domain.com` according to your own domain name.
 ```shell
 server {
     listen 443 ssl;
@@ -171,6 +172,10 @@ Then we enter the following codes one by one.
 
 ```shell
 unlink /etc/nginx/sites-available/default
+```
+
+```shell
+ln -s /etc/nginx/sites-available/ar.node.conf /etc/nginx/sites-enabled/ar.node.conf
 ```
 
 ```shell

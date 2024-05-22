@@ -171,6 +171,10 @@ unlink /etc/nginx/sites-available/default
 ```
 
 ```shell
+ln -s /etc/nginx/sites-available/ar.node.conf /etc/nginx/sites-enabled/ar.node.conf
+```
+
+```shell
 nginx -t
 ```
 Bu kodun çıktısında bir hata görmezseniz OK şeklinde bir çıktı verecektir. Bu da nginx ayarlarında bir sorıun olmadığını gösterir.
