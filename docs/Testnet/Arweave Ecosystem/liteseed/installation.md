@@ -8,7 +8,6 @@ sidebar_position: 1
 
 # Liteseed Installation Guide 
 
-
 ## Domain 
 Before starting, you must have a domain. Get yourself a domain from a service provider. You can find a domain for $1 per year.
 
@@ -172,6 +171,8 @@ service nginx restart
 First, fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSdqFBwz9h6RUSyk4So16u6aIn1b_sfuGv6JYDew_hoM8rxoRQ/viewform) here.
 
 Then send your `wallet address`, `dicord ID` and `website` you set above to hello@liteseed.xyz.
+
+Don't forget to join the [Discord](https://discord.gg/WgnX4r6SMZ) server.
 
 ## Staking 
 To request a token, write the address (twitter or website) you gave in the e-mail you sent to where it says `https://liteseed.domain.com`.

@@ -155,6 +155,8 @@ service nginx restart
  
 Ardından `cüzdan adresinizi`, `dicord ID`'nizi ve yukarıda ayarladığınız `web sitenizi` hello@liteseed.xyz adresine gönderin.
 
+[Discord](https://discord.gg/WgnX4r6SMZ) sunucusuna katılmayı unutmayın.
+
 
 ## Stake Etme 
 Token istemek için gönderdiğiniz e-postada verdiğiniz adresi (twitter or website) `https://liteseed.domain.com` yazan yere yazın.
