@@ -154,9 +154,9 @@ service nginx restart
 Token almak için cüzdan adresinizi ve varsa web sitenizi veya Twitter adresinizi `hello@liteseed.xyz` adresine gönderin.
 
 ## Stake Etme 
-Token istemek için gönderdiğiniz e-postada verdiğiniz adresi (twitter or website) `https://yourbundlerurl.com` yazan yere yazın.
+Token istemek için gönderdiğiniz e-postada verdiğiniz adresi (twitter or website) `https://liteseed.domain.com` yazan yere yazın.
 ```shell
-docker run -v liteseed:/data edge stake -u "https://yourbundlerurl.com"
+docker run -v liteseed:/data edge stake -u "https://liteseed.domain.com"
 ```
 
 ## Stake Durumunu Kontrol Etme

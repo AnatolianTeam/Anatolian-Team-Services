@@ -172,9 +172,9 @@ service nginx restart
 To receive tokens, send your wallet address and your website (if applicable) or Twitter address to `hello@liteseed.xyz`.
 
 ## Staking 
-To request a token, write the address (twitter or website) you gave in the e-mail you sent to where it says `https://yourbundlerurl.com`.
+To request a token, write the address (twitter or website) you gave in the e-mail you sent to where it says `https://liteseed.domain.com`.
 ```shell
-docker run -v liteseed:/data edge stake -u "https://yourbundlerurl.com"
+docker run -v liteseed:/data edge stake -u "https://liteseed.domain.com"
 ```
 
 ## Controling Stake
