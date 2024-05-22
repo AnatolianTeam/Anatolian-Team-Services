@@ -67,9 +67,9 @@ Balance: 1000 LSD
 Staked:  No
 ```
 
-## Domain SSL and TXT Record
+## Domain SSL and TXT Kaydı
 
-### Create SSL (HTTPS) Certificates for Your Domain:
+### Alan Adınız için SSL (HTTPS) Sertifikası Alma
 Aşağıdaki kodda eposta adresiniz ve domaininizi düzenledikten sonra kodu çalıştırınız.
 ```shell
 certbot certonly --manual --preferred-challenges dns --email EMAIL_ADDRESS -d liteseed.domain.com

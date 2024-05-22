@@ -107,7 +107,7 @@ docker-compose logs -f --tail=0
 
 ## Ağ Kurulumu
 
-### Alan Aınız için SSL (HTTPS) Sertifikası Alma
+### Alan Adınız için SSL (HTTPS) Sertifikası Alma
 Aşağıdaki kodda eposta adresiniz ve domaininizi düzenledikten sonra kodu çalıştırınız.
 ```shell
 certbot certonly --manual --preferred-challenges dns --email EPOSTA_ADRESİNİZ -d ar.domain.com -d '*.ar.domain.com'
