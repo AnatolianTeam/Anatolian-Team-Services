@@ -23,15 +23,14 @@ keywords: [penumbra, stake, swap, kullanıcı rehberi, rehber]
 
 [Stake](https://app.testnet.penumbra.zone/#/staking) sayfasına gidin ekibimizin validatorünü `Anatolian Team` olara göreceksiniz. `Delegate` butonuna tıklayın ve stake etmek istediğimiz `UM` token miktarını yazıp `Delegate` butonuna basıp cüzdanınızdan `onay` verin.  
 
-
-![User Guide 1](./../../../../../../../docs/Testnet/penumbra/img/user-guide-1.png)
-![User Guide 2](./../../../../../../../docs/Testnet/penumbra/img/user-guide-2.png)
+![User Guide 1](./../../../../../../docs/Testnet/penumbra/img/user-guide-1.png)
+![User Guide 2](./../../../../../../docs/Testnet/penumbra/img/user-guide-2.png)
 
 :::warning
 Sayfada bizi bulmakta zorlanırsanız `CTRL + F` ya da `CMD + F` butonlarına basıp `Anatolian Team` şeklinde `arama` yapabilirsiniz.
 :::
 
-![User Guide 3](./../../../../../../../docs/Testnet/penumbra/img/user-guide-3.png)
+![User Guide 3](./../../../../../../docs/Testnet/penumbra/img/user-guide-3.png)
 
 ### Swap
 
