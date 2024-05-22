@@ -151,7 +151,10 @@ service nginx restart
 
 ## Token İsteme
 
-Token almak için cüzdan adresinizi ve varsa web sitenizi veya Twitter adresinizi `hello@liteseed.xyz` adresine gönderin.
+Öncelikle buradaki [formu](https://docs.google.com/forms/d/e/1FAIpQLSdqFBwz9h6RUSyk4So16u6aIn1b_sfuGv6JYDew_hoM8rxoRQ/viewform) doldurun.
+ 
+Ardından `cüzdan adresinizi`, `dicord ID`'nizi ve yukarıda ayarladığınız `web sitenizi` hello@liteseed.xyz adresine gönderin.
+
 
 ## Stake Etme 
 Token istemek için gönderdiğiniz e-postada verdiğiniz adresi (twitter or website) `https://liteseed.domain.com` yazan yere yazın.

@@ -169,7 +169,9 @@ service nginx restart
 
 ## Requesting Tokens
 
-To receive tokens, send your wallet address and your website (if applicable) or Twitter address to `hello@liteseed.xyz`.
+First, fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSdqFBwz9h6RUSyk4So16u6aIn1b_sfuGv6JYDew_hoM8rxoRQ/viewform) here.
+
+Then send your `wallet address`, `dicord ID` and `website` you set above to hello@liteseed.xyz.
 
 ## Staking 
 To request a token, write the address (twitter or website) you gave in the e-mail you sent to where it says `https://liteseed.domain.com`.
