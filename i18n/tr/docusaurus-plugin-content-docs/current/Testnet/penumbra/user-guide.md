@@ -2,7 +2,6 @@
 title: 👤 Kullanıcı Rehberi
 description: Penumbra kullanıcı rehberi.
 image: ./img/Penumbra-Service-Cover.jpg
-keywords: [penumbra, installation, snapshot, statesync, update]
 keywords: [penumbra, stake, swap, kullanıcı rehberi, rehber]
 ---
 
