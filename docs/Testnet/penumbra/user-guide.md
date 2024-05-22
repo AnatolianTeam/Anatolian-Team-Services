@@ -21,6 +21,11 @@ You can request tokens from the faucet `every 6 hours`. The tap is restricted ag
 
 ## Transactions
 
+Transactions are made at https://app.testnet.penumbra.zone/. When you first connect your wallet here, your wallet will be synchronized. You need to wait for the bar shown in the picture below to be completely filled.
+
+![User Guide 4](./img/user-guide-4.png)
+
+
 ### Staking
 
 Go to the [Stake](https://app.testnet.penumbra.zone/#/staking) page and you will see the validator of our team as 'Anatolian Team'. Click on the `Delegate` button and write the amount of `UM` tokens we want to stake, press the `Delegate` button and confirm from your wallet.

@@ -21,6 +21,10 @@ Musluktan `her 6 saatte bir` token isteyebilirsiniz. Musluk yoğun kullanıma ka
 
 ## İşlemler
 
+İşlemleri https://app.testnet.penumbra.zone/ adresinden yapıyoruz. Buraya cüzdanınızı ilk bağladığınızda cüzdanınız senkronize olacak. Aşağıdaki resimde gösterilen barın tamamamının dolmasını beklemeniz gerekiyor. 
+
+![User Guide 4](./../../../../../../docs/Testnet/penumbra/img/user-guide-4.png)
+
 ### Stake Etme
 
 [Stake](https://app.testnet.penumbra.zone/#/staking) sayfasına gidin ekibimizin validatorünü `Anatolian Team` olara göreceksiniz. `Delegate` butonuna tıklayın ve stake etmek istediğimiz `UM` token miktarını yazıp `Delegate` butonuna basıp cüzdanınızdan `onay` verin.  
