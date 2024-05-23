@@ -44,7 +44,7 @@ If you have difficulty finding us on the page, you can press `CTRL + F` or `CMD 
 Go to [Swap](https://app.testnet.penumbra.zone/#/swap) and trade other tokens.
 
 ### Sending Tokens
-Go to [Swap](https://app.testnet.penumbra.zone/#/send) and send tokens to your friends.
+Go to [send](https://app.testnet.penumbra.zone/#/send) and send tokens to your friends.
 
 You can use our [telegram chat](https://t.me/AnatolianTeam) channel to share your wallet address.
 

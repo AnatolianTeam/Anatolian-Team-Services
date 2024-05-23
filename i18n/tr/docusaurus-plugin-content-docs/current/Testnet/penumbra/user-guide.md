@@ -45,7 +45,7 @@ Sayfada bizi bulmakta zorlanırsanız `CTRL + F` ya da `CMD + F` butonlarına ba
 
 ### Token Gönderme
 
-[Swap](https://app.testnet.penumbra.zone/#/send) sayfasına gidin ve arkadaşlarınıza token gönderin.
+[Send](https://app.testnet.penumbra.zone/#/send) sayfasına gidin ve arkadaşlarınıza token gönderin.
 
 Cüzdan adresi paylaşımı için [telegram chat](https://t.me/AnatolianTeam) kanalımızı kullanabilirsiniz.
 
