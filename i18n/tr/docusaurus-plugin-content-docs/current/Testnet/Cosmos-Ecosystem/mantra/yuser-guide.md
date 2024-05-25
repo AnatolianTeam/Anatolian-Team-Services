@@ -24,10 +24,9 @@ slug: user-guide
 
 ## Musluk
 
-[Discord](https://discord.gg/3ZnyCFhxqD) sunucusuna gidip `#🚰︱hongbai-faucet` kanalından 0.5 OM token alın. 
-[Musluk](https://faucet.hongbai.mantrachain.io/) websitesi de şuan discord'a yönlendiriyor. 
-
 [Discord](https://discord.gg/3ZnyCFhxqD) sunucusuna gidip `#🚰︱hongbai-faucet` kanalına `/request mantra_cüzdan_adresi` şeklinde mesaj atarak günde bir kez 0.5 OM token alabilirsiniz. 
+
+[Musluk](https://faucet.hongbai.mantrachain.io/) websitesi de şuan discord'a yönlendiriyor. 
 
 ## Delege Etme
 

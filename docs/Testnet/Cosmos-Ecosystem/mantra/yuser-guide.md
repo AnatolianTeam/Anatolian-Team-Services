@@ -26,6 +26,7 @@ Go to [keplr](https://chains.keplr.app) or our [explorer](https://cosmos-testnet
 ## Faucet
 
 You can get 0.5 OM tokens once a day by going to the [Discord](https://discord.gg/3ZnyCFhxqD) server and sending a message to the `#🚰︱hongbai-faucet` channel as `/request mantra_wallet_address`.
+
 [Faucet](https://faucet.hongbai.mantrachain.io/) website also currently redirects to discord.
 
 ## Delegate
