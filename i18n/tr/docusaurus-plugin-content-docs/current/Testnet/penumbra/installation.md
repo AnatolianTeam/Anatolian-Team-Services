@@ -2,7 +2,7 @@
 title: 💾 Kurulum
 description: Node kurulum rehberi.
 image: ./img/Penumbra-Service-Cover.jpg
-keywords: [penumbra, installation, snapshot, statesync, update]
+keywords: [penumbra, kurulum, snapshot, statesync, update]
 ---
 
 # Kurulum
