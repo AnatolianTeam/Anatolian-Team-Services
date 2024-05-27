@@ -39,8 +39,8 @@ If your server is ARM, use the following code.
 ver="1.22.2"
 wget "https://golang.org/dl/go$ver.linux-arm64.tar.gz"
 rm -rf /usr/local/go
-tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
-rm -rf "go$ver.linux-amd64.tar.gz"
+tar -C /usr/local -xzf "go$ver.linux-arm64.tar.gz"
+rm -rf "go$ver.linux-arm64.tar.gz"
 echo 'export GOROOT=/usr/local/go' >> $HOME/.bash_profile
 echo 'export GOPATH=$HOME/go' >> $HOME/.bash_profile
 echo 'export GO111MODULE=on' >> $HOME/.bash_profile
