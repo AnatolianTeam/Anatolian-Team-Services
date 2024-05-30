@@ -14,6 +14,7 @@ keywords: [initia, chain, installation, snapshot, statesync, update]
  ✔️ [Blockchain Explorer](https://scan.testnet.initia.xyz/initiation-1/validators) |
  ✔️ [Docs](https://docs.initia.xyz/) |
  ✔️ [GitHub](https://github.com/initia-labs) |
+ ✔️ [Validator Tasks](https://initia-xyz.notion.site/The-Initiation-Validator-Tasks-6d88ab0034644473907435662f9285b3) |
  ✔️ [Discord](https://discord.gg/initia)
 
 ## Requirements
