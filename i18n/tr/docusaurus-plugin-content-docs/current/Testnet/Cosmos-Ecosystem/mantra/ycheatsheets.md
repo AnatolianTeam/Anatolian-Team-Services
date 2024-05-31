@@ -68,61 +68,61 @@ mantrachaind keys list
 
 ### Cüzdan Adresini Görme
 ```
-mantrachaind keys show $BBN_WALLET --bech val -a
+mantrachaind keys show $MANTRA_WALLET --bech val -a
 ```
 
 ### Cüzdanı İçeri Aktarma
 ```
-mantrachaind keys add $BBN_WALLET --recover
+mantrachaind keys add $MANTRA_WALLET --recover
 ```
 
 ### Cüzdanı Silme
 ```
-mantrachaind keys delete $BBN_WALLET
+mantrachaind keys delete $MANTRA_WALLET
 ```
 
 ### Cüzdan Bakiyesini Kontrol Etme
 ```
-mantrachaind query bank balances $BBN_WALLET_ADDRESS
+mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 ```
 
 ## Token İşlemleri
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-mantrachaind tx bank send $BBN_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000ubbn
+mantrachaind tx bank send $MANTRA_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uom
 ```
 
 ### Proposal Oylamasına Katılma
 ```
-mantrachaind tx gov vote 1 yes --from $BBN_WALLET --chain-id=$BBN_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx gov vote 1 yes --from $MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-mantrachaind tx staking delegate $BBN_VALOPER_ADDRESS 100000000ubbn --from=$BBN_WALLET --chain-id=$BBN_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx staking delegate $MANTRA_VALOPER_ADDRESS 100000000uom --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-mantrachaind tx staking unbond $(mantrachaind keys show $BBN_WALLET --bech val -a) 1000000ubbn --from $BBN_WALLET --chain-id $BBN_CHAIN_ID --fees 3000ubbn -y
+mantrachaind tx staking unbond $(mantrachaind keys show $MANTRA_WALLET --bech val -a) 1000000uom --from $MANTRA_WALLET --chain-id $MANTRA_CHAIN_ID --fees 3000uom -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-mantrachaind tx staking redelegate srcValidatorAddress destValidatorAddress 100000000ubbn --from=$BBN_WALLET --chain-id=$BBN_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uom --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-mantrachaind tx distribution withdraw-all-rewards --from=$BBN_WALLET --chain-id=$BBN_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx distribution withdraw-all-rewards --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-mantrachaind tx distribution withdraw-rewards $BBN_VALOPER_ADDRESS --from=$BBN_WALLET --commission --chain-id=$BBN_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx distribution withdraw-rewards $MANTRA_VALOPER_ADDRESS --from=$MANTRA_WALLET --commission --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -137,9 +137,9 @@ mantrachaind status 2>&1 | jq .ValidatorInfo
 ```
 mantrachaind tx staking edit-validator \
 --new-moniker=YENI-NODE-ADI \
---chain-id=$BBN_CHAIN_ID \
---from=$BBN_WALLET \
---gas-prices 0.00001ubbn \
+--chain-id=$MANTRA_CHAIN_ID \
+--from=$MANTRA_WALLET \
+--gas-prices 0.00001uom \
 --gas-adjustment 1.5 \
 --gas auto -y
 ```
@@ -147,25 +147,25 @@ mantrachaind tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-mantrachaind tx staking edit-validator --commission-rate "0.02" --moniker=$BBN_NODENAME --from $BBN_WALLET --chain-id $BBN_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto - y
+mantrachaind tx staking edit-validator --commission-rate "0.02" --moniker=$MANTRA_NODENAME --from $MANTRA_WALLET --chain-id $MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
 Bu bilgileri değiştirmeden önce https://keybase.io/ adresine kayıt olarak aşağıdaki kodda görüldüğü gibi 16 haneli (XXXX0000XXXX0000) kodunuzu almalısınız. Ayrıca profil resmi vs. ayarları da yapabilirsiniz. 
-`$BBN_NODENAME` ve `$BBN_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
+`$MANTRA_NODENAME` ve `$MANTRA_WALLET`: Validator (Moniker) ve cüzdan adınız, değiştirmeniz gerekmez. Çünkü değişkenlere ekledik.
 ```
 mantrachaind tx staking edit-validator \
---moniker=$BBN_NODENAME \
+--moniker=$MANTRA_NODENAME \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$BBN_CHAIN_ID \
---from=$BBN_WALLET
+--chain-id=$MANTRA_CHAIN_ID \
+--from=$MANTRA_WALLET
 ```
 
 ### Validator Detayları
 ```
-mantrachaind q staking validator $(mantrachaind keys show $BBN_WALLET --bech val -a)
+mantrachaind q staking validator $(mantrachaind keys show $MANTRA_WALLET --bech val -a)
 ```
 
 ### Jailing Bilgisi
@@ -180,7 +180,7 @@ mantrachaind q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-mantrachaind tx slashing unjail --from $BBN_WALLET --chain-id $BBN_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx slashing unjail --from $MANTRA_WALLET --chain-id $MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

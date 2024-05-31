@@ -90,39 +90,39 @@ mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 
 ### Transferring from One Wallet to Another
 ```
-mantrachaind tx bank send $MANTRA_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000ubbn
+mantrachaind tx bank send $MANTRA_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uom
 ```
 
 ### Participating in Proposal Voting
 ```
-mantrachaind tx gov vote 1 yes --from $MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx gov vote 1 yes --from $MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-mantrachaind tx staking delegate $MANTRA_VALOPER_ADDRESS 100000000ubbn --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx staking delegate $MANTRA_VALOPER_ADDRESS 100000000uom --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-mantrachaind tx staking unbond $(mantrachaind keys show $MANTRA_WALLET --bech val -a) 1000000ubbn --from $MANTRA_WALLET --chain-id indigo-1 --fees 3000ubbn -y
+mantrachaind tx staking unbond $(mantrachaind keys show $MANTRA_WALLET --bech val -a) 1000000uom --from $MANTRA_WALLET --chain-id indigo-1 --fees 3000uom -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-mantrachaind tx staking redelegate srcValidatorAddress destValidatorAddress 100000000ubbn --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uom --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-mantrachaind tx distribution withdraw-all-rewards --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx distribution withdraw-all-rewards --from=$MANTRA_WALLET --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-mantrachaind tx distribution withdraw-rewards $MANTRA_VALOPER_ADDRESS --from=$MANTRA_WALLET --commission --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx distribution withdraw-rewards $MANTRA_VALOPER_ADDRESS --from=$MANTRA_WALLET --commission --chain-id=$MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -139,7 +139,7 @@ mantrachaind tx staking edit-validator \
 --new-moniker=NEW-NODE-NAME \
 --chain-id=$MANTRA_CHAIN_ID \
 --from=$MANTRA_WALLET \
---gas-prices 0.00001ubbn\
+--gas-prices 0.00001uom\
 --gas-adjustment 1.5\
 --gas auto -y
 ```
@@ -147,7 +147,7 @@ mantrachaind tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-mantrachaind tx staking edit-validator --commission-rate "0.02" --moniker=$MANTRA_NODENAME --from $MANTRA_WALLET --chain-id $MANTRA_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto - y
+mantrachaind tx staking edit-validator --commission-rate "0.02" --moniker=$MANTRA_NODENAME --from $MANTRA_WALLET --chain-id $MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
@@ -180,7 +180,7 @@ mantrachaind q slashing params
 
 ### Recovering Validator from Jail
 ```
-mantrachaind tx slashing unjail --from $MANTRA_WALLET --chain-id $MANTRA_CHAIN_ID --gas-prices 0.00001ubbn --gas-adjustment 1.5 --gas auto -y
+mantrachaind tx slashing unjail --from $MANTRA_WALLET --chain-id $MANTRA_CHAIN_ID --gas-prices 0.00001uom --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List
