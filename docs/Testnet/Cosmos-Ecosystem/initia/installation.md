@@ -65,7 +65,7 @@ source $HOME/.bash_profile
 ### Sample
 Let's assume that your Node (`INITIA_NODENAME`) and Wallet (`INITIA_WALLET`) name is `Anatolian-Guide` and the port you will use (`INITIA_PORT`) will be `16656`. The code will be arranged as shown below.
 ```shell
-echo "export INITIA_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
+echo 'export INITIA_NODENAME="Anatolian-Guide"' >> $HOME/.bash_profile
 echo "export INITIA_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export INITIA_PORT=16" >> $HOME/.bash_profile
 echo "export INITIA_CHAIN_ID=initiation-1" >> $HOME/.bash_profile
