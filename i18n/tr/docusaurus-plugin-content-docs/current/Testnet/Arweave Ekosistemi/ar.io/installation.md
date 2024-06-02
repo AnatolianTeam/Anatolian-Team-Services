@@ -167,11 +167,7 @@ server {
 Ardından aşağıdaki kodları sırasıyla giriyoruz.
 
 ```shell
-unlink /etc/nginx/sites-available/default
-```
-
-```shell
-ln -s /etc/nginx/sites-available/ar.node.conf /etc/nginx/sites-enabled/ar.node.conf
+unlink /etc/nginx/sites-enable/default
 ```
 
 ```shell
