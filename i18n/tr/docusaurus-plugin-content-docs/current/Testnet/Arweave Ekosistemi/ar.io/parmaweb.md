@@ -10,7 +10,7 @@ sidebar_position: 8
 
 ## Sayfa Oluşturma
 
-[PermaPages](https://pages.ar-io.dev/) sayfasına gidin `dashboard`' tıklayıp cüzdanınızı bağlayın. Açılan sayfada `Create Web Pages` tıklayın ve sayfanızı oluşturun. 
+[PermaPages](https://pages.ar-io.dev/) sayfasına gidin `dashboard`' tıklayıp cüzdanınızı bağlayın. Açılan sayfada `Create Web Pages` tıklayın ve sayfanızı oluşturun.  
 
 
 ## Blog Yazma 

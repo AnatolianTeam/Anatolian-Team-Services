@@ -8,7 +8,7 @@ sidebar_position: 3
 
 # Ar.io Stake Aktif Etme Rehberi
 
-Bu bölümde stake etmeyi aktif etmek için yapılması gerekenler anlatılmıştır.
+Bu bölümde stake etmeyi aktif etmek için yapılması gerekenler anlatılmıştır. 
 
 ## update-gateway-settings.ts Dosyasnın Düzenlenmesi
 

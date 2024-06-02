@@ -9,7 +9,7 @@ sidebar_position: 6
 # Çözümler
 
 ## TX id Hatası
-Aşağıdakine benzer bir hata alırsanız. Nodejs versiyonunuzla ilgili bir sorun vardır.
+Aşağıdakine benzer bir hata alırsanız. Nodejs versiyonunuzla ilgili bir sorun vardır. 
 ```shell
 root@asdaddadsda:~/testnet-contract# yarn ts-node tools/delegate-stake.ts
 /root/testnet-contract/tools/delegate-stake.ts:39

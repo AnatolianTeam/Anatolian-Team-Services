@@ -18,7 +18,7 @@ Bu işlemlere başlamadan önce bir domaine sahip olmanız gerekmektedir. Bir se
 ### Alt Alan Adı (Subdomain) Oluşturma
 Servis sağlayıcınızın paneline birin ve gelişmiş DNS ayarları ya da IP Bazlı DNS ayarları bölününe girin. Burada 2 adet A kaydı oluşturun.
 1. İlk `A` kaydı için `kayıt ismi` bölümüne `ar` ya da `ario`, `değere` ise sunucunuzun `ip adresini` yazıp kaydedin.
-2. İkinci `A` kaydında ise `kayıt ismi` bölümüne `*.ar` ya da `*.ario`, `değere` yine aynı şekilde sunucunuzun `ip adresini` yazıp kaydedin.
+2. İkinci `A` kaydında ise `kayıt ismi` bölümüne `*.ar` ya da `*.ario`, `değere` yine aynı şekilde sunucunuzun `ip adresini` yazıp kaydedin. 
 
 * Zamanı geldiğinde burada yine işlem yapacağız bu sefer `TXT` kaydı oluşturacağız. 
 

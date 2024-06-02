@@ -8,7 +8,7 @@ sidebar_position: 4
 
 # Ar.io Delegasyon Rehberi
 
-Bu bölümde bir başkasına ya da kendinize delege etmek için yapılması gerekenler anlatılmıştır.
+Bu bölümde bir başkasına ya da kendinize delege etmek için yapılması gerekenler anlatılmıştır. 
 
 ## delegate-stake.ts Dosyasnın Düzenlenmesi
 

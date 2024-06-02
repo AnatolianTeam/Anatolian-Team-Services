@@ -30,7 +30,7 @@ docker-compose up -d
 ```shell
 docker-compose logs -f --tail=0
 ```
-* Ardından `CTRL C` ile logları kapatın. Kapatmadan bir screen içerisinde çalıştıracak oluranız zamanla diskinizde bu loglar yer kaplayacaktır. 
+* Ardından `CTRL C` ile logları kapatın. Kapatmadan bir screen içerisinde çalıştıracak oluranız zamanla diskinizde bu loglar yer kaplayacaktır.  
 
 
 ## Redis Error Çözümü

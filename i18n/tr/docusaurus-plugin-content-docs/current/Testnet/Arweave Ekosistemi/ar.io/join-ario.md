@@ -19,7 +19,7 @@ git clone https://github.com/ar-io/testnet-contract
 
 ### key.json Dosyası Oluşturma
 
-ArConnect cüzdanınızı dışarı aktarın (Ayarlar > Wallets > Export keyfile). Ardından dosya içeriğini kopyalayıp aşağıdaki kodda açtığımız dosyaya yapıştırın.
+ArConnect cüzdanınızı dışarı aktarın (Ayarlar > Wallets > Export keyfile). Ardından dosya içeriğini kopyalayıp aşağıdaki kodda açtığımız dosyaya yapıştırın. 
 
 ```shell
 cd testnet-contract

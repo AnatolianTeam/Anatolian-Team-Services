@@ -153,7 +153,7 @@ service nginx restart
 
 Öncelikle buradaki [formu](https://docs.google.com/forms/d/e/1FAIpQLSdqFBwz9h6RUSyk4So16u6aIn1b_sfuGv6JYDew_hoM8rxoRQ/viewform) doldurun.
  
-Ardından `cüzdan adresinizi`, `dicord ID`'nizi ve yukarıda ayarladığınız `web sitenizi` hello@liteseed.xyz adresine gönderin.
+Ardından `cüzdan adresinizi`, `dicord ID`'nizi ve yukarıda ayarladığınız `web sitenizi` hello@liteseed.xyz adresine gönderin. 
 
 [Discord](https://discord.gg/WgnX4r6SMZ) sunucusuna katılmayı unutmayın.
 

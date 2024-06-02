@@ -49,7 +49,6 @@ aos orbit --cron 30-seconds
 
 ### 0rbit-Price-Feed.lua Dosyası Oluşturma
 Aşağıdaki değerlere Process ID (PID) ve GITHUB kullanıcı adınıı yazın.
-Write the Process ID (PID) and GITHUB username in the values ​​below.
 ```shell
 PID=PROCESS_ID_NUMARANIZ
 GITHUB=GIHUB_KULLANICI_ADINIZ
