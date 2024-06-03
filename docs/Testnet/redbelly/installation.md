@@ -167,7 +167,7 @@ cd $HOME/Redbelly
 
 ### Check Logs
 ```shell
-tail -f $HOME/logs/rbbcLogs
+tail -f $HOME/Redbelly/logs/rbbcLogs
 ```
 
 ## Verifying the Node is Running

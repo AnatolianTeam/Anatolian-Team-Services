@@ -171,7 +171,7 @@ cd $HOME/Redbelly
 
 ### Logları Kontrol Etme
 ```shell
-tail -f $HOME/logs/rbbcLogs
+tail -f $HOME/Redbelly/logs/rbbcLogs
 ```
 
 ## Node'un Çalıştığını Doğrulama
