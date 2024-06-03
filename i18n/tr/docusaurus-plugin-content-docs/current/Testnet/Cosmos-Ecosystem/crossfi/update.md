@@ -23,7 +23,7 @@ systemctl restart crossfid && journalctl -u crossfid -f
 ## Scheduled Update
 
 ```shell
-# Install tmux dependency, if needed
+# yüklü değilse tmux kurun
 apt update
 apt install -y tmux
 ```
