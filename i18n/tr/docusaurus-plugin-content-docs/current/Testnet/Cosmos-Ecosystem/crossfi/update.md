@@ -20,7 +20,7 @@ mv $HOME/bin/crossfid $(which crossfid)
 systemctl restart crossfid && journalctl -u crossfid -f
 ```
 
-## Scheduled Update
+## Güncelleme Planlama
 
 ```shell
 # yüklü değilse tmux kurun
