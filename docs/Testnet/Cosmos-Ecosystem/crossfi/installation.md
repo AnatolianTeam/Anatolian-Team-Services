@@ -60,14 +60,14 @@ source $HOME/.bash_profile
 ```
 cd $HOME
 mkdir -p $HOME/go/bin
-curl -L https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz > crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
-tar -xvzf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
+wget https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild9/crossfi-node_0.3.0-prebuild9_linux_amd64.tar.gz
+tar -xvf crossfi-node_0.3.0-prebuild9_linux_amd64.tar.gz
 chmod +x $HOME/bin/crossfid
 mv $HOME/bin/crossfid $HOME/go/bin
-rm -rf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz readme.md $HOME/bin
+rm crossfi-node_0.3.0-prebuild9_linux_amd64.tar.gz
 crossfid version
 ```
-The version output will be `0.3.0-prebuild3`.
+The version output will be `0.3.0-prebuild9`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
@@ -77,32 +77,32 @@ crossfid config chain-id $CFI_CHAIN_ID
 crossfid init --chain-id $CFI_CHAIN_ID $CFI_NODENAME
 
 # Copying the Genesis and addrbook Files
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/genesis.json -O $HOME/.mineplex-chain/config/genesis.json
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/addrbook.json -O $HOME/.mineplex-chain/config/addrbook.json
+wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/genesis.json -O $HOME/.crossfid/config/genesis.json
+wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/addrbook.json -O $HOME/.crossfid/config/addrbook.json
 
 # Set up the minimum gas price
-sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "5000000000mpx"|' $HOME/.mineplex-chain/config/app.toml
+sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "5000000000mpx"|' $HOME/.crossfid/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.mineplex-chain/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.crossfid/config/config.toml
 
 # Set up SEED and PEERS
 SEEDS="89752fa7945a06e972d7d860222a5eeaeab5c357@128.140.70.97:26656,dd83e3c7c4e783f8a46dbb010ec8853135d29df0@crossfi-testnet-seed.itrocket.net:36656"
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.mineplex-chain/config/config.toml
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.crossfid/config/config.toml
 
 # Enabling Prometheus
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.mineplex-chain/config/config.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.crossfid/config/config.toml
 
 # Set up Pruning 
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="50"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.mineplex-chain/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.mineplex-chain/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.mineplex-chain/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.mineplex-chain/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.crossfid/config/app.toml
 
 # Set up Ports
 sed -i.bak -e "
@@ -111,7 +111,7 @@ s%:26657%:${CFI_PORT}657%g;
 s%:6060%:${CFI_PORT}060%g;
 s%:26656%:${CFI_PORT}656%g;
 s%:26660%:${CFI_PORT}660%g
-" $HOME/.mineplex-chain/config/config.toml
+" $HOME/.crossfid/config/config.toml
 sed -i.bak -e "
 s%:8545%:${CFI_PORT}545%g;
 s%:8546%:${CFI_PORT}546%g;
@@ -119,13 +119,13 @@ s%:1317%:${CFI_PORT}317%g;
 s%:8080%:${CFI_PORT}080%g; 
 s%:9090%:${CFI_PORT}090%g; 
 s%:9091%:${CFI_PORT}091%g
-" $HOME/.mineplex-chain/config/app.toml
-sed -i.bak -e "s%:26657%:${CFI_PORT}657%g" $HOME/.mineplex-chain/config/client.toml
+" $HOME/.crossfid/config/app.toml
+sed -i.bak -e "s%:26657%:${CFI_PORT}657%g" $HOME/.crossfid/config/client.toml
 
 # Adding External Address
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CFI_PORT}656\"|g" ~/.mineplex-chain/config/config.toml > ~/.mineplex-chain/config/config.toml.tmp
-mv ~/.mineplex-chain/config/config.toml.tmp  ~/.mineplex-chain/config/config.toml
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CFI_PORT}656\"|g" ~/.crossfid/config/config.toml > ~/.crossfid/config/config.toml.tmp
+mv ~/.crossfid/config/config.toml.tmp  ~/.crossfid/config/config.toml
 
 # Creating the Service File
 tee /etc/systemd/system/crossfid.service > /dev/null << EOF
@@ -237,7 +237,7 @@ systemctl disable crossfid && \
 rm /etc/systemd/system/crossfid.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .mineplex-chain crossfi && \
+rm -rf .crossfid crossfi && \
 rm -rf $(which crossfid)
 sed -i '/CFI_/d' ~/.bash_profile
 ```

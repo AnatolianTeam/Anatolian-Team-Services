@@ -60,14 +60,14 @@ source $HOME/.bash_profile
 ```
 cd $HOME
 mkdir -p $HOME/go/bin
-curl -L https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz > crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
-tar -xvzf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
+wget https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild9/crossfi-node_0.3.0-prebuild9_linux_amd64.tar.gz
+tar -xvf crossfi-node_0.3.0-prebuild9_linux_amd64.tar.gz
 chmod +x $HOME/bin/crossfid
 mv $HOME/bin/crossfid $HOME/go/bin
-rm -rf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz readme.md $HOME/bin
+rm crossfi-node_0.3.0-prebuild9_linux_amd64.tar.gz
 crossfid version
 ```
-Versiyon çıktısı `0.3.0-prebuild3` olacak.
+Versiyon çıktısı `0.3.0-prebuild9` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştırıyoruz.
@@ -76,35 +76,35 @@ crossfid config keyring-backend test
 crossfid config chain-id $CFI_CHAIN_ID
 crossfid init --chain-id $CFI_CHAIN_ID $CFI_NODENAME
 git clone https://github.com/crossfichain/testnet.git
-mv $HOME/testnet/ $HOME/.mineplex-chain/
+mv $HOME/testnet/ $HOME/.crossfid/
 
 # Copying the Genesis and addrbook Files
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/genesis.json -O $HOME/.mineplex-chain/config/genesis.json
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/addrbook.json -O $HOME/.mineplex-chain/config/addrbook.json
+wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/genesis.json -O $HOME/.crossfid/config/genesis.json
+wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/addrbook.json -O $HOME/.crossfid/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "5000000000mpx"|' $HOME/.mineplex-chain/config/app.toml
+sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "5000000000mpx"|' $HOME/.crossfid/config/app.toml
 
 # Indexer Kapatma -Opsiyonel
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.mineplex-chain/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.crossfid/config/config.toml
 
 # SEEDS ve PEERS Ayarlaması
 SEEDS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.mineplex-chain/config/config.toml
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.crossfid/config/config.toml
 
 # Prometheus'u Aktif Etme
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.mineplex-chain/config/config.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.crossfid/config/config.toml
 
 # Pruning Ayarlama 
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="50"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.mineplex-chain/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.mineplex-chain/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.mineplex-chain/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.mineplex-chain/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.crossfid/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.crossfid/config/app.toml
 
 # Portları Ayarlama
 sed -i.bak -e "
@@ -115,19 +115,19 @@ s%:26657%:${CFI_PORT}657%g;
 s%:6060%:${CFI_PORT}060%g;
 s%:26656%:${CFI_PORT}656%g;
 s%:26660%:${CFI_PORT}660%g
-" $HOME/.mineplex-chain/config/config.toml
+" $HOME/.crossfid/config/config.toml
 sed -i.bak -e "
 s%:1317%:${CFI_PORT}317%g; 
 s%:8080%:${CFI_PORT}080%g; 
 s%:9090%:${CFI_PORT}090%g; 
 s%:9091%:${CFI_PORT}091%g
-" $HOME/.mineplex-chain/config/app.toml
-sed -i.bak -e "s%:26657%:${CFI_PORT}657%g" $HOME/.mineplex-chain/config/client.toml
+" $HOME/.crossfid/config/app.toml
+sed -i.bak -e "s%:26657%:${CFI_PORT}657%g" $HOME/.crossfid/config/client.toml
 
 # Harici Adres Ekleme
 PUB_IP=`curl -s -4 icanhazip.com`
-sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CFI_PORT}656\"|g" ~/.mineplex-chain/config/config.toml > ~/.mineplex-chain/config/config.toml.tmp
-mv ~/.mineplex-chain/config/config.toml.tmp  ~/.mineplex-chain/config/config.toml
+sed -e "s|external_address = \".*\"|external_address = \"$PUB_IP:${CFI_PORT}656\"|g" ~/.crossfid/config/config.toml > ~/.crossfid/config/config.toml.tmp
+mv ~/.crossfid/config/config.toml.tmp  ~/.crossfid/config/config.toml
 
 # Servis Dosyası Oluşturma
 tee /etc/systemd/system/crossfid.service > /dev/null << EOF
@@ -238,7 +238,7 @@ systemctl disable crossfid && \
 rm /etc/systemd/system/crossfid.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .mineplex-chain crossfi && \
+rm -rf .crossfid crossfi && \
 rm -rf $(which crossfid)
 sed -i '/CFI_/d' ~/.bash_profile
  ```
