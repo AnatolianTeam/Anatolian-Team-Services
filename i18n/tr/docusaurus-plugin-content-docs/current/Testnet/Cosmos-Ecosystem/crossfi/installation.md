@@ -79,8 +79,8 @@ git clone https://github.com/crossfichain/testnet.git
 mv $HOME/testnet/ $HOME/.crossfid/
 
 # Copying the Genesis and addrbook Files
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/genesis.json -O $HOME/.crossfid/config/genesis.json
-wget https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/Cosmos-Ecosystem/crossfi/files/addrbook.json -O $HOME/.crossfid/config/addrbook.json
+wget https://testnet.anatolianteam.com/crossfi/genesis.json -O $HOME/.crossfid/config/genesis.json
+wget https://testnet.anatolianteam.com/crossfi/addrbook.json -O $HOME/.crossfid/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "5000000000mpx"|' $HOME/.crossfid/config/app.toml
