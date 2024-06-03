@@ -141,7 +141,7 @@ Description=Penumbra Node
 After=network.target
 [Service]
 User=root
-ExecStart=/usr/local/bin/pd start
+ExecStart=/root/.cargo/bin/pd start
 Restart=always
 RestartSec=3
 LimitNOFILE=infinity
