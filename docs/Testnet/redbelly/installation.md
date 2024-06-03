@@ -138,11 +138,11 @@ rm -f log
 EOF
 ```
 
-### Creatin start-rbn.sh File
+### Creating start-rbn.sh File
 Enter the following codes respectively;
 
 ```shell
-tee $HOME/Redbelly/observe.sh > /dev/null << EOF
+tee $HOME/Redbelly/start-rbn.sh > /dev/null << EOF
 #!/bin/sh
 # filename: start-rbn.sh
 mkdir -p binaries
@@ -161,7 +161,7 @@ chmod +x *.sh
 
 ## Run Node
 ```shell
-cd $HOME
+cd $HOME/Redbelly
 ./start-rbn.sh
 ```
 

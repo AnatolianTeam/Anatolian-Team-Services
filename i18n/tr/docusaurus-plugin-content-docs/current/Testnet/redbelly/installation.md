@@ -78,7 +78,9 @@ mv rbbc $HOME/Redbelly/
 Config dosyasını inidirip ilgili dizine taşıyoruz.
 ```shell
 cd $HOME
-curl -s https://raw.githubusercontent.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/redbelly/files/config_template.yaml > config.yaml
+curl -s https://github.com/AnatolianTeam/Anatolian-Team-Services/docs/Testnet/redbelly/files/config_template.yaml > config.yaml
+https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/RedbellyBinary/config_template.yaml
+https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/RedbellyBinary
 mv config.yaml $HOME/Redbelly/
 nano $HOME/Redbelly/config.yaml
 ```
@@ -144,7 +146,7 @@ EOF
 Aşağıdaki kodları sırasıyla giriniz;
 
 ```shell
-tee $HOME/Redbelly/observe.sh > /dev/null << EOF
+tee $HOME/Redbelly/start-rbn.sh > /dev/null << EOF
 #!/bin/sh
 # filename: start-rbn.sh
 mkdir -p binaries
@@ -163,7 +165,7 @@ chmod +x *.sh
 
 ## Node'u Başlatma
 ```shell
-cd $HOME
+cd $HOME/Redbelly
 ./start-rbn.sh
 ```
 
