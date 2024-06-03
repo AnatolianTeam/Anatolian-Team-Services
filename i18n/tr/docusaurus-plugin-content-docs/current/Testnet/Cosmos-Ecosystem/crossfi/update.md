@@ -24,8 +24,8 @@ systemctl restart crossfid && journalctl -u crossfid -f
 
 ```shell
 # Install tmux dependency, if needed
-sudo apt update
-sudo apt install -y tmux
+apt update
+apt install -y tmux
 ```
 
 ```shell
