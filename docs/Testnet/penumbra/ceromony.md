@@ -18,6 +18,7 @@ apt install screen
 ```
 
 ## Installing Penumbra pcli
+
 ```
 curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pcli-x86_64-unknown-linux-gnu.tar.xz
 unxz pcli-x86_64-unknown-linux-gnu.tar.xz

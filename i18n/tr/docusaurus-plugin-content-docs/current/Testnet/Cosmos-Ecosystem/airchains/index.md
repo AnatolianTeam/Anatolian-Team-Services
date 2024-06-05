@@ -18,7 +18,7 @@ keywords: [airchains, chain, kurulum, snapshot, statesync, güncelleme]
 
 ## Gereksinimler
 
-| Bşleşenler | Minimum | **Önerilen** |
+| Bileşenler | Minimum | **Önerilen** |
 | ------------ | ------------ | ------------ |
 | CPU |	4 | 4 |
 | RAM	| 8 GB | 16 GB |
