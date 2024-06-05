@@ -110,6 +110,9 @@ s%:26656%:${ACRE_PORT}656%g;
 s%:26660%:${ACRE_PORT}660%g
 " $HOME/.acred/config/config.toml
 sed -i.bak -e "
+s%:8545%:${ACRE_PORT}545%g;
+s%:8546%:${ACRE_PORT}546%g;
+s%:6065%:${ACRE_PORT}065%g;
 s%:1317%:${ACRE_PORT}317%g; 
 s%:8080%:${ACRE_PORT}080%g; 
 s%:9090%:${ACRE_PORT}090%g; 

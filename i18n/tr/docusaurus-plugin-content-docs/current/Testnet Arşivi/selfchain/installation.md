@@ -109,6 +109,9 @@ s%:26656%:${SELF_PORT}656%g;
 s%:26660%:${SELF_PORT}660%g
 " $HOME/.selfchain/config/config.toml
 sed -i.bak -e "
+s%:8545%:${SELF_PORT}545%g;
+s%:8546%:${SELF_PORT}546%g;
+s%:6065%:${SELF_PORT}065%g;
 s%:1317%:${SELF_PORT}317%g; 
 s%:8080%:${SELF_PORT}080%g; 
 s%:9090%:${SELF_PORT}090%g; 

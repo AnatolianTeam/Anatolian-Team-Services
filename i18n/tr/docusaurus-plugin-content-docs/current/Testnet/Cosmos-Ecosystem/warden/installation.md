@@ -110,6 +110,9 @@ s%:26656%:${WARDEN_PORT}656%g;
 s%:26660%:${WARDEN_PORT}660%g
 " $HOME/.warden/config/config.toml
 sed -i.bak -e "
+s%:8545%:${WARDEN_PORT}545%g;
+s%:8546%:${WARDEN_PORT}546%g;
+s%:6065%:${WARDEN_PORT}065%g;
 s%:1317%:${WARDEN_PORT}317%g; 
 s%:8080%:${WARDEN_PORT}080%g; 
 s%:9090%:${WARDEN_PORT}090%g; 

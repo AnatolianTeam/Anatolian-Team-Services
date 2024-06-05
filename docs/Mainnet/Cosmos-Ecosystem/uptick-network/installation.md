@@ -110,6 +110,9 @@ s%:26656%:${UPTICK_PORT}656%g;
 s%:26660%:${UPTICK_PORT}660%g
 " $HOME/.uptickd/config/config.toml
 sed -i.bak -e "
+s%:8545%:${UPTICK_PORT}545%g;
+s%:8546%:${UPTICK_PORT}546%g;
+s%:6065%:${UPTICK_PORT}065%g;
 s%:1317%:${UPTICK_PORT}317%g; 
 s%:8080%:${UPTICK_PORT}080%g; 
 s%:9090%:${UPTICK_PORT}090%g; 

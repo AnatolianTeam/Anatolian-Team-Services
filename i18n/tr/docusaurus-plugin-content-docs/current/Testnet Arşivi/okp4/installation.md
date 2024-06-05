@@ -109,6 +109,9 @@ s%:26656%:${OKP4_PORT}656%g;
 s%:26660%:${OKP4_PORT}660%g
 " $HOME/.okp4d/config/config.toml
 sed -i.bak -e "
+s%:8545%:${OKP4_PORT}545%g;
+s%:8546%:${OKP4_PORT}546%g;
+s%:6065%:${OKP4_PORT}065%g;
 s%:1317%:${OKP4_PORT}317%g; 
 s%:8080%:${OKP4_PORT}080%g; 
 s%:9090%:${OKP4_PORT}090%g; 

@@ -108,8 +108,6 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 # Portları Ayarlama
 sed -i.bak -e "
-s%:8545%:${CFI_PORT}545%g;
-s%:8546%:${CFI_PORT}546%g;
 s%:26658%:${CFI_PORT}658%g;
 s%:26657%:${CFI_PORT}657%g;
 s%:6060%:${CFI_PORT}060%g;
@@ -117,6 +115,9 @@ s%:26656%:${CFI_PORT}656%g;
 s%:26660%:${CFI_PORT}660%g
 " $HOME/.crossfid/config/config.toml
 sed -i.bak -e "
+s%:8545%:${CFI_PORT}545%g;
+s%:8546%:${CFI_PORT}546%g;
+s%:6065%:${CFI_PORT}065%g;
 s%:1317%:${CFI_PORT}317%g; 
 s%:8080%:${CFI_PORT}080%g; 
 s%:9090%:${CFI_PORT}090%g; 

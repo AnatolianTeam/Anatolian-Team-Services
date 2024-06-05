@@ -109,6 +109,9 @@ s%:26656%:${LAVA_PORT}656%g;
 s%:26660%:${LAVA_PORT}660%g
 " $HOME/.lava/config/config.toml
 sed -i.bak -e "
+s%:8545%:${LAVA_PORT}545%g;
+s%:8546%:${LAVA_PORT}546%g;
+s%:6065%:${LAVA_PORT}065%g;
 s%:1317%:${LAVA_PORT}317%g; 
 s%:8080%:${LAVA_PORT}080%g; 
 s%:9090%:${LAVA_PORT}090%g; 

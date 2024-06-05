@@ -110,6 +110,9 @@ s%:26656%:${C4E_PORT}656%g;
 s%:26660%:${C4E_PORT}660%g
 " $HOME/.c4e-chain/config/config.toml
 sed -i.bak -e "
+s%:8545%:${C4E_PORT}545%g;
+s%:8546%:${C4E_PORT}546%g;
+s%:6065%:${C4E_PORT}065%g;
 s%:1317%:${C4E_PORT}317%g; 
 s%:8080%:${C4E_PORT}080%g; 
 s%:9090%:${C4E_PORT}090%g; 

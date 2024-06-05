@@ -109,6 +109,9 @@ s%:26656%:${OG_PORT}656%g;
 s%:26660%:${OG_PORT}660%g
 " $HOME/.0gchain/config/config.toml
 sed -i.bak -e "
+s%:8545%:${OG_PORT}545%g;
+s%:8546%:${OG_PORT}546%g;
+s%:6065%:${OG_PORT}065%g;
 s%:1317%:${OG_PORT}317%g; 
 s%:8080%:${OG_PORT}080%g; 
 s%:9090%:${OG_PORT}090%g; 

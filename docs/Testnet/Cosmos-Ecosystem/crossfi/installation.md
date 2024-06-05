@@ -115,6 +115,7 @@ s%:26660%:${CFI_PORT}660%g
 sed -i.bak -e "
 s%:8545%:${CFI_PORT}545%g;
 s%:8546%:${CFI_PORT}546%g;
+s%:6065%:${CFI_PORT}065%g;
 s%:1317%:${CFI_PORT}317%g; 
 s%:8080%:${CFI_PORT}080%g; 
 s%:9090%:${CFI_PORT}090%g; 

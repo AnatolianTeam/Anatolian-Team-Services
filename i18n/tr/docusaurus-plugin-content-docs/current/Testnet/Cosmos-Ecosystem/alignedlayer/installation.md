@@ -123,6 +123,9 @@ s%:26656%:${ALIGNED_PORT}656%g;
 s%:26660%:${ALIGNED_PORT}660%g
 " $HOME/.alignedlayer/config/config.toml
 sed -i.bak -e "
+s%:8545%:${ALIGNED_PORT}545%g;
+s%:8546%:${ALIGNED_PORT}546%g;
+s%:6065%:${ALIGNED_PORT}065%g;
 s%:1317%:${ALIGNED_PORT}317%g; 
 s%:8080%:${ALIGNED_PORT}080%g; 
 s%:9090%:${ALIGNED_PORT}090%g; 

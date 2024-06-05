@@ -112,6 +112,9 @@ s%:26656%:${PRYZM_PORT}656%g;
 s%:26660%:${PRYZM_PORT}660%g
 " $HOME/.pryzm/config/config.toml
 sed -i.bak -e "
+s%:8545%:${PRYZM_PORT}545%g;
+s%:8546%:${PRYZM_PORT}546%g;
+s%:6065%:${PRYZM_PORT}065%g;
 s%:1317%:${PRYZM_PORT}317%g; 
 s%:8080%:${PRYZM_PORT}080%g; 
 s%:9090%:${PRYZM_PORT}090%g; 

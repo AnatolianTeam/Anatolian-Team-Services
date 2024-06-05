@@ -108,6 +108,9 @@ s%:26656%:${CROWD_PORT}656%g;
 s%:26660%:${CROWD_PORT}660%g
 " $HOME/.cardchaind/config/config.toml
 sed -i.bak -e "
+s%:8545%:${CROWD_PORT}545%g;
+s%:8546%:${CROWD_PORT}546%g;
+s%:6065%:${CROWD_PORT}065%g;
 s%:1317%:${CROWD_PORT}317%g; 
 s%:8080%:${CROWD_PORT}080%g; 
 s%:9090%:${CROWD_PORT}090%g; 

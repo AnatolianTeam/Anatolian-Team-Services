@@ -114,6 +114,9 @@ s%:26656%:${REBUS_PORT}656%g;
 s%:26660%:${REBUS_PORT}660%g
 " $HOME/.rebusd/config/config.toml
 sed -i.bak -e "
+s%:8545%:${REBUS_PORT}545%g;
+s%:8546%:${REBUS_PORT}546%g;
+s%:6065%:${REBUS_PORT}065%g;
 s%:1317%:${REBUS_PORT}317%g; 
 s%:8080%:${REBUS_PORT}080%g; 
 s%:9090%:${REBUS_PORT}090%g; 

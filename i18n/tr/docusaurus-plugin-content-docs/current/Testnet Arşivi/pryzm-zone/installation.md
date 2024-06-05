@@ -103,19 +103,22 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 # Portları Ayarlama
 sed -i.bak -e "
-s%:26658%:${BBN_PORT}658%g;
-s%:26657%:${BBN_PORT}657%g;
-s%:6060%:${BBN_PORT}060%g;
-s%:26656%:${BBN_PORT}656%g;
-s%:26660%:${BBN_PORT}660%g
+s%:26658%:${PRYZM_PORT}658%g;
+s%:26657%:${PRYZM_PORT}657%g;
+s%:6060%:${PRYZM_PORT}060%g;
+s%:26656%:${PRYZM_PORT}656%g;
+s%:26660%:${PRYZM_PORT}660%g
 " $HOME/.pryzm/config/config.toml
 sed -i.bak -e "
-s%:1317%:${BBN_PORT}317%g; 
-s%:8080%:${BBN_PORT}080%g; 
-s%:9090%:${BBN_PORT}090%g; 
-s%:9091%:${BBN_PORT}091%g
+s%:8545%:${PRYZM_PORT}545%g;
+s%:8546%:${PRYZM_PORT}546%g;
+s%:6065%:${PRYZM_PORT}065%g;
+s%:1317%:${PRYZM_PORT}317%g; 
+s%:8080%:${PRYZM_PORT}080%g; 
+s%:9090%:${PRYZM_PORT}090%g; 
+s%:9091%:${PRYZM_PORT}091%g
 " $HOME/.pryzm/config/app.toml
-sed -i.bak -e "s%:26657%:${BBN_PORT}657%g" $HOME/.pryzm/config/client.toml
+sed -i.bak -e "s%:26657%:${PRYZM_PORT}657%g" $HOME/.pryzm/config/client.toml
 
 # Harici Adres Ekleme
 PUB_IP=`curl -s -4 icanhazip.com`

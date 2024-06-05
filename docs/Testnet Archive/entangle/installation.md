@@ -111,6 +111,9 @@ s%:26656%:${ENT_PORT}656%g;
 s%:26660%:${ENT_PORT}660%g
 " $HOME/.entangled/config/config.toml
 sed -i.bak -e "
+s%:8545%:${ENT_PORT}545%g;
+s%:8546%:${ENT_PORT}546%g;
+s%:6065%:${ENT_PORT}065%g;
 s%:1317%:${ENT_PORT}317%g; 
 s%:8080%:${ENT_PORT}080%g; 
 s%:9090%:${ENT_PORT}090%g; 
