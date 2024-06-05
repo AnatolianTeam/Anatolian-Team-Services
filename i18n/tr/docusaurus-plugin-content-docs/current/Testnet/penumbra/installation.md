@@ -6,7 +6,9 @@ keywords: [penumbra, kurulum, snapshot, statesync, update]
 ---
 
 # Kurulum
-
+:::warning
+pcli, pd ve pclientd sürümlerini [buradan](https://github.com/penumbra-zone/penumbra/releases) kontrol edebilirsiniz.
+:::
 ## Sistemi Güncelleme
 ```shell
 apt update && apt upgrade -y
@@ -31,7 +33,6 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
 source $HOME/.bash_profile
 go version
 ```
-
 
 ## Penumbra Command Line Interface (CLI) Kurulumu
 
@@ -88,15 +89,15 @@ pcli view balance
 ```
 
 ## Penumbra and CometBFT Kurulumu
-
-
 ```
-curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.75.0/pd-x86_64-unknown-linux-gnu.tar.gz
-tar -xf pd-x86_64-unknown-linux-gnu.tar.gz
-mv pd-x86_64-unknown-linux-gnu/pd /usr/local/bin/
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pd-installer.sh | sh
 ```
-
-Penumbra'nın başarıyla kurulup kurulmadığını kontrol etdin:
+```
+source $HOME/.cargo/env
+```
+:::warning
+Penumbra (pd) kurulumunun başarıyla tamamlandığını doğrulayın.
+:::
 ```
 pd --version
 ```

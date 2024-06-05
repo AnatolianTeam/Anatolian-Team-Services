@@ -7,6 +7,10 @@ keywords: [penumbra, installation, snapshot, statesync, update]
 
 # Installation
 
+:::warning
+You can check versions of pcli, pd and pclientd [here](https://github.com/penumbra-zone/penumbra/releases).
+:::
+
 ## Updating the System
 ```shell
 apt update && apt upgrade -y
@@ -47,11 +51,9 @@ curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/
 ```
 source $HOME/.cargo/env
 ```
-
 :::warning
 Please confirm that the Command Line Interface (CLI) installation has been successfully finalized.
 :::
-
 ```
 pcli --version
 ```
@@ -89,12 +91,14 @@ pcli view balance
 
 ## Set up Penumbra and CometBFT.
 ```
-curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pd-x86_64-unknown-linux-gnu.tar.gz
-tar -xf pd-x86_64-unknown-linux-gnu.tar.gz
-mv pd-x86_64-unknown-linux-gnu/pd /usr/local/bin/
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pd-installer.sh | sh
 ```
-
+```
+source $HOME/.cargo/env
+```
+:::warning
 Confirm the successful installation of Penumbra:
+:::
 ```
 pd --version
 ```

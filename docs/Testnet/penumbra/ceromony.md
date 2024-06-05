@@ -6,7 +6,9 @@ keywords: [penumbra, summoning, ceremony, private, chain, installation,]
 ---
 
 # Penumbra Ceremony Phase 2 Installation
-
+:::warning
+You can check pcli version [here](https://github.com/penumbra-zone/penumbra/releases).
+:::
 ## Updating the System
 ```shell
 apt update && apt upgrade -y

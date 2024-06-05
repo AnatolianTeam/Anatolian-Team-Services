@@ -6,7 +6,9 @@ keywords: [Penumbra, Zone, summoning, özel, gizlilik, seromoni, kurulum]
 ---
 
 # Penumbra Summoning Seromoni Faz 2 Kurulum
-
+:::warning
+Pcli Sürüm kontrollerini [buradan](https://github.com/penumbra-zone/penumbra/releases) yapabilirsiniz.
+:::
 ## Sistemi Güncelleme
 ```shell
 apt update && apt upgrade -y
@@ -19,10 +21,11 @@ apt install screen
 
 ## Penumbra pcli Kurulumu
 ```
-curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pcli-x86_64-unknown-linux-gnu.tar.xz
-unxz pcli-x86_64-unknown-linux-gnu.tar.xz
-tar -xf pcli-x86_64-unknown-linux-gnu.tar
-sudo mv pcli-x86_64-unknown-linux-gnu/pcli /usr/local/bin/
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pcli-installer.sh | sh
+```
+```
+source $HOME/.cargo/env
+```
 pcli --version
 ```
 Versiyon çıktısı `pcli v0.77.2` olacak.
