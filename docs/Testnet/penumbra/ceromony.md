@@ -19,13 +19,13 @@ apt install screen
 
 ## Installing Penumbra pcli
 ```
-curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.71.0/pcli-x86_64-unknown-linux-gnu.tar.xz
+curl -sSfL -O https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pcli-x86_64-unknown-linux-gnu.tar.xz
 unxz pcli-x86_64-unknown-linux-gnu.tar.xz
 tar -xf pcli-x86_64-unknown-linux-gnu.tar
 sudo mv pcli-x86_64-unknown-linux-gnu/pcli /usr/local/bin/
 pcli --version
 ```
-The version output will be `pcli v0.71.0`.
+The version output will be `pcli v0.77.2`.
 
 ### Updating pcli
 :::warning
