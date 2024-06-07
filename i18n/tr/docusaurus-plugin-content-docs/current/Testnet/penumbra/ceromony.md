@@ -1,11 +1,11 @@
 ---
-title: 🎊 Seromoni
-description: Penumbra Summoning Seromoni katılım rehberi.
+title: 🎊 Seremoni
+description: Penumbra Summoning Seremoni katılım rehberi.
 image: ./img/Penumbra-Service-Cover.jpg
-keywords: [Penumbra, Zone, summoning, özel, gizlilik, seromoni, kurulum]
+keywords: [Penumbra, Zone, summoning, özel, gizlilik, seremoni, kurulum]
 ---
 
-# Penumbra Summoning Seromoni Faz 2 Kurulum
+# Penumbra Summoning Seremoni Faz 2 Kurulum
 :::warning
 Pcli Sürüm kontrollerini [buradan](https://github.com/penumbra-zone/penumbra/releases) yapabilirsiniz.
 :::
@@ -54,7 +54,7 @@ Cüzdan tohum ifadenizi kaydetmeyi unutmayın!
 :::
 
 ### Var Olan Cüzdanı İçeri Aktarma
-Daha önceki seromoniye katıldıysanız ve hali hazırda bir cüzdanınız varsa onu içe aktarabilirsiniz.
+Daha önceki seremoniye katıldıysanız ve hali hazırda bir cüzdanınız varsa onu içe aktarabilirsiniz.
 ```shell
 pcli init soft-kms import-phrase
 ```
