@@ -20,12 +20,13 @@ apt install screen
 ```
 
 ## Penumbra pcli Kurulumu
-```
+```shell
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pcli-installer.sh | sh
 ```
-```
+```shell
 source $HOME/.cargo/env
 ```
+```shell
 pcli --version
 ```
 Versiyon çıktısı `pcli v0.77.2` olacak.

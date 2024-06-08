@@ -21,12 +21,13 @@ apt install screen
 
 ## Installing Penumbra pcli
 
-```
+```shell
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.77.2/pcli-installer.sh | sh
 ```
-```
+```shell
 source $HOME/.cargo/env
 ```
+```shell
 pcli --version
 ```
 The version output will be `pcli v0.77.2`.
