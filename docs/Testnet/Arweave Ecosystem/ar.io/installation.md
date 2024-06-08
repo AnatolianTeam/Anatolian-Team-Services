@@ -171,7 +171,7 @@ server {
 Then we enter the following codes one by one.
 
 ```shell
-unlink /etc/nginx/sites-enabled/default
+unlink /etc/nginx/sites-available/default
 ```
 
 ```shell
