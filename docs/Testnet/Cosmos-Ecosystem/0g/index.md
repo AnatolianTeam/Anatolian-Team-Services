@@ -42,7 +42,7 @@ PEERS="6cb43c1a81a9db8008268b0951ca8525e5670745@85.10.200.82:26656,1248487ea5857
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.0gchain/config/config.toml
 ```
 
-The address book is updated once three hour. You can use it for quick launch.
+The address book is updated once hour. You can use it for quick launch.
 ```shell
 wget -O $HOME/.0gchain/config/addrbook.json "https://testnet.anatolianteam.com/0g/addrbook.json"
 ```
