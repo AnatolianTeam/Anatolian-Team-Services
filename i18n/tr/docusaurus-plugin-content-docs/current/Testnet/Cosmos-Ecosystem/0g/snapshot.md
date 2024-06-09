@@ -5,7 +5,7 @@ image: ./img/0G-Service-Cover.jpg
 keywords: [0g, ai, yapay zeka, modüler, zincir, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (YAKINDA)
+# Snapshot
 
 ```shell
 # install lz4
