@@ -41,7 +41,7 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 echo "export OG_NODENAME=$OG_NODENAME"  >> $HOME/.bash_profile
 echo "export OG_WALLET=$OG_WALLET" >> $HOME/.bash_profile
 echo "export OG_PORT=11" >> $HOME/.bash_profile
-echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export OG_CHAIN_ID=zgtendermint_16600-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Node (`OG_NODENAME`) ve Cüzdan (`OG_WALLET`) adımızın `Anatolian-Guide` oldu
 echo "export OG_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export OG_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export OG_PORT=16" >> $HOME/.bash_profile
-echo "export OG_CHAIN_ID=zgtendermint_9000-1" >> $HOME/.bash_profile
+echo "export OG_CHAIN_ID=zgtendermint_16600-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
