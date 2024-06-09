@@ -267,7 +267,7 @@ Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik y
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.05 \
 --min-self-delegation="1" \
---gas-prices=7aevmos \
+--gas-prices=0.25ua0gi  \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$OG_WALLET \
