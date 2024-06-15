@@ -126,8 +126,19 @@ docker-compose -f mainnet-external-node-docker-compose.yml up -d
 ```
 
 ### RPC URL Kullanımı
-Node, 3060 portunu kullanıyor olacak. Cüzdanınıza RPC adresinizi şu şekilde ekleyebilirsiniz. `http://SUNUCU_IP_ADRESI:3060`
+Node, 3060 portunu kullanıyor olacak. 
 
+> Cüzdanınıza RPC adresinizi şu şekilde ekleyebilirsiniz.
+
+```
+Ağ adı: Adın önemi yok, dilediğiniz bir isim yazabilirsiniz.
+
+RPC URL: http://SUNUCU_IP_ADRESI:3060
+
+Zincir Kimliği: 324
+
+Blok Gezgini: https://explorer.zksync.io/blocks/
+```
 
 ## İşlem Sonu
 RPC ile işleminiz bittikten sonra Hetzner kontrol panelinizden sunucunuzu kapatabilirsiniz.
