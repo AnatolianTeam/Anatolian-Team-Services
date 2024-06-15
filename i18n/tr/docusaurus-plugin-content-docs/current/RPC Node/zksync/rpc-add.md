@@ -11,7 +11,7 @@ keywords: [zksync, rpc, node]
 
 Network name: `zksync - Anatolian`
 
-RPC URL: `http://SERVER_IP_ADDRESS:3060`
+RPC URL: `https://mainnet.era.zksync.io`
 
 Chain ID: `324`
 
