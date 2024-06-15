@@ -79,8 +79,53 @@ docker logs -f --tail 100 docker-compose-examples_external-node_1
 Then close the logs with CTRL C. Turning off the logs does not stop the node, it continues to run in the background. If you run it on a screen without closing it, these logs will take up space on your disk over time.
 :::
 
+## RPC URL Operations
+
+### Editing the .yml File
+First, open this file.
+```shell
+nano $HOME/zksync-era/docs/guides/external-node/docker-compose-examples/mainnet-external-node-docker-compose.yml
+```
+Then, change the section shown below in the file - `"127.0.0.1:3060:3060"` to `"0.0.0.0:3060:3060"`.
+```shell
+.
+.
+.
+  external-node:
+    image: "matterlabs/external-node:2.0-v24.0.0"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3060:3060". ## Change this section to: `"0.0.0.0:3060:3060"`
+      - "127.0.0.1:3061:3061"
+      - "127.0.0.1:3081:3081"
+    volumes:
+      - mainnet-rocksdb:/db
+    expose:
+      - 3322
+.
+.
+.
+```
+
+Then press `CTRL X, Y and enter` and save it.
+
+### Restarting Node
+With this process, we will apply the changes we made above.
+
+First close docker compose.
+```shell
+cd $HOME/zksync-era/docs/guides/external-node/docker-compose-examples
+docker-compose -f mainnet-external-node-docker-compose.yml down
+```
+Then restart.
+```shell
+docker-compose -f mainnet-external-node-docker-compose.yml up -d
+```
+
 ## Take the RPC URL
-The node will be using port 3000. You can add your rpc address to your wallet as follows. `http://SERVER_IP_ADDRESS:3000`
+The node will be using port 3060. You can add your rpc address to your wallet as follows. `http://SERVER_IP_ADDRESS:3060`
 
 ## End of Process
 After you are done with RPC, you can turn off your server from your Hetzner control panel.

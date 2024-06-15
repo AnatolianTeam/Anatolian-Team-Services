@@ -80,8 +80,53 @@ docker logs -f --tail 100 docker-compose-examples_external-node_1
 Ardından CTRL C ile logları kapatın. Logları kapatmanız node'u durdurmaz, arka planda çalışmaya devam ediyor zaten. Kapatmadan bir screen içerisinde çalıştıracak oluranız zamanla diskinizde bu loglar yer kaplayacaktır. 
 :::
 
-## RPC URL Alma
-Node, 3000 portunu kullanıyor olacak. Metamaska rpc adresinizi şu şekilde ekleyebilirsiniz. `http://SUNUCU_IP_ADRESI:3000`
+## RPC URL İşlemleri
+
+### .yml Dosyasını Düzenleme
+Öncelikle bu dosyayı açıyoruz.
+```shell
+nano $HOME/zksync-era/docs/guides/external-node/docker-compose-examples/mainnet-external-node-docker-compose.yml
+```
+Ardından dosyada aşağıdaki gösterilen - `"127.0.0.1:3060:3060"` bölümü `"0.0.0.0:3060:3060"` olarak değiştiriyoruz. 
+```shell
+.
+.
+.
+  external-node:
+    image: "matterlabs/external-node:2.0-v24.0.0"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3060:3060". ## Bu bölümü şu şekilde değiştiriyoruz: `"0.0.0.0:3060:3060"`
+      - "127.0.0.1:3061:3061"
+      - "127.0.0.1:3081:3081"
+    volumes:
+      - mainnet-rocksdb:/db
+    expose:
+      - 3322
+.
+.
+.
+```
+
+Ardından `CTRL X, Y ve ardından enter` tuşlayıp laydediyoruz.
+
+### Node'u Yeniden Başlatma
+Bu işlemle yukarıda yaptığımız değişiklkleri uygulayacağız.
+
+Önce docker compose'u kapatıyoruz. 
+```shell
+cd $HOME/zksync-era/docs/guides/external-node/docker-compose-examples
+docker-compose -f mainnet-external-node-docker-compose.yml down
+```
+Ardından yenien başlatıyoruz.
+```shell
+docker-compose -f mainnet-external-node-docker-compose.yml up -d
+```
+
+### RPC URL Kullanımı
+Node, 3060 portunu kullanıyor olacak. Cüzdanınıza RPC adresinizi şu şekilde ekleyebilirsiniz. `http://SUNUCU_IP_ADRESI:3060`
 
 
 ## İşlem Sonu
