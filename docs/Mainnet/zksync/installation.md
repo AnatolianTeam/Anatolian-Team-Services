@@ -2,7 +2,7 @@
 title: 💾 Installation
 description: RPC Node installation guide.
 image: ./img/zkync-Service-Cover.jpg
-keywords: [zksync, roc, node]
+keywords: [zksync, rpc, node]
 ---
 
 # Installation
