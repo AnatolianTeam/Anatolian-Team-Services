@@ -2,12 +2,12 @@
 id: introduction
 hide_table_of_contents: true
 description: RPC Node kurulum rehberi.
-image: ./img/zkync-Service-Cover.jpg
-keywords: [zkync, rpc, node]
+image: ./img/zksync-Service-Cover.jpg
+keywords: [zksync, rpc, node]
 ---
 # zksync
 
-![zksync](./img/zkync-Service.jpg)
+![zksync](./img/zksync-Service.jpg)
 
 ## Bağlantılar
  ✔️ [Website](https://zksync.io/) |

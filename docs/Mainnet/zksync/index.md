@@ -2,12 +2,12 @@
 id: introduction
 hide_table_of_contents: true
 description: RPC Node installation guide.
-image: ./img/zkync-Service-Cover.jpg
+image: ./img/zksync-Service-Cover.jpg
 keywords: [zksync, roc, node]
 ---
 # zksync
 
-![zksync](./img/zkync-Service.jpg)
+![zksync](./img/zksync-Service.jpg)
 
 ## Links
  ✔️ [Website](https://zksync.io/) |

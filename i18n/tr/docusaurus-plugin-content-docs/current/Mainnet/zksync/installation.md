@@ -1,8 +1,8 @@
 ---
 title: 💾 Kurulum
 description: RPC Node kurulum rehberi.
-image: ./img/zkync-Service-Cover.jpg
-keywords: [zkync, rpc, node]
+image: ./img/zksync-Service-Cover.jpg
+keywords: [zksync, rpc, node]
 ---
 
 # Kurulum
