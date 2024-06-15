@@ -129,7 +129,6 @@ docker-compose -f mainnet-external-node-docker-compose.yml up -d
 Node, 3060 portunu kullanıyor olacak. 
 
 > Cüzdanınıza RPC adresinizi şu şekilde ekleyebilirsiniz.
-
 ```
 Ağ adı: Adın önemi yok, dilediğiniz bir isim yazabilirsiniz.
 
