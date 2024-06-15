@@ -6,11 +6,8 @@ keywords: [zksync, rpc, node]
 ---
 
 # Installation
-:::warning
-Rehber yapım aşamasındadır. Bittiğinde bu ileti burada olmayacaktır.
-:::
 
-## Sunucu Kiralama
+## Server Rental
 For this, it would be useful to obtain the AX52 VDS 1TB server from [Hetzner](https://hetzner.cloud/?ref=z9uy37L7ovja), which you can use on an hourly basis. This is essential to avoid problems on shared (VPS) servers. After installing Ubuntu 22.04 on the server, you can proceed to the following steps.
 
 ## Updating the System
@@ -125,7 +122,18 @@ docker-compose -f mainnet-external-node-docker-compose.yml up -d
 ```
 
 ## Take the RPC URL
-The node will be using port 3060. You can add your rpc address to your wallet as follows. `http://SERVER_IP_ADDRESS:3060`
+The node will be using port 3060.
+
+>  You can add your rpc address to your wallet as follows.
+```
+Network name: The name does not matter, you can write any name you want.
+
+RPC URL: http://SERVER_IP_ADDRESS:3060
+
+Chain ID: 324
+
+Block Explorer: https://explorer.zksync.io/blocks/
+```
 
 ## End of Process
 After you are done with RPC, you can turn off your server from your Hetzner control panel.

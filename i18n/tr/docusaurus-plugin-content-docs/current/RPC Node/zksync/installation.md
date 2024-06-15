@@ -6,20 +6,17 @@ keywords: [zksync, rpc, node]
 ---
 
 # Kurulum
-:::warning
-Rehber yapım aşamasındadır. Bittiğinde bu uyarı burada olmayacaktır.
-:::
 
 ## Sunucu Kiralama
 Bunun için [Hetzner](https://hetzner.cloud/?ref=z9uy37L7ovja)'den saatlik olarak kullanabileceğiniz AX52 VDS 1TB'lık sunucuyu temin etmeniz faydalı olacaktır. paylaşımlı (VPS) sunucularda sıkıntı yaşamamak adına bu elzem. Suncucuya Ubuntu 22.04 kurlumunu sağladıktan sonra alağıdaki adımlara geşebilirsini.z
 
 
-## Updating the System
+## Sistemi Güncelleme
 ```shell
 apt update && apt upgrade -y
 ```
 
-## Güt Kurulması
+## Git Kurulması
 ```shell
 apt install git
 ```
