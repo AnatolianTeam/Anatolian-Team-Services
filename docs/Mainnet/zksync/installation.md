@@ -11,9 +11,7 @@ Rehber yapım aşamasındadır. Bittiğinde bu ileti burada olmayacaktır.
 :::
 
 ## Sunucu Kiralama
-
-Bunun için [Hetzner](https://hetzner.cloud/?ref=z9uy37L7ovja)'den saatlik olarak kullanabileceğiniz AX42 VDS sunucuyu temin etmeniz faydalı olacaktır. paylaşımlı (VPS) sunucularda sıkıntı yaşamamak adına bu elzem.
-
+For this, it would be useful to obtain the AX52 VDS 1TB server from [Hetzner](https://hetzner.cloud/?ref=z9uy37L7ovja), which you can use on an hourly basis. This is essential to avoid problems on shared (VPS) servers. After installing Ubuntu 22.04 on the server, you can proceed to the following steps.
 
 ## Updating the System
 ```shell

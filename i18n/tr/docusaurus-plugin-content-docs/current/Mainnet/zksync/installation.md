@@ -11,8 +11,7 @@ Rehber yapım aşamasındadır. Bittiğinde bu uyarı burada olmayacaktır.
 :::
 
 ## Sunucu Kiralama
-
-Bunun için [Hetzner](https://hetzner.cloud/?ref=z9uy37L7ovja)'den saatlik olarak kullanabileceğiniz AX42 VDS sunucuyu temin etmeniz faydalı olacaktır. paylaşımlı (VPS) sunucularda sıkıntı yaşamamak adına bu elzem.
+Bunun için [Hetzner](https://hetzner.cloud/?ref=z9uy37L7ovja)'den saatlik olarak kullanabileceğiniz AX52 VDS 1TB'lık sunucuyu temin etmeniz faydalı olacaktır. paylaşımlı (VPS) sunucularda sıkıntı yaşamamak adına bu elzem. Suncucuya Ubuntu 22.04 kurlumunu sağladıktan sonra alağıdaki adımlara geşebilirsini.z
 
 
 ## Updating the System
