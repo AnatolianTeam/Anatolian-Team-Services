@@ -19,7 +19,7 @@ systemctl stop lavad
 cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup 
 
 lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
-SNAP_NAME=$(curl -s COMING_SOON | egrep -o ">lava-testnet-2.*\.tar.lz4" | tr -d ">")
+SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/lava/ | egrep -o ">lava-testnet-2.*\.tar.lz4" | tr -d ">")
 curl -L https://testnet.anatolianteam.com/lava/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.lava
 
 mv $HOME/.lava/priv_validator_state.json.backup $HOME/.lava/data/priv_validator_state.json 
