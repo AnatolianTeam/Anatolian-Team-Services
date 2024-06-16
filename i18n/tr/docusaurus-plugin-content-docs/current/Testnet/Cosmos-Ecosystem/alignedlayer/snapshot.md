@@ -5,7 +5,7 @@ image: ./img/Aligned-Service-Cover.jpg
 keywords: [Aligned, Layer, alignedlayer, katman, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (YAKINDA)
+# Snapshot
 
 ```shell
 # install lz4

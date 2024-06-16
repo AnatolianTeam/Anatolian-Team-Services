@@ -5,7 +5,7 @@ image: ./img/Lava-Service-Cover.jpg
 keywords: [lava, network, kurulum, snapshot, statesync, güncelleme]
 ---
 
-# Snapshot (YAKINDA)
+# Snapshot
 
 ```shell
 # install lz4
