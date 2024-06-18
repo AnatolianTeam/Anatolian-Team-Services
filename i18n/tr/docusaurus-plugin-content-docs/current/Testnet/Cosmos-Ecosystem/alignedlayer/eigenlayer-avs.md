@@ -43,5 +43,6 @@ aligned verify-proof-onchain \
   --chain holesky
 ```
 
-Son olarak kodun çıktısında explorer linkini kopyalayıp, Aligned'ı etiketleyip bir tweet atıyoruz.
+## Tweet Görevi
+Son olarak kodun çıktısında explorer linkini kopyalayıp, Aligned'ı etiketleyip bir tweet atıyoruz. Ardından bu tweetimizin linkini Aligned [discord](https://discord.gg/Kvvqf3kVBm) sunucusunda `#🧪┃testnet` kanalından paylaşın.
 

@@ -7,7 +7,7 @@ keywords: [Aligned, Layer, alignedlayer, installation, snapshot, statesync, upda
 
 # Aligned Testnet 3 - First EigenLayer AVS
 
-# Aligned Installation
+## Aligned Installation
 Download Aligned to send proofs to the testnet.
 ```
 curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/install_aligned.sh | bash
@@ -17,12 +17,12 @@ curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batche
 source /root/.bashrc
 ```
 
-# Download Sample SP1 Evidence File with ELF File
+## Download Sample SP1 Evidence File with ELF File
 ```
 curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/get_proof_test_files.sh | bash
 ```
 
-# Sending Proof
+## Sending Proof
 ```
 aligned submit \
   --proving_system SP1 \
@@ -32,8 +32,8 @@ aligned submit \
   --conn wss://batcher.alignedlayer.com
 ```
 
-# Validating Proof on the Network
 
+## Validating Proof on the Network
 ```
 aligned verify-proof-onchain \
   --aligned-verification-data ~/aligned_verification_data/*.json \
@@ -41,5 +41,5 @@ aligned verify-proof-onchain \
   --chain holesky
 ```
 
-Son olarak kodun çıktısında explorer linkini kopyalayıp, Aligned'ı etiketleyip bir tweet atıyoruz.
-
+## Tweet Task
+Finally, we copy the explorer link in the output of the code, tag Aligned and send a tweet. Then share the link of this tweet on the `#🧪┃testnet` channel on the Aligned [discord](https://discord.gg/Kvvqf3kVBm) server.
