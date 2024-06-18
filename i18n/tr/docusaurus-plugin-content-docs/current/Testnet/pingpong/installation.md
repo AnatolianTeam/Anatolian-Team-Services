@@ -16,9 +16,9 @@ Kurulum yapacağınız sunucu 22.04 olmalıdır.
 **Başlamadan önce yapılacaklar:**
 1. [Harvester](https://harvester.pingpong.build/) sayfasına google hesabınızla bağlanıp bir hesap oluşturun.
 2. Aşağıdaki resimde gördüğünüz `Add Devices` butonuna tıklayın.
-![Pingpong-1](./img/Pingpong-1.png)
+![Pingpong-1](./img/pingpong-1.png)
 3. Açılan pencerede aşağıdaki resimge gördüğünüz gibi `cihaz adınızı` yazıp `ID`'nizi alın. `Bu ID son aşamada lazım olacak.`
-![Pingpong-2](./img/Pingpong-2.png)
+![Pingpong-2](./img/pingpong-2.png)
 4. `Linux` seçin. Ardından `kurulum tamamlandıktan` sonra `Let's Gooo!` butonuna tıklayın.
 
 ## Sistemi Güncelleme
