@@ -21,6 +21,15 @@ Kurulum yapacağınız sunucu 22.04 olmalıdır.
 ![Pingpong-2](./img/Pingpong-2.png)
 4. `Linux` seçin. Ardından `kurulum tamamlandıktan` sonra `Let's Gooo!` butonuna tıklayın.
 
+## Sistemi Güncelleme
+```shell
+apt update && apt upgrade -y
+```
+
+## Gerekli Kütüphanelerin Kurulması
+```shell
+apt install wget screen -y < "/dev/null"
+```
 
 ## Docker Kurulumu
 ```shell
@@ -41,6 +50,12 @@ wget https://anatolianteam.com/PINGPONG
 ```
 
 ## Pingpong Çalıştırma
+Bir screen açın.
+
+```shell
+screen -S ping
+```
+
 `ID` yazan yere panelde size verilen DI'ui yazınız.
 ```shell
 chmod +x ./PINGPONG && ./PINGPONG --key ID

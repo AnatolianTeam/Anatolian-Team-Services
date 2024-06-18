@@ -21,6 +21,16 @@ The server you will install on must be 22.04.
 ![Pingpong-2](./../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/pingpong/img/pingpong-2.png)
 4. Select `Linux`. Then click on the `Let's Gooo!` button after the `installation is completed`.
 
+## Updating the System
+```shell
+apt update && apt upgrade -y
+```
+
+## Installing the Necessary Libraries
+```shell
+apt install wget screen -y < "/dev/null"
+```
+
 ## Installing the Docker
 ```shell
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -40,6 +50,12 @@ wget https://anatolianteam.com/PINGPONG
 ```
 
 ## Running the Pingpong
+Open a screen.
+
+```shell
+screen -S pin
+```
+
 `ID` yazan yere panelde size verilen DI'ui yazınız.
 ```shell
 chmod +x ./PINGPONG && ./PINGPONG --key ID
