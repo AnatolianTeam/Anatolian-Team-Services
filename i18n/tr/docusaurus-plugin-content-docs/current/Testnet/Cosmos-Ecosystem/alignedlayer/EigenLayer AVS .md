@@ -1,5 +1,5 @@
 ---
-title: 💾 Kurulum
+title: 💾 EigenLayer AVS 🆕
 description: Aligned Testnet 3 - First EigenLayer AVS.
 image: ./img/Aligned-Service-Cover.jpg
 keywords: [Aligned, Layer, alignedlayer, katman, kurulum, snapshot, statesync, güncelleme]
