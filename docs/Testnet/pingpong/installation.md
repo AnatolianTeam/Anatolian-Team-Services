@@ -21,6 +21,8 @@ The server you will install on must be 22.04.
 ![Pingpong-2](./../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/pingpong/img/pingpong-2.png)
 4. Select `Linux`. Then click on the `Let's Gooo!` button after the `installation is completed`.
 
+
+
 ## Updating the System
 ```shell
 apt update && apt upgrade -y
