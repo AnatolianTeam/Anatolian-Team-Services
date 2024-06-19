@@ -5,9 +5,9 @@ image: ./img/Pingpong-Service-Cover.jpg
 description: Pingpong Rehberi
 keywords: [Pingpong, build, DePINFi, kurulum]
 ---
-# Gasp 
+# Pingpong 
 
-![Gasp](./img/Pingpong-Service.jpg)
+![Pingpong](./img/Pingpong-Service.jpg)
 
 ## Bağlantılar
  ✔️ [Website](https://www.pingpong.build/) |
