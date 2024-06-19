@@ -32,6 +32,7 @@ aligned submit \
   --conn wss://batcher.alignedlayer.com
 ```
 
+Take the output of the code as a screenshot.
 
 ## Validating Proof on the Network
 ```
@@ -42,4 +43,5 @@ aligned verify-proof-onchain \
 ```
 
 ## Tweet Task
-Finally, we copy the explorer link in the output of the code, tag Aligned and send a tweet. Then share the link of this tweet on the `#🧪┃testnet` channel on the Aligned [discord](https://discord.gg/Kvvqf3kVBm) server.
+
+Finally, we copy the explorer link in the output of the code, tag Aligned and send a tweet with the screenshot we took. Then share the link of this tweet on the `#🧪┃testnet` channel on the Aligned [discord](https://discord.gg/Kvvqf3kVBm) server.

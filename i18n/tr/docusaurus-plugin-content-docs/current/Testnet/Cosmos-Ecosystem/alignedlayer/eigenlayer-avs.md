@@ -34,6 +34,8 @@ aligned submit \
   --conn wss://batcher.alignedlayer.com
 ```
 
+Kodun çıktısını ekran görüntüsü olarak alın. 
+
 #  Kanıtı Ağ Üzerinde Doğrulama
 
 ```
@@ -44,5 +46,5 @@ aligned verify-proof-onchain \
 ```
 
 ## Tweet Görevi
-Son olarak kodun çıktısında explorer linkini kopyalayıp, Aligned'ı etiketleyip bir tweet atıyoruz. Ardından bu tweetimizin linkini Aligned [discord](https://discord.gg/Kvvqf3kVBm) sunucusunda `#🧪┃testnet` kanalından paylaşın.
+Son olarak kodun çıktısında explorer linkini kopyalayıp, Aligned'ı etiketleyip aldığımız kran görüntüsüyle bir tweet atıyoruz. Ardından bu tweetimizin linkini Aligned [discord](https://discord.gg/Kvvqf3kVBm) sunucusunda `#🧪┃testnet` kanalından paylaşın.
 
