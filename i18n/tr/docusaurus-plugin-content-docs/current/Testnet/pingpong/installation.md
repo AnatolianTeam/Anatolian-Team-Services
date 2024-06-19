@@ -65,6 +65,6 @@ chmod +x ./PINGPONG && ./PINGPONG --key ID
 
 [Uygulama](https://app.pingpong.build/points?invite_code=FvjWneYQ) sayfasına gidip cüzdan ve twitter bağlayarak görevleri yapabilirsiniz. 
 
-Ek olarak panelde cüzdan ile işlem yapılacak görevler olup kendi araştırmanızı yapınız. 
+Ek olarak panelde cüzdan ile Holešky ağında tokenlerinizi talep edip görevleri yaparak puan toplayabilirsiniz. 
 
 

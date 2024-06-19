@@ -66,4 +66,4 @@ chmod +x ./PINGPONG && ./PINGPONG --key ID
 
 You can do the tasks by going to the [Application](https://app.pingpong.build/points?invite_code=FvjWneYQ) page and connecting wallet and twitter.
 
-Additionally, there are tasks on the panel that can be processed with a wallet, so do your own research.
+In addition, you can collect points by requesting your tokens on the holesky network with the wallet on the panel and doing tasks.
