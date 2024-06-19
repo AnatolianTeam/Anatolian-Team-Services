@@ -71,11 +71,11 @@
     "message": "Burada Substrate tabanlı projelere ait test ağları için rehberleri bulacaksınız.",
     "description": "The generated-index page description for category Substrate Ecosystem in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Cosmos Ecosystem": {
+  "sidebar.tutorialSidebar.category.Arweave Ecosystem": {
     "message": "Arweave Ekosistemi",
     "description": "The label for category Arweave Ecosystem in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Cosmos Ecosystem.link.generated-index.description": {
+  "sidebar.tutorialSidebar.category.Arweave Ecosystem.link.generated-index.description": {
     "message": "Burada Arweave ekosistemine ait test ağlarına yönelik rehberleri bulacaksınız.",
     "description": "The generated-index page description for category Arweave Ecosystem in sidebar tutorialSidebar"
   }
