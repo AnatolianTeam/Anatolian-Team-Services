@@ -19,7 +19,7 @@ Kurulum yapacağınız sunucu 22.04 olmalıdır.
 ![Pingpong-1](./img/pingpong-1.png)
 3. Açılan pencerede aşağıdaki resimge gördüğünüz gibi `cihaz adınızı` yazıp `ID`'nizi alın. `Bu ID son aşamada lazım olacak.`
 ![Pingpong-2](./img/pingpong-2.png)
-4. `Linux` seçin. Ardından `kurulum tamamlandıktan` sonra `Let's Gooo!` butonuna tıklayın.
+4. `Linux` seçin ve ardından sonra `Let's Gooo!` butonuna tıklayın.
 
 ## Sistemi Güncelleme
 ```shell

@@ -19,7 +19,7 @@ The server you will install on must be 22.04.
 ![Pingpong-1](./../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/pingpong/img/pingpong-1.png)
 3. In the window that opens, enter `your device name` and get your `ID` as you see in the picture below. `This ID will be needed at the last stage.`
 ![Pingpong-2](./../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/pingpong/img/pingpong-2.png)
-4. Select `Linux`. Then click on the `Let's Gooo!` button after the `installation is completed`.
+4. Select `Linux` and then click on the `Let's Gooo!` button.
 
 
 ## Updating the System
