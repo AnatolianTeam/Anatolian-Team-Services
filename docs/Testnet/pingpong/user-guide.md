@@ -19,6 +19,9 @@ To obtain tokens, go to the Application](https://app.pingpong.build/points?invit
 
 Bridge your mGRT & mLPT tokens from the Holešky Testnet network to the Morph Holesky Testnet network.
 
+## Holešky-Morph Holesky Bridge
+ETH is required on the Morph Holesky network for staking, you can send ETH using the bridge [here](https://bridge-holesky.morphl2.io/).
+
 ## Staking 
 
 Earn Morph_PPP & Campaign1_PPP points by staking your mGRT & mLP tokens that you send to the Morph Holesky Testnet network.

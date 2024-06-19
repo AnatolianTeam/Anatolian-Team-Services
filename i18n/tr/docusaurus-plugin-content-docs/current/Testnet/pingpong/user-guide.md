@@ -19,6 +19,9 @@ Tokenleri temin etmek için Uygulama](https://app.pingpong.build/points?invite_c
 
 Almış olduğunuz mGRT & mLPT tokenlerinizi Holešky Testnet ağından Morph Holesky Testnet ağına köprüleyin.
 
+## Holešky-Morph Holesky Köprü
+Stake işlemi için Morph Holesky ağında ETH gerekli, [buradaki](https://bridge-holesky.morphl2.io/) köprüyü kullanarak ETH gönderebilirsiniz.
+
 ## Stake Etme
 
 Morph Holesky Testnet ağına gönderdiğiniz mGRT & mLP tokenlerinizi stake ederek Morph_PPP & Campaign1_PPP puanı kazanın.
