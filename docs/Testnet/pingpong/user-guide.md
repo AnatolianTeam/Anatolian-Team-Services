@@ -13,7 +13,7 @@ Obtain test ETH using [PoW Faucet](https://holesky-faucet.pk910.de).
 
 ## Obtaining mGRT & mLPT Tokens
 
-To obtain tokens, go to the Application](https://app.pingpong.build/points?invite_code=FvjWneYQ) page and connect with your wallet. When you connect your Twitter and Discord profiles and complete the tasks, you will receive 25 of each token. These tokens will be issued daily.
+To obtain tokens, go to the [Application](https://app.pingpong.build/points?invite_code=FvjWneYQ) page and connect with your wallet. When you connect your Twitter and Discord profiles and complete the tasks, you will receive 25 of each token. These tokens will be issued daily.
 
 ## Bridge Task
 

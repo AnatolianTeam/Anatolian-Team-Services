@@ -13,7 +13,7 @@ keywords: [Pingpong, kullanıcı rehberi, rehber]
 
 ## mGRT & mLPT Tokenlerini Temin Etme
 
-Tokenleri temin etmek için Uygulama](https://app.pingpong.build/points?invite_code=FvjWneYQ) sayfasına gidip cüzdanınız ile bağlanın. Twitter ve discord profilinizi bağlayıp görevleri yaptığınızda her bir tokenden 25'er adet alacaksınız. Bu tokenler günlük olarak verilecek. 
+Tokenleri temin etmek için [Uygulama](https://app.pingpong.build/points?invite_code=FvjWneYQ) sayfasına gidip cüzdanınız ile bağlanın. Twitter ve discord profilinizi bağlayıp görevleri yaptığınızda her bir tokenden 25'er adet alacaksınız. Bu tokenler günlük olarak verilecek. 
 
 ## Köprü Görevi
 
