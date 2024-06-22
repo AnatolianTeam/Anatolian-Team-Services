@@ -53,3 +53,18 @@ Cüzdan adresi paylaşımı için [telegram chat](https://t.me/AnatolianTeam) ka
 
 [Shield Funds](https://app.testnet.penumbra.zone/#/ibc) sayfasına gidin ve `UM` tokenleriniz Osmosis ya da Noble test cüzdanlarınıza gönderin.
 
+## İşlemlerde Hata Alınması
+
+Hata almaya başlayıydanız ile olarak cüzdanınızın önbelleğini (cache) temizleyip sayfayı yenileyin ve ardından cüzdanınızın senkronize olmasını bekleyin.
+
+Aşağıdaki resimler ile gösterilmiştir.
+
+![Error 1](./../../../../../../docs/Testnet/penumbra/img/network-error-1.png)
+
+![Error 2](./../../../../../../docs/Testnet/penumbra/img/network-error-2.png)
+
+![Error 3](./../../../../../../docs/Testnet/penumbra/img/network-error-3.png)
+
+![Error 4](./../../../../../../docs/Testnet/penumbra/img/network-error-4.png)
+
+![Error 5](./../../../../../../docs/Testnet/penumbra/img/network-error-5.png)

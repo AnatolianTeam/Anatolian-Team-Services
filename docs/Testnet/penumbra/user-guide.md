@@ -51,3 +51,19 @@ You can use our [telegram chat](https://t.me/AnatolianTeam) channel to share you
 ### IBC Transfer
 
 Go to [Shield Funds](https://app.testnet.penumbra.zone/#/ibc) and send your `UM` tokens to your Osmosis or Noble test wallets.
+
+## Getting Errors in Transactions
+
+If you start getting errors, clear your wallet's cache, refresh the page, and then wait for your wallet to sync.
+
+It is shown with the pictures below.
+
+![Error 1](./img/network-error-1.png)
+
+![Error 2](./img/network-error-2.png)
+
+![Error 3](./img/network-error-3.png)
+
+![Error 4](./img/network-error-4.png)
+
+![Error 5](./img/network-error-5.png)
