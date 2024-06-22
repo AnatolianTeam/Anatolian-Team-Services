@@ -1,1 +1,0 @@
-(self.webpackChunkservice=self.webpackChunkservice||[]).push([[5525],{5525:()=>{}}]);
