@@ -33,3 +33,44 @@ Yukarıda kaydettiğiniz PUPKEY'inizi [Aplha](https://alpha.nubit.org/) sayfası
 ## Video
 
 [![Watch the video](./img/video-2.jpg)](https://youtu.be/krM2OlWnurQ)
+
+# Faydalı Kodlar
+
+## Nubit Cüzdan Adresini Öğrenme
+```shell
+$HOME/nubit-node/bin/nubit state account-address  --node.store $HOME/.nubit-light-nubit-alphatestnet-1
+```
+
+## Nubit Cüzdan PUPKEY Öğrenme
+```shell
+$HOME/nubit-node/bin/nkey list --p2p.network nubit-alphatestnet-1 --node.type light
+```
+
+## Nubit Cüzdan Kelimelerini Öğrenme
+```shell
+cat $HOME/nubit-node/mnemonic.txt
+```
+
+## Cüzdanı Değiştirme
+### Mevcut cüzdanı Silme
+
+```shell
+$HOME/nubit-node/bin/nkey delete my_nubit_key -f --node.type light --p2p.network nubit-alphatestnet-1
+```
+
+### Varolan Cüzdanı Ekleme
+```shell
+$HOME/nubit-node/bin/nkey add CUZDAN_ADI --recover --keyring-backend test --node.type light --p2p.network nubit-alphatestnet-1
+```
+
+### Cüzdanların Listesine Bakma
+```shell
+$HOME/nubit-node/bin/nkey list --p2p.network nubit-alphatestnet-1 --node.type light
+```
+
+## Node'u Kaldırma
+```shell
+rm -rf $HOME/nubit-node
+rm -rf $HOME/.nubit-light-nubit-alphatestnet-1
+```
+
