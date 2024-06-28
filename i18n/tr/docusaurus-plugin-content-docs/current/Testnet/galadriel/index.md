@@ -2,20 +2,18 @@
 id: introduction
 hide_table_of_contents: true
 image: ./img/Galadriel-Service-Cover.jpg
-description: Galadriel Service Page
-keywords: [Galadriel, ai, modular, chain, installation, snapshot, statesync, update]
+description: Galadriel Servis Sayfası
+keywords: [Galadriel, AI, Layer 1, Katman 1, kurulum]
 ---
-# Galadriel Zone
+# Galadriel 
 
 ![Galadriel](./img/Galadriel-Service.jpg)
 
-## Links
+## Bağlantılar
  ✔️ [Website](https://galadriel.com/) |
- ✔️ [Explorer](https://explorer.galadriel.com/) |
- ✔️ [Docs](https://docs.galadriel.com/) |
+ ✔️ [Doküman](https://docs.galadriel.com/) |  
  ✔️ [GitHub](https://github.com/galadriel-ai) |
  ✔️ [Discord](https://discord.gg/xfKhQWbVdV)
-
 
 
 ```mdx-code-block
