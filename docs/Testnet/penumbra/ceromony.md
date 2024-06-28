@@ -5,6 +5,10 @@ image: ./img/Penumbra-Service-Cover.jpg
 keywords: [penumbra, summoning, ceremony, private, chain, installation,]
 ---
 
+:::warning
+Participation in Penumbra Summoning Ceremony Phase 2 has been completed.
+:::
+
 # Penumbra Ceremony Phase 2 Installation
 :::warning
 You can check pcli version [here](https://github.com/penumbra-zone/penumbra/releases).

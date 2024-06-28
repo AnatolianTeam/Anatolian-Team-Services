@@ -5,7 +5,12 @@ image: ./img/Penumbra-Service-Cover.jpg
 keywords: [Penumbra, Zone, summoning, özel, gizlilik, seremoni, kurulum]
 ---
 
+:::warning
+Penumbra Summoning Seremoni Faz 2'ye katılım süreci tamamlanmıştır.
+:::
+
 # Penumbra Summoning Seremoni Faz 2 Kurulum
+
 :::warning
 Pcli Sürüm kontrollerini [buradan](https://github.com/penumbra-zone/penumbra/releases) yapabilirsiniz.
 :::
