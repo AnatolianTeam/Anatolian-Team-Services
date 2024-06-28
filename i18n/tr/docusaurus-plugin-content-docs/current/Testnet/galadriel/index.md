@@ -11,7 +11,7 @@ keywords: [Galadriel, AI, Layer 1, Katman 1, kurulum]
 
 ## Bağlantılar
  ✔️ [Website](https://galadriel.com/) |
- ✔️ [Doküman](https://docs.galadriel.com/) |  
+ ✔️ [Doküman](https://docs.galadriel.com/) |
  ✔️ [GitHub](https://github.com/galadriel-ai) |
  ✔️ [Discord](https://discord.gg/xfKhQWbVdV)
 

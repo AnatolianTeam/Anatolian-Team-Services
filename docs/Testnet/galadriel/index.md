@@ -11,7 +11,7 @@ keywords: [Galadriel, AI, Layer 1, installation]
 
 ## Links
  ✔️ [Website](https://galadriel.com/) |
- ✔️ [Dosc](https://docs.galadriel.com/) |  
+ ✔️ [Dosc](https://docs.galadriel.com/) |
  ✔️ [GitHub](https://github.com/galadriel-ai) |
  ✔️ [Discord](https://discord.gg/xfKhQWbVdV)
 
