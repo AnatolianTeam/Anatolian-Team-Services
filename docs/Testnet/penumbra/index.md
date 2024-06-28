@@ -1,21 +1,22 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./img/Galadriel-Service-Cover.jpg
-description: Galadriel Service Page
-keywords: [Galadriel, ai, modular, chain, installation, snapshot, statesync, update]
+image: ./img/Penumbra-Service-Cover.jpg
+description: Penumbra Service Page
+keywords: [Penumbra, modular, chain, installation, snapshot, statesync, update]
 ---
-# Galadriel Zone
+# Penumbra Zone
 
-![Galadriel](./img/Galadriel-Service.jpg)
+![Penumbra](./img/Penumbra-Service.jpg)
 
 ## Links
- ✔️ [Website](https://galadriel.com/) |
- ✔️ [Explorer](https://explorer.galadriel.com/) |
- ✔️ [Docs](https://docs.galadriel.com/) |
- ✔️ [GitHub](https://github.com/galadriel-ai) |
- ✔️ [Discord](https://discord.gg/xfKhQWbVdV)
-
+ ✔️ [Website](https://penumbra.zone/) |
+ ✔️ [Testnet App](https://app.testnet.penumbra.zone/) |
+ ✔️ [Summoning Website](https://summoning.penumbra.zone/) |
+ ✔️ [Ceromony Phase 2 Explorer](https://summoning.penumbra.zone/phase/2) |
+ ✔️ [Docs](https://guide.penumbra.zone/main/index.html) |
+ ✔️ [GitHub](https://github.com/penumbra-zone) |
+ ✔️ [Discord](https://discord.gg/T7E5U929AV)
 
 
 ```mdx-code-block
