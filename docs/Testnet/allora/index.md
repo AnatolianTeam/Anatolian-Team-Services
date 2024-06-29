@@ -1,13 +1,13 @@
 ---
 id: introduction
 hide_table_of_contents: true
-image: ./img/Galadriel-Service-Cover.jpg
-description: Galadriel Servis Page.
-keywords: [Galadriel, AI, Layer 1, installation]
+image: ./img/Allora-Service-Cover.jpg
+description: Allora Servis Page.
+keywords: [Allora, AI, Layer 1, installation]
 ---
-# Galadriel 
+# Allora 
 
-![Galadriel](./img/Galadriel-Service.jpg) 
+![Allora](./img/Allora-Service.jpg) 
 
 ## Links
 ## Bağlantılar
