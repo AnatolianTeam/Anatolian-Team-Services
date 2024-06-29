@@ -17,7 +17,7 @@ keywords: [Gasp, EigenLayer, Eigen, Layer, restake, Holesky, Holesky, Holešky, 
 
 ## Gereksinimler
 
-| Bşleşenler | Minimum | **Önerilen** |
+| Bileşenler | Minimum | **Önerilen** |
 | ------------ | ------------ | ------------ |
 | CPU |	2 | 4 |
 | RAM	| 4 GB | 8 GB |

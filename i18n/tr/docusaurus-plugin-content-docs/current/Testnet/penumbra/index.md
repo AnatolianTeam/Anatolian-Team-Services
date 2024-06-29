@@ -20,7 +20,7 @@ keywords: [Penumbra, Zone, özel, gizlilik, seromoni, kurulum]
 
 ## Gereksinimler (Full Node)
 
-| Bşleşenler | Minimum | **Önerilen** |
+| Bileşenler | Minimum | **Önerilen** |
 | ------------ | ------------ | ------------ |
 | CPU |	4 | 4 |
 | RAM	| 8 GB | 16 GB |
