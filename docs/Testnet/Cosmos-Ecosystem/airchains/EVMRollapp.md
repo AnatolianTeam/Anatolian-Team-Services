@@ -20,7 +20,7 @@ For optimal performance, your system should possess the following specifications
 Begin by updating your system and installing the required packages:
 
 ```bash
-cd $HOME && source <(curl -s https://raw.githubusercontent.com/vnbnode/binaries/main/update-binary.sh)
+cd $HOME && source <(curl -s https://raw.githubusercontent.com/AnatolianTeam/scripts/main/install.sh)
 ```
 
 Next, clone the necessary repositories from GitHub:
