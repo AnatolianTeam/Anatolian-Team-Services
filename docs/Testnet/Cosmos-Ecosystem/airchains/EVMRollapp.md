@@ -131,6 +131,9 @@ Start a new screen session named "track" for managing the tracker.
 
 ```bash
 screen -S track
+sudo rm -rf ~/.tracks
+cd tracks
+go mod tidy
 ```
 
 **B. Initializing Tracking Configuration**
@@ -138,7 +141,7 @@ screen -S track
 Navigate to the `tracks` directory and initialize tracking with your configurations using the following command:
 
 ```bash
-go run cmd/main.go init --daRpc "http://127.0.0.1:7000" --daKey "AVAIL-PUB-KEY" --daType "avail"
+go run cmd/main.go init --daRpc "http://127.0.0.1:7000" --daKey "AVAIL-PUB-KEY" --daType "avail" --moniker "YOUR-NAME-VNBnode" --stationRpc "http://127.0.0.1:16545" --stationAPI "http://127.0.0.1:16545" --stationType "evm"
 ```
 
 ## Creating an Airchain Wallet and Starting Your Station
