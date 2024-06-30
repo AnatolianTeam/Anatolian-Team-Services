@@ -99,6 +99,8 @@ s%:26660%:${G_PORT}660%g" $HOME/.evmosd/config/config.toml
 
 2. Locate the line containing `127.0.0.1` and change it to `0.0.0.0` to allow external connections.
 
+<img width="989" alt="Ekran Resmi 2024-06-30 13 32 09" src="https://github.com/AnatolianTeam/Anatolian-Team-Services/assets/107190154/b5893123-1730-482c-8f4a-794432f9ea40">
+
 ### 3. Setting Up Avail DA
 
 **A. Launching a Screen Session and Navigation**
