@@ -26,8 +26,8 @@ cd $HOME && source <(curl -s https://raw.githubusercontent.com/AnatolianTeam/scr
 Next, clone the necessary repositories from GitHub:
 
 ```bash
-git clone https://github.com/airchains-network/evm-station.git && \
-git clone https://github.com/airchains-network/tracks.git && \
+git clone https://github.com/airchains-network/evm-station.git
+git clone https://github.com/airchains-network/tracks.git
 git clone https://github.com/availproject/availup.git
 ```
 
