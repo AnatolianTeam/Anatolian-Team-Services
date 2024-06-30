@@ -1,7 +1,7 @@
 ---
 title: 🔗 EVMRollapp
 description: EVMRollapp Installation Guide.
-image: 
+image: ./img/Airchains-Service-Cover.jpg
 keywords: [airchains, chain, evm, rollapp]
 ---
 
