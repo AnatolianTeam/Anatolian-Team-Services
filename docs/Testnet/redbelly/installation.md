@@ -64,10 +64,11 @@ Go to the Redbelly [registration page](https://vine.redbelly.network/nds-node-re
 
 ### Download Binary
 Download the Redbelly Binary file and move it to the relevant directory.
+
 ```shell
 cd $HOME
 mkdir -p Redbelly
-curl -s https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/RedbellyBinary > rbbc
+curl -s ./files/RedbellyBinary > rbbc
 mv rbbc $HOME/Redbelly/
 ```
 
@@ -75,7 +76,7 @@ mv rbbc $HOME/Redbelly/
 Download the Config file and move it to the relevant directory.
 ```shell
 cd $HOME
-curl -s https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/config_template.yaml > config.yaml
+curl -s ./files/config_template.yaml > config.yaml
 mv config.yaml $HOME/Redbelly/
 nano $HOME/Redbelly/config.yaml
 ```
@@ -99,7 +100,7 @@ Then save file. (CTRL X, Y, Enter)
 ### Download Genesis File
 ```shell
 cd $HOME
-curl -s https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/genesis.json
+curl -s ./files/genesis.json
 mv genesis.json $HOME/Redbelly/
 ```
 
