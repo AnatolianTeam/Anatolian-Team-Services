@@ -68,7 +68,7 @@ Download the Redbelly Binary file and move it to the relevant directory.
 ```shell
 cd $HOME
 mkdir -p Redbelly
-curl -s ./files/RedbellyBinary > rbbc
+curl -s https://anatolianteam.com/Redbelly/RedbellyBinary > rbbc
 mv rbbc $HOME/Redbelly/
 ```
 
@@ -76,7 +76,7 @@ mv rbbc $HOME/Redbelly/
 Download the Config file and move it to the relevant directory.
 ```shell
 cd $HOME
-curl -s ./files/config_template.yaml > config.yaml
+curl -s https://anatolianteam.com/Redbelly/config_template.yaml > config.yaml
 mv config.yaml $HOME/Redbelly/
 nano $HOME/Redbelly/config.yaml
 ```
@@ -100,7 +100,7 @@ Then save file. (CTRL X, Y, Enter)
 ### Download Genesis File
 ```shell
 cd $HOME
-curl -s ./files/genesis.json
+curl -s https://anatolianteam.com/Redbelly/genesis.json
 mv genesis.json $HOME/Redbelly/
 ```
 

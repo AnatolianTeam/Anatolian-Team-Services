@@ -70,7 +70,7 @@ Redbelly Binary dosyasını inidirip ilgili dizine taşıyoruz.
 ```shell
 cd $HOME
 mkdir -p Redbelly
-curl -s https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/RedbellyBinary > rbbc
+curl -s https://anatolianteam.com/Redbelly/RedbellyBinary > rbbc
 mv rbbc $HOME/Redbelly/
 ```
 
@@ -78,7 +78,7 @@ mv rbbc $HOME/Redbelly/
 Config dosyasını inidirip ilgili dizine taşıyoruz.
 ```shell
 cd $HOME
-curl -s https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/config_template.yaml > config.yaml
+curl -s https://anatolianteam.com/Redbelly/config_template.yaml > config.yaml
 mv config.yaml $HOME/Redbelly/
 nano $HOME/Redbelly/config.yaml
 ```
@@ -102,7 +102,7 @@ Ardından dosyayı kaydedin (CTRL X, Y, Enter)
 ### Genesis Dosyasın İndirme
 ```shell
 cd $HOME
-curl -s https://github.com/AnatolianTeam/Anatolian-Team-Services/raw/main/docs/Testnet/redbelly/files/genesis.json
+curl -s https://anatolianteam.com/Redbelly/genesis.json
 mv genesis.json $HOME/Redbelly/
 ```
 
