@@ -9,26 +9,26 @@ keywords: [Allora, AI, Layer 1, installation]
 
 [Kaynak](https://docs.allora.network/datasci/walkthrough-price-prediction-worker#prerequisite)
 
-## Sistemi Güncelleme, Python Kurulumu ve Gerekli Kütüphanelerin Kurulması
+#### Sistemi Güncelleme, Python Kurulumu ve Gerekli Kütüphanelerin Kurulması
 ```shell
 apt update && apt upgrade -y
 sudo apt install python3 && sudo apt install python3-pip
 apt install ca-certificates curl gnupg lsb-release git htop liblz4-tool screen wget make jq gcc unzip lz4 build-essential pkg-config libssl-dev libreadline-dev libffi-dev zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev -y < "/dev/null"
 ```
 
-## Docker Kurulumu
+#### Docker Kurulumu
 ```shell
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-## Docker Compose Kurulumu
+#### Docker Compose Kurulumu
 ```shell
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
-### Go Kuralım
+#### Go Kuralım
 ```
 ver="1.22.2" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
@@ -39,72 +39,71 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &
 source $HOME/.bash_profile
 ```
 
-## Allora ve Cüzdan Kurulumu
+#### Allora ve Cüzdan Kurulumu
 ```shell
 git clone https://github.com/allora-network/allora-chain.git
 cd allora-chain && make all
 ```
 
-### Allora Cüzdan Kurulumu
+#### Allora Cüzdan Kurulumu
 ```shell
 allorad keys add CUZDAN_ADI
 ```
 
-### Mevcut Cüzdanı İçe Aktarma
+#### Mevcut Cüzdanı İçe Aktarma
 ```shell
 allorad keys add CUZDAN_ADI --recover
 ```
 
 > Ardından cüzdanınızı Keplr'e import edin. 
 
-### Allora Ağını Ekleme
+#### Allora Ağını Ekleme
 Allora [explorer](https://explorer.edgenet.allora.network/wallet/suggest) sayfasına gidip ağı ekleyin.
 
-### Allora Kontrol Paneli
+#### Allora Kontrol Paneli
 
 Allora [kontrol paneli](https://app.allora.network)'nde puanlarımızı takip edeceğiz.
 
-### Musluk
-Allora cüzdanımıza [musluk](https://faucet.edgenet.allora.network/)'tan token istiyoruz.
+#### Faucet
+Allora cüzdanımıza [Faucet](https://faucet.edgenet.allora.network/)'tan token istiyoruz.
 
-### Allora Worker Kurulumu
+#### Allora Worker Kurulumu
 
 ```shell
 cd $HOME
 git clone https://github.com/allora-network/basic-coin-prediction-node
 ```
 
-### Data Dosyalarını Oluşturma
+#### Data Dosyalarını Oluşturma
 ```shell
 cd basic-coin-prediction-node
 mkdir worker-data
 mkdir head-data
 ```
 
-### Data Dosya İzinlerini Ayarlama
+#### Data Dosya İzinlerini Ayarlama
 ```shell
 chmod -R 777 worker-data
 chmod -R 777 head-data
 ```
 
-### Head Key Oluşturma
+#### Head Key Oluşturma
 ```shell
 docker run -it --entrypoint=bash -v ./head-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
 ```
 
-### Worker Key Oluşturma
+#### Worker Key Oluşturma
 ```shell
 docker run -it --entrypoint=bash -v ./worker-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
 ```
 
-### Head Key Öğrenme
+#### Head Key Öğrenme
 ```shell
 cat head-data/keys/identity
 ```
 > Keyi kaydedin, aşağıdaki bölümlerde lazım olacak.
 
-### docker-compose.yml Dosyasını Hazırlama 
-
+#### docker-compose.yml Dosyasını Hazırlama 
 
 #### Var Olan Dosyayı Silme
 ```shell
@@ -257,7 +256,7 @@ volumes:
 EOF
 ````
 
-## Allora Worker Başlatma
+#### Allora Worker Başlatma
 
 ```shell
 cd $HOME/basic-coin-prediction-node
@@ -268,7 +267,7 @@ docker compose up -d
 🚨 Ben başlatınca aşağıdaki hatayı aldım. Yukarıdaki docker-compose.yml dosyasın düzenlemesinde portlarla ilişkili mi anlayamadım.
 ![image](https://github.com/koltigin/Allora-Price-Prediction-Worker-Node/assets/102043225/bc7469e3-8cad-445d-8519-f94862f78bdf)
 
-### Node Kontrolü
+#### Node Kontrolü
 
 Allora docker konteynır (`basic-coin-prediction-node-worker`) id'sini almak için aşağıdaki kodu girin.  
 ```shell
@@ -289,7 +288,7 @@ Succes: register node TX Hash:
 .
 ```
 
-## Allora Puanları
+#### Allora Puanları
 
 [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWRhMjlmLTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) sayfasına gidip cüzdanınızı bağlayıp puanlarınızı kontrol edebilirsiniz.
 
