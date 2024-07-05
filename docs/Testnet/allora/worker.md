@@ -5,30 +5,28 @@ image: ./img/Allora-Service-Cover.jpg
 keywords: [Allora, AI, Layer 1, installation]
 ---
 
-# Allora Price Prediction Worker Node Kurulumu
+# Allora Price Prediction Worker Node Installation
 
-[Kaynak](https://docs.allora.network/datasci/walkthrough-price-prediction-worker#prerequisite)
-
-#### Sistemi Güncelleme, Python Kurulumu ve Gerekli Kütüphanelerin Kurulması
+## Updating the System, Installing Python and Installing Required Libraries
 ```shell
 apt update && apt upgrade -y
 sudo apt install python3 && sudo apt install python3-pip
 apt install ca-certificates curl gnupg lsb-release git htop liblz4-tool screen wget make jq gcc unzip lz4 build-essential pkg-config libssl-dev libreadline-dev libffi-dev zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev -y < "/dev/null"
 ```
 
-#### Docker Kurulumu
+## Installing the Docker
 ```shell
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-#### Docker Compose Kurulumu
+## Installing the Docker Compose
 ```shell
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
-#### Go Kuralım
+## Installing the Go
 ```
 ver="1.22.2" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
@@ -39,77 +37,79 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &
 source $HOME/.bash_profile
 ```
 
-#### Allora ve Cüzdan Kurulumu
+## Installing Allora & Wallet
 ```shell
 git clone https://github.com/allora-network/allora-chain.git
 cd allora-chain && make all
 ```
 
-#### Allora Cüzdan Kurulumu
+### Creating a New Wallet
 ```shell
 allorad keys add CUZDAN_ADI
 ```
 
-#### Mevcut Cüzdanı İçe Aktarma
+### Importing an Existing Wallet
 ```shell
 allorad keys add CUZDAN_ADI --recover
 ```
 
 > Ardından cüzdanınızı Keplr'e import edin. 
 
-#### Allora Ağını Ekleme
+## Adding the Allora Network
 Allora [explorer](https://explorer.edgenet.allora.network/wallet/suggest) sayfasına gidip ağı ekleyin.
 
-#### Allora Kontrol Paneli
+## Allora Dasboard
 
 Allora [kontrol paneli](https://app.allora.network)'nde puanlarımızı takip edeceğiz.
 
-#### Faucet
+## Faucet
 Allora cüzdanımıza [Faucet](https://faucet.edgenet.allora.network/)'tan token istiyoruz.
 
-#### Allora Worker Kurulumu
+## Installing the Allora Worker
 
 ```shell
 cd $HOME
 git clone https://github.com/allora-network/basic-coin-prediction-node
 ```
 
-#### Data Dosyalarını Oluşturma
+### Creating the Data Files
 ```shell
 cd basic-coin-prediction-node
 mkdir worker-data
 mkdir head-data
 ```
 
-#### Data Dosya İzinlerini Ayarlama
+### Settings the Data File Permissions
 ```shell
 chmod -R 777 worker-data
 chmod -R 777 head-data
 ```
 
-#### Head Key Oluşturma
+### Creating the Head Key
 ```shell
 docker run -it --entrypoint=bash -v ./head-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
 ```
 
-#### Worker Key Oluşturma
+### Worker Key Oluşturma
 ```shell
 docker run -it --entrypoint=bash -v ./worker-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
 ```
 
-#### Head Key Öğrenme
+### Learning the Head Key
 ```shell
 cat head-data/keys/identity
 ```
 > Keyi kaydedin, aşağıdaki bölümlerde lazım olacak.
 
-#### docker-compose.yml Dosyasını Hazırlama 
+### Preparing the docker-compose.yml File 
 
-#### Var Olan Dosyayı Silme
+#### Deleting the Existing File
 ```shell
 rm docker-compose.yml
 ```
-#### Yeni Dosyayı Hazırlama
+
+#### Preparing the New File
+
 > Aşağıdaki varsayılan olarak kullanılacak portlar yazılmıştır. Eğer bu portlar sunucusunuzda kullanılıyorsa bunları değiştirin.
 > `MNEMONIC` bölümüne cüzdan kelimelerini,
 > `CUZDAN_ADI` bölümüne cüzdan adınızı,
@@ -254,9 +254,9 @@ volumes:
   worker-data:
   head-data:
 EOF
-````
+```
 
-#### Allora Worker Başlatma
+## Starting the Allora Worker
 
 ```shell
 cd $HOME/basic-coin-prediction-node
@@ -264,7 +264,7 @@ docker compose build
 docker compose up -d
 ```
 
-#### Node Kontrolü
+## Checking the Node
 
 Allora docker konteynır (`basic-coin-prediction-node-worker`) id'sini almak için aşağıdaki kodu girin.  
 ```shell
@@ -285,11 +285,11 @@ Succes: register node TX Hash:
 .
 ```
 
-#### Allora Puanları
+## Allora Points
 
 [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWRhMjlmLTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) sayfasına gidip cüzdanınızı bağlayıp puanlarınızı kontrol edebilirsiniz.
 
-#### Allora Silme Komutları
+## Completely Deleting the Node
 ```
 rm -rf allora-chain
 rm -rf .allorad
