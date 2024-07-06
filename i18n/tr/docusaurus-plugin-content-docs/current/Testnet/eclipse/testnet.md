@@ -25,18 +25,6 @@ apt-get install -y nodejs
 apt update -y && apt upgrade -y
 ```
 
-Update Node version
-
-sudo apt-get remove nodejs
-press `y``` and proceed
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-source ~/.bashrc
-nvm install --lts
-nvm use --lts
-node -v
-
-
 ### NodeJS Kurulumu
 
 ```shell
