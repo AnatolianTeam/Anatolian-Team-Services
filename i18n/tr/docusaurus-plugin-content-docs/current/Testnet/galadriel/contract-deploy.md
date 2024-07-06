@@ -33,12 +33,9 @@ apt update -y && apt upgrade -y
 
 ### NPM Kurulumu
 ```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.bashrc
-nvm install 22
-nvm use v22.2.0
 apt install npm
 ```
+
 ## Repoyu Klonlama
 ```shell
 git clone https://github.com/galadriel-ai/contracts
