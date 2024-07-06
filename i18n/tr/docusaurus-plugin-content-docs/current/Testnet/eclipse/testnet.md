@@ -36,9 +36,23 @@ apt update -y && apt upgrade -y
 ### NVM Kurulumu
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+```shell
 source ~/.bashrc
+```
+```shell
 nvm install 22
-nvm use v22.2.0
+nvm use v22.4.0
+```
+
+Yukarıdaki kodda hata alırsanız aşağıdaki kod ile mevcut sürümlerinizi kontrol edin.
+```shell
+nvm ls
+```
+
+Ardından en üst sürümü aşağıdaki örnek kodda olduğu gibi aktif hale getirin;
+```shell
+nvm use v22.4.0
 ```
 
 ## NPM Kurulumu
