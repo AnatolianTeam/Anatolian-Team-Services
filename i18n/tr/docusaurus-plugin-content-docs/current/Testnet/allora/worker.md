@@ -1,5 +1,5 @@
 ---
-title: 💾 Kontrat Oluşturma
+title: 💾 Worker
 description: Allora Worker kurulum rehberi.
 image: ./img/Allora-Service-Cover.jpg
 keywords: [Allora, AI, Layer 1, Katman 1, kurulum]
