@@ -27,7 +27,7 @@ chmod +x /usr/local/bin/docker-compose
 ```
 
 ## Go Kurulumu
-```
+```shell
 ver="1.22.2" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
 rm -rf /usr/local/go && \
