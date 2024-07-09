@@ -14,19 +14,19 @@ sudo apt install python3 && sudo apt install python3-pip
 apt install ca-certificates curl gnupg lsb-release git htop liblz4-tool screen wget make jq gcc unzip lz4 build-essential pkg-config libssl-dev libreadline-dev libffi-dev zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev -y < "/dev/null"
 ```
 
-## Installing the Docker
+## Installing Docker
 ```shell
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-## Installing the Docker Compose
+## Installing Docker Compose
 ```shell
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
-## Installing the Go
+## Installing Go
 ```
 ver="1.22.2" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
@@ -45,25 +45,25 @@ cd allora-chain && make all
 
 ### Creating a New Wallet
 ```shell
-allorad keys add CUZDAN_ADI
+allorad keys add WALLET_NAME
 ```
 
 ### Importing an Existing Wallet
 ```shell
-allorad keys add CUZDAN_ADI --recover
+allorad keys add WALLET_NAME --recover
 ```
 
-> Ardından cüzdanınızı Keplr'e import edin. 
+> Then import your wallet to Keplr.
 
 ## Adding the Allora Network
-Allora [explorer](https://explorer.edgenet.allora.network/wallet/suggest) sayfasına gidip ağı ekleyin.
+Go to the Allora [explorer](https://explorer.edgenet.allora.network/wallet/suggest) page and add the network.
 
-## Allora Dasboard
+## Allora Dashboard
 
-Allora [kontrol paneli](https://app.allora.network)'nde puanlarımızı takip edeceğiz.
+We will monitor our scores on the Allora [dashboard](https://app.allora.network).
 
 ## Faucet
-Allora cüzdanımıza [Faucet](https://faucet.edgenet.allora.network/)'tan token istiyoruz.
+Request tokens for the Allora wallet from the [Faucet](https://faucet.edgenet.allora.network/).
 
 ## Installing the Allora Worker
 
@@ -79,7 +79,7 @@ mkdir worker-data
 mkdir head-data
 ```
 
-### Settings the Data File Permissions
+### Setting Data File Permissions
 ```shell
 chmod -R 777 worker-data
 chmod -R 777 head-data
@@ -90,16 +90,16 @@ chmod -R 777 head-data
 docker run -it --entrypoint=bash -v ./head-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
 ```
 
-### Worker Key Oluşturma
+### Creating the Worker Key
 ```shell
 docker run -it --entrypoint=bash -v ./worker-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
 ```
 
-### Learning the Head Key
+### Obtaining the Head Key
 ```shell
 cat head-data/keys/identity
 ```
-> Keyi kaydedin, aşağıdaki bölümlerde lazım olacak.
+> Save this key, it will be needed in the following sections.
 
 ### Preparing the docker-compose.yml File 
 
@@ -110,10 +110,10 @@ rm docker-compose.yml
 
 #### Preparing the New File
 
-> Aşağıdaki varsayılan olarak kullanılacak portlar yazılmıştır. Eğer bu portlar sunucusunuzda kullanılıyorsa bunları değiştirin.
-> `MNEMONIC` bölümüne cüzdan kelimelerini,
-> `CUZDAN_ADI` bölümüne cüzdan adınızı,
-> `HEAD_ID` bölümüne ise yukarıda alınan head key kodunu yazın. Ardından kodu çalıştırın. 
+> The default ports are listed below. If these ports are already in use on your server, change them.
+> Replace `MNEMONIC` with your wallet mnemonic,
+> Replace `WALLET_NAME` with your wallet name,
+> Replace `HEAD_ID` with the head key obtained earlier. Then execute the code.
 
 ```shell
 PY_PORT="8000"
@@ -122,10 +122,10 @@ W_PORT2="9010"
 REST_PORT="6000"
 MNEMONIC=""
 HEAD_ID=""
-CUZDAN_ADI=""
+WALLET_NAME=""
 ```
 
-> Şimdi yeni dosyamızı oluşturuyoruz aşağıdaki kodu olduğu gibi çalıştırı.
+> Now create our new file as the code written below.
 ```shell
 tee $HOME/basic-coin-prediction-node/docker-compose.yml > /dev/null << EOF
 version: '3'
@@ -196,7 +196,7 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=$W_PORT1 \
           --boot-nodes=/ip4/172.22.0.100/tcp/$W_PORT2/p2p/$HEAD_ID \
           --topic=allora-topic-1-worker \
-          --allora-chain-key-name=$CUZDAN_ADI \
+          --allora-chain-key-name=$WALLET_NAME \
           --allora-chain-restore-mnemonic='$MNEMONIC' \
           --allora-node-rpc-address=https://allora-rpc.edgenet.allora.network/ \
           --allora-chain-topic-id=1
@@ -266,28 +266,30 @@ docker compose up -d
 
 ## Checking the Node
 
-Allora docker konteynır (`basic-coin-prediction-node-worker`) id'sini almak için aşağıdaki kodu girin.  
+Enter the following code to get the Allora docker container (`basic-coin-prediction-node-worker`) id.
 ```shell
 docker ps
 ```
 
-Aşağıdaki kodda `C_ID` bölümüne id yazıp çalıştıralım.
+Run the code below in the `C_ID` section.
 ```shell
 docker logs -f C_ID
 ```
 
-Aşağıdaki gibi bir çıktı alamnız gerekiyor.
+You should get output like this:
 ```shell
 .
 .
-Succes: register node TX Hash:
+Success: register node TX Hash:
 .
 .
 ```
 
 ## Allora Points
 
-[Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWRhMjlmLTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) sayfasına gidip cüzdanınızı bağlayıp puanlarınızı kontrol edebilirsiniz.
+Go to [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWRhMjlm
+
+LTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) page and connect your wallet to check your scores.
 
 ## Completely Deleting the Node
 ```
