@@ -54,4 +54,4 @@ Finally, use this command to check the logs.
 
 Example log should look like this:
 
-<img width="1362" alt="Ekran Resmi 2024-07-04 01 58 08" src="https://github.com/koltigin/Allora-Price-Prediction-Worker-Node/assets/107190154/6f13dda0-ffd8-4e6a-85a5-8b5f597d76f8">
+<img width="1362" alt="Ekran Resmi 2024-07-04 01 58 08" src="https://github.com/koltigin/Allora-Price-Prediction-Worker-Node/assets/107190154/6f13dda0-ffd8-4e6a-85a5-8b5f597d76f8" />
