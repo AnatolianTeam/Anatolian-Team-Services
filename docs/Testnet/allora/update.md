@@ -1,3 +1,10 @@
+---
+title: 🛠️ Update  
+description: Allora worker installation guide.
+image: ./img/Allora-Service-Cover.jpg
+keywords: [Allora, AI, Layer 1, installation, Update]
+---
+
 # Allora Update
 
 **1. Stop and Remove Allora Containers**
