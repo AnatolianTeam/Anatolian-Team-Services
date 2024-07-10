@@ -13,7 +13,7 @@ keywords: [Farcaster,hubble, ETH, Optimism, kurulum]
  ✔️ [Website](https://farcaster.xyz/) |
  ✔️ [Doküman](https://docs.farcaster.xyz/) |
  ✔️ [GitHub](https://github.com/farcasterxyz/) |
- ✔️ [Hubble](https://www.thehubble.xyz/)
+ ✔️ [Hubble](https://www.thehubble.xyz/) |
  ✔️ [Warpcast](https://warpcast.com/~/invite-page/328172?id=bfbf46c5)
 
 ## Gereksinimler

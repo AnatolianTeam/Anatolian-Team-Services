@@ -13,7 +13,7 @@ keywords: [Farcaster, Hubble, ETH, Optimism, installation]
  ✔️ [Website](https://farcaster.xyz/) |
  ✔️ [Docs](https://docs.farcaster.xyz/) |
  ✔️ [GitHub](https://github.com/farcasterxyz/) |
- ✔️ [Hubble](https://www.thehubble.xyz/)
+ ✔️ [Hubble](https://www.thehubble.xyz/) |
  ✔️ [Warpcast](https://warpcast.com/~/invite-page/328172?id=bfbf46c5)
 
 ## Requirements
