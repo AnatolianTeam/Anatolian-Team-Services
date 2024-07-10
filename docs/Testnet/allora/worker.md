@@ -291,6 +291,30 @@ Go to [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWR
 
 LTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) page and connect your wallet to check your scores.
 
+## Docker Compose Kurulumunu Test Etme
+```
+curl --location 'http://localhost:6000/api/v1/functions/execute' --header 'Accept: application/json, text/plain, */*' --header 'Content-Type: application/json;charset=UTF-8' --data '{
+    "function_id": "bafybeigpiwl3o73zvvl6dxdqu7zqcub5mhg65jiky2xqb4rdhfmikswzqm",
+    "method": "allora-inference-function.wasm",
+    "parameters": null,
+    "topic": "1",
+    "config": {
+        "env_vars": [
+            {                              
+                "name": "BLS_REQUEST_PATH",
+                "value": "/api"
+            },
+            {                              
+                "name": "ALLORA_ARG_PARAMS",
+                "value": "1711064725"
+            }
+        ],
+        "number_of_nodes": -1,
+        "timeout" : 2
+    }
+}'
+```
+
 ## Cheking Update the Node and ETH Price
 ```
 curl http://localhost:8000/update
