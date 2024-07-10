@@ -119,23 +119,27 @@ EOF
 
 ### Hubble Çalıştırma
 ```shell
+cd $HOME/hub-monorepo/apps/hubble
 docker compose up hubble -d
 ```
 
 ### Log Kontrol Etme
 Çalıştırdıktan sonra aşağıdaki kod ile senktronizasyonu kontrol edin. Biraz uzun sürecektir.
 ```shell
+cd $HOME/hub-monorepo/apps/hubble
 docker compose logs -f hubble
 ```
 
 ### FID Kontrol Etme
 Senkronize olduktan sonra aşağıdaki kod ile Warpcast FID doğru mu kontrol edin.
 ```shell
+cd $HOME/hub-monorepo/apps/hubble
 docker logs hubble-hubble-1 2>&1 | grep "Hub Operator FID"
 ```
 
 ### Güncelleme
 ```shell
+cd $HOME/hub-monorepo/apps/hubble
 git fetch --tags --force && git checkout @latest
 docker compose stop && docker compose up -d --force-recreate --pull always
 ```
