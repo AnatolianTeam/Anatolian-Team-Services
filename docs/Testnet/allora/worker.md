@@ -291,6 +291,14 @@ Go to [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWR
 
 LTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) page and connect your wallet to check your scores.
 
+## Cheking Update the Node and ETH Price
+```
+curl http://localhost:8000/update
+```
+```
+curl http://localhost:8000/inference/ETH
+```
+
 ## Completely Deleting the Node
 ```
 rm -rf allora-chain

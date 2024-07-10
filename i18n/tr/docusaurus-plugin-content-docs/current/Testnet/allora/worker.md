@@ -287,6 +287,14 @@ Succes: register node TX Hash:
 
 [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWRhMjlmLTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) sayfasına gidip cüzdanınızı bağlayıp puanlarınızı kontrol edebilirsiniz.
 
+## Node Fiyat Bilgisini Güncelleme ve ETH Fiyatını Kontrol Etme
+```
+curl http://localhost:8000/update
+```
+```
+curl http://localhost:8000/inference/ETH
+```
+
 ## Allora Silme Komutları
 ```
 rm -rf allora-chain
