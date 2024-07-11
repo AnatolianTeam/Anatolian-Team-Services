@@ -41,7 +41,7 @@ The areas you need to change are written below.
 echo "export STRD_NODENAME=$STRD_NODENAME"  >> $HOME/.bash_profile
 echo "export STRD_WALLET=$STRD_WALLET" >> $HOME/.bash_profile
 echo "export STRD_PORT=11" >> $HOME/.bash_profile
-echo "export STRD_CHAIN_ID=acre_9052-1" >> $HOME/.bash_profile
+echo "export STRD_CHAIN_ID=stride-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Let's assume that your Node (`STRD_NODENAME`) and Wallet (`STRD_WALLET`) name is
 echo "export STRD_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export STRD_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export STRD_PORT=16" >> $HOME/.bash_profile
-echo "export STRD_CHAIN_ID=acre_9052-1" >> $HOME/.bash_profile
+echo "export STRD_CHAIN_ID=stride-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
