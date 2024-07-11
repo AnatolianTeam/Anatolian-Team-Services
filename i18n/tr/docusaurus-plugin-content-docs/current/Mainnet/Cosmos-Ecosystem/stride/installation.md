@@ -231,7 +231,7 @@ systemctl disable strided && \
 rm /etc/systemd/system/strided.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .strided acrechain && \
+rm -rf .strided stride && \
 rm -rf $(which strided)
 sed -i '/STRD_/d' ~/.bash_profile
 ```
