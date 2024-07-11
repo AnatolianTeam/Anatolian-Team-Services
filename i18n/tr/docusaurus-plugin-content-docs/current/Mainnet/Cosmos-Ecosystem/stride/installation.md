@@ -55,7 +55,7 @@ echo "export STRD_CHAIN_ID=acre_9052-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-## Arable'ın Kurulması
+## Stride'ın Kurulması
 ```shell
 cd $HOME
 git clone https://github.com/Stride-Labs/stride.git && cd stride
