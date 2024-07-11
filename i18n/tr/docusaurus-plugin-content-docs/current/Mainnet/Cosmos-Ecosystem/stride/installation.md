@@ -59,7 +59,7 @@ source $HOME/.bash_profile
 ```shell
 cd $HOME
 git clone https://github.com/Stride-Labs/stride.git && cd stride
-git checkout v18.0.0
+git checkout v22.0.0
 make install
 strided version
 ```
