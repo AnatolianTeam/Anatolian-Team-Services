@@ -63,7 +63,7 @@ git checkout v22.0.0
 make install
 strided version
 ```
-The version output will be `v18.0.0`.
+The version output will be `v22.0.0`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
