@@ -25,14 +25,6 @@ apt-get install -y nodejs
 apt update -y && apt upgrade -y
 ```
 
-### NodeJS Kurulumu
-
-```shell
-curl -sL https://deb.nodesource.com/setup_21.x | sudo -E bash -
-apt-get install -y nodejs
-apt update -y && apt upgrade -y
-```
-
 ### NVM Kurulumu
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -138,8 +130,6 @@ Aşağıdaki kodda güzenlemeniz gereken yerler;
 ```shell
 node deposit.js Solana_Cuzdan 0x7C9e161ebe55000a3220F972058Fb83273653a6e Gwei_Miktar Gwei_Fee_Miktar Cuzdan_Private_Key Sepolia_RPC_Endpoint
 ```
-
-Tamamlanacak... Daha bitmedi, hazırlanıyor.
 
 ## Token Oluşturma
 
