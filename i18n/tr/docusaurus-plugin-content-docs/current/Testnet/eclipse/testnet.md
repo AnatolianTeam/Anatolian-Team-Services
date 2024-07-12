@@ -76,6 +76,9 @@ export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
 ```shell
 cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
 ```
+```shell
+export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
+```shell
 
 ## Cüzdan
 
