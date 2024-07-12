@@ -112,7 +112,7 @@ solana address
 
 Solana cüzdan kelimerinizi bir cüzdanda içe aktarın ve cüzdan adresinizi alın daha sonra privaate key'inizi de kaydedin. Sonraki adımmlarda lazım olacak. 
 
-[PoW Faucet](https://sepolia-faucet.pk910.de/) adresinde test Sepolia ETH edinin.
+[PoW Faucet](https://sepolia-faucet.pk910.de/) adresinde test Sepolia ETH edinin, ardından Eclipse için kullanacağınız cüzdana Sepolia ETH gönderin.
 
 ## Eclipse Köprü Script Kurulumu
 
