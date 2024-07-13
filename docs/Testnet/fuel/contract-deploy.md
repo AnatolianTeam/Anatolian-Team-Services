@@ -14,7 +14,7 @@ Here it is explained how you can deploy a contract with [GitHup Codespaces](http
 
 ## Video
 You can make your transactions by following the video below.
-[![Watch the video](../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/fuel/img/FuelVideoGuide.jpg)]()
+[![Watch the video](../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/fuel/img/FuelVideoGuide.jpg)](https://youtu.be/Q_bCt0ervw4)
 
 ## Updating the System and Installing Required Libraries
 ```shell

@@ -15,7 +15,7 @@ Burada [GitHup Codespaces](https://github.com/codespaces) ile kontrat deploy ede
 
 ## Video
 Aşağıdaki ideoyu izleyerek işlemlerinizi yapabilirsiniz.
-[![Watch the video](./img/FuelVideoGuide.jpg)]()
+[![Watch the video](./img/FuelVideoGuide.jpg)](https://youtu.be/Q_bCt0ervw4)
 
 ## Sistemi Güncelleme ve Gerekli Kütüphanelerin Kurulması
 ```shell
