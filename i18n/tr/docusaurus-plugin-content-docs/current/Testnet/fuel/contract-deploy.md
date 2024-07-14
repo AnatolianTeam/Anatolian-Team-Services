@@ -146,6 +146,10 @@ forc-wallet new
 Cüzdan kelimelerinizi güvenli bir yerda saklamayı unutmayın.
 :::
 
+## Faucet
+
+To deploy counters, we need to have test ETH in our wallet. To get tokens, go to [faucet](https://faucet-testnet.fuel.network/).
+
 ## Kontratı Oluşturma
 Aşağıdaki kodu girdikten sonra önce `0` yazıp enterlayın ve ardından `y` yazıp enterlayın.
 ```shell

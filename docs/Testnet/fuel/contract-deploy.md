@@ -129,7 +129,7 @@ If the above code gives an error, use the code below.
 ```shell
 forc-wallet import 
 ```
-Yukarıdak
+
 
 ### Creating a New Wallet
 ```shell
@@ -143,6 +143,9 @@ forc-wallet new
 :::warning
 Don't forget to keep your wallet words in a safe place.
 :::
+
+## Musluk
+Kontar deploy etmek için cüzdanımızda test ETH olması gerekiyor. Token almak için [faucet](https://faucet-testnet.fuel.network/)sayfasına gidin. 
 
 ## Creating the Contract
 After entering the code below, first type `0` and enter, and then type `y` and enter.
