@@ -104,7 +104,6 @@ fn increment() {
     storage.counter.write(incremented);
 		}
 }
-EOF
 ```
 
 </TabItem>
