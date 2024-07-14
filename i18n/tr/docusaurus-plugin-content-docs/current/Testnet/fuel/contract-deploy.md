@@ -17,6 +17,13 @@ Burada [GitHup Codespaces](https://github.com/codespaces) ile kontrat deploy ede
 Aşağıdaki ideoyu izleyerek işlemlerinizi yapabilirsiniz.
 [![Watch the video](./img/FuelVideoGuide.jpg)](https://youtu.be/Q_bCt0ervw4)
 
+## Root Yetkisi
+
+İlk olarak aşağıdaki kod ile root yetkisi alıyoruz ve işlemlere bu şekilde devam ediyoruz.
+```shell
+sudo su
+```
+
 ## Sistemi Güncelleme ve Gerekli Kütüphanelerin Kurulması
 ```shell
 apt update
