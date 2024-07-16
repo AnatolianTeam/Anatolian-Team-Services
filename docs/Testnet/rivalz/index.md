@@ -11,7 +11,7 @@ keywords: [Rivalz, AI, Dymension, Celestia, installation]
 
 ## Links
  ✔️ [Website](https://rivalz.ai/) |
- ✔️ [Docs](https://docs.rivalz.ai/) |  
+ ✔️ [Docs](https://docs.rivalz.ai/) |
  ✔️ [Dashboard](https://rivalz.ai?r=mkoltigin) |
  ✔️ [Discord](https://discord.gg/grNNnSBPBG)
 

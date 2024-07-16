@@ -11,7 +11,7 @@ keywords: [Rivalz, AI, Dymension, Celestia, kurulum]
 
 ## Bağlantılar
  ✔️ [Website](https://rivalz.ai/) |
- ✔️ [Doküman](https://docs.rivalz.ai/) |  
+ ✔️ [Doküman](https://docs.rivalz.ai/) |
  ✔️ [Kontrol Paneli](https://rivalz.ai?r=mkoltigin) |
  ✔️ [Discord](https://discord.gg/grNNnSBPBG)
 
