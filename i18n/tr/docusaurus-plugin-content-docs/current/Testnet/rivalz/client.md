@@ -64,7 +64,7 @@ rivalz run
 ```
 
 Kodu çalıştırdığınızda aşağıdakileri soracak;
-> 1. `? Enter wallet address (EVM):`  kullanıcı panelinize bağlanırken kullandığınız EVM cüzdan adresiniz
+> 1. `? Enter wallet address (EVM):`  [kullanıcı panelinize](https://rivalz.ai?r=mkoltigin) bağlanırken kullandığınız EVM cüzdan adresiniz
 > 2. `? Enter CPU cores number you want to use (Max 6):` sisteminize göre buraya bir rakam girin. Eğer 6CPU var ve başka node'lar da çalışyorsa hepsini yazmamanız iyi olur.
 > 3. `? Enter Ram size you want to use (GB, Max 16 GB):` buradada kullanılmasını istediğiniz RAM miktarını yazın
 > 4. `? Select disk type you want to use:  (Use arrow keys)` HD seçiliyken Enter tuşuna basın.
