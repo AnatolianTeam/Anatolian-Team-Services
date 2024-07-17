@@ -94,6 +94,17 @@ ARNS_ROOT_HOST=DOMAİN_ADDRESS // Example: ar.domain.com
 AR_IO_WALLET=WaLLET_ADDRESS
 OBSERVER_WALLET=WaLLET_ADDRESS
 ```
+### Wallet's .json File
+
+Finally, open your ArConnect wallet, then export the .json file of your wallet. Correct the filename to `your_wallet_address.json`, then send this file via SFTP to the `root/ar-io-node/wallets` directory.
+
+Or open the .json file you exported and paste its content into the code below and run the code;
+In the code below, replace `your_wallet_address` and `codes` section.
+```shell
+tee $HOME/ar-io-node/wallets/your_wallet_address.json > /dev/null <<EOF
+codes
+EOF
+```
 
 ## Running the Node
 

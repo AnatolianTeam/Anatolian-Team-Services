@@ -94,6 +94,18 @@ AR_IO_WALLET=CÜZDAN_ADRESİNİZ
 OBSERVER_WALLET=CÜZDAN_ADRESİNİZ
 ```
 
+### Cüzdanın .json Dosyası
+
+Son olarak ArConnect cüzdanınızı açın ardından cüzdanınızın .json dosyasını dışarı aktarın. Dosya adını `cuzdan_adresiniz.json` olarak düzeltin, ardından bu dosyayı `root/ar-io-node/wallets` dizininne SFTP aracılığıyla gönderin. 
+
+Veyahut dışarı aktardığınız .json dosyasını açın ve içeriğini aşağıdaki koda yapıştırıp kodu çalıştırın;
+Aşağıdaki kodda `cuzdan_adresiniz` ve `kodlar` bölümünü değiştirin.
+```shell
+tee $HOME/ar-io-node/wallets/cuzdan_adresiniz.json > /dev/null <<EOF
+kodlar
+EOF
+```
+
 ## Node'u Çalıştırma
 
 ```shell
