@@ -106,6 +106,10 @@ kodlar
 EOF
 ```
 
+> Aşağıda node'u çalıştırdıktan sonra bu adrese gidin https://domain_adresiniz.com/ar-io/observer/info
+
+Bu bölümde `wallet":"INVALID"` yerine `wallet":"Cüzdan_Adresiniz"` yazmalı.
+
 ## Node'u Çalıştırma
 
 ```shell

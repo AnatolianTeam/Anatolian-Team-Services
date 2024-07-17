@@ -106,6 +106,10 @@ codes
 EOF
 ```
 
+> After running the node below, go to this address https://Your_Domain_Address.com/ar-io/observer/info
+
+In this section, `wallet":"Your_Wallet_Address"` should be written instead of `wallet":"INVALID"`.
+
 ## Running the Node
 
 ```shell
