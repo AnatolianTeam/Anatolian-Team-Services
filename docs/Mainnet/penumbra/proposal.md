@@ -40,7 +40,7 @@ pcli query governance proposal 0 definition
 
 ## Voting
 ```shell
-pcli tx vote yes --on 1
+pcli tx vote yes --on 0
 ```
 
 ## 🎉 Congratulations
