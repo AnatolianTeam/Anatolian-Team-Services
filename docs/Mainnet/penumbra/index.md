@@ -17,8 +17,8 @@ keywords: [Penumbra, modular, chain, installation, snapshot, statesync, update]
  ✔️ [Discord](https://discord.gg/T7E5U929AV)
 
 
-RPC: https://penumbra.anatolianteam.com
-APP: https://penumbra.anatolianteam.com/app
+> RPC: https://grpc-penumbra.anatolianteam.com
+> APP: https://grpc-penumbra.anatolianteam.com/app
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
