@@ -12,8 +12,7 @@ Burada delegatorlerin oylarını kullanması için basit bir rehber hazırlanmı
 ## Penumbra pcli Kurulumu
 
 ```shell
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.79.0/pcli-installer.sh | sh
-
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.79.1/pcli-installer.sh | sh
 ```
 
 ## Cüzdanı İçe Aktarma

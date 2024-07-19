@@ -12,8 +12,7 @@ Here is a simple guide for delegates to cast their votes.
 ## Installing the Penumbra PCLI 
 
 ```shell
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.79.0/pcli-installer.sh | sh
-
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.79.1/pcli-installer.sh | sh
 ```
 
 ## Importing the Wallet
