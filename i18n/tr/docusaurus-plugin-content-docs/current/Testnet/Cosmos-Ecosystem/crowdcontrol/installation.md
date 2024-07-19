@@ -41,7 +41,7 @@ Aşağıda değiştirmeniz gereken yerler belirtilmiştir.
 echo "export CROWD_NODENAME=$CROWD_NODENAME"  >> $HOME/.bash_profile
 echo "export CROWD_WALLET=$CROWD_WALLET" >> $HOME/.bash_profile
 echo "export CROWD_PORT=11" >> $HOME/.bash_profile
-echo "export CROWD_CHAIN_ID=cardtestnet-10" >> $HOME/.bash_profile
+echo "export CROWD_CHAIN_ID=cardtestnet-12" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Node (`CROWD_NODENAME`) ve Cüzdan (`CROWD_WALLET`) adımızın `Anatolian-Guide
 echo "export CROWD_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export CROWD_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export CROWD_PORT=16" >> $HOME/.bash_profile
-echo "export CROWD_CHAIN_ID=cardtestnet-10" >> $HOME/.bash_profile
+echo "export CROWD_CHAIN_ID=cardtestnet-12" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -59,10 +59,10 @@ source $HOME/.bash_profile
 ```
 git clone https://github.com/DecentralCardGame/Cardchain
 cd Cardchain
-git checkout v0.14.2
+git checkout v0.16.0
 make install
 ```
-Versiyon çıktısı `0.14.2` olacak.
+Versiyon çıktısı `0.16.0` olacak.
 
 ## Uygulamayı Yapılandırma ve Başlatma
 We copy and paste the codes below without making any changes.

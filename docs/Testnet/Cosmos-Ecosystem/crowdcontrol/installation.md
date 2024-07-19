@@ -41,7 +41,7 @@ The areas you need to change are written below.
 echo "export CROWD_NODENAME=$CROWD_NODENAME"  >> $HOME/.bash_profile
 echo "export CROWD_WALLET=$CROWD_WALLET" >> $HOME/.bash_profile
 echo "export CROWD_PORT=11" >> $HOME/.bash_profile
-echo "export CROWD_CHAIN_ID=cardtestnet-10" >> $HOME/.bash_profile
+echo "export CROWD_CHAIN_ID=cardtestnet-12" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,7 +51,7 @@ Let's assume that your Node (`CROWD_NODENAME`) and Wallet (`CROWD_WALLET`) name 
 echo "export CROWD_NODENAME=Anatolian-Guide"  >> $HOME/.bash_profile
 echo "export CROWD_WALLET=Anatolian-Guide" >> $HOME/.bash_profile
 echo "export CROWD_PORT=16" >> $HOME/.bash_profile
-echo "export CROWD_CHAIN_ID=cardtestnet-10" >> $HOME/.bash_profile
+echo "export CROWD_CHAIN_ID=cardtestnet-12" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -59,10 +59,10 @@ source $HOME/.bash_profile
 ```
 git clone https://github.com/DecentralCardGame/Cardchain
 cd Cardchain
-git checkout v0.14.2
+git checkout v0.16.0
 make install
 ```
-The version output will be `0.14.2`.
+The version output will be `0.16.0`.
 
 ## Configuring and Launching the Node
 We copy and paste the codes below without making any changes.
