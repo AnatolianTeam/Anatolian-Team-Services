@@ -19,7 +19,7 @@ curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/
 After entering the code below, type your wallet words (you won't be able to see your words when you type, they will be written in the background) and press enter.
 
 ```shell
-pcli init --grpc-url https://grpc-penumbra.anatolianteam.com soft-kms import-phrase
+pcli init --grpc-url https://grpc-penumbra.anatolianteam.com soft-kms import-phrase 
 ```
 
 ### Confirming Your Wallet Address

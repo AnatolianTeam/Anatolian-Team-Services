@@ -19,7 +19,7 @@ curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/
 Aşağıdaki kodu girdikten sonra cüzdan kelimelerinizi yazın (yazdığınızda kelimeleriniz göremezsiniz, arka planda yazılmış olacak) ve enter tuşuna basın. 
 
 ```shell
-pcli init --grpc-url https://grpc-penumbra.anatolianteam.com soft-kms import-phrase
+pcli init --grpc-url https://grpc-penumbra.anatolianteam.com soft-kms import-phrase 
 ```
 
 ### Cüzdan Adresinizi Teyit Etme 
