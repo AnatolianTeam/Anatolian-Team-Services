@@ -1,6 +1,6 @@
 ---
 title: 🗳️ Oy Kullanma
-description: Penumbra oy kullanma rehberi.
+description: Penumbra Oy Kullanma Rehberi.
 image: ./img/Penumbra-Service-Cover.jpg
 keywords: [penumbra, stake, swap, kullanıcı rehberi, rehber]
 ---
