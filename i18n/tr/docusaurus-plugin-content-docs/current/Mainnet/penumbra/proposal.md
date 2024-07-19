@@ -42,6 +42,12 @@ pcli query governance proposal 0 definition
 ```shell
 pcli tx vote yes --on 0
 ```
+```shell
+pcli tx vote no --on 0
+```
+```shell
+pcli tx vote abstain --on 0
+```
 
 ## 🎉 Tebrikler
 
