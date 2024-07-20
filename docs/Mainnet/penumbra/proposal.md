@@ -38,6 +38,11 @@ pcli init --grpc-url https://grpc-penumbra.anatolianteam.com soft-kms import-phr
 pc view address 0
 ```
 
+### Sync Wallet
+```shell
+pcli view sync
+```
+
 ### Checking Your Balance
 ```shell
 pc view balance

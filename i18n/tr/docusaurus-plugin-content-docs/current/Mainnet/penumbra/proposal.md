@@ -38,6 +38,11 @@ pcli init --grpc-url https://grpc-penumbra.anatolianteam.com soft-kms import-phr
 pcli view address 0
 ```
 
+### Cüzdanı Senkronize Etme
+```shell
+pcli view sync
+```
+
 ### Bakiyenizi Kontrol Etme
 ```shell
 pcli view balance
