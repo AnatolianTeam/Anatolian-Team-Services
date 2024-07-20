@@ -26,6 +26,15 @@ pcli --version
 ```
 The version output will be `pcli v0.79.1`.
 
+### Updating pcli
+:::warning
+If you have installed it before and the previous pcli version is installed on your server, run the code below. If not, you do not need to do this.
+:::
+```shell
+pcli view reset
+```
+**No wallet needs to be generated. The existing wallet will be used automatically.**
+
 ## Importing the Wallet
 After entering the code below, type your wallet words (you won't be able to see your words when you type, they will be written in the background) and press enter.
 

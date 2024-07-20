@@ -26,6 +26,18 @@ pcli --version
 ```
 Versiyon çıktısı `pcli v0.79.1` olacak.
 
+### pcli Güncelleme
+
+:::warning
+Eğer daha önce kurduysanız ve eski pcli sürümü sunucunuzda yüklü ise aşağıdaki kodu çalıştırın. Değilse bu işlemi yapmanıza gerek yoktur.
+:::
+
+```shell
+pcli view reset
+```
+**Bu aşamada herhangi bir cüzdan oluşturulmasına gerek yoktur. Mevcut cüzdan otomatik olarak kullanılacaktır.**
+
+
 ## Cüzdanı İçe Aktarma
 Aşağıdaki kodu girdikten sonra cüzdan kelimelerinizi yazın (yazdığınızda kelimeleriniz göremezsiniz, arka planda yazılmış olacak) ve enter tuşuna basın. 
 
