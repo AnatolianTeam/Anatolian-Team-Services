@@ -14,6 +14,13 @@ Here is a simple guide for delegates to cast their votes.
 ```shell
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.79.1/pcli-installer.sh | sh
 ```
+```shell
+source $HOME/.cargo/env
+```
+```shell
+pcli --version
+```
+The version output will be `pcli v0.79.1`.
 
 ## Importing the Wallet
 After entering the code below, type your wallet words (you won't be able to see your words when you type, they will be written in the background) and press enter.

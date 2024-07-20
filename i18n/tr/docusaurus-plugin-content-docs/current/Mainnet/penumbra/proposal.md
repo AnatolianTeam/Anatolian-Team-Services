@@ -14,6 +14,13 @@ Burada delegatorlerin oylarını kullanması için basit bir rehber hazırlanmı
 ```shell
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/penumbra-zone/penumbra/releases/download/v0.79.1/pcli-installer.sh | sh
 ```
+```shell
+source $HOME/.cargo/env
+```
+```shell
+pcli --version
+```
+Versiyon çıktısı `pcli v0.79.1` olacak.
 
 ## Cüzdanı İçe Aktarma
 Aşağıdaki kodu girdikten sonra cüzdan kelimelerinizi yazın (yazdığınızda kelimeleriniz göremezsiniz, arka planda yazılmış olacak) ve enter tuşuna basın. 
