@@ -94,34 +94,34 @@ empowerd tx bank send $ART_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000umpwr
 
 ### Proposal Oylamasına Katılma
 ```
-empowerd tx gov vote 1 yes --from $ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx gov vote 1 yes --from $ART_WALLET --chain-id=$EMPOW_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-empowerd tx staking delegate $ART_VALOPER_ADDRESS 100000000umpwr --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx staking delegate $ART_VALOPER_ADDRESS 100000000umpwr --from=$ART_WALLET --chain-id=$EMPOW_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-empowerd tx staking unbond $(empowerd keys show $ART_WALLET --bech val -a) 1000000umpwr --from $ART_WALLET --chain-id $ART_CHAIN_ID --fees 3000umpwr -y
+empowerd tx staking unbond $(empowerd keys show $ART_WALLET --bech val -a) 1000000umpwr --from $ART_WALLET --chain-id $EMPOW_ID --fees 3000umpwr -y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-empowerd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000umpwr --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx staking redelegate srcValidatorAddress destValidatorAddress 100000000umpwr --from=$ART_WALLET --chain-id=$EMPOW_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-empowerd tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$ART_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx distribution withdraw-all-rewards --from=$ART_WALLET --chain-id=$EMPOW_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-empowerd tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$ART_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx distribution withdraw-rewards $ART_VALOPER_ADDRESS --from=$ART_WALLET --commission --chain-id=$EMPOW_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -136,7 +136,7 @@ empowerd status 2>&1 | jq .ValidatorInfo
 ```
 empowerd tx staking edit-validator \
 --new-moniker=YENI-NODE-ADI \
---chain-id=$ART_CHAIN_ID \
+--chain-id=$EMPOW_ID \
 --from=$ART_WALLET \
 --gas-prices 0.00001umpwr \
 --gas-adjustment 1.5 \
@@ -146,7 +146,7 @@ empowerd tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-empowerd tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto - y
+empowerd tx staking edit-validator --commission-rate "0.02" --moniker=$ART_NODENAME --from $ART_WALLET --chain-id $EMPOW_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
@@ -158,7 +158,7 @@ empowerd tx staking edit-validator \
 --identity=XXXX0000XXXX0000\
 --website="YOU CAN WRITE YOUR WEBSITE IF YOU EXIST" \
 --details="YOU CAN WRITE A SENTENCE INTRODUCING YOURSELF IN THIS SECTION" \
---chain-id=$ART_CHAIN_ID \
+--chain-id=$EMPOW_ID \
 --from=$ART_WALLET
 ```
 
@@ -179,7 +179,7 @@ empowerd q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-empowerd tx slashing unjail --from $ART_WALLET --chain-id $ART_CHAIN_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
+empowerd tx slashing unjail --from $ART_WALLET --chain-id $EMPOW_ID --gas-prices 0.00001umpwr --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

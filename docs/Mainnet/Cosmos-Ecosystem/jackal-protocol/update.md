@@ -5,18 +5,33 @@ image: ./img/Jackal-Service-Cover.jpg
 keywords: [jackal, protocol, canine, network, installation, snapshot, statesync, update]
 ---
 
-# Update
+# Update ((v.4.0.0))
 
-## Version 3.2.2
+## Scheduled Update
+
+### tmux Install
 ```shell
-systemctl stop canined
-cd $HOME
-rm -rf canine-chain
-git clone https://github.com/JackalLabs/canine-chain.git
-cd canine-chain
-git checkout v3.2.2
-make install
-
-systemctl restart canined && journalctl -u canined -f -o cat
+apt update
+apt install -y tmux
 ```
 
+### Auto Update
+```shell
+tmux new -s jackal "bash <(curl -s https://raw.githubusercontent.com/AnatolianTeam/Cosmos-Scripts/main/utils/schedule_upgrade.sh) -n jackal -i jackal-1 -t 8527000 -v v4.0.0 -b canined -c https://github.com/AnatolianTeam"
+```
+
+`press CTRL+B then leave hands and then press D`
+
+
+## Manual Update
+```shell
+sudo systemctl stop canined
+
+cd && rm -rf canine-chain
+git clone https://github.com/JackalLabs/canine-chain.git
+cd canine-chain
+git checkout v4.0.0
+make install
+
+systemctl restart canined
+```
