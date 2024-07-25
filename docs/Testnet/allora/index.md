@@ -17,7 +17,7 @@ keywords: [Allora, AI, Layer 1, installation]
  ✔️ [Discord](https://discord.gg/2NqGYRxPHQ)
 
 
-## Worker Gereksinimler
+## Worker Requirements
 
 | Components | Minimum | **Recommended** |
 | ------------ | ------------ | ------------ |
