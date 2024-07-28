@@ -21,7 +21,8 @@ apt install curl build-essential pkg-config libssl-dev git wget jq make gcc chro
 ```shell
 cd $HOME
 wget https://github.com/fractal-bitcoin/fractald-release/releases/download/v1.0.6/fractald-1.0.6-x86_64-linux-gnu.tar.gz
-tar -zxvf fractald-1.0.6-x86_64-linux-gnu.tar.gz && mv fractald-1.0.6-x86_64-linux-gnu fractal && rm fractald-1.0.6-x86_64-linux-gnu.tar.gz
+tar -zxvf fractald-1.0.6-x86_64-linux-gnu.tar.gz && mv fractald-1.0.6-x86_64-linux-gnu.tar.gz $HOME/fractal
+rm fractald-1.0.6-x86_64-linux-gnu.tar.gz
 ```
 ```shell
 cd fractal && mkdir data
