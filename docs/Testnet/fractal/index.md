@@ -11,6 +11,7 @@ keywords: [Fractal, Bitcoin, BTC, Service, installation]
 
 ## Links
  ✔️ [Website](https://www.fractalbitcoin.io/) |
+ ✔️ [Docs](https://docs.fractalbitcoin.io/) |
  ✔️ [Technical Litepaper](https://www.notion.so/fractal-bitcoin/2024-01-Fractal-Bitcoin-v0-0-9-04c62c379d6846c7b6163fcd1fb9d566?pvs=4) |
  ✔️ [GitHub](https://github.com/fractal-bitcoin/)
 
