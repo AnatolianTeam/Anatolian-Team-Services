@@ -13,7 +13,9 @@ keywords: [Ar.io, Ar, permaweb, kurulum]
  ✔️ [Website](https://www.ar.io) |
  ✔️ [Blockchain Explorer](https://gateways.ar-io.dev) |
  ✔️ [Doküman](https://docs.ar.io) |
- ✔️ [Discord](https://discord.gg/ApxXjvwECK)
+ ✔️ [Discord](https://discord.gg/ApxXjvwECK) |
+ ✔️ [Arscan](https://arscan.io/gateways) |
+ ✔️ [Gateways](https://discord.gg/ApxXjvwECK)
 
 ## Gereksinimler
 
