@@ -60,7 +60,7 @@ source $HOME/.bash_profile
 cd $HOME
 git clone https://github.com/chain4energy/c4e-chain.git
 cd c4e-chain
-git checkout tags/v1.3.0
+git checkout tags/v1.4.0
 make install
 c4ed version
 ```
