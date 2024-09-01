@@ -74,8 +74,8 @@ c4ed config chain-id $C4E_CHAIN_ID
 c4ed init --chain-id $C4E_CHAIN_ID $C4E_NODENAME
 
 # Copying the Genesis and addrbook Files
-wget https://raw.githubusercontent.com/chain4energy/c4e-chains/main/babajaga-1/genesis.json -O $HOME/.c4e-chain/config/genesis.json
-wget https://raw.githubusercontent.com/koltigin/C4E-Kurulum-Rehberi/main/addrbook.json -O $HOME/.c4e-chain/config/addrbook.json
+wget https://testnet.anatolianteam.com/c4e/genesis.json -O $HOME/.c4e-chain/config/genesis.json
+wget https://testnet.anatolianteam.com/c4e/addrbook.json -O $HOME/.c4e-chain/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0uc4e "|g' $HOME/.c4e-chain/config/app.toml
