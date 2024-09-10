@@ -7,7 +7,7 @@ keywords: [Allora, AI, Layer 1, Kurulum, Güncelleme]
 
 # Allora Güncelleme
 
-****1. Basic Price Node Konteynerını Durdurma ve Kaldırma**
+**1. Basic Price Node Konteynerını Durdurma ve Kaldırma**
 **
 ```shell
 bash -c "$(curl -s https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Allora/stop.sh)"
@@ -21,7 +21,7 @@ This command stops and removes Allora containers.
 cd $HOME && rm -rf basic-coin-prediction-node
 ```
 
-**3. Allora Huggingface Walkthrough Reposunu Klonlama *
+**3. Allora Huggingface Walkthrough Reposunu Klonlama**
 
 ```shell
 cd $HOME
@@ -148,7 +148,7 @@ EOF
 **4. Coingecko API key Oluşturma**
 https://www.coingecko.com/en/developers/dashboard adresine gidrek kendinize bir API Key alın.
 
-Ardından aşağıdaki kodda YOUR_API` yazan yere kodunuzu yazın ve kodu çalıştırın.
+Ardından aşağıdaki kodda `YOUR_API` yazan yere kodunuzu yazın ve kodu çalıştırın.
 ```shell
 APIKEY="YOUR_API"
 ```

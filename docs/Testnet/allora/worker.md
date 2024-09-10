@@ -1,5 +1,5 @@
 ---
-title: 💾 Worker 
+title: 💾 Worker Intallation
 description: Allora worker installation guide.
 image: ./img/Allora-Service-Cover.jpg
 keywords: [Allora, AI, Layer 1, installation]
@@ -65,255 +65,182 @@ We will monitor our scores on the Allora [dashboard](https://app.allora.network)
 ## Faucet
 Request tokens for the Allora wallet from the [Faucet](https://faucet.edgenet.allora.network/).
 
-## Installing the Allora Worker
+## Installing the Allora Huggingface Walkthrough Worker
 
 ```shell
 cd $HOME
-git clone https://github.com/allora-network/basic-coin-prediction-node
+git clone https://github.com/allora-network/allora-huggingface-walkthrough
+cd allora-huggingface-walkthrough
 ```
 
 ### Creating the Data Files
 ```shell
-cd basic-coin-prediction-node
 mkdir worker-data
-mkdir head-data
-```
-
-### Setting Data File Permissions
-```shell
 chmod -R 777 worker-data
-chmod -R 777 head-data
 ```
 
-### Creating the Head Key
+### Changing Port (Optional)
+If there is another application on your server that uses port 8000, you need to change it.
+> Kullanmak istediğiniz port numarasını `YOUR_PORT` yazan yere girin ve kodu çalıştırın.
+> Enter the port number you want to use in the place where it says `YOUR_PORT` and run the code.
 ```shell
-docker run -it --entrypoint=bash -v ./head-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
+PORT="YOUR_PORT"
 ```
 
-### Creating the Worker Key
+> Then run following code.
 ```shell
-docker run -it --entrypoint=bash -v ./worker-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
+sed -i.bak -e "s%8000:8000%${YOUR_PORT}:${YOUR_PORT}%g" $HOME/allora-huggingface-walkthrough/docker-compose.yaml 
 ```
 
-### Obtaining the Head Key
+
+
+### Creating the Config File
+Run the code below by entering your wallet name and seed phrase.
 ```shell
-cat head-data/keys/identity
-```
-> Save this key, it will be needed in the following sections.
-
-### Preparing the docker-compose.yml File 
-
-#### Deleting the Existing File
-```shell
-rm docker-compose.yml
-```
-
-#### Preparing the New File
-
-> The default ports are listed below. If these ports are already in use on your server, change them.
-> Replace `MNEMONIC` with your wallet mnemonic,
-> Replace `WALLET_NAME` with your wallet name,
-> Replace `HEAD_ID` with the head key obtained earlier. Then execute the code.
-
-```shell
-PY_PORT="8000"
-W_PORT1="9011"
-W_PORT2="9010"
-REST_PORT="6000"
 MNEMONIC=""
-HEAD_ID=""
-WALLET_NAME=""
+CUZDAN_ADI=""
 ```
 
-> Now create our new file as the code written below.
+Run the following code without any changes.
 ```shell
-tee $HOME/basic-coin-prediction-node/docker-compose.yml > /dev/null << EOF
-version: '3'
-
-services:
-  inference:
-    container_name: inference-basic-eth-pred
-    build:
-      context: .
-    command: python -u /app/app.py
-    ports:
-      - "$PY_PORT:$PY_PORT"
-    networks:
-      eth-model-local:
-        aliases:
-          - inference
-        ipv4_address: 172.22.0.4
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:$PY_PORT/inference/ETH"]
-      interval: 10s
-      timeout: 10s
-      retries: 12
-    volumes:
-      - ./inference-data:/app/data
-
-  updater:
-    container_name: updater-basic-eth-pred
-    build: .
-    environment:
-      - INFERENCE_API_ADDRESS=http://inference:$PY_PORT
-    command: >
-      sh -c "
-      while true; do
-        python -u /app/update_app.py;
-        sleep 24h;
-      done
-      "
-    depends_on:
-      inference:
-        condition: service_healthy
-    networks:
-      eth-model-local:
-        aliases:
-          - updater
-        ipv4_address: 172.22.0.5
-
-  worker:
-    container_name: worker-basic-eth-pred
-    environment:
-      - INFERENCE_API_ADDRESS=http://inference:$PY_PORT
-      - HOME=/data
-    build:
-      context: .
-      dockerfile: Dockerfile_b7s
-    entrypoint:
-      - "/bin/bash"
-      - "-c"
-      - |
-        if [ ! -f /data/keys/priv.bin ]; then
-          echo "Generating new private keys..."
-          mkdir -p /data/keys
-          cd /data/keys
-          allora-keys
-        fi
-        # Change boot-nodes below to the key advertised by your head
-        allora-node --role=worker --peer-db=/data/peerdb --function-db=/data/function-db \
-          --runtime-path=/app/runtime --runtime-cli=bls-runtime --workspace=/data/workspace \
-          --private-key=/data/keys/priv.bin --log-level=debug --port=$W_PORT1 \
-          --boot-nodes=/ip4/172.22.0.100/tcp/$W_PORT2/p2p/$HEAD_ID \
-          --topic=allora-topic-1-worker \
-          --allora-chain-key-name=$WALLET_NAME \
-          --allora-chain-restore-mnemonic='$MNEMONIC' \
-          --allora-node-rpc-address=https://allora-rpc.edgenet.allora.network/ \
-          --allora-chain-topic-id=1
-    volumes:
-      - ./worker-data:/data
-    working_dir: /data
-    depends_on:
-      - inference
-      - head
-    networks:
-      eth-model-local:
-        aliases:
-          - worker
-        ipv4_address: 172.22.0.10
-
-  head:
-    container_name: head-basic-eth-pred
-    image: alloranetwork/allora-inference-base-head:latest
-    environment:
-      - HOME=/data
-    entrypoint:
-      - "/bin/bash"
-      - "-c"
-      - |
-        if [ ! -f /data/keys/priv.bin ]; then
-          echo "Generating new private keys..."
-          mkdir -p /data/keys
-          cd /data/keys
-          allora-keys
-        fi
-        allora-node --role=head --peer-db=/data/peerdb --function-db=/data/function-db  \
-          --runtime-path=/app/runtime --runtime-cli=bls-runtime --workspace=/data/workspace \
-          --private-key=/data/keys/priv.bin --log-level=debug --port=$W_PORT2 --rest-api=:$REST_PORT
-    ports:
-      - "$REST_PORT:$REST_PORT"
-    volumes:
-      - ./head-data:/data
-    working_dir: /data
-    networks:
-      eth-model-local:
-        aliases:
-          - head
-        ipv4_address: 172.22.0.100
-
-
-networks:
-  eth-model-local:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.22.0.0/24
-
-volumes:
-  inference-data:
-  worker-data:
-  head-data:
+tee $HOME/allora-huggingface-walkthrough/config.json > /dev/null << EOF
+{
+    "wallet": {
+        "addressKeyName": "$CUZDAN_ADI",
+        "addressRestoreMnemonic": "$MNEMONIC",
+        "alloraHomeDir": "/root/.allorad",
+        "gas": "1000000",
+        "gasAdjustment": 1.0,
+        "nodeRpc": "https://allora-rpc.testnet-1.testnet.allora.network/",
+        "maxRetries": 1,
+        "delay": 1,
+        "submitTx": false
+    },
+    "worker": [
+        {
+            "topicId": 1,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 1,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 2,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 3,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 3,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BTC"
+            }
+        },
+        {
+            "topicId": 4,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 2,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BTC"
+            }
+        },
+        {
+            "topicId": 5,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 4,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        },
+        {
+            "topicId": 6,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        },
+        {
+            "topicId": 7,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 2,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 8,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 3,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BNB"
+            }
+        },
+        {
+            "topicId": 9,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ARB"
+            }
+        }
+        
+    ]
+}
 EOF
 ```
 
-## Starting the Allora Worker
+### Creating the Coingecko API key**
+Get an API Key for yourself at https://www.coingecko.com/en/developers/dashboard.
 
+Write your own API in the code below, where it says`YOUR_API`, and run the code.
 ```shell
-cd $HOME/basic-coin-prediction-node
-docker compose build
-docker compose up -d
+APIKEY="YOUR_API"
+```
+Then run following code.
+```shell
+sed -i.bak -e "s%<Your Coingecko API key>%${APIKEY}%g" $HOME/allora-huggingface-walkthrough/app.py 
 ```
 
-## Checking the Node
+## Running the Allora Huggingface Worker
 
-Enter the following code to get the Allora docker container (`basic-coin-prediction-node-worker`) id.
 ```shell
-docker ps
+chmod +x init.config
+./init.config
 ```
 
-Run the code below in the `C_ID` section.
 ```shell
-docker logs -f C_ID
+docker compose up --build -d
 ```
 
-You should get output like this:
+## Checking the Logs
+
 ```shell
-.
-.
-Success: register node TX Hash:
-.
-.
+docker compose logs -f worker
+```
+
+```shell
+docker compose logs -f
 ```
 
 ## Allora Points
 
-Go to [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWRhMjlm
+Go to [Allora Points](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjBlNWRhMjlmLTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) page and connect your wallet to check your scores.
 
-LTc3YjItNDQ2NS1hYTcxLTk0NWI3NjRhMTA0ZiJ9) page and connect your wallet to check your scores.
-
-## Docker Compose Kurulumunu Test Etme
-```
-curl --location 'http://localhost:6000/api/v1/functions/execute' --header 'Accept: application/json, text/plain, */*' --header 'Content-Type: application/json;charset=UTF-8' --data '{
-    "function_id": "bafybeigpiwl3o73zvvl6dxdqu7zqcub5mhg65jiky2xqb4rdhfmikswzqm",
-    "method": "allora-inference-function.wasm",
-    "parameters": null,
-    "topic": "1",
-    "config": {
-        "env_vars": [
-            {                              
-                "name": "BLS_REQUEST_PATH",
-                "value": "/api"
-            },
-            {                              
-                "name": "ALLORA_ARG_PARAMS",
-                "value": "1711064725"
-            }
-        ],
-        "number_of_nodes": -1,
-        "timeout" : 2
-    }
-}'
-```
 
 ## Cheking Update the Node and ETH Price
 ```

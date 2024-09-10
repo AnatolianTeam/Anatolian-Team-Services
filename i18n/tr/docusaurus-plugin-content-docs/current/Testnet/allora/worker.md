@@ -1,5 +1,5 @@
 ---
-title: 💾 Worker
+title: 💾 Worker Kurulumu
 description: Allora Worker kurulum rehberi.
 image: ./img/Allora-Service-Cover.jpg
 keywords: [Allora, AI, Layer 1, Katman 1, kurulum]
@@ -65,222 +65,173 @@ Allora [kontrol paneli](https://app.allora.network)'nde puanlarımızı takip ed
 ## Faucet
 Allora cüzdanımıza [Faucet](https://faucet.edgenet.allora.network/)'tan token istiyoruz.
 
-## Allora Worker Kurulumu
+## Allora Huggingface Walkthrough Kurulumu
 
 ```shell
 cd $HOME
-git clone https://github.com/allora-network/basic-coin-prediction-node
+git clone https://github.com/allora-network/allora-huggingface-walkthrough
+cd allora-huggingface-walkthrough
 ```
 
-### Data Dosyalarını Oluşturma
+### Data Dosyası Oluşturma
 ```shell
-cd basic-coin-prediction-node
 mkdir worker-data
-mkdir head-data
-```
-
-### Data Dosya İzinlerini Ayarlama
-```shell
 chmod -R 777 worker-data
-chmod -R 777 head-data
 ```
 
-### Head Key Oluşturma
+### Port Değiştirme (Opsiyonel)
+Eğer sunucusunuzda 8000 portunu kullanan başka bir uygulama varsa bunu değiştirmeniz gerekir.
+> Kullanmak istediğiniz port numarasını `YOUR_PORT` yazan yere girin ve kodu çalıştırın.
 ```shell
-docker run -it --entrypoint=bash -v ./head-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
+PORT="YOUR_PORT"
 ```
 
-### Worker Key Oluşturma
+> Then run following code.
 ```shell
-docker run -it --entrypoint=bash -v ./worker-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
+sed -i.bak -e "s%8000:8000%${YOUR_PORT}:${YOUR_PORT}%g" $HOME/allora-huggingface-walkthrough/docker-compose.yaml 
 ```
 
-### Head Key Öğrenme
+### Config Dosyası Oluşturma**
+Aşağıdaki kodu, cüzdan adınızı ve kelimelerinizi girerek çalıştırın.
 ```shell
-cat head-data/keys/identity
-```
-> Keyi kaydedin, aşağıdaki bölümlerde lazım olacak.
-
-## docker-compose.yml Dosyasını Hazırlama 
-
-### Var Olan Dosyayı Silme
-```shell
-rm docker-compose.yml
-```
-### Yeni Dosyayı Hazırlama
-> Aşağıdaki varsayılan olarak kullanılacak portlar yazılmıştır. Eğer bu portlar sunucusunuzda kullanılıyorsa bunları değiştirin.
-> `MNEMONIC` bölümüne cüzdan kelimelerini,
-> `CUZDAN_ADI` bölümüne cüzdan adınızı,
-> `HEAD_ID` bölümüne ise yukarıda alınan head key kodunu yazın. Ardından kodu çalıştırın. 
-
-```shell
-PY_PORT="8000"
-W_PORT1="9011"
-W_PORT2="9010"
-REST_PORT="6000"
 MNEMONIC=""
-HEAD_ID=""
 CUZDAN_ADI=""
 ```
 
-> Şimdi yeni dosyamızı oluşturuyoruz aşağıdaki kodu olduğu gibi çalıştırı.
+Ardından aşağıdaki kodu çalıştırın. 
 ```shell
-tee $HOME/basic-coin-prediction-node/docker-compose.yml > /dev/null << EOF
-version: '3'
-
-services:
-  inference:
-    container_name: inference-basic-eth-pred
-    build:
-      context: .
-    command: python -u /app/app.py
-    ports:
-      - "$PY_PORT:$PY_PORT"
-    networks:
-      eth-model-local:
-        aliases:
-          - inference
-        ipv4_address: 172.22.0.4
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:$PY_PORT/inference/ETH"]
-      interval: 10s
-      timeout: 10s
-      retries: 12
-    volumes:
-      - ./inference-data:/app/data
-
-  updater:
-    container_name: updater-basic-eth-pred
-    build: .
-    environment:
-      - INFERENCE_API_ADDRESS=http://inference:$PY_PORT
-    command: >
-      sh -c "
-      while true; do
-        python -u /app/update_app.py;
-        sleep 24h;
-      done
-      "
-    depends_on:
-      inference:
-        condition: service_healthy
-    networks:
-      eth-model-local:
-        aliases:
-          - updater
-        ipv4_address: 172.22.0.5
-
-  worker:
-    container_name: worker-basic-eth-pred
-    environment:
-      - INFERENCE_API_ADDRESS=http://inference:$PY_PORT
-      - HOME=/data
-    build:
-      context: .
-      dockerfile: Dockerfile_b7s
-    entrypoint:
-      - "/bin/bash"
-      - "-c"
-      - |
-        if [ ! -f /data/keys/priv.bin ]; then
-          echo "Generating new private keys..."
-          mkdir -p /data/keys
-          cd /data/keys
-          allora-keys
-        fi
-        # Change boot-nodes below to the key advertised by your head
-        allora-node --role=worker --peer-db=/data/peerdb --function-db=/data/function-db \
-          --runtime-path=/app/runtime --runtime-cli=bls-runtime --workspace=/data/workspace \
-          --private-key=/data/keys/priv.bin --log-level=debug --port=$W_PORT1 \
-          --boot-nodes=/ip4/172.22.0.100/tcp/$W_PORT2/p2p/$HEAD_ID \
-          --topic=allora-topic-1-worker \
-          --allora-chain-key-name=$CUZDAN_ADI \
-          --allora-chain-restore-mnemonic='$MNEMONIC' \
-          --allora-node-rpc-address=https://allora-rpc.edgenet.allora.network/ \
-          --allora-chain-topic-id=1
-    volumes:
-      - ./worker-data:/data
-    working_dir: /data
-    depends_on:
-      - inference
-      - head
-    networks:
-      eth-model-local:
-        aliases:
-          - worker
-        ipv4_address: 172.22.0.10
-
-  head:
-    container_name: head-basic-eth-pred
-    image: alloranetwork/allora-inference-base-head:latest
-    environment:
-      - HOME=/data
-    entrypoint:
-      - "/bin/bash"
-      - "-c"
-      - |
-        if [ ! -f /data/keys/priv.bin ]; then
-          echo "Generating new private keys..."
-          mkdir -p /data/keys
-          cd /data/keys
-          allora-keys
-        fi
-        allora-node --role=head --peer-db=/data/peerdb --function-db=/data/function-db  \
-          --runtime-path=/app/runtime --runtime-cli=bls-runtime --workspace=/data/workspace \
-          --private-key=/data/keys/priv.bin --log-level=debug --port=$W_PORT2 --rest-api=:$REST_PORT
-    ports:
-      - "$REST_PORT:$REST_PORT"
-    volumes:
-      - ./head-data:/data
-    working_dir: /data
-    networks:
-      eth-model-local:
-        aliases:
-          - head
-        ipv4_address: 172.22.0.100
-
-
-networks:
-  eth-model-local:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.22.0.0/24
-
-volumes:
-  inference-data:
-  worker-data:
-  head-data:
+tee $HOME/allora-huggingface-walkthrough/config.json > /dev/null << EOF
+{
+    "wallet": {
+        "addressKeyName": "$CUZDAN_ADI",
+        "addressRestoreMnemonic": "$MNEMONIC",
+        "alloraHomeDir": "/root/.allorad",
+        "gas": "1000000",
+        "gasAdjustment": 1.0,
+        "nodeRpc": "https://allora-rpc.testnet-1.testnet.allora.network/",
+        "maxRetries": 1,
+        "delay": 1,
+        "submitTx": false
+    },
+    "worker": [
+        {
+            "topicId": 1,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 1,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 2,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 3,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 3,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BTC"
+            }
+        },
+        {
+            "topicId": 4,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 2,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BTC"
+            }
+        },
+        {
+            "topicId": 5,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 4,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        },
+        {
+            "topicId": 6,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "SOL"
+            }
+        },
+        {
+            "topicId": 7,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 2,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        },
+        {
+            "topicId": 8,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 3,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "BNB"
+            }
+        },
+        {
+            "topicId": 9,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ARB"
+            }
+        }
+        
+    ]
+}
 EOF
 ```
 
-## Allora Worker Başlatma
+### Coingecko API key Oluşturma
+https://www.coingecko.com/en/developers/dashboard adresine gidrek kendinize bir API Key alın.
 
+Ardından aşağıdaki kodda `YOUR_API` yazan yere kodunuzu yazın ve kodu çalıştırın.
 ```shell
-cd $HOME/basic-coin-prediction-node
-docker compose build
-docker compose up -d
+APIKEY="YOUR_API"
+```
+Ardından aşağıdaki kodu çalıştırın.
+```shell
+sed -i.bak -e "s%<Your Coingecko API key>%${APIKEY}%g" $HOME/allora-huggingface-walkthrough/app.py 
 ```
 
-## Node Kontrolü
+## Allora Huggingface Worker'ı Çalıştırma
 
-Allora docker konteynır (`basic-coin-prediction-node-worker`) id'sini almak için aşağıdaki kodu girin.  
 ```shell
-docker ps
+chmod +x init.config
+./init.config
 ```
 
-Aşağıdaki kodda `C_ID` bölümüne id yazıp çalıştıralım.
 ```shell
-docker logs -f C_ID
+docker compose up --build -d
 ```
 
-Aşağıdaki gibi bir çıktı alamnız gerekiyor.
+## Logları Kontrol Etme
+
 ```shell
-.
-.
-Succes: register node TX Hash:
-.
-.
+docker compose logs -f worker
+```
+
+```shell
+docker compose logs -f
 ```
 
 ## Allora Puanları

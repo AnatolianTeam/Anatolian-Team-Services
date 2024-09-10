@@ -35,7 +35,7 @@ mkdir -p worker-data
 chmod -R 777 worker-data
 ```
 
-**5. Create the Config File**
+**5. Creating the Config File**
 Run the code below by entering your wallet name and seed phrase.
 ```shell
 MNEMONIC=""
