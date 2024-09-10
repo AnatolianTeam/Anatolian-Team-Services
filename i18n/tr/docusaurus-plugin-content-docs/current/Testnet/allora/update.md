@@ -1,48 +1,48 @@
 ---
-title: 🛠️ Update  
-description: Allora worker installation guide.
+title: 🛠️ Güncelleme  
+description: Allora worker güncelleme rehberi.
 image: ./img/Allora-Service-Cover.jpg
-keywords: [Allora, AI, Layer 1, installation, Update]
+keywords: [Allora, AI, Layer 1, Kurulum, Güncelleme]
 ---
 
-# Allora Update
+# Allora Güncelleme
 
-**1. Stop and Remove Basic Price Node Containers**
-
+****1. Basic Price Node Konteynerını Durdurma ve Kaldırma**
+**
 ```shell
 bash -c "$(curl -s https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Allora/stop.sh)"
 ```
 
 This command stops and removes Allora containers.
 
-**2. Delete basic-coin-prediction-node Directory**
+**2. basic-coin-prediction-node Dizinini Kaldırma**
 
 ```shell
 cd $HOME && rm -rf basic-coin-prediction-node
 ```
 
-**3. Cloning the Allora Huggingface Walkthrough *
+**3. Allora Huggingface Walkthrough Reposunu Klonlama *
 
 ```shell
 cd $HOME
 git clone https://github.com/allora-network/allora-huggingface-walkthrough
 cd allora-huggingface-walkthrough
 ```
-**4. Create New Files**
+**4. Yeni Dosyaları Oluşturma**
 
 ```shell
 mkdir -p worker-data
 chmod -R 777 worker-data
 ```
 
-**5. Create the Config File**
-Run the code below by entering your wallet name and seed phrase.
+**5. Config Dosyası Oluşturma**
+Aşağıdaki kodu, cüzdan adınızı ve kelimelerinizi girerek çalıştırın.
 ```shell
 MNEMONIC=""
 CUZDAN_ADI=""
 ```
 
-Run the following code without any changes.
+Ardından aşağıdaki kodu çalıştırın. 
 ```shell
 tee $HOME/allora-huggingface-walkthrough/config.json > /dev/null << EOF
 {
@@ -145,19 +145,19 @@ tee $HOME/allora-huggingface-walkthrough/config.json > /dev/null << EOF
 EOF
 ```
 
-**4. Creating the Coingecko API key**
-Get an API Key for yourself at https://www.coingecko.com/en/developers/dashboard.
+**4. Coingecko API key Oluşturma**
+https://www.coingecko.com/en/developers/dashboard adresine gidrek kendinize bir API Key alın.
 
-Write your own API in the code below, where it says`YOUR_API`, and run the code.
+Ardından aşağıdaki kodda YOUR_API` yazan yere kodunuzu yazın ve kodu çalıştırın.
 ```shell
 APIKEY="YOUR_API"
 ```
-Then run following code.
+Ardından aşağıdaki kodu çalıştırın.
 ```shell
 sed -i.bak -e "s%<Your Coingecko API key>%${APIKEY}%g" $HOME/allora-huggingface-walkthrough/app.py 
 ```
 
-**4. Running the Run Huggingface Worker**
+**4. Huggingface Worker'ı Çalıştırma**
 
 ```shell
 chmod +x init.config
@@ -168,7 +168,7 @@ chmod +x init.config
 docker compose up --build -d
 ```
 
-**5. Checking the Logs**
+**5. Logları Kontrol Etme**
 
 ```shell
 docker compose logs -f worker
