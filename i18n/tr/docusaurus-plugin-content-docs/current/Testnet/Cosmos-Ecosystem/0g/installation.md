@@ -58,8 +58,11 @@ source $HOME/.bash_profile
 ## 0G Kurulması
 ```
 cd $HOME
-git clone -b v0.2.3 https://github.com/0glabs/0g-chain.git
+rm -rf 0g-chain
+git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
+git checkout v0.3.1
+git submodule update --init
 make install
 0gchaind version
 ```
@@ -72,19 +75,18 @@ Aşağıdaki kodlarda herhangi bir değişilik yapmadan kopyalayıp yapıştır�
 0gchaind init --chain-id $OG_CHAIN_ID $OG_NODENAME
 
 # Genesis ve addrbook Dosyalarını Kopyalama
-wget https://testnet.anatolianteam.com/0g/genesis.json -O $HOME/.0gchain/config/genesis.json
-wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.0gchain/config/addrbook.json
+wget https://github.com/0glabs/0g-chain/releases/download/v0.2.3/genesis.json -O $HOME/.0gchain/config/genesis.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ua0gi\"/" $HOME/.0gchain/config/app.toml
+sed -i "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.00025ua0gi\"/" $HOME/.0gchain/config/app.toml
 
 # Indexer Kapatma -Opsiyonel
 indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.0gchain/config/config.toml
 
 # SEEDS ve PEERS Ayarlaması
-PEERS="6dbb0450703d156d75db57dd3e51dc260a699221@152.53.47.155:13456,df4cc52fa0fcdd5db541a28e4b5a9c6ce1076ade@37.60.246.110:13456,11945ced69c3448adeeba49355703984fcbc3a1a@37.27.130.146:26656,dbfb5240845c8c7d2865a35e9f361cc42877721f@78.46.40.246:34656,386c82b09e0ec6a68e653a5d6c57f766ae73e0df@194.163.183.208:26656,d5e294d6d5439f5bd63d1422423d7798492e70fd@77.237.232.146:26656,65600fbbcee78a6350b68e4e33148304cbec8c95@45.90.121.240:26656,48e3cab55ba7a1bc8ea940586e4718a857de84c4@178.63.4.186:26656,d7921529d985b18096ea5cc5d023806af91fd51e@157.90.128.250:58656,3bd6c0c825470d07cd49e57d0b650d490cc48527@37.60.253.166:26656,6efd3559f5d9d13e6442bc2fc9b17e50dc800970@91.205.104.91:13456,3b3ddcd4de429456177b29e5ca0febe4f4c21989@75.119.139.198:26656,58702cc91cc456e9beeb9b3e381f23fac39a3311@94.16.31.30:13456,e7c8f15c88ec1d6dc2b3a9ab619519fbd61182d6@217.76.54.13:26656,7e6124b7816c2fddd1e0f08bbaf0b6876230c5f4@37.27.120.13:26656" && \
-SEEDS="81987895a11f6689ada254c6b57932ab7ed909b6@54.241.167.190:26656,010fb4de28667725a4fef26cdc7f9452cc34b16d@54.176.175.48:26656,e9b4bc203197b62cc7e6a80a64742e752f4210d5@54.193.250.204:26656,68b9145889e7576b652ca68d985826abd46ad660@18.166.164.232:26656" && \
+PEERS="80fa309afab4a35323018ac70a40a446d3ae9caf@og-testnet-peer.itrocket.net:11656,90490155eb1e28a00cb9000657ef53cf9822e9e2@185.245.182.248:12656,6d0e4af8b817dbb81266d6c6710033896f1d65cb@158.220.103.216:12656,881b2297ac90fdf6803136101c1b33eeb52a0bcc@213.199.37.74:12656,2de20431412255201b960a0713c3a3f6fdbeb7e7@173.249.19.219:12656,9b6346424a9b1357bae659a51dbbb8d1c4d1366f@173.249.58.134:12656,055e3e65fd72102f389372564e0107e3ee5022fa@167.86.95.218:12656,0ada3d654c01607d585793943b37335a97a56691@213.239.195.210:12656,3f4ee55632cbd8694c7e5d173f10d7d7b23a5ec1@138.201.185.45:12656,2d780e7cae16cf25dfb992e294d5f672ae8a65ac@185.190.140.189:12656,85eec3750270e50ea73c46b1caa72e7110fa7b1b@156.67.81.129:12656,d619b3c8a0cc49b52ce68b45d8ebe2b9060a3f0a@149.50.111.193:12656,6ea4a3942152a33a50c54cc60aa311fd43cc71d7@144.91.93.99:12656,d7c847d92cf2714d3018cecd6476b6ef86b4240b@66.94.113.206:12656,85f1a5c5e62bbe59d9764453bf4624dc261a53f7@38.242.237.56:12656,1754dac0846c42ebe21fe1935eda0311d567d6a9@45.14.194.144:12656,7e49c7c5d8cf1a4f79d3a2c4a2c3597d144e638e@156.67.81.135:12656" && \
+SEEDS="81987895a11f6689ada254c6b57932ab7ed909b6@54.241.167.190:26656,010fb4de28667725a4fef26cdc7f9452cc34b16d@54.176.175.48:26656,e9b4bc203197b62cc7e6a80a64742e752f4210d5@54.193.250.204:26656,68b9145889e7576b652ca68d985826abd46ad660@18.166.164.232:26656,8f21742ea5487da6e0697ba7d7b36961d3599567@og-testnet-seed.itrocket.net:47656" && \
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.0gchain/config/config.toml
 
 # Prometheus'u Aktif Etme
@@ -199,12 +201,12 @@ ya da
 ### Yeni Cüzdan Oluşturma
 `$OG_WALLET` bölümünü değiştirmiyoruz kurulumun başında cüzdanımıza değişkenler ile isim belirledik.
 ```shell 
-0gchaind keys add $OG_WALLET
+0gchaind keys add $OG_WALLET --eth
 ```  
 
 ### Var Olan Cüzdanı İçeri Aktarma
 ```shell
-0gchaind keys add $OG_WALLET --recover
+0gchaind keys add $OG_WALLET --eth --recover
 ```
 
 ### EVM Adresinizi Öğrenme

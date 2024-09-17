@@ -58,8 +58,11 @@ source $HOME/.bash_profile
 ## Installing 0G
 ```
 cd $HOME
-git clone -b v0.2.3 https://github.com/0glabs/0g-chain.git
+rm -rf 0g-chain
+git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
+git checkout v0.3.1
+git submodule update --init
 make install
 0gchaind version
 ```
@@ -72,11 +75,10 @@ We copy and paste the codes below without making any changes.
 0gchaind init --chain-id $OG_CHAIN_ID $OG_NODENAME
 
 # Copying the Genesis and addrbook Files
-wget https://testnet.anatolianteam.com/0g/genesis.json -O $HOME/.0gchain/config/genesis.json
-wget https://testnet.anatolianteam.com/0g/addrbook.json -O $HOME/.0gchain/config/addrbook.json
+wget https://github.com/0glabs/0g-chain/releases/download/v0.2.3/genesis.json -O $HOME/.0gchain/config/genesis.json
 
 # Set up the minimum gas price
-sed -i "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ua0gi\"/" $HOME/.0gchain/config/app.toml
+sed -i "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.00025ua0gi\"/" $HOME/.0gchain/config/app.toml
 
 # Closing Indexer-Optional
 indexer="null"
@@ -199,12 +201,12 @@ or
 ### Creating a New Wallet
 We do not change the `$OG_WALLET` section, we named our wallet with variables at the beginning of the installation.
 ```shell 
-0gchaind keys add $OG_WALLET
+0gchaind keys add $OG_WALLET --eth
 ```  
 
 ### Importing an Existing Wallet
 ```shell
-0gchaind keys add $OG_WALLET --recover
+0gchaind keys add $OG_WALLET --eth --recover
 ```
 
 ### Learning Your EVM Address
