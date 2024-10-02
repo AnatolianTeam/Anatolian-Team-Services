@@ -102,7 +102,7 @@ solana config set --url https://testnet.dev2.eclipsenetwork.xyz/
 solana config set --keypair /path-to-wallet/my-wallet.json
 ```
 
-### Solana Adresini Üğrenme
+### Solana Adresini Öğrenme
 
 ```shell
 solana address 
