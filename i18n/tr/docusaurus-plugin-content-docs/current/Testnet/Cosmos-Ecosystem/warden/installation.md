@@ -77,7 +77,7 @@ wget https://testnet.anatolianteam.com/warden/genesis.json -O $HOME/.warden/conf
 wget https://testnet.anatolianteam.com/warden/addrbook.json -O $HOME/.warden/config/addrbook.json
 
 # Minimum GAS Ücretinin Ayarlanması
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.005uward"|g' $HOME/.warden/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "25000000award"|g' $HOME/.warden/config/app.toml
 
 # Indexer Kapatma -Opsiyonel
 indexer="null"
@@ -222,7 +222,7 @@ Aşağıdaki komutta aşağıda berlirtilen yerler dışında bir değişiklik y
 ```shell 
 cd $HOME
 echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(wardend comet show-validator | grep -Po '\"key\":\s*\"\K[^"]*')\"},
-    \"amount\": \"9900000uward\",
+    \"amount\": \"9900000award\",
     \"moniker\": \"$WARDEN_NODENAME\",
     \"commission-rate\": \"0.1\",
     \"commission-max-rate\": \"0.2\",
@@ -239,7 +239,7 @@ echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(warde
 ```shell 
 wardend tx staking create-validator $HOME/validator.json \
     --chain-id=$WARDEN_CHAIN_ID \
-    --gas-prices=0.25uward \
+    --gas-prices=0.25award \
     --gas-adjustment=1.5 \
     --gas=auto \
     --from=$WARDEN_WALLET \

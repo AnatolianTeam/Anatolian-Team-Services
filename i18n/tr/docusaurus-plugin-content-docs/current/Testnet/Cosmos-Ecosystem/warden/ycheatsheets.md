@@ -89,39 +89,39 @@ wardend query bank balances $WARDEN_WALLET_ADDRESS
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```
-wardend tx bank send $WARDEN_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uward
+wardend tx bank send $WARDEN_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000award
 ```
 
 ### Proposal Oylamasına Katılma
 ```
-wardend tx gov vote 1 yes --from $WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward--gas-adjustment 1.5 --gas auto -y
+wardend tx gov vote 1 yes --from $WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Stake Etme / Delegate Etme
 ```
-wardend tx staking delegate $WARDEN_VALOPER_ADDRESS 100000000uward--from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward--gas-adjustment 1.5 --gas auto -y
+wardend tx staking delegate $WARDEN_VALOPER_ADDRESS 100000000award--from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Stake'ten Çıkma
 ```
-wardend tx staking unbond $(wardend keys show $WARDEN_WALLET --bech val -a) 1000000uward--from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --fees 3000uward-y
+wardend tx staking unbond $(wardend keys show $WARDEN_WALLET --bech val -a) 1000000award--from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --fees 3000award-y
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme / Redelegate Etme
 `srcValidatorAddress`: Mevcut Stake edilen validatorün adresi
 `destValidatorAddress`: Yeni stake edilecek validatorün adresi
 ```
-wardend tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uward--from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward--gas-adjustment 1.5 --gas auto -y
+wardend tx staking redelegate srcValidatorAddress destValidatorAddress 100000000award--from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Ödülleri Çekme
 ```
-wardend tx distribution withdraw-all-rewards --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward--gas-adjustment 1.5 --gas auto -y
+wardend tx distribution withdraw-all-rewards --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Komisyon Ödüllerini Çekme
 ```
-wardend tx distribution withdraw-rewards $WARDEN_VALOPER_ADDRESS --from=$WARDEN_WALLET --commission --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward--gas-adjustment 1.5 --gas auto -y
+wardend tx distribution withdraw-rewards $WARDEN_VALOPER_ADDRESS --from=$WARDEN_WALLET --commission --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award--gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator İşlemleri
@@ -138,7 +138,7 @@ wardend tx staking edit-validator \
 --new-moniker=YENI-NODE-ADI \
 --chain-id=$WARDEN_CHAIN_ID \
 --from=$WARDEN_WALLET \
---gas-prices 0.00001uward \
+--gas-prices 0.00001award \
 --gas-adjustment 1.5 \
 --gas auto -y
 ```
@@ -146,7 +146,7 @@ wardend tx staking edit-validator \
 ### Validator Komisyon Oranını Değiştirme
 `commission-rate` yazan bölümdeki değeri değiştiriyoruz.
 ```
-wardend tx staking edit-validator --commission-rate "0.02" --moniker=$WARDEN_NODENAME --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001uward--gas-adjustment 1.5 --gas auto - y
+wardend tx staking edit-validator --commission-rate "0.02" --moniker=$WARDEN_NODENAME --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001award--gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Validator Bilgilerinizi Düzenleme
@@ -179,7 +179,7 @@ wardend q slashing params
 
 ### Validatoru Jail Durumundan Kurtarma 
 ```
-wardend tx slashing unjail --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001uward--gas-adjustment 1.5 --gas auto -y
+wardend tx slashing unjail --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001award--gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Actif Validator Listesi

@@ -88,39 +88,39 @@ wardend query bank balances $WARDEN_WALLET_ADDRESS
 
 ### Transferring from One Wallet to Another
 ```
-wardend tx bank send $WARDEN_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000uward
+wardend tx bank send $WARDEN_WALLET_ADDRESS SENDING_CUZDAN_ADRESI 100000000award
 ```
 
 ### Participating in Proposal Voting
 ```
-wardend tx gov vote 1 yes --from $WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward --gas-adjustment 1.5 --gas auto -y
+wardend tx gov vote 1 yes --from $WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Validatore Staking / Delegation
 ```
-wardend tx staking delegate $WARDEN_VALOPER_ADDRESS 100000000uward --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward --gas-adjustment 1.5 --gas auto -y
+wardend tx staking delegate $WARDEN_VALOPER_ADDRESS 100000000award --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award --gas-adjustment 1.5 --gas auto -y
 ```
 ### Unbonding
 ```
-wardend tx staking unbond $(wardend keys show $WARDEN_WALLET --bech val -a) 1000000uward --from $WARDEN_WALLET --chain-id indigo-1 --fees 3000uward -y
+wardend tx staking unbond $(wardend keys show $WARDEN_WALLET --bech val -a) 1000000award --from $WARDEN_WALLET --chain-id indigo-1 --fees 3000award -y
 ```
 
 ### Staking / Redelegate from Current Validator to Other Validator
 `srcValidatorAddress`: Address of the current staked validator
 `destValidatorAddress`: Address of the new validator to be staked
 ```
-wardend tx staking redelegate srcValidatorAddress destValidatorAddress 100000000uward --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward --gas-adjustment 1.5 --gas auto -y
+wardend tx staking redelegate srcValidatorAddress destValidatorAddress 100000000award --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdraw Rewards
 ```
-wardend tx distribution withdraw-all-rewards --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward --gas-adjustment 1.5 --gas auto -y
+wardend tx distribution withdraw-all-rewards --from=$WARDEN_WALLET --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Withdrawing Commission Rewards
 
 ```
-wardend tx distribution withdraw-rewards $WARDEN_VALOPER_ADDRESS --from=$WARDEN_WALLET --commission --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001uward --gas-adjustment 1.5 --gas auto -y
+wardend tx distribution withdraw-rewards $WARDEN_VALOPER_ADDRESS --from=$WARDEN_WALLET --commission --chain-id=$WARDEN_CHAIN_ID --gas-prices 0.00001award --gas-adjustment 1.5 --gas auto -y
 ```
 
 ## Validator operations
@@ -137,7 +137,7 @@ wardend tx staking edit-validator \
 --new-moniker=NEW-NODE-NAME \
 --chain-id=$WARDEN_CHAIN_ID \
 --from=$WARDEN_WALLET \
---gas-prices 0.00001uward \
+--gas-prices 0.00001award \
 --gas-adjustment 1.5 \
 --gas auto -y
 ```
@@ -145,7 +145,7 @@ wardend tx staking edit-validator \
 ### Changing Validator Commission Rate
 We change the value in the section that says 'commission-rate'.
 ```
-wardend tx staking edit-validator --commission-rate "0.02" --moniker=$WARDEN_NODENAME --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001uward --gas-adjustment 1.5 --gas auto - y
+wardend tx staking edit-validator --commission-rate "0.02" --moniker=$WARDEN_NODENAME --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001award --gas-adjustment 1.5 --gas auto - y
 ```
 
 ### Editing Your Validator Information
@@ -178,7 +178,7 @@ wardend q slashing params
 
 ### Recovering Validator from Jail
 ```
-wardend tx slashing unjail --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001uward --gas-adjustment 1.5 --gas auto -y
+wardend tx slashing unjail --from $WARDEN_WALLET --chain-id $WARDEN_CHAIN_ID --gas-prices 0.00001award --gas-adjustment 1.5 --gas auto -y
 ```
 
 ### Active Validators List
