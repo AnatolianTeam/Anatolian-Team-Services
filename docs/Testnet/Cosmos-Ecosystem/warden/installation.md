@@ -57,11 +57,12 @@ source $HOME/.bash_profile
 
 ## Installing Warden Protocol
 ```
-cd $HOME
-rm -rf wardenprotocol
-git clone --depth 1 --branch v0.3.0 https://github.com/warden-protocol/wardenprotocol/
-cd wardenprotocol
-make install
+cd $HOME && mkdir -p go/bin/
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.5.3/wardend_Linux_x86_64.zip
+unzip wardend_Linux_x86_64.zip
+rm -rf wardend_Linux_x86_64.zip
+chmod +x wardend
+mv wardend $HOME/go/bin/wardend
 ```
 
 ## Configuring and Launching the Node

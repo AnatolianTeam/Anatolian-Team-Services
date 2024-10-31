@@ -19,7 +19,7 @@ apt install make clang pkg-config libssl-dev libclang-dev build-essential git cu
 
 ## Go Kurulumu
 ```shell
-ver="1.21.5"
+ver="1.21.6"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 rm -rf /usr/local/go
 tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
@@ -57,11 +57,12 @@ source $HOME/.bash_profile
 
 ## Warden Protocol'ün Kurulması
 ```
-cd $HOME
-rm -rf wardenprotocol
-git clone --depth 1 --branch v0.3.0 https://github.com/warden-protocol/wardenprotocol/
-cd wardenprotocol
-make install
+cd $HOME && mkdir -p go/bin/
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.5.3/wardend_Linux_x86_64.zip
+unzip wardend_Linux_x86_64.zip
+rm -rf wardend_Linux_x86_64.zip
+chmod +x wardend
+mv wardend $HOME/go/bin/wardend
 ```
 
 ## Uygulamayı Yapılandırma ve Başlatma
