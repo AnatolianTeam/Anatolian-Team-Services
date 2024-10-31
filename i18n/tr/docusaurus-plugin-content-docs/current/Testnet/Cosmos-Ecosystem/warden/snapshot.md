@@ -19,7 +19,7 @@ systemctl stop wardend
 cp $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup 
 
 wardend tendermint unsafe-reset-all --home $HOME/.warden --keep-addr-book
-SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/warden/ | egrep -o ">buenavista-1.*\.tar.lz4" | tr -d ">")
+SNAP_NAME=$(curl -s https://testnet.anatolianteam.com/warden/ | egrep -o ">chiado_10010-1.*\.tar.lz4" | tr -d ">")
 curl -L https://testnet.anatolianteam.com/warden/${SNAP_NAME} | tar -I lz4 -xf - -C $HOME/.warden
 
 mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json 
