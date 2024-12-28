@@ -39,7 +39,7 @@ apt update -y && apt upgrade -y && apt install -y curl openssh-server docker-com
 
 ## NVM Installation
 ```shell
-nvm install 18.8.0 && nvm use 18.8.0
+nvm install 20.11.1 && nvm use 20.11.1
 ```
 
 ## Update
