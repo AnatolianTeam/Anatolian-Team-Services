@@ -10,7 +10,7 @@ keywords: [Ar.io, Ar, Permaweb, installation]
 ![Ar](./img/Ar-Service.jpg) 
 
 ## Links
- ✔️ [Website](https://www.ar.io) |
+ ✔️ [Website](https://ar.io) |
  ✔️ [Blockchain Explorer](https://gateways.ar-io.dev) |
  ✔️ [Docs](https://docs.ar.io) |
  ✔️ [Discord](https://discord.gg/ApxXjvwECK) |
