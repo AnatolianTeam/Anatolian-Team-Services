@@ -10,8 +10,8 @@ keywords: [Ar.io, Ar, permaweb, kurulum]
 ![Ar](./img/Ar-Service.jpg)
 
 ## Bağlantılar
- ✔️ [Website](https://www.ar.io) |
- ✔️ [Blockchain Explorer](https://gateways.ar-io.dev) |
+ ✔️ [Website](https://ar.io/) |
+ ✔️ [Blockchain Explorer](https://network-portal.app/#/gateways) |
  ✔️ [Doküman](https://docs.ar.io) |
  ✔️ [Discord](https://discord.gg/ApxXjvwECK) |
  ✔️ [Arscan](https://arscan.io/gateways) |
