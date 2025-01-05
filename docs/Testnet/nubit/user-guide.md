@@ -14,14 +14,3 @@ On the [Alpha](https://alpha.nubit.org/) page, you can connect your Cosmos walle
 It is briefly explained in the video below.
 [![Watch the video](./../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/nubit/img/video-1.jpg)](https://youtu.be/okjrbxwG0Hs?si=PsKKL85TOkN6vvsd)
 
-
-
-<div className="video-container">
-<LiteYouTubeEmbed
-    id="okjrbxwG0Hs"
-    params="autoplay=1&autohide=1&showinfo=0&rel=0"
-    title="Nubit Teşvikli Testnet (Faz 1)"
-    poster="hqdefault"
-    webp
-/>
-</div>
