@@ -1,9 +1,9 @@
 ---
-title: 🆙 User Guide
+title: 👤 User Guide
 description: Ar.io User Guide.
 image: ./img/Anatolian-Guide-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, user, guide]
-sidebar_position: 5
+sidebar_position: 10
 ---
 
 # Ar.io User Guide

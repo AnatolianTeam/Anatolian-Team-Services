@@ -1,9 +1,9 @@
 ---
-title: 🆙 Kullanıcı Rehberi
+title: 👤 Kullanıcı Rehberi
 description: Ar.io Kullanıcı Rehberi.
 image: ./img/Anatolian-Guide-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kullanıcı, rehber]
-sidebar_position: 5
+sidebar_position: 10
 ---
 
 # Ar.io Kullanıcı Rehberi
