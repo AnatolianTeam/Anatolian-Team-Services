@@ -76,7 +76,7 @@ Go to https://app.ardrive.io/ and upload your desired files here. Check the Assi
 
 ### Delegation
 
-Go to https://network-portal.app/gateways#/staking and connect your wallet. Then you can stake to the desired gateways in the list that opens. We recommend that you stake at least 15+ tARIO. If you want to stake to us and our friends as a team, the addresses are below:
+If you would like to stake us as a team and our friends , the addresses are below. We recommend that you stake at least `15+ tARIO`.
 
 * **Note:** You will make us happy if you choose people who do not have 11 delegates while staking. On the page you opened, you can see the number of delegates belonging to the gateway operator in the `Active Delegates` tab.
 

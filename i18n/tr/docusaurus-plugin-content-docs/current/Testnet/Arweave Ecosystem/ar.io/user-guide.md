@@ -74,7 +74,7 @@ https://app.ardrive.io/ adresine gidin burada istediğiniz dosyalarınızı yük
 
 ### Delegasyon
 
-https://network-portal.app/gateways#/staking adresine giderek cüzdanınızı bağlayın. ardından açılan listede istediğiniz ağ geçitlerine stake işlemi yapabilirsiniz. En az 15+ tARIO stake etmenizi tavsiye ederiz. Ekip olarak bizlere ve tanıdığımız dostlarımıza stake etmek isterseniz adresler aşağıdadır:
+Ekip olarak bizlere ve dostlarımıza stake etmek isterseniz adresler aşağıdadır. En az `15+ tARIO` stake etmenizi tavsiye ederiz. 
 
 * **Not:** Stake ederken 11 delege sayısına sahip olmayan kişileri seçerseniz bizleri mutlu edersiniz. Açtığınız sayfada ağ geçidi operatorüne ait delege sayısını `Active Delegates` sekmesinde görebilirsiniz.
 1. [KolTigin](https://network-portal.app/gateways#/gateways/EhkVW8-6SnOm1UBVI-TJH2Hsmoz9ppv1jQMRaSo2W_g)
