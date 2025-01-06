@@ -82,7 +82,7 @@ https://network-portal.app/gateways#/staking adresine giderek cüzdanınızı ba
 3. [Qavurdagli](https://network-portal.app/gateways#/gateways/BIa3UE0QEPRJC4HBSU252qHtA8ZOR4ClnzBq1LZQ_WU)
 4. [MSGateway](https://network-portal.app/gateways#/gateways/Z7gvVfG9n_AXsCQL9hfpknYQawYR30DFNTuBAzWzoOk) 
 5. [DarksunGateway](https://network-portal.app/gateways#/gateways/99cN-yl_Ytpn-_vOOZrF39O3YST9Qe5OP9SZHP_JN7Y)
-
+6. [New Station](https://network-portal.app/gateways#/gateways/HkRKUlJM85uaOurxShYU5TD3fCsTO0-0mhh_rcgc1Xw)
 
 ### Permaweb 
 
