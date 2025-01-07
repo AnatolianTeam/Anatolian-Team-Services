@@ -83,6 +83,7 @@ Ekip olarak bizlere ve dostlarımıza stake etmek isterseniz adresler aşağıda
 4. [MSGateway](https://network-portal.app/gateways#/gateways/Z7gvVfG9n_AXsCQL9hfpknYQawYR30DFNTuBAzWzoOk) 
 5. [DarksunGateway](https://network-portal.app/gateways#/gateways/99cN-yl_Ytpn-_vOOZrF39O3YST9Qe5OP9SZHP_JN7Y)
 6. [New Station](https://network-portal.app/gateways#/gateways/HkRKUlJM85uaOurxShYU5TD3fCsTO0-0mhh_rcgc1Xw)
+7. [Dr.Testnet](https://network-portal.app/gateways#/gateways/4ncmHw9ZNRTVyrptYgJdWInoq75Rbx_u4Qlvq-PSrBI) 
 
 ### Permaweb 
 
