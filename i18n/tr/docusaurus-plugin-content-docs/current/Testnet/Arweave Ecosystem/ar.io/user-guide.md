@@ -99,7 +99,7 @@ Bunlara ek olarak yapabileceğiniz şeyler şunlardır;
 1. Zealy ögrevlerini yaparak EXP puan toplayabilirsiniz. Buradaki görevler eğitim odaklı olup Arweave ekosistemini ve Ar.io'yu daha iyi anlamanızı sağlayacaktır. 
 Katılmak isterseniz [buradan](https://zealy.io/cw/ar-io/invite/roq3SOPBCEpxllr_O_4IB) katılabilirsiniz. Puanları [buradan](https://exp.ar-io.dev/) takip edebilirsiniz.
 2. [Helix](https://helix.arweave.net/) platfromunda NFT koleksiyonu oluşturabilirsiniz.
-3. [Llama Land ](https://llamaland.arweave.net/#/)adresine günlük giriş yaparak ödül alabilirsiniz. Eğer $LLAMA tokeniniz yok ise https://www.permaswap.network/#/ao/TARIO-LLAMA?tab=swap adresinden temin edebilirsiniz.
+3. [Llama Land ](https://llamaland.arweave.net/#/)adresini ziyaret edebilirsiniz.
 4. [Bazar](https://bazar.arweave.dev/#/collection/JAHF1fo4MECRZZFKGcT0B6XM94Lqe-3FtB4Ht_kTEK0/assets/) NFt markette profilinizi oluşturup NFT alıp satabilirsiniz.
 
 ## Destek
