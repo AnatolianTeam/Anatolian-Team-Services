@@ -5,6 +5,8 @@ image: ./img/Anatolian-Guide-Cover.jpg
 keywords: [Ar.io, Ar, permaweb, kullanıcı, rehber]
 sidebar_position: 10
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 # Ar.io Kullanıcı Rehberi
 
