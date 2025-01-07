@@ -5,7 +5,7 @@ image: ./img/Ar-Service-Cover.jpg
 description: Ar.io Rehberi
 keywords: [Ar.io, Ar, permaweb, kurulum]
 ---
-# Ar.io Kurulum Rehberi 
+# Ar.io
 
 ![Ar](./img/Ar-Service.jpg)
 
