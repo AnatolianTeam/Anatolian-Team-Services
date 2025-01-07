@@ -12,17 +12,17 @@ sidebar_position: 10
 
 What you can do in Ar.io is listed under headings below.
 
-## **Topics:**
-1. Creating a wallet.
-2. Obtaining Ar Tokens.
-3. Bridging Ar tokens.
-4. Obtaining tARIO tokens.
-5. Obtaining ArNS domains and creating subdomains.
-6. Uploading files to Ardrive.
-7. Delegating tARIIO tokens.
-8. Using Vouch Portal.
-9. Using Permaweb
-10. Collecting EXP points by doing Zealy tasks and additional things that can be done.
+## Topics
+1. [Creating a wallet.](#wallet)
+2. [Obtaining Ar Tokens.](#ar-token)
+3. [Bridging Ar tokens.](#bridge)
+4. [Obtaining tARIO tokens](#get-tario-tokens)
+5. [Leasing ArNS domains and creating subdomains.](#arns-domain-lease)
+6. [Uploading files to Ardrive.](#using-ardrive)
+7. [Delegating tARIO tokens.](#delegation)
+8. [Using Vouch Portal.](#vouch-portal)
+9. [Using Permaweb](#permaweb)
+10. [Collecting EXP points by doing Zealy tasks and additional things that can be done.](#other-actions)
 
 ### Wallet
 We need a wallet to perform our transactions in the Arweave ecosystem. You can install the Ar Connect wallet in your browser from [here](https://www.arconnect.io/).
@@ -56,7 +56,7 @@ To use our Ar tokens as wAR, we go to the https://aox.xyz/#/beta bridge. It may 
 
 After the bridge process, we purchase `tARIO` tokens at https://www.permaswap.network/#/ao/WAR-TARIO?tab=swap with the tokens we receive as wAR.
 
-### ArNS Domain Lease
+### Leasing ArNS Domain 
 
 Since domain purchase is expensive, we use the rental method, i.e. `Lease` option.
 
@@ -95,7 +95,7 @@ Permaweb is derived from permanently web and means permanent web. You can prepar
 
 [Here](https://vouch-portal.arweave.net/#/intent/vouch-status) will be your passport on the permaweb. You earn points by connecting Gitcoin, Twitter. In addition to these, you also get additional points according to your AR balance and the wAR balance you stake. Try to make your score `5+`.
 
-### Other Actions
+### Other Activities That Can Be Done
 
 In addition to these, you can do the following;
 

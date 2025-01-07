@@ -13,16 +13,16 @@ sidebar_position: 10
 Ar.io'da yapabilecekleriniz aşağıda başlıklar halinde sıralanmıştır. 
 
 ## Konu başlıkları
-1. Cüzdan oluşturma.
-2. Ar Token temin etme.
-3. Ar tokenleri köprüleme.
-4. tARIO token alma.
-5. ArNS domain alma ve alt alan adları oluşturma.
-6. Ardrive'a dosya yükleme.
-7. tARIİO token delege etme.
-8. Vouch Portal kullanma.
-9. Permaweb kullanımı
-10. Zealy görevlerini yaparak EXP puan toplama ve ek olarak yapıalbilecekler.
+1. [Cüzdan oluşturma.](#cüzdan)
+2. [Ar Token temin etme.](#ar-token)
+3. [Ar tokenleri köprüleme.](#köprü-i̇şlemi)
+4. [tARIO token alma](#tario-token-alma)
+5. [ArNS domain alma ve alt alan adları oluşturma.](#arns-domain-alma)
+6. [Ardrive'a dosya yükleme.](#ardrive-kullanma)
+7. [tARIO token delege etme.](#delegasyon)
+8. [Vouch Portal kullanma.](#vouch-portal)
+9. [Permaweb kullanımı](#permaweb)
+10. [Zealy görevlerini yaparak EXP puan toplama ve ek olarak yapılabilecekler.](#yapılabilecek-diğer-i̇şlemler)
 
 ### Cüzdan
 Arweave ekosisteminde işlemlerimizi yapmak için biz cüzdana ihtiyacımız var. [Buradan](https://www.arconnect.io/) Ar Connect cüzdanı tarayıcınıza kurabilirsiniz. 
