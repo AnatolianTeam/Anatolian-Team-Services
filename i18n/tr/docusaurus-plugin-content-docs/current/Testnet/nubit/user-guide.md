@@ -12,6 +12,15 @@ keywords: [Nubit, Bitcoin, Native, DA, Veri Kullanılabilirliği, Katmanı, kull
 [Aplha](https://alpha.nubit.org/) sayfasında Cosmos cüzdanınızı bağlayıp musluktan token alabilir ve görevleri yapabilirsiniz.
 
 Aşağıdaki videoda kısaca anlatılmıştır.
-[![Watch the video](./img/video-1.jpg)](https://youtu.be/okjrbxwG0Hs?si=PsKKL85TOkN6vvsd)
+
+<div className="video-container">
+<LiteYouTubeEmbed
+    id="okjrbxwG0Hs"
+    params="autoplay=1&autohide=1&showinfo=0&rel=0"
+    title="Nubit Teşvikli Testnet (Faz 1)"
+    poster="hqdefault"
+    webp
+/>
+</div>
 
 

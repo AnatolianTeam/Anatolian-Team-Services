@@ -25,5 +25,3 @@ It is briefly explained in the video below.
 />
 </div>
 
-[![Watch the video](./../../../i18n/tr/docusaurus-plugin-content-docs/current/Testnet/nubit/img/video-1.jpg)](https://youtu.be/okjrbxwG0Hs?si=PsKKL85TOkN6vvsd)
-
