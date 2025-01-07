@@ -25,6 +25,7 @@ What you can do in Ar.io is listed under headings below.
 8. [Using Vouch Portal.](#vouch-portal)
 9. [Using Permaweb](#permaweb)
 10. [Collecting EXP points by doing Zealy tasks and additional things that can be done.](#other-actions)
+11. [Video](#video)
 
 ### Wallet
 We need a wallet to perform our transactions in the Arweave ecosystem. You can install the Ar Connect wallet in your browser from [here](https://www.arconnect.io/).
@@ -111,3 +112,15 @@ Katılmak isterseniz [buradan](https://zealy.io/cw/ar-io/invite/roq3SOPBCEpxllr_
 ## Support
 
 You can ask about any issues you are stuck on our Telegram page.
+
+## Video 
+
+<div className="video-container">
+<LiteYouTubeEmbed
+    id="TlhlkRMBUqM"
+    params="autoplay=1&autohide=1&showinfo=0&rel=0"
+    title="Ar.io | Kapsamlı Rehber"
+    poster="hqdefault"
+    webp
+/>
+</div>

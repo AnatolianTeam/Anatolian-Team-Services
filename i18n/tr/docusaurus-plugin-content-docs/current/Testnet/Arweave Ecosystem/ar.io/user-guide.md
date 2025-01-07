@@ -25,6 +25,7 @@ Ar.io'da yapabilecekleriniz aşağıda başlıklar halinde sıralanmıştır.
 8. [Vouch Portal kullanma.](#vouch-portal)
 9. [Permaweb kullanımı](#permaweb)
 10. [Zealy görevlerini yaparak EXP puan toplama ve ek olarak yapılabilecekler.](#yapılabilecek-diğer-i̇şlemler)
+11. [Video](#video) 
 
 ### Cüzdan
 Arweave ekosisteminde işlemlerimizi yapmak için biz cüzdana ihtiyacımız var. [Buradan](https://www.arconnect.io/) Ar Connect cüzdanı tarayıcınıza kurabilirsiniz. 
@@ -108,3 +109,15 @@ Katılmak isterseniz [buradan](https://zealy.io/cw/ar-io/invite/roq3SOPBCEpxllr_
 ## Destek
 
 Takıldığınız konularda Telegram sayfamızdan sorabilirsiniz.
+
+## Video 
+
+<div className="video-container">
+<LiteYouTubeEmbed
+    id="TlhlkRMBUqM"
+    params="autoplay=1&autohide=1&showinfo=0&rel=0"
+    title="Ar.io | Kapsamlı Rehber"
+    poster="hqdefault"
+    webp
+/>
+</div>
