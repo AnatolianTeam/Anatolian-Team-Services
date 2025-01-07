@@ -4,6 +4,8 @@ description: Nubit kullanıcı rehberi.
 image: ./img/Nubit-Service-Cover.jpg
 keywords: [Nubit, Bitcoin, Native, DA, Veri Kullanılabilirliği, Katmanı, kullanıcı rehberi, rehber]
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 # Nubit Kullanıcı Rehberi
 
