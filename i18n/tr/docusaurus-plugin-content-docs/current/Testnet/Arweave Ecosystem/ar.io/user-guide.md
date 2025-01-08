@@ -24,8 +24,9 @@ Ar.io'da yapabilecekleriniz aşağıda başlıklar halinde sıralanmıştır.
 7. [tARIO token delege etme.](#delegasyon)
 8. [Vouch Portal kullanma.](#vouch-portal)
 9. [Permaweb kullanımı](#permaweb)
-10. [Zealy görevlerini yaparak EXP puan toplama ve ek olarak yapılabilecekler.](#yapılabilecek-diğer-i̇şlemler)
-11. [Video](#video) 
+10. [Swap ve Likidite Ekleme](#swap-ve-likidite)
+11. [Zealy görevlerini yaparak EXP puan toplama ve ek olarak yapılabilecekler.](#yapılabilecek-diğer-i̇şlemler)
+12. [Video](#video) 
 
 ### Cüzdan
 Arweave ekosisteminde işlemlerimizi yapmak için biz cüzdana ihtiyacımız var. [Buradan](https://www.arconnect.io/) Ar Connect cüzdanı tarayıcınıza kurabilirsiniz. 
@@ -95,6 +96,10 @@ Permaweb, permanently web'ten türetilmiş olup Kalıcı web anlamına gelmekted
 ### Vouch Portal
 
 [Burası](https://vouch-portal.arweave.net/#/intent/vouch-status) permaweb'teki pasaportunuz olacaktır. Gitcoin, Twitter bağlayarak puan kazanırsınız. Bunlara ek olarak AR bakiyeniz ve stake ettiğiniz wAR bakiyesine göre de ek puanlar alırsınız. Puanınızı `5+` yapmaya çalışın. 
+
+### Swap ve Likidite Ekleme
+
+[Bogeta](https://botega.arweave.net/#/swap)'da swap yapıp likidite ekleyebilirsiniz.
 
 ### Yapılabilecek Diğer İşlemler
 

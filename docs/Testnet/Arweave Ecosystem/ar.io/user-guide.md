@@ -24,9 +24,9 @@ What you can do in Ar.io is listed under headings below.
 7. [Delegating tARIO tokens.](#delegation)
 8. [Using Vouch Portal.](#vouch-portal)
 9. [Using Permaweb](#permaweb)
-10. [Collecting EXP points by doing Zealy tasks and additional things that can be done.](#other-actions)
-11. [Video](#video)
-
+10. [Swap and Liquidity](#swap-and-adding-liquidity)
+11. [Collecting EXP points by doing Zealy tasks and additional things that can be done.](#other-actions)
+12. [Video](#video)
 ### Wallet
 We need a wallet to perform our transactions in the Arweave ecosystem. You can install the Ar Connect wallet in your browser from [here](https://www.arconnect.io/).
 
@@ -94,6 +94,10 @@ If you would like to stake us as a team and our friends , the addresses are belo
 ### Permaweb
 
 Permaweb is derived from permanently web and means permanent web. You can prepare a website, blog, CV page or whatever you want to do here. You can look at this topic on [here](parmaweb.md) page.
+
+### Swap and Liquidity
+
+You can swap and add liquidity at [Bogeta](https://botega.arweave.net/#/swap).
 
 ### Vouch Portal
 
